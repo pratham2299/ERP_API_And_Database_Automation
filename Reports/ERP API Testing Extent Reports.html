@@ -1,0 +1,2297 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>ERP Automation End To End Testing Report</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">ERP Automation Test Exection Results By Prathamesh Dhasade</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">May 20, 2024 10:40:01 AM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Add Priority without authorization</p>
+            <p class="text-sm">
+              <span>10:40:01 AM</span> / <span>00:00:00:721</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Add Priority without authorization</h5>
+<span class='badge badge-success'>05.20.2024 10:40:01 AM</span>
+<span class='badge badge-danger'>05.20.2024 10:40:02 AM</span>
+<span class='badge badge-default'>00:00:00:721</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:02 AM</td>
+        <td>
+          Status code for add priority is: 401
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:02 AM</td>
+        <td>
+          Response for add priority is: {
+    "timestamp": "2024-05-20T05:10:03.648+00:00",
+    "status": 401,
+    "error": "Unauthorized",
+    "path": "/erp/task/priority/add"
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:40:02 AM</td>
+        <td>
+          <span class='badge white-text green'>verify_Add_Priority_Without_Authorization - Test Case Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Get All priorities without authorization</p>
+            <p class="text-sm">
+              <span>10:40:02 AM</span> / <span>00:00:00:710</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Get All priorities without authorization</h5>
+<span class='badge badge-success'>05.20.2024 10:40:02 AM</span>
+<span class='badge badge-danger'>05.20.2024 10:40:03 AM</span>
+<span class='badge badge-default'>00:00:00:710</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:03 AM</td>
+        <td>
+          Status code for get all priorities is: 401
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:03 AM</td>
+        <td>
+          Response for get all priorities is: {
+    "timestamp": "2024-05-20T05:10:04.349+00:00",
+    "status": 401,
+    "error": "Unauthorized",
+    "path": "/erp/task/priority/get/all"
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:40:03 AM</td>
+        <td>
+          <span class='badge white-text green'>verify_Get_All_Priority_Without_Authorization - Test Case Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Update priority without authorization</p>
+            <p class="text-sm">
+              <span>10:40:03 AM</span> / <span>00:00:01:230</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Update priority without authorization</h5>
+<span class='badge badge-success'>05.20.2024 10:40:03 AM</span>
+<span class='badge badge-danger'>05.20.2024 10:40:04 AM</span>
+<span class='badge badge-default'>00:00:01:230</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:04 AM</td>
+        <td>
+          Status code for update priority is: 401
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:04 AM</td>
+        <td>
+          Response for update priority is: {
+    "timestamp": "2024-05-20T05:10:05.551+00:00",
+    "status": 401,
+    "error": "Unauthorized",
+    "path": "/erp/task/priority/update"
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:40:04 AM</td>
+        <td>
+          <span class='badge white-text green'>verify_Update_Priority_Without_Authorization - Test Case Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="7"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Delete priority without authorization</p>
+            <p class="text-sm">
+              <span>10:40:04 AM</span> / <span>00:00:00:561</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Delete priority without authorization</h5>
+<span class='badge badge-success'>05.20.2024 10:40:04 AM</span>
+<span class='badge badge-danger'>05.20.2024 10:40:05 AM</span>
+<span class='badge badge-default'>00:00:00:561</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:05 AM</td>
+        <td>
+          Status code for delete priority is: 401
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:05 AM</td>
+        <td>
+          Response for delete priority is: {
+    "timestamp": "2024-05-20T05:10:06.195+00:00",
+    "status": 401,
+    "error": "Unauthorized",
+    "path": "/erp/task/priority/delete/single"
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:40:05 AM</td>
+        <td>
+          <span class='badge white-text green'>verify_Delete_Single_Priority_Without_Authorization - Test Case Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="8"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Get All priorities with authorization</p>
+            <p class="text-sm">
+              <span>10:40:05 AM</span> / <span>00:00:00:623</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Get All priorities with authorization</h5>
+<span class='badge badge-success'>05.20.2024 10:40:05 AM</span>
+<span class='badge badge-danger'>05.20.2024 10:40:05 AM</span>
+<span class='badge badge-default'>00:00:00:623</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:05 AM</td>
+        <td>
+          Status code for get all priorities is: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:05 AM</td>
+        <td>
+          Response for get all priorities is: [
+    {
+        "priorityId": 1,
+        "priority": "Low",
+        "priorityLevel": 0,
+        "priorityColor": "Sand",
+        "priorityColorCode": "#EDDFCB"
+    },
+    {
+        "priorityId": 2,
+        "priority": "Medium",
+        "priorityLevel": 1,
+        "priorityColor": "Pumpkin",
+        "priorityColorCode": "#FBD9AA"
+    },
+    {
+        "priorityId": 3,
+        "priority": "High",
+        "priorityLevel": 2,
+        "priorityColor": "Red Orange",
+        "priorityColorCode": "#FBB7AA"
+    },
+    {
+        "priorityId": 4,
+        "priority": "Highest",
+        "priorityLevel": 3,
+        "priorityColor": "Maroon",
+        "priorityColorCode": "#EB878B"
+    }
+]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:40:05 AM</td>
+        <td>
+          <span class='badge white-text green'>verify_Get_All_Priorities_With_Authorization - Test Case Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="9"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Add priority with valid and invalid data and with authorization</p>
+            <p class="text-sm">
+              <span>10:40:05 AM</span> / <span>00:00:00:630</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Add priority with valid and invalid data and with authorization</h5>
+<span class='badge badge-success'>05.20.2024 10:40:05 AM</span>
+<span class='badge badge-danger'>05.20.2024 10:40:06 AM</span>
+<span class='badge badge-default'>00:00:00:630</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:06 AM</td>
+        <td>
+          Request payload for add priority is: {"priorityId":0,"priority":"Sprouts","priorityLevel":11,"priorityColor":"fuchsia","priorityColorCode":"#994387"}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:06 AM</td>
+        <td>
+          Status code for add priority is: 201
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:06 AM</td>
+        <td>
+          Response for add priority is: {
+    "priorityId": "11"
+}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="10"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Get All priorities with authorization</p>
+            <p class="text-sm">
+              <span>10:40:06 AM</span> / <span>00:00:00:859</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Get All priorities with authorization</h5>
+<span class='badge badge-success'>05.20.2024 10:40:06 AM</span>
+<span class='badge badge-danger'>05.20.2024 10:40:07 AM</span>
+<span class='badge badge-default'>00:00:00:859</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:07 AM</td>
+        <td>
+          Status code for get all priorities is: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:07 AM</td>
+        <td>
+          Response for get all priorities is: [
+    {
+        "priorityId": 1,
+        "priority": "Low",
+        "priorityLevel": 0,
+        "priorityColor": "Sand",
+        "priorityColorCode": "#EDDFCB"
+    },
+    {
+        "priorityId": 2,
+        "priority": "Medium",
+        "priorityLevel": 1,
+        "priorityColor": "Pumpkin",
+        "priorityColorCode": "#FBD9AA"
+    },
+    {
+        "priorityId": 3,
+        "priority": "High",
+        "priorityLevel": 2,
+        "priorityColor": "Red Orange",
+        "priorityColorCode": "#FBB7AA"
+    },
+    {
+        "priorityId": 4,
+        "priority": "Highest",
+        "priorityLevel": 3,
+        "priorityColor": "Maroon",
+        "priorityColorCode": "#EB878B"
+    },
+    {
+        "priorityId": 11,
+        "priority": "Sprouts",
+        "priorityLevel": 11,
+        "priorityColor": "fuchsia",
+        "priorityColorCode": "#994387"
+    }
+]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:40:07 AM</td>
+        <td>
+          <span class='badge white-text green'>verify_Add_Priority_With_Authorization - Test Case Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="11"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Add priority with valid and invalid data and with authorization</p>
+            <p class="text-sm">
+              <span>10:40:07 AM</span> / <span>00:00:00:681</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Add priority with valid and invalid data and with authorization</h5>
+<span class='badge badge-success'>05.20.2024 10:40:07 AM</span>
+<span class='badge badge-danger'>05.20.2024 10:40:08 AM</span>
+<span class='badge badge-default'>00:00:00:681</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:07 AM</td>
+        <td>
+          Request payload for add priority is: {"priorityId":0,"priority":"Butternut pumpkin","priorityLevel":2,"priorityColor":"indigo","priorityColorCode":"#87DEF0"}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:07 AM</td>
+        <td>
+          Status code for add priority is: 201
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:07 AM</td>
+        <td>
+          Response for add priority is: {
+    "priorityId": "12"
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:40:08 AM</td>
+        <td>
+          <span class='badge white-text red'>verify_Add_Priority_With_Authorization - Test Case Failed</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:40:08 AM</td>
+        <td>
+          <span class='badge white-text red'>java.lang.AssertionError: 1 expectation failed.
+Expected status code <422> but was <201>.
+ - Test Case Failed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="12"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Add priority with valid and invalid data and with authorization</p>
+            <p class="text-sm">
+              <span>10:40:08 AM</span> / <span>00:00:00:636</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Add priority with valid and invalid data and with authorization</h5>
+<span class='badge badge-success'>05.20.2024 10:40:08 AM</span>
+<span class='badge badge-danger'>05.20.2024 10:40:08 AM</span>
+<span class='badge badge-default'>00:00:00:636</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:08 AM</td>
+        <td>
+          Request payload for add priority is: {"priorityId":0,"priority":"Limes","priorityLevel":15,"priorityColor":"","priorityColorCode":"#5EEBD3"}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:08 AM</td>
+        <td>
+          Status code for add priority is: 400
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:08 AM</td>
+        <td>
+          Response for add priority is: {
+    "timestamp": "2024-05-20T05:10:09.690+00:00",
+    "status": 400,
+    "error": "Bad Request",
+    "path": "/erp/task/priority/add"
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:40:08 AM</td>
+        <td>
+          <span class='badge white-text green'>verify_Add_Priority_With_Authorization - Test Case Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="13"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Add priority with valid and invalid data and with authorization</p>
+            <p class="text-sm">
+              <span>10:40:08 AM</span> / <span>00:00:00:623</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Add priority with valid and invalid data and with authorization</h5>
+<span class='badge badge-success'>05.20.2024 10:40:08 AM</span>
+<span class='badge badge-danger'>05.20.2024 10:40:09 AM</span>
+<span class='badge badge-default'>00:00:00:623</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:09 AM</td>
+        <td>
+          Request payload for add priority is: {"priorityId":0,"priority":"Papaw","priorityLevel":17,"priorityColor":"Pumpkin","priorityColorCode":"#8A910E"}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:09 AM</td>
+        <td>
+          Status code for add priority is: 201
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:09 AM</td>
+        <td>
+          Response for add priority is: {
+    "priorityId": "13"
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:40:09 AM</td>
+        <td>
+          <span class='badge white-text red'>verify_Add_Priority_With_Authorization - Test Case Failed</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:40:09 AM</td>
+        <td>
+          <span class='badge white-text red'>java.lang.AssertionError: 1 expectation failed.
+Expected status code <422> but was <201>.
+ - Test Case Failed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="14"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Add priority with valid and invalid data and with authorization</p>
+            <p class="text-sm">
+              <span>10:40:09 AM</span> / <span>00:00:00:683</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Add priority with valid and invalid data and with authorization</h5>
+<span class='badge badge-success'>05.20.2024 10:40:09 AM</span>
+<span class='badge badge-danger'>05.20.2024 10:40:09 AM</span>
+<span class='badge badge-default'>00:00:00:683</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:09 AM</td>
+        <td>
+          Request payload for add priority is: {"priorityId":0,"priority":"Prunes","priorityLevel":12,"priorityColor":"black","priorityColorCode":""}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:09 AM</td>
+        <td>
+          Status code for add priority is: 400
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:09 AM</td>
+        <td>
+          Response for add priority is: {
+    "timestamp": "2024-05-20T05:10:11.047+00:00",
+    "status": 400,
+    "error": "Bad Request",
+    "path": "/erp/task/priority/add"
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:40:09 AM</td>
+        <td>
+          <span class='badge white-text green'>verify_Add_Priority_With_Authorization - Test Case Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="15"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Add priority with valid and invalid data and with authorization</p>
+            <p class="text-sm">
+              <span>10:40:09 AM</span> / <span>00:00:00:605</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Add priority with valid and invalid data and with authorization</h5>
+<span class='badge badge-success'>05.20.2024 10:40:09 AM</span>
+<span class='badge badge-danger'>05.20.2024 10:40:10 AM</span>
+<span class='badge badge-default'>00:00:00:605</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:10 AM</td>
+        <td>
+          Request payload for add priority is: {"priorityId":0,"priority":"Passionfruit","priorityLevel":15,"priorityColor":"fuchsia","priorityColorCode":"#EB878B"}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:10 AM</td>
+        <td>
+          Status code for add priority is: 201
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:10 AM</td>
+        <td>
+          Response for add priority is: {
+    "priorityId": "14"
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:40:10 AM</td>
+        <td>
+          <span class='badge white-text red'>verify_Add_Priority_With_Authorization - Test Case Failed</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:40:10 AM</td>
+        <td>
+          <span class='badge white-text red'>java.lang.AssertionError: 1 expectation failed.
+Expected status code <422> but was <201>.
+ - Test Case Failed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="16"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Add priority with valid and invalid data and with authorization</p>
+            <p class="text-sm">
+              <span>10:40:10 AM</span> / <span>00:00:00:598</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Add priority with valid and invalid data and with authorization</h5>
+<span class='badge badge-success'>05.20.2024 10:40:10 AM</span>
+<span class='badge badge-danger'>05.20.2024 10:40:11 AM</span>
+<span class='badge badge-default'>00:00:00:598</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:11 AM</td>
+        <td>
+          Request payload for add priority is: {"priorityId":0,"priority":"","priorityLevel":19,"priorityColor":"blue","priorityColorCode":"#068324"}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:11 AM</td>
+        <td>
+          Status code for add priority is: 400
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:11 AM</td>
+        <td>
+          Response for add priority is: {
+    "timestamp": "2024-05-20T05:10:12.276+00:00",
+    "status": 400,
+    "error": "Bad Request",
+    "path": "/erp/task/priority/add"
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:40:11 AM</td>
+        <td>
+          <span class='badge white-text green'>verify_Add_Priority_With_Authorization - Test Case Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="17"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Add priority with valid and invalid data and with authorization</p>
+            <p class="text-sm">
+              <span>10:40:11 AM</span> / <span>00:00:00:630</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Add priority with valid and invalid data and with authorization</h5>
+<span class='badge badge-success'>05.20.2024 10:40:11 AM</span>
+<span class='badge badge-danger'>05.20.2024 10:40:11 AM</span>
+<span class='badge badge-default'>00:00:00:630</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:11 AM</td>
+        <td>
+          Request payload for add priority is: {"priorityId":0,"priority":"High","priorityLevel":13,"priorityColor":"teal","priorityColorCode":"#FA62D0"}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:11 AM</td>
+        <td>
+          Status code for add priority is: 422
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:11 AM</td>
+        <td>
+          Response for add priority is: {
+    "timestamp": "2024-05-20T05:10:12.896+00:00",
+    "status": 422,
+    "error": "Unprocessable Entity",
+    "path": "/erp/task/priority/add"
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:40:11 AM</td>
+        <td>
+          <span class='badge white-text green'>verify_Add_Priority_With_Authorization - Test Case Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="18"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Update priority with valid and invalid data and with authorization</p>
+            <p class="text-sm">
+              <span>10:40:11 AM</span> / <span>00:00:01:127</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Update priority with valid and invalid data and with authorization</h5>
+<span class='badge badge-success'>05.20.2024 10:40:11 AM</span>
+<span class='badge badge-danger'>05.20.2024 10:40:12 AM</span>
+<span class='badge badge-default'>00:00:01:127</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:12 AM</td>
+        <td>
+          Request paylaod for update priority is: [{"priorityId":1,"priority":"Low","priorityLevel":0,"priorityColor":"Sand","priorityColorCode":"#EDDFCB"},{"priorityId":2,"priority":"Medium","priorityLevel":1,"priorityColor":"Pumpkin","priorityColorCode":"#FBD9AA"},{"priorityId":3,"priority":"High","priorityLevel":2,"priorityColor":"Red Orange","priorityColorCode":"#FBB7AA"},{"priorityId":12,"priority":"Butternut pumpkin","priorityLevel":2,"priorityColor":"indigo","priorityColorCode":"#87DEF0"},{"priorityId":4,"priority":"Highest","priorityLevel":3,"priorityColor":"Maroon","priorityColorCode":"#EB878B"},{"priorityId":11,"priority":"Sprouts","priorityLevel":11,"priorityColor":"fuchsia","priorityColorCode":"#994387"},{"priorityId":11,"priority":"Strawberries","priorityLevel":15,"priorityColor":"silver","priorityColorCode":"#C70C88"},{"priorityId":13,"priority":"Papaw","priorityLevel":17,"priorityColor":"Pumpkin","priorityColorCode":"#8A910E"}]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:12 AM</td>
+        <td>
+          Status code for update priority is: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:12 AM</td>
+        <td>
+          Response for update priority is: Priority Updated Successfully
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="19"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Get All priorities with authorization</p>
+            <p class="text-sm">
+              <span>10:40:12 AM</span> / <span>00:00:00:748</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Get All priorities with authorization</h5>
+<span class='badge badge-success'>05.20.2024 10:40:12 AM</span>
+<span class='badge badge-danger'>05.20.2024 10:40:13 AM</span>
+<span class='badge badge-default'>00:00:00:748</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:13 AM</td>
+        <td>
+          Status code for get all priorities is: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:13 AM</td>
+        <td>
+          Response for get all priorities is: [
+    {
+        "priorityId": 1,
+        "priority": "Low",
+        "priorityLevel": 0,
+        "priorityColor": "Sand",
+        "priorityColorCode": "#EDDFCB"
+    },
+    {
+        "priorityId": 2,
+        "priority": "Medium",
+        "priorityLevel": 1,
+        "priorityColor": "Pumpkin",
+        "priorityColorCode": "#FBD9AA"
+    },
+    {
+        "priorityId": 3,
+        "priority": "High",
+        "priorityLevel": 2,
+        "priorityColor": "Red Orange",
+        "priorityColorCode": "#FBB7AA"
+    },
+    {
+        "priorityId": 12,
+        "priority": "Butternut pumpkin",
+        "priorityLevel": 2,
+        "priorityColor": "indigo",
+        "priorityColorCode": "#87DEF0"
+    },
+    {
+        "priorityId": 4,
+        "priority": "Highest",
+        "priorityLevel": 3,
+        "priorityColor": "Maroon",
+        "priorityColorCode": "#EB878B"
+    },
+    {
+        "priorityId": 11,
+        "priority": "Strawberries",
+        "priorityLevel": 15,
+        "priorityColor": "silver",
+        "priorityColorCode": "#C70C88"
+    },
+    {
+        "priorityId": 14,
+        "priority": "Passionfruit",
+        "priorityLevel": 15,
+        "priorityColor": "fuchsia",
+        "priorityColorCode": "#EB878B"
+    },
+    {
+        "priorityId": 13,
+        "priority": "Papaw",
+        "priorityLevel": 17,
+        "priorityColor": "Pumpkin",
+        "priorityColorCode": "#8A910E"
+    }
+]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:40:13 AM</td>
+        <td>
+          <span class='badge white-text red'>verify_Update_Priority_With_Authorization - Test Case Failed</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:40:13 AM</td>
+        <td>
+          <span class='badge white-text red'>java.lang.AssertionError: expected [Strawberries] but found [Passionfruit] - Test Case Failed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="20"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Update priority with valid and invalid data and with authorization</p>
+            <p class="text-sm">
+              <span>10:40:13 AM</span> / <span>00:00:01:170</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Update priority with valid and invalid data and with authorization</h5>
+<span class='badge badge-success'>05.20.2024 10:40:13 AM</span>
+<span class='badge badge-danger'>05.20.2024 10:40:14 AM</span>
+<span class='badge badge-default'>00:00:01:170</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:14 AM</td>
+        <td>
+          Request paylaod for update priority is: [{"priorityId":1,"priority":"Low","priorityLevel":0,"priorityColor":"Sand","priorityColorCode":"#EDDFCB"},{"priorityId":2,"priority":"Medium","priorityLevel":1,"priorityColor":"Pumpkin","priorityColorCode":"#FBD9AA"},{"priorityId":3,"priority":"High","priorityLevel":2,"priorityColor":"Red Orange","priorityColorCode":"#FBB7AA"},{"priorityId":12,"priority":"Butternut pumpkin","priorityLevel":2,"priorityColor":"indigo","priorityColorCode":"#87DEF0"},{"priorityId":4,"priority":"Highest","priorityLevel":3,"priorityColor":"Maroon","priorityColorCode":"#EB878B"},{"priorityId":11,"priority":"Strawberries","priorityLevel":15,"priorityColor":"silver","priorityColorCode":"#C70C88"},{"priorityId":11,"priority":"Cavalo","priorityLevel":0,"priorityColor":"teal","priorityColorCode":"#5C0D24"},{"priorityId":13,"priority":"Papaw","priorityLevel":17,"priorityColor":"Pumpkin","priorityColorCode":"#8A910E"}]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:14 AM</td>
+        <td>
+          Status code for update priority is: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:14 AM</td>
+        <td>
+          Response for update priority is: Priority Updated Successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:40:14 AM</td>
+        <td>
+          <span class='badge white-text red'>verify_Update_Priority_With_Authorization - Test Case Failed</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:40:14 AM</td>
+        <td>
+          <span class='badge white-text red'>java.lang.AssertionError: 1 expectation failed.
+Expected status code <409> but was <200>.
+ - Test Case Failed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="21"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Update priority with valid and invalid data and with authorization</p>
+            <p class="text-sm">
+              <span>10:40:14 AM</span> / <span>00:00:01:127</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Update priority with valid and invalid data and with authorization</h5>
+<span class='badge badge-success'>05.20.2024 10:40:14 AM</span>
+<span class='badge badge-danger'>05.20.2024 10:40:15 AM</span>
+<span class='badge badge-default'>00:00:01:127</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=21</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:15 AM</td>
+        <td>
+          Request paylaod for update priority is: [{"priorityId":1,"priority":"Low","priorityLevel":0,"priorityColor":"Sand","priorityColorCode":"#EDDFCB"},{"priorityId":11,"priority":"Cavalo","priorityLevel":0,"priorityColor":"teal","priorityColorCode":"#5C0D24"},{"priorityId":2,"priority":"Medium","priorityLevel":1,"priorityColor":"Pumpkin","priorityColorCode":"#FBD9AA"},{"priorityId":3,"priority":"High","priorityLevel":2,"priorityColor":"Red Orange","priorityColorCode":"#FBB7AA"},{"priorityId":12,"priority":"Butternut pumpkin","priorityLevel":2,"priorityColor":"indigo","priorityColorCode":"#87DEF0"},{"priorityId":4,"priority":"Highest","priorityLevel":3,"priorityColor":"Maroon","priorityColorCode":"#EB878B"},{"priorityId":11,"priority":"","priorityLevel":19,"priorityColor":"black","priorityColorCode":"#3CACB4"},{"priorityId":13,"priority":"Papaw","priorityLevel":17,"priorityColor":"Pumpkin","priorityColorCode":"#8A910E"}]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:15 AM</td>
+        <td>
+          Status code for update priority is: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:15 AM</td>
+        <td>
+          Response for update priority is: Priority Updated Successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:40:15 AM</td>
+        <td>
+          <span class='badge white-text red'>verify_Update_Priority_With_Authorization - Test Case Failed</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:40:15 AM</td>
+        <td>
+          <span class='badge white-text red'>java.lang.AssertionError: 1 expectation failed.
+Expected status code <400> but was <200>.
+ - Test Case Failed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="22"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Update priority with valid and invalid data and with authorization</p>
+            <p class="text-sm">
+              <span>10:40:15 AM</span> / <span>00:00:01:316</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Update priority with valid and invalid data and with authorization</h5>
+<span class='badge badge-success'>05.20.2024 10:40:15 AM</span>
+<span class='badge badge-danger'>05.20.2024 10:40:17 AM</span>
+<span class='badge badge-default'>00:00:01:316</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=22</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:17 AM</td>
+        <td>
+          Request paylaod for update priority is: [{"priorityId":1,"priority":"Low","priorityLevel":0,"priorityColor":"Sand","priorityColorCode":"#EDDFCB"},{"priorityId":2,"priority":"Medium","priorityLevel":1,"priorityColor":"Pumpkin","priorityColorCode":"#FBD9AA"},{"priorityId":3,"priority":"High","priorityLevel":2,"priorityColor":"Red Orange","priorityColorCode":"#FBB7AA"},{"priorityId":12,"priority":"Butternut pumpkin","priorityLevel":2,"priorityColor":"indigo","priorityColorCode":"#87DEF0"},{"priorityId":4,"priority":"Highest","priorityLevel":3,"priorityColor":"Maroon","priorityColorCode":"#EB878B"},{"priorityId":11,"priority":"High","priorityLevel":18,"priorityColor":"plum","priorityColorCode":"#DDA004"},{"priorityId":13,"priority":"Papaw","priorityLevel":17,"priorityColor":"Pumpkin","priorityColorCode":"#8A910E"},{"priorityId":11,"priority":"","priorityLevel":19,"priorityColor":"black","priorityColorCode":"#3CACB4"}]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:17 AM</td>
+        <td>
+          Status code for update priority is: 409
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:17 AM</td>
+        <td>
+          Response for update priority is: {
+    "timestamp": "2024-05-20T05:10:18.406+00:00",
+    "status": 409,
+    "error": "Conflict",
+    "path": "/erp/task/priority/update"
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:40:17 AM</td>
+        <td>
+          <span class='badge white-text green'>verify_Update_Priority_With_Authorization - Test Case Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="23"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Update priority with valid and invalid data and with authorization</p>
+            <p class="text-sm">
+              <span>10:40:17 AM</span> / <span>00:00:01:239</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Update priority with valid and invalid data and with authorization</h5>
+<span class='badge badge-success'>05.20.2024 10:40:17 AM</span>
+<span class='badge badge-danger'>05.20.2024 10:40:18 AM</span>
+<span class='badge badge-default'>00:00:01:239</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=23</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:18 AM</td>
+        <td>
+          Request paylaod for update priority is: [{"priorityId":1,"priority":"Low","priorityLevel":0,"priorityColor":"Sand","priorityColorCode":"#EDDFCB"},{"priorityId":2,"priority":"Medium","priorityLevel":1,"priorityColor":"Pumpkin","priorityColorCode":"#FBD9AA"},{"priorityId":3,"priority":"High","priorityLevel":2,"priorityColor":"Red Orange","priorityColorCode":"#FBB7AA"},{"priorityId":12,"priority":"Butternut pumpkin","priorityLevel":2,"priorityColor":"indigo","priorityColorCode":"#87DEF0"},{"priorityId":4,"priority":"Highest","priorityLevel":3,"priorityColor":"Maroon","priorityColorCode":"#EB878B"},{"priorityId":11,"priority":"Fingerlime","priorityLevel":19,"priorityColor":"","priorityColorCode":"#A91A95"},{"priorityId":13,"priority":"Papaw","priorityLevel":17,"priorityColor":"Pumpkin","priorityColorCode":"#8A910E"},{"priorityId":11,"priority":"","priorityLevel":19,"priorityColor":"black","priorityColorCode":"#3CACB4"}]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:18 AM</td>
+        <td>
+          Status code for update priority is: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:18 AM</td>
+        <td>
+          Response for update priority is: Priority Updated Successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:40:18 AM</td>
+        <td>
+          <span class='badge white-text red'>verify_Update_Priority_With_Authorization - Test Case Failed</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:40:18 AM</td>
+        <td>
+          <span class='badge white-text red'>java.lang.AssertionError: 1 expectation failed.
+Expected status code <400> but was <200>.
+ - Test Case Failed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="24"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Update priority with valid and invalid data and with authorization</p>
+            <p class="text-sm">
+              <span>10:40:18 AM</span> / <span>00:00:01:276</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Update priority with valid and invalid data and with authorization</h5>
+<span class='badge badge-success'>05.20.2024 10:40:18 AM</span>
+<span class='badge badge-danger'>05.20.2024 10:40:19 AM</span>
+<span class='badge badge-default'>00:00:01:276</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=24</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:19 AM</td>
+        <td>
+          Request paylaod for update priority is: [{"priorityId":1,"priority":"Low","priorityLevel":0,"priorityColor":"Sand","priorityColorCode":"#EDDFCB"},{"priorityId":2,"priority":"Medium","priorityLevel":1,"priorityColor":"Pumpkin","priorityColorCode":"#FBD9AA"},{"priorityId":3,"priority":"High","priorityLevel":2,"priorityColor":"Red Orange","priorityColorCode":"#FBB7AA"},{"priorityId":12,"priority":"Butternut pumpkin","priorityLevel":2,"priorityColor":"indigo","priorityColorCode":"#87DEF0"},{"priorityId":4,"priority":"Highest","priorityLevel":3,"priorityColor":"Maroon","priorityColorCode":"#EB878B"},{"priorityId":11,"priority":"Mango","priorityLevel":17,"priorityColor":"fuchsia","priorityColorCode":"#ACDFD8"},{"priorityId":13,"priority":"Papaw","priorityLevel":17,"priorityColor":"Pumpkin","priorityColorCode":"#8A910E"},{"priorityId":11,"priority":"","priorityLevel":19,"priorityColor":"black","priorityColorCode":"#3CACB4"}]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:19 AM</td>
+        <td>
+          Status code for update priority is: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:19 AM</td>
+        <td>
+          Response for update priority is: Priority Updated Successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:40:19 AM</td>
+        <td>
+          <span class='badge white-text red'>verify_Update_Priority_With_Authorization - Test Case Failed</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:40:19 AM</td>
+        <td>
+          <span class='badge white-text red'>java.lang.AssertionError: 1 expectation failed.
+Expected status code <409> but was <200>.
+ - Test Case Failed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="25"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Update priority with valid and invalid data and with authorization</p>
+            <p class="text-sm">
+              <span>10:40:19 AM</span> / <span>00:00:01:181</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Update priority with valid and invalid data and with authorization</h5>
+<span class='badge badge-success'>05.20.2024 10:40:19 AM</span>
+<span class='badge badge-danger'>05.20.2024 10:40:20 AM</span>
+<span class='badge badge-default'>00:00:01:181</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=25</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:20 AM</td>
+        <td>
+          Request paylaod for update priority is: [{"priorityId":1,"priority":"Low","priorityLevel":0,"priorityColor":"Sand","priorityColorCode":"#EDDFCB"},{"priorityId":2,"priority":"Medium","priorityLevel":1,"priorityColor":"Pumpkin","priorityColorCode":"#FBD9AA"},{"priorityId":3,"priority":"High","priorityLevel":2,"priorityColor":"Red Orange","priorityColorCode":"#FBB7AA"},{"priorityId":12,"priority":"Butternut pumpkin","priorityLevel":2,"priorityColor":"indigo","priorityColorCode":"#87DEF0"},{"priorityId":4,"priority":"Highest","priorityLevel":3,"priorityColor":"Maroon","priorityColorCode":"#EB878B"},{"priorityId":11,"priority":"Kiwi Fruit","priorityLevel":16,"priorityColor":"sky blue","priorityColorCode":""},{"priorityId":13,"priority":"Papaw","priorityLevel":17,"priorityColor":"Pumpkin","priorityColorCode":"#8A910E"},{"priorityId":11,"priority":"","priorityLevel":19,"priorityColor":"black","priorityColorCode":"#3CACB4"}]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:20 AM</td>
+        <td>
+          Status code for update priority is: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:20 AM</td>
+        <td>
+          Response for update priority is: Priority Updated Successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:40:20 AM</td>
+        <td>
+          <span class='badge white-text red'>verify_Update_Priority_With_Authorization - Test Case Failed</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:40:20 AM</td>
+        <td>
+          <span class='badge white-text red'>java.lang.AssertionError: 1 expectation failed.
+Expected status code <400> but was <200>.
+ - Test Case Failed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="26"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Update priority with valid and invalid data and with authorization</p>
+            <p class="text-sm">
+              <span>10:40:20 AM</span> / <span>00:00:01:317</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Update priority with valid and invalid data and with authorization</h5>
+<span class='badge badge-success'>05.20.2024 10:40:20 AM</span>
+<span class='badge badge-danger'>05.20.2024 10:40:22 AM</span>
+<span class='badge badge-default'>00:00:01:317</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=26</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:22 AM</td>
+        <td>
+          Request paylaod for update priority is: [{"priorityId":1,"priority":"Low","priorityLevel":0,"priorityColor":"Sand","priorityColorCode":"#EDDFCB"},{"priorityId":2,"priority":"Medium","priorityLevel":1,"priorityColor":"Pumpkin","priorityColorCode":"#FBD9AA"},{"priorityId":3,"priority":"High","priorityLevel":2,"priorityColor":"Red Orange","priorityColorCode":"#FBB7AA"},{"priorityId":12,"priority":"Butternut pumpkin","priorityLevel":2,"priorityColor":"indigo","priorityColorCode":"#87DEF0"},{"priorityId":4,"priority":"Highest","priorityLevel":3,"priorityColor":"Maroon","priorityColorCode":"#EB878B"},{"priorityId":11,"priority":"Strawberries","priorityLevel":14,"priorityColor":"indigo","priorityColorCode":"#FBD9AA"},{"priorityId":13,"priority":"Papaw","priorityLevel":17,"priorityColor":"Pumpkin","priorityColorCode":"#8A910E"},{"priorityId":11,"priority":"","priorityLevel":19,"priorityColor":"black","priorityColorCode":"#3CACB4"}]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:22 AM</td>
+        <td>
+          Status code for update priority is: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:22 AM</td>
+        <td>
+          Response for update priority is: Priority Updated Successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:40:22 AM</td>
+        <td>
+          <span class='badge white-text red'>verify_Update_Priority_With_Authorization - Test Case Failed</span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>10:40:22 AM</td>
+        <td>
+          <span class='badge white-text red'>java.lang.AssertionError: 1 expectation failed.
+Expected status code <409> but was <200>.
+ - Test Case Failed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="27"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Update priority with valid and invalid data and with authorization</p>
+            <p class="text-sm">
+              <span>10:40:22 AM</span> / <span>00:00:01:158</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Update priority with valid and invalid data and with authorization</h5>
+<span class='badge badge-success'>05.20.2024 10:40:22 AM</span>
+<span class='badge badge-danger'>05.20.2024 10:40:23 AM</span>
+<span class='badge badge-default'>00:00:01:158</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=27</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:23 AM</td>
+        <td>
+          Request paylaod for update priority is: [{"priorityId":1,"priority":"Low","priorityLevel":0,"priorityColor":"Sand","priorityColorCode":"#EDDFCB"},{"priorityId":2,"priority":"Medium","priorityLevel":1,"priorityColor":"Pumpkin","priorityColorCode":"#FBD9AA"},{"priorityId":3,"priority":"High","priorityLevel":2,"priorityColor":"Red Orange","priorityColorCode":"#FBB7AA"},{"priorityId":12,"priority":"Butternut pumpkin","priorityLevel":2,"priorityColor":"indigo","priorityColorCode":"#87DEF0"},{"priorityId":4,"priority":"Highest","priorityLevel":3,"priorityColor":"Maroon","priorityColorCode":"#EB878B"},{"priorityId":58,"priority":"Nashi Pear","priorityLevel":10,"priorityColor":"turquoise","priorityColorCode":"#C167B1"},{"priorityId":13,"priority":"Papaw","priorityLevel":17,"priorityColor":"Pumpkin","priorityColorCode":"#8A910E"},{"priorityId":11,"priority":"","priorityLevel":19,"priorityColor":"black","priorityColorCode":"#3CACB4"}]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:23 AM</td>
+        <td>
+          Status code for update priority is: 404
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:23 AM</td>
+        <td>
+          Response for update priority is: {
+    "timestamp": "2024-05-20T05:10:24.585+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "path": "/erp/task/priority/update"
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:40:23 AM</td>
+        <td>
+          <span class='badge white-text green'>verify_Update_Priority_With_Authorization - Test Case Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="28"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Delete priority with valid and invalid data and with authorization</p>
+            <p class="text-sm">
+              <span>10:40:23 AM</span> / <span>00:00:00:794</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Delete priority with valid and invalid data and with authorization</h5>
+<span class='badge badge-success'>05.20.2024 10:40:23 AM</span>
+<span class='badge badge-danger'>05.20.2024 10:40:24 AM</span>
+<span class='badge badge-default'>00:00:00:794</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=28</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:24 AM</td>
+        <td>
+          Request paylaod for delete priority is: Curly Retriever
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:24 AM</td>
+        <td>
+          Response body for delete priority is: {
+    "timestamp": "2024-05-20T05:10:25.366+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "path": "/erp/task/priority/delete/single"
+}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:24 AM</td>
+        <td>
+          Status code for delete priority is: 404
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:40:24 AM</td>
+        <td>
+          <span class='badge white-text green'>verify_Delete_Single_Priority_With_Authorization - Test Case Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="29"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Delete priority with valid and invalid data and with authorization</p>
+            <p class="text-sm">
+              <span>10:40:24 AM</span> / <span>00:00:00:602</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Delete priority with valid and invalid data and with authorization</h5>
+<span class='badge badge-success'>05.20.2024 10:40:24 AM</span>
+<span class='badge badge-danger'>05.20.2024 10:40:24 AM</span>
+<span class='badge badge-default'>00:00:00:602</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=29</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:24 AM</td>
+        <td>
+          Request paylaod for delete priority is: Passionfruit
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:24 AM</td>
+        <td>
+          Response body for delete priority is: Priority Deleted Successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:24 AM</td>
+        <td>
+          Status code for delete priority is: 200
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="30"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Get All priorities with authorization</p>
+            <p class="text-sm">
+              <span>10:40:24 AM</span> / <span>00:00:00:672</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Get All priorities with authorization</h5>
+<span class='badge badge-success'>05.20.2024 10:40:24 AM</span>
+<span class='badge badge-danger'>05.20.2024 10:40:25 AM</span>
+<span class='badge badge-default'>00:00:00:672</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=30</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:25 AM</td>
+        <td>
+          Status code for get all priorities is: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:25 AM</td>
+        <td>
+          Response for get all priorities is: [
+    {
+        "priorityId": 1,
+        "priority": "Low",
+        "priorityLevel": 0,
+        "priorityColor": "Sand",
+        "priorityColorCode": "#EDDFCB"
+    },
+    {
+        "priorityId": 2,
+        "priority": "Medium",
+        "priorityLevel": 1,
+        "priorityColor": "Pumpkin",
+        "priorityColorCode": "#FBD9AA"
+    },
+    {
+        "priorityId": 3,
+        "priority": "High",
+        "priorityLevel": 2,
+        "priorityColor": "Red Orange",
+        "priorityColorCode": "#FBB7AA"
+    },
+    {
+        "priorityId": 12,
+        "priority": "Butternut pumpkin",
+        "priorityLevel": 2,
+        "priorityColor": "indigo",
+        "priorityColorCode": "#87DEF0"
+    },
+    {
+        "priorityId": 4,
+        "priority": "Highest",
+        "priorityLevel": 3,
+        "priorityColor": "Maroon",
+        "priorityColorCode": "#EB878B"
+    },
+    {
+        "priorityId": 13,
+        "priority": "Papaw",
+        "priorityLevel": 17,
+        "priorityColor": "Pumpkin",
+        "priorityColorCode": "#8A910E"
+    },
+    {
+        "priorityId": 11,
+        "priority": "",
+        "priorityLevel": 19,
+        "priorityColor": "black",
+        "priorityColorCode": "#3CACB4"
+    }
+]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:40:25 AM</td>
+        <td>
+          <span class='badge white-text green'>verify_Delete_Single_Priority_With_Authorization - Test Case Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="31"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Delete priority with valid and invalid data and with authorization</p>
+            <p class="text-sm">
+              <span>10:40:25 AM</span> / <span>00:00:00:556</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Delete priority with valid and invalid data and with authorization</h5>
+<span class='badge badge-success'>05.20.2024 10:40:25 AM</span>
+<span class='badge badge-danger'>05.20.2024 10:40:26 AM</span>
+<span class='badge badge-default'>00:00:00:556</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=31</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:26 AM</td>
+        <td>
+          Request paylaod for delete priority is: Papaw
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:26 AM</td>
+        <td>
+          Response body for delete priority is: Priority Deleted Successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:26 AM</td>
+        <td>
+          Status code for delete priority is: 200
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="32"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Get All priorities with authorization</p>
+            <p class="text-sm">
+              <span>10:40:26 AM</span> / <span>00:00:00:668</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Get All priorities with authorization</h5>
+<span class='badge badge-success'>05.20.2024 10:40:26 AM</span>
+<span class='badge badge-danger'>05.20.2024 10:40:26 AM</span>
+<span class='badge badge-default'>00:00:00:668</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=32</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:26 AM</td>
+        <td>
+          Status code for get all priorities is: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:40:26 AM</td>
+        <td>
+          Response for get all priorities is: [
+    {
+        "priorityId": 1,
+        "priority": "Low",
+        "priorityLevel": 0,
+        "priorityColor": "Sand",
+        "priorityColorCode": "#EDDFCB"
+    },
+    {
+        "priorityId": 2,
+        "priority": "Medium",
+        "priorityLevel": 1,
+        "priorityColor": "Pumpkin",
+        "priorityColorCode": "#FBD9AA"
+    },
+    {
+        "priorityId": 3,
+        "priority": "High",
+        "priorityLevel": 2,
+        "priorityColor": "Red Orange",
+        "priorityColorCode": "#FBB7AA"
+    },
+    {
+        "priorityId": 12,
+        "priority": "Butternut pumpkin",
+        "priorityLevel": 2,
+        "priorityColor": "indigo",
+        "priorityColorCode": "#87DEF0"
+    },
+    {
+        "priorityId": 4,
+        "priority": "Highest",
+        "priorityLevel": 3,
+        "priorityColor": "Maroon",
+        "priorityColorCode": "#EB878B"
+    },
+    {
+        "priorityId": 11,
+        "priority": "",
+        "priorityLevel": 19,
+        "priorityColor": "black",
+        "priorityColorCode": "#3CACB4"
+    }
+]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:40:26 AM</td>
+        <td>
+          <span class='badge white-text green'>verify_Delete_Single_Priority_With_Authorization - Test Case Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>May 20, 2024 10:40:01 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>May 20, 2024 10:40:26 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>19</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>10</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='65%'>
+<b>19</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='34%'><b>10</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='13%'><b>15</b> events passed</small></div>
+<div>
+<small data-tooltip='17%'><b>20</b> events failed,
+<b data-tooltip='%'>78</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Add Priority without authorization":0.721,"Get All priorities without authorization":0.71,"Update priority without authorization":1.23,"Delete priority without authorization":0.561,"Get All priorities with authorization":0.623,"Add priority with valid and invalid data and with authorization":0.63,"Get All priorities with authorization":0.859,"Add priority with valid and invalid data and with authorization":0.681,"Add priority with valid and invalid data and with authorization":0.636,"Add priority with valid and invalid data and with authorization":0.623,"Add priority with valid and invalid data and with authorization":0.683,"Add priority with valid and invalid data and with authorization":0.605,"Add priority with valid and invalid data and with authorization":0.598,"Add priority with valid and invalid data and with authorization":0.63,"Update priority with valid and invalid data and with authorization":1.127,"Get All priorities with authorization":0.748,"Update priority with valid and invalid data and with authorization":1.17,"Update priority with valid and invalid data and with authorization":1.127,"Update priority with valid and invalid data and with authorization":1.316,"Update priority with valid and invalid data and with authorization":1.239,"Update priority with valid and invalid data and with authorization":1.276,"Update priority with valid and invalid data and with authorization":1.181,"Update priority with valid and invalid data and with authorization":1.317,"Update priority with valid and invalid data and with authorization":1.158,"Delete priority with valid and invalid data and with authorization":0.794,"Delete priority with valid and invalid data and with authorization":0.602,"Get All priorities with authorization":0.672,"Delete priority with valid and invalid data and with authorization":0.556,"Get All priorities with authorization":0.668
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>OS</td>
+<td>Windows 10</td>
+</tr>
+<tr>
+<td>Tester</td>
+<td>Prathamesh Dhasade</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 19,
+failParent: 10,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 15,
+failEvents: 20,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 78
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

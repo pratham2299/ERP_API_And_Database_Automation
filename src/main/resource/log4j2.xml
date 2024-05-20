@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} --> %logger{36} - %msg%n" />
+		</Console>
+		<File name="LoginEmployeeAPITestCases"
+			fileName="Logs/LoginEmployeeAPITestCases.log">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} --> %logger{36} - %msg%n" />
+		</File>
+		<File name="DesignationFolderAPITestCases"
+			fileName="Logs/DesignationFolderAPITestCases.log">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} --> %logger{36} - %msg%n" />
+		</File>
+		<File name="DepartmentFolderAPITestCases"
+			fileName="Logs/DepartmentFolderAPITestCases.log">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} --> %logger{36} - %msg%n" />
+		</File>
+		<File name="StatusFolderAPITestCases"
+			fileName="Logs/StatusFolderAPITestCases.log">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} --> %logger{36} - %msg%n" />
+		</File>
+		<File name="PriorityFolderAPITestCases"
+			fileName="Logs/PriorityFolderAPITestCases.log">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} --> %logger{36} - %msg%n" />
+		</File>
+		<File name="ProjectFolderAPITestCases"
+			fileName="Logs/ProjectFolderAPITestCases.log">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} --> %logger{36} - %msg%n" />
+		</File>
+		<File name="RoleFolderAPITestCases"
+			fileName="Logs/RoleFolderAPITestCases.log">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} --> %logger{36} - %msg%n" />
+		</File>
+		<File name="EmployeeFolderAPITestCases"
+			fileName="Logs/EmployeeFolderAPITestCases.log">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} --> %logger{36} - %msg%n" />
+		</File>
+		<File name="LogsFolderAPITestCases"
+			fileName="Logs/LogsFolderAPITestCases.log">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} --> %logger{36} - %msg%n" />
+		</File>
+		<File name="RegularTaskFolderAPITestCases"
+			fileName="Logs/RegularTaskFolderAPITestCases.log">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} --> %logger{36} - %msg%n" />
+		</File>
+		<File name="VerificationStatusFolderAPITestCases"
+			fileName="Logs/VerificationStatusFolderAPITestCases.log">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} --> %logger{36} - %msg%n" />
+		</File>
+		<File name="TaskFolderAPITestCases"
+			fileName="Logs/TaskFolderAPITestCases.log">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} --> %logger{36} - %msg%n" />
+		</File>
+		<File name="RequestFolderAPITestCases"
+			fileName="Logs/RequestFolderAPITestCases.log">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} --> %logger{36} - %msg%n" />
+		</File>
+		<File name="NotificationFolderAPITestCases"
+			fileName="Logs/NotificationFolderAPITestCases.log">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} --> %logger{36} - %msg%n" />
+		</File>
+		<File name="MilestoneFolderAPITestCases"
+			fileName="Logs/MilestoneFolderAPITestCases.log">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} --> %logger{36} - %msg%n" />
+		</File>
+	</Appenders>
+	<Loggers>
+		<Logger name="in.task_erp_api.testcases.LoginEmployeeAPITestCases"
+			level="all"
+			additivity="false">
+			<AppenderRef ref="LoginEmployeeAPITestCases" />
+			<AppenderRef ref="Console" />
+		</Logger>
+		<Logger name="in.task_erp_api.testcases.StatusFolderAPITestCases"
+			level="all"
+			additivity="false">
+			<AppenderRef ref="StatusFolderAPITestCases" />
+			<AppenderRef ref="Console" />
+		</Logger>
+		<Logger name="in.task_erp_api.testcases.PriorityFolderAPITestCases"
+			level="all"
+			additivity="false">
+			<AppenderRef ref="PriorityFolderAPITestCases" />
+			<AppenderRef ref="Console" />
+		</Logger>
+		<Logger name="in.task_erp_api.testcases.DesignationFolderAPITestCases"
+			level="all"
+			additivity="false">
+			<AppenderRef ref="DesignationFolderAPITestCases" />
+			<AppenderRef ref="Console" />
+		</Logger>
+		<Logger name="in.task_erp_api.testcases.DepartmentFolderAPITestCases"
+			level="all"
+			additivity="false">
+			<AppenderRef ref="DepartmentFolderAPITestCases" />
+			<AppenderRef ref="Console" />
+		</Logger>
+		<Logger name="in.task_erp_api.testcases.RoleFolderAPITestCases"
+			level="all"
+			additivity="false">
+			<AppenderRef ref="RoleFolderAPITestCases" />
+			<AppenderRef ref="Console" />
+		</Logger>
+		<Logger name="in.task_erp_api.testcases.ProjectFolderAPITestCases"
+			level="all"
+			additivity="false">
+			<AppenderRef ref="ProjectFolderAPITestCases" />
+			<AppenderRef ref="Console" />
+		</Logger>
+		<Logger name="in.task_erp_api.testcases.EmployeeFolderAPITestCases"
+			level="all"
+			additivity="false">
+			<AppenderRef ref="EmployeeFolderAPITestCases" />
+			<AppenderRef ref="Console" />
+		</Logger>
+		<Logger name="in.task_erp_api.testcases.LogsFolderAPITestCases"
+			level="all"
+			additivity="false">
+			<AppenderRef ref="LogsFolderAPITestCases" />
+			<AppenderRef ref="Console" />
+		</Logger>
+		<Logger name="in.task_erp_api.testcases.RegularTaskFolderAPITestCases"
+			level="all"
+			additivity="false">
+			<AppenderRef ref="RegularTaskFolderAPITestCases" />
+			<AppenderRef ref="Console" />
+		</Logger>
+		<Logger
+			name="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases"
+			level="all"
+			additivity="false">
+			<AppenderRef ref="VerificationStatusFolderAPITestCases" />
+			<AppenderRef ref="Console" />
+		</Logger>
+		<Logger name="in.task_erp_api.testcases.TaskFolderAPITestCases"
+			level="all"
+			additivity="false">
+			<AppenderRef ref="TaskFolderAPITestCases" />
+			<AppenderRef ref="Console" />
+		</Logger>
+		<Logger name="in.task_erp_api.testcases.RequestFolderAPITestCases"
+			level="all"
+			additivity="false">
+			<AppenderRef ref="RequestFolderAPITestCases" />
+			<AppenderRef ref="Console" />
+		</Logger>
+		<Logger name="in.task_erp_api.testcases.NotificationFolderAPITestCases"
+			level="all"
+			additivity="false">
+			<AppenderRef ref="NotificationFolderAPITestCases" />
+			<AppenderRef ref="Console" />
+		</Logger>
+		<Logger name="in.task_erp_api.testcases.MilestoneFolderAPITestCases"
+			level="all"
+			additivity="false">
+			<AppenderRef ref="MilestoneFolderAPITestCases" />
+			<AppenderRef ref="Console" />
+		</Logger>
+	</Loggers>
+</Configuration>

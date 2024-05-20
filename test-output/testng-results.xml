@@ -1,0 +1,1531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="28" passed="18" failed="10" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-05-20T10:39:56 IST" name="Suite" finished-at="2024-05-20T10:40:26 IST" duration-ms="30202">
+    <groups>
+    </groups>
+    <test started-at="2024-05-20T10:39:56 IST" name="Test" finished-at="2024-05-20T10:40:26 IST" duration-ms="30202">
+      <class name="in.task_erp_api.testcases.PriorityFolderAPITestCases">
+        <test-method is-config="true" signature="extent_Report_Setup()[pri:0, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:01 IST" name="extent_Report_Setup" finished-at="2024-05-20T10:40:01 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extent_Report_Setup -->
+        <test-method signature="verify_Add_Priority_Without_Authorization()[pri:1, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:01 IST" name="verify_Add_Priority_Without_Authorization" finished-at="2024-05-20T10:40:02 IST" duration-ms="720" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Add_Priority_Without_Authorization -->
+        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:02 IST" name="test_Method_Exection_Result" finished-at="2024-05-20T10:40:02 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Add_Priority_Without_Authorization status=SUCCESS method=PriorityFolderAPITestCases.verify_Add_Priority_Without_Authorization()[pri:1, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Method_Exection_Result -->
+        <test-method signature="verify_Get_All_Priority_Without_Authorization()[pri:2, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:02 IST" name="verify_Get_All_Priority_Without_Authorization" finished-at="2024-05-20T10:40:03 IST" duration-ms="709" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Get_All_Priority_Without_Authorization -->
+        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:03 IST" name="test_Method_Exection_Result" finished-at="2024-05-20T10:40:03 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Get_All_Priority_Without_Authorization status=SUCCESS method=PriorityFolderAPITestCases.verify_Get_All_Priority_Without_Authorization()[pri:2, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Method_Exection_Result -->
+        <test-method signature="verify_Update_Priority_Without_Authorization()[pri:3, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:03 IST" name="verify_Update_Priority_Without_Authorization" finished-at="2024-05-20T10:40:04 IST" duration-ms="1230" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Update_Priority_Without_Authorization -->
+        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:04 IST" name="test_Method_Exection_Result" finished-at="2024-05-20T10:40:04 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Update_Priority_Without_Authorization status=SUCCESS method=PriorityFolderAPITestCases.verify_Update_Priority_Without_Authorization()[pri:3, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Method_Exection_Result -->
+        <test-method signature="verify_Delete_Single_Priority_Without_Authorization()[pri:4, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:04 IST" name="verify_Delete_Single_Priority_Without_Authorization" finished-at="2024-05-20T10:40:05 IST" duration-ms="561" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Delete_Single_Priority_Without_Authorization -->
+        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:05 IST" name="test_Method_Exection_Result" finished-at="2024-05-20T10:40:05 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Delete_Single_Priority_Without_Authorization status=SUCCESS method=PriorityFolderAPITestCases.verify_Delete_Single_Priority_Without_Authorization()[pri:4, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Method_Exection_Result -->
+        <test-method signature="verify_Get_All_Priorities_With_Authorization()[pri:5, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:05 IST" name="verify_Get_All_Priorities_With_Authorization" finished-at="2024-05-20T10:40:05 IST" duration-ms="623" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Get_All_Priorities_With_Authorization -->
+        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:05 IST" name="test_Method_Exection_Result" finished-at="2024-05-20T10:40:05 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Get_All_Priorities_With_Authorization status=SUCCESS method=PriorityFolderAPITestCases.verify_Get_All_Priorities_With_Authorization()[pri:5, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Method_Exection_Result -->
+        <test-method signature="verify_Add_Priority_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:05 IST" name="verify_Add_Priority_With_Authorization" data-provider="TestDataForAddPriority" finished-at="2024-05-20T10:40:07 IST" duration-ms="1490" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sprouts]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[11]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[fuchsia]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[#994387]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Add_Priority_With_Authorization -->
+        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:07 IST" name="test_Method_Exection_Result" finished-at="2024-05-20T10:40:07 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Add_Priority_With_Authorization status=SUCCESS method=PriorityFolderAPITestCases.verify_Add_Priority_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Method_Exection_Result -->
+        <test-method signature="verify_Add_Priority_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:07 IST" name="verify_Add_Priority_With_Authorization" data-provider="TestDataForAddPriority" finished-at="2024-05-20T10:40:08 IST" duration-ms="680" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Butternut pumpkin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[indigo]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[#87DEF0]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <422> but was <201>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <422> but was <201>.
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at jdk.internal.reflect.GeneratedMethodAccessor26.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at in.task_erp_api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
+at in.task_erp_api.testcases.PriorityFolderAPITestCases.verify_Add_Priority_With_Authorization(PriorityFolderAPITestCases.java:112)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Add_Priority_With_Authorization -->
+        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:08 IST" name="test_Method_Exection_Result" finished-at="2024-05-20T10:40:08 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Add_Priority_With_Authorization status=FAILURE method=PriorityFolderAPITestCases.verify_Add_Priority_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Method_Exection_Result -->
+        <test-method signature="verify_Add_Priority_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:08 IST" name="verify_Add_Priority_With_Authorization" data-provider="TestDataForAddPriority" finished-at="2024-05-20T10:40:08 IST" duration-ms="637" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Limes]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[15]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[#5EEBD3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Add_Priority_With_Authorization -->
+        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:08 IST" name="test_Method_Exection_Result" finished-at="2024-05-20T10:40:08 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Add_Priority_With_Authorization status=SUCCESS method=PriorityFolderAPITestCases.verify_Add_Priority_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Method_Exection_Result -->
+        <test-method signature="verify_Add_Priority_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:08 IST" name="verify_Add_Priority_With_Authorization" data-provider="TestDataForAddPriority" finished-at="2024-05-20T10:40:09 IST" duration-ms="621" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Papaw]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[17]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Pumpkin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[#8A910E]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <422> but was <201>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <422> but was <201>.
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at jdk.internal.reflect.GeneratedMethodAccessor26.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at in.task_erp_api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
+at in.task_erp_api.testcases.PriorityFolderAPITestCases.verify_Add_Priority_With_Authorization(PriorityFolderAPITestCases.java:112)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Add_Priority_With_Authorization -->
+        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:09 IST" name="test_Method_Exection_Result" finished-at="2024-05-20T10:40:09 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Add_Priority_With_Authorization status=FAILURE method=PriorityFolderAPITestCases.verify_Add_Priority_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Method_Exection_Result -->
+        <test-method signature="verify_Add_Priority_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:09 IST" name="verify_Add_Priority_With_Authorization" data-provider="TestDataForAddPriority" finished-at="2024-05-20T10:40:09 IST" duration-ms="682" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Prunes]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[black]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Add_Priority_With_Authorization -->
+        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:09 IST" name="test_Method_Exection_Result" finished-at="2024-05-20T10:40:09 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Add_Priority_With_Authorization status=SUCCESS method=PriorityFolderAPITestCases.verify_Add_Priority_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Method_Exection_Result -->
+        <test-method signature="verify_Add_Priority_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:09 IST" name="verify_Add_Priority_With_Authorization" data-provider="TestDataForAddPriority" finished-at="2024-05-20T10:40:10 IST" duration-ms="603" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Passionfruit]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[15]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[fuchsia]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[#EB878B]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <422> but was <201>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <422> but was <201>.
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at jdk.internal.reflect.GeneratedMethodAccessor26.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at in.task_erp_api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
+at in.task_erp_api.testcases.PriorityFolderAPITestCases.verify_Add_Priority_With_Authorization(PriorityFolderAPITestCases.java:112)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Add_Priority_With_Authorization -->
+        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:10 IST" name="test_Method_Exection_Result" finished-at="2024-05-20T10:40:10 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Add_Priority_With_Authorization status=FAILURE method=PriorityFolderAPITestCases.verify_Add_Priority_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Method_Exection_Result -->
+        <test-method signature="verify_Add_Priority_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:10 IST" name="verify_Add_Priority_With_Authorization" data-provider="TestDataForAddPriority" finished-at="2024-05-20T10:40:11 IST" duration-ms="598" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[19]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[blue]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[#068324]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Add_Priority_With_Authorization -->
+        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:11 IST" name="test_Method_Exection_Result" finished-at="2024-05-20T10:40:11 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Add_Priority_With_Authorization status=SUCCESS method=PriorityFolderAPITestCases.verify_Add_Priority_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Method_Exection_Result -->
+        <test-method signature="verify_Add_Priority_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:11 IST" name="verify_Add_Priority_With_Authorization" data-provider="TestDataForAddPriority" finished-at="2024-05-20T10:40:11 IST" duration-ms="628" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[High]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[13]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[teal]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[#FA62D0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Add_Priority_With_Authorization -->
+        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:11 IST" name="test_Method_Exection_Result" finished-at="2024-05-20T10:40:11 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Add_Priority_With_Authorization status=SUCCESS method=PriorityFolderAPITestCases.verify_Add_Priority_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Method_Exection_Result -->
+        <test-method signature="verify_Update_Priority_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:11 IST" name="verify_Update_Priority_With_Authorization" data-provider="TestDataForUpdatePriority" finished-at="2024-05-20T10:40:13 IST" duration-ms="1876" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Strawberries]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[15]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[silver]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[#C70C88]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Strawberries] but found [Passionfruit]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Strawberries] but found [Passionfruit]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at in.task_erp_api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Authorization(PriorityFolderAPITestCases.java:167)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Update_Priority_With_Authorization -->
+        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:13 IST" name="test_Method_Exection_Result" finished-at="2024-05-20T10:40:13 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Update_Priority_With_Authorization status=FAILURE method=PriorityFolderAPITestCases.verify_Update_Priority_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Method_Exection_Result -->
+        <test-method signature="verify_Update_Priority_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:13 IST" name="verify_Update_Priority_With_Authorization" data-provider="TestDataForUpdatePriority" finished-at="2024-05-20T10:40:14 IST" duration-ms="1167" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Cavalo]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[teal]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[#5C0D24]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <409> but was <200>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <409> but was <200>.
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at jdk.internal.reflect.GeneratedMethodAccessor26.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at in.task_erp_api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
+at in.task_erp_api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Authorization(PriorityFolderAPITestCases.java:157)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Update_Priority_With_Authorization -->
+        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:14 IST" name="test_Method_Exection_Result" finished-at="2024-05-20T10:40:14 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Update_Priority_With_Authorization status=FAILURE method=PriorityFolderAPITestCases.verify_Update_Priority_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Method_Exection_Result -->
+        <test-method signature="verify_Update_Priority_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:14 IST" name="verify_Update_Priority_With_Authorization" data-provider="TestDataForUpdatePriority" finished-at="2024-05-20T10:40:15 IST" duration-ms="1123" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[19]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[black]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[#3CACB4]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <400> but was <200>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <400> but was <200>.
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at jdk.internal.reflect.GeneratedMethodAccessor26.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at in.task_erp_api.bodyValidations.BodyValidation.response400Validation(BodyValidation.java:38)
+at in.task_erp_api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Authorization(PriorityFolderAPITestCases.java:152)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Update_Priority_With_Authorization -->
+        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:15 IST" name="test_Method_Exection_Result" finished-at="2024-05-20T10:40:15 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Update_Priority_With_Authorization status=FAILURE method=PriorityFolderAPITestCases.verify_Update_Priority_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Method_Exection_Result -->
+        <test-method signature="verify_Update_Priority_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:15 IST" name="verify_Update_Priority_With_Authorization" data-provider="TestDataForUpdatePriority" finished-at="2024-05-20T10:40:17 IST" duration-ms="1317" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[High]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[18]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[plum]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[#DDA004]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Update_Priority_With_Authorization -->
+        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:17 IST" name="test_Method_Exection_Result" finished-at="2024-05-20T10:40:17 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Update_Priority_With_Authorization status=SUCCESS method=PriorityFolderAPITestCases.verify_Update_Priority_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Method_Exection_Result -->
+        <test-method signature="verify_Update_Priority_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:17 IST" name="verify_Update_Priority_With_Authorization" data-provider="TestDataForUpdatePriority" finished-at="2024-05-20T10:40:18 IST" duration-ms="1237" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Fingerlime]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[19]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[#A91A95]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <400> but was <200>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <400> but was <200>.
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at jdk.internal.reflect.GeneratedMethodAccessor26.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at in.task_erp_api.bodyValidations.BodyValidation.response400Validation(BodyValidation.java:38)
+at in.task_erp_api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Authorization(PriorityFolderAPITestCases.java:152)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Update_Priority_With_Authorization -->
+        <test-method signature="verify_Update_Priority_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:18 IST" name="verify_Update_Priority_With_Authorization" data-provider="TestDataForUpdatePriority" finished-at="2024-05-20T10:40:19 IST" duration-ms="1273" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Mango]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[17]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[fuchsia]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[#ACDFD8]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <409> but was <200>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <409> but was <200>.
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at jdk.internal.reflect.GeneratedMethodAccessor26.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at in.task_erp_api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
+at in.task_erp_api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Authorization(PriorityFolderAPITestCases.java:157)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Update_Priority_With_Authorization -->
+        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:18 IST" name="test_Method_Exection_Result" finished-at="2024-05-20T10:40:18 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Update_Priority_With_Authorization status=FAILURE method=PriorityFolderAPITestCases.verify_Update_Priority_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Method_Exection_Result -->
+        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:19 IST" name="test_Method_Exection_Result" finished-at="2024-05-20T10:40:19 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Update_Priority_With_Authorization status=FAILURE method=PriorityFolderAPITestCases.verify_Update_Priority_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Method_Exection_Result -->
+        <test-method signature="verify_Update_Priority_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:19 IST" name="verify_Update_Priority_With_Authorization" data-provider="TestDataForUpdatePriority" finished-at="2024-05-20T10:40:20 IST" duration-ms="1178" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Kiwi Fruit]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[16]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[sky blue]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <400> but was <200>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <400> but was <200>.
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at jdk.internal.reflect.GeneratedMethodAccessor26.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at in.task_erp_api.bodyValidations.BodyValidation.response400Validation(BodyValidation.java:38)
+at in.task_erp_api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Authorization(PriorityFolderAPITestCases.java:152)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Update_Priority_With_Authorization -->
+        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:20 IST" name="test_Method_Exection_Result" finished-at="2024-05-20T10:40:20 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Update_Priority_With_Authorization status=FAILURE method=PriorityFolderAPITestCases.verify_Update_Priority_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Method_Exection_Result -->
+        <test-method signature="verify_Update_Priority_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:20 IST" name="verify_Update_Priority_With_Authorization" data-provider="TestDataForUpdatePriority" finished-at="2024-05-20T10:40:22 IST" duration-ms="1315" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Strawberries]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[14]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[indigo]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[#FBD9AA]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <409> but was <200>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <409> but was <200>.
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at jdk.internal.reflect.GeneratedMethodAccessor26.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at in.task_erp_api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
+at in.task_erp_api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Authorization(PriorityFolderAPITestCases.java:157)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Update_Priority_With_Authorization -->
+        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:22 IST" name="test_Method_Exection_Result" finished-at="2024-05-20T10:40:22 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Update_Priority_With_Authorization status=FAILURE method=PriorityFolderAPITestCases.verify_Update_Priority_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Method_Exection_Result -->
+        <test-method signature="verify_Update_Priority_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:22 IST" name="verify_Update_Priority_With_Authorization" data-provider="TestDataForUpdatePriority" finished-at="2024-05-20T10:40:23 IST" duration-ms="1157" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[58]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Nashi Pear]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[turquoise]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[#C167B1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Update_Priority_With_Authorization -->
+        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:23 IST" name="test_Method_Exection_Result" finished-at="2024-05-20T10:40:23 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Update_Priority_With_Authorization status=SUCCESS method=PriorityFolderAPITestCases.verify_Update_Priority_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Method_Exection_Result -->
+        <test-method signature="verify_Delete_Single_Priority_With_Authorization(java.lang.String)[pri:8, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:23 IST" name="verify_Delete_Single_Priority_With_Authorization" data-provider="TestDataForDeletePriority" finished-at="2024-05-20T10:40:24 IST" duration-ms="794" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Curly Retriever]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Delete_Single_Priority_With_Authorization -->
+        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:24 IST" name="test_Method_Exection_Result" finished-at="2024-05-20T10:40:24 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Delete_Single_Priority_With_Authorization status=SUCCESS method=PriorityFolderAPITestCases.verify_Delete_Single_Priority_With_Authorization(java.lang.String)[pri:8, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Method_Exection_Result -->
+        <test-method signature="verify_Delete_Single_Priority_With_Authorization(java.lang.String)[pri:8, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:24 IST" name="verify_Delete_Single_Priority_With_Authorization" data-provider="TestDataForDeletePriority" finished-at="2024-05-20T10:40:25 IST" duration-ms="1276" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Passionfruit]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Delete_Single_Priority_With_Authorization -->
+        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:25 IST" name="test_Method_Exection_Result" finished-at="2024-05-20T10:40:25 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Delete_Single_Priority_With_Authorization status=SUCCESS method=PriorityFolderAPITestCases.verify_Delete_Single_Priority_With_Authorization(java.lang.String)[pri:8, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Method_Exection_Result -->
+        <test-method signature="verify_Delete_Single_Priority_With_Authorization(java.lang.String)[pri:8, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:25 IST" name="verify_Delete_Single_Priority_With_Authorization" data-provider="TestDataForDeletePriority" finished-at="2024-05-20T10:40:26 IST" duration-ms="1225" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Papaw]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Delete_Single_Priority_With_Authorization -->
+        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a]" started-at="2024-05-20T10:40:26 IST" name="test_Method_Exection_Result" finished-at="2024-05-20T10:40:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Delete_Single_Priority_With_Authorization status=SUCCESS method=PriorityFolderAPITestCases.verify_Delete_Single_Priority_With_Authorization(java.lang.String)[pri:8, instance:in.task_erp_api.testcases.PriorityFolderAPITestCases@4b9df8a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Method_Exection_Result -->
+      </class> <!-- in.task_erp_api.testcases.PriorityFolderAPITestCases -->
+      <class name="in.task_erp_api.testcases.LoginEmployeeAPITestCases">
+        <test-method is-config="true" signature="startBackendServer()[pri:0, instance:in.task_erp_api.testcases.LoginEmployeeAPITestCases@58fb7731]" started-at="2024-05-20T10:39:56 IST" name="startBackendServer" finished-at="2024-05-20T10:39:56 IST" duration-ms="449" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBackendServer -->
+        <test-method is-config="true" signature="extent_Report_Setup()[pri:0, instance:in.task_erp_api.testcases.LoginEmployeeAPITestCases@58fb7731]" started-at="2024-05-20T10:39:56 IST" name="extent_Report_Setup" finished-at="2024-05-20T10:39:56 IST" duration-ms="161" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extent_Report_Setup -->
+        <test-method signature="verify_Login_Employee_By_Giving_Valid_Data()[pri:1, instance:in.task_erp_api.testcases.LoginEmployeeAPITestCases@58fb7731]" started-at="2024-05-20T10:39:56 IST" name="verify_Login_Employee_By_Giving_Valid_Data" finished-at="2024-05-20T10:39:59 IST" duration-ms="2600" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Login_Employee_By_Giving_Valid_Data -->
+        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.LoginEmployeeAPITestCases@58fb7731]" started-at="2024-05-20T10:39:59 IST" name="test_Method_Exection_Result" finished-at="2024-05-20T10:39:59 IST" duration-ms="10" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Login_Employee_By_Giving_Valid_Data status=SUCCESS method=LoginEmployeeAPITestCases.verify_Login_Employee_By_Giving_Valid_Data()[pri:1, instance:in.task_erp_api.testcases.LoginEmployeeAPITestCases@58fb7731] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Method_Exection_Result -->
+        <test-method signature="verify_Login_Employee_By_Giving_Invalid_LoginId()[pri:2, instance:in.task_erp_api.testcases.LoginEmployeeAPITestCases@58fb7731]" started-at="2024-05-20T10:39:59 IST" name="verify_Login_Employee_By_Giving_Invalid_LoginId" finished-at="2024-05-20T10:39:59 IST" duration-ms="609" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Login_Employee_By_Giving_Invalid_LoginId -->
+        <test-method signature="verify_Login_Employee_By_Giving_Invalid_Password()[pri:3, instance:in.task_erp_api.testcases.LoginEmployeeAPITestCases@58fb7731]" started-at="2024-05-20T10:40:00 IST" name="verify_Login_Employee_By_Giving_Invalid_Password" finished-at="2024-05-20T10:40:01 IST" duration-ms="1855" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Login_Employee_By_Giving_Invalid_Password -->
+        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.LoginEmployeeAPITestCases@58fb7731]" started-at="2024-05-20T10:40:00 IST" name="test_Method_Exection_Result" finished-at="2024-05-20T10:40:00 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Login_Employee_By_Giving_Invalid_LoginId status=SUCCESS method=LoginEmployeeAPITestCases.verify_Login_Employee_By_Giving_Invalid_LoginId()[pri:2, instance:in.task_erp_api.testcases.LoginEmployeeAPITestCases@58fb7731] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Method_Exection_Result -->
+        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.LoginEmployeeAPITestCases@58fb7731]" started-at="2024-05-20T10:40:01 IST" name="test_Method_Exection_Result" finished-at="2024-05-20T10:40:01 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Login_Employee_By_Giving_Invalid_Password status=SUCCESS method=LoginEmployeeAPITestCases.verify_Login_Employee_By_Giving_Invalid_Password()[pri:3, instance:in.task_erp_api.testcases.LoginEmployeeAPITestCases@58fb7731] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Method_Exection_Result -->
+        <test-method is-config="true" signature="flush_Extent_Report()[pri:0, instance:in.task_erp_api.testcases.LoginEmployeeAPITestCases@58fb7731]" started-at="2024-05-20T10:40:26 IST" name="flush_Extent_Report" finished-at="2024-05-20T10:40:27 IST" duration-ms="332" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flush_Extent_Report -->
+      </class> <!-- in.task_erp_api.testcases.LoginEmployeeAPITestCases -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
