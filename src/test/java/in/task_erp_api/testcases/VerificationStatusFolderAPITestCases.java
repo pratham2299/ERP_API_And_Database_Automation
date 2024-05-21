@@ -7,6 +7,8 @@ import java.util.*;
 import org.apache.logging.log4j.*;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
+
 import in.task_erp_api.bodyValidations.*;
 import in.task_erp_api.endpoints.*;
 import in.task_erp_api.payloads.*;
@@ -14,7 +16,7 @@ import in.task_erp_api.responses.*;
 import in.task_erp_api.utilities.*;
 import io.restassured.response.Response;
 
-public class VerificationStatusFolderAPITestCases {
+public class VerificationStatusFolderAPITestCases extends BaseTest {
 	public static final Logger log = LogManager.getLogger(VerificationStatusFolderAPITestCases.class);
 
 	public static int newCreatedVerificationStatusId;
@@ -32,161 +34,163 @@ public class VerificationStatusFolderAPITestCases {
 	public Response response;
 
 	@Test(priority = 1)
-	public void verifyAddVerificationWithoutAuthorization() {
-		String requestPayload = VerificationFolderPayloads
-				.giveVerificationStatusPayloadForAddVerificationStatus("Verified", 10, "Red", "#123");
+	public void verify_Add_Verification_Status_Without_Authorization() {
+		test = BaseTest.extent.createTest("Add verification status without authorization");
 
-		response = Responses.postRequestWithoutAuthorization(requestPayload,
+		String requestPayload = VerificationFolderPayloads.addVerificationPayload("Verified", 10, "Red", "#123");
+
+		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
 				APIEndpoints.addVerificationStatusEndpoint);
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO, "Status code for add verification status is: " + response.getStatusCode());
+		test.log(Status.INFO, "Response for add verification status is: " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 2)
-	public void verifyGetAllVerificationesWithoutAuthorization() {
-		response = Responses.getRequestWithoutAuthorization(APIEndpoints.getAllVerificationStatusesEndpoint);
+	public void verify_Get_All_Verification_Statuses_Without_Authorization() {
+		test = BaseTest.extent.createTest("Get all verification statuses without authorization");
+
+		Response response = Responses.getRequestWithoutAuthorization(APIEndpoints.getAllVerificationStatusesEndpoint);
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO, "Status code for get all verification statuses is: " + response.getStatusCode());
+		test.log(Status.INFO, "Response for get all verification statuses is: " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 3)
-	public void verifyUpdateVerificationWithoutAuthorization() {
-		String requestPayload = VerificationFolderPayloads.giveVerificationStatusPayloadForUpdateVerificationStatus(5,
-				"Verified", 10, "Red", "#123");
+	public void verify_Update_Verification_Status_Without_Authorization() throws Throwable {
+		test = BaseTest.extent.createTest("Update verification status without authorization");
 
-		response = Responses.postRequestWithoutAuthorization(requestPayload,
+		Response getVerificationsResponse = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
+				APIEndpoints.getAllVerificationStatusesEndpoint);
+
+		String requestPayload = VerificationFolderPayloads.updateVerificationWithMaxIdPayload(
+				getVerificationsResponse.getBody().asPrettyString(), 5, "Verified", 10, "Red", "#123");
+
+		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
 				APIEndpoints.updateVerificationStatusEndpoint);
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO, "Status code for update verification status is: " + response.getStatusCode());
+		test.log(Status.INFO, "Response for update verification status is: " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 4)
-	public void verifyDeleteVerificationWithoutAuthorization() {
-		response = Responses.getRequestWithoutAuthorizationAndOneQueryParameter(
+	public void verify_Delete_Verification_Status_Without_Authorization() {
+		test = BaseTest.extent.createTest("Delete verification status without authorization");
+
+		Response response = Responses.getRequestWithoutAuthorizationAndOneQueryParameter(
 				APIEndpoints.deleteVerificationStatusEndpoint, "id", "8");
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO, "Status code for delete verification status is: " + response.getStatusCode());
+		test.log(Status.INFO, "Response for delete verification status is: " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 5)
-	public void verifyGetAllStatusWithAuthorization() {
-		response = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
-				APIEndpoints.getAllVerificationStatusesEndpoint);
-
-		System.out.println(response.getBody().asPrettyString());
-
-		BodyValidation.responseValidation(response, 200);
-
-		verificationStatusIds = response.jsonPath().getList("verificationStatusId");
-		log.info("List of verification status Ids before new verification status add are: " + verificationStatusIds);
-
-		verificationStatuses = response.jsonPath().getList("verificationStatus");
-		log.info("List of verification status names before new verification status add are: " + verificationStatuses);
-
-		verificationLevels = response.jsonPath().getList("verificationLevel");
-		log.info("List of verification status levels before new verification status add are: " + verificationLevels);
-
-		verificationColors = response.jsonPath().getList("verificationColor");
-		log.info("List of verification status colors before new verification status add are: " + verificationColors);
-
-		verificationColorCodes = response.jsonPath().getList("verificationColorCode");
-		log.info("List of verification status color codes before new verification status add are: "
-				+ verificationColorCodes + "\n");
-
+	public void verify_Get_All_Verification_Statuses_With_Authorization() {
+		verify_Get_All_Verification_Statuses_API_With_Authorization("before add new verification status");
 	}
 
 	@Test(priority = 6, dataProvider = "TestDataForAddVerificationStatus", dataProviderClass = DataProvidersForVerificationStatusFolder.class)
-	public void verifyAddVerificationStatusWithAuthorization(String verificationStatusInput, int verificationLevelInput,
-			String verificationColorInput, String verificationColorCodeInput) {
-		String requestPayload = VerificationFolderPayloads.giveVerificationStatusPayloadForAddVerificationStatus(
-				verificationStatusInput, verificationLevelInput, verificationColorInput, verificationColorCodeInput);
+	public void verify_Add_Verification_Status_With_Authorization(String verificationStatus, int verificationLevel,
+			String verificationColor, String verificationColorCode) {
+		test = BaseTest.extent.createTest("Add verification status with valid and invalid data and with authorization");
 
-		response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
+		String requestPayload = VerificationFolderPayloads.addVerificationPayload(verificationStatus, verificationLevel,
+				verificationColor, verificationColorCode);
+
+		Response response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.addVerificationStatusEndpoint);
+		test.log(Status.INFO, "Request payload for add verification status is: " + requestPayload);
+		test.log(Status.INFO, "Status code for add verification status is: " + response.getStatusCode());
+		test.log(Status.INFO, "Response for add verification status is: " + response.getBody().asPrettyString());
 
-		System.out.println(response.getBody().asPrettyString());
-
-		if (verificationStatusInput.equalsIgnoreCase("") || verificationColorInput.equalsIgnoreCase("")
-				|| verificationColorCodeInput.equalsIgnoreCase("")) {
+		if (verificationStatus.equalsIgnoreCase("") || verificationColor.equalsIgnoreCase("")
+				|| verificationColorCode.equalsIgnoreCase("")) {
 			BodyValidation.response400Validation(response);
-		} else if (verificationStatuses.contains(verificationStatusInput)
-				|| verificationLevels.contains(verificationLevelInput)
-				|| verificationColors.contains(verificationColorInput)
-				|| verificationColorCodes.contains(verificationColorCodeInput)) {
+		} else if (verificationStatuses.contains(verificationStatus) || verificationLevels.contains(verificationLevel)
+				|| verificationColors.contains(verificationColor)
+				|| verificationColorCodes.contains(verificationColorCode)) {
 			BodyValidation.responseValidation(response, "Conflict", 409);
 		} else {
 			BodyValidation.responseValidation(response, 200);
 
-			log.info("\nAfter added new verification status get all verification status API response is: ");
-			verifyGetAllVerificationStatusesAPIWithAuthorization("after added new verification status");
+			verify_Get_All_Verification_Statuses_API_With_Authorization("after added new verification status");
 
 			verifyNewCreatedVerificationStatusDetails("after added new verification status");
 
-			assertEquals(newCreatedVerificationStatus, verificationStatusInput);
+			assertEquals(newCreatedVerificationStatus, verificationStatus);
 
-			assertEquals(newCreatedVerificationStatusColor, verificationColorInput);
+			assertEquals(newCreatedVerificationStatusColor, verificationColor);
 
-			assertEquals(newCreatedVerificationStatusColorCode, verificationColorCodeInput);
+			assertEquals(newCreatedVerificationStatusColorCode, verificationColorCode);
 		}
 	}
 
-	@Test(priority = 7, dataProvider = "TestDataForUpdateVerificationStatus", dataProviderClass = DataProvidersForVerificationStatusFolder.class, enabled = false)
-	public void verifyUpdateVerificationStatusWithAuthorization(int verificationStatusIdInput,
-			String verificationStatusInput, int verificationLevelInput, String verificationColorInput,
-			String verificationColorCodeInput) {
-		String requestPayload = VerificationFolderPayloads.giveVerificationStatusPayloadForUpdateVerificationStatus(
-				verificationStatusIdInput, verificationStatusInput, verificationLevelInput, verificationColorInput,
-				verificationColorCodeInput);
+	@Test(priority = 7, dataProvider = "TestDataForUpdateVerificationStatus", dataProviderClass = DataProvidersForVerificationStatusFolder.class)
+	public void verify_Update_Verification_Status_With_Authorization(int verificationStatusId,
+			String verificationStatus, int verificationLevel, String verificationColor, String verificationColorCode)
+			throws Throwable {
+		test = BaseTest.extent
+				.createTest("Update verification status with valid and invalid data and with authorization");
 
-		response = Responses.putRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
+		Response getVerificationsResponse = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
+				APIEndpoints.getAllVerificationStatusesEndpoint);
+
+		String requestPayload = VerificationFolderPayloads.updateVerificationWithMaxIdPayload(
+				getVerificationsResponse.getBody().asPrettyString(), verificationStatusId, verificationStatus,
+				verificationLevel, verificationColor, verificationColorCode);
+
+		Response response = Responses.putRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.updateVerificationStatusEndpoint);
+		test.log(Status.INFO, "Request payload for update verification status is: " + requestPayload);
+		test.log(Status.INFO, "Status code for update verification status is: " + response.getStatusCode());
+		test.log(Status.INFO, "Response for update verification status is: " + response.getBody().asPrettyString());
 
-		System.out.println(response.getBody().asPrettyString());
-
-		if (verificationStatusInput.equalsIgnoreCase("") || verificationColorInput.equalsIgnoreCase("")
-				|| verificationColorCodeInput.equalsIgnoreCase("")) {
+		if (verificationStatus.equalsIgnoreCase("") || verificationColor.equalsIgnoreCase("")
+				|| verificationColorCode.equalsIgnoreCase("")) {
 			BodyValidation.response400Validation(response);
-		} else if (verificationStatusIds.contains(verificationStatusIdInput) == false) {
+		} else if (verificationStatusIds.contains(verificationStatusId) == false) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
-		} else if (verificationStatuses.contains(verificationStatusInput)
-				|| verificationLevels.contains(verificationLevelInput)
-				|| verificationColors.contains(verificationColorInput)
-				|| verificationColorCodes.contains(verificationColorCodeInput)) {
+		} else if (verificationStatuses.contains(verificationStatus) || verificationLevels.contains(verificationLevel)
+				|| verificationColors.contains(verificationColor)
+				|| verificationColorCodes.contains(verificationColorCode)) {
 			BodyValidation.responseValidation(response, "Conflict", 409);
 		} else {
 			BodyValidation.responseValidation(response, 200);
 
-			log.info("\nAfter updated new verification status get all verification status API response is: ");
-			verifyGetAllVerificationStatusesAPIWithAuthorization("after updated new verification status");
+			verify_Get_All_Verification_Statuses_API_With_Authorization("after updated new verification status");
 
 			verifyNewCreatedVerificationStatusDetails("after updated new verification status");
 
-			assertEquals(newCreatedVerificationStatus, verificationStatusInput);
+			assertEquals(newCreatedVerificationStatus, verificationStatus);
 
-			assertEquals(newCreatedVerificationStatusColor, verificationColorInput);
+			assertEquals(newCreatedVerificationStatusColor, verificationColor);
 
-			assertEquals(newCreatedVerificationStatusColorCode, verificationColorCodeInput);
+			assertEquals(newCreatedVerificationStatusColorCode, verificationColorCode);
 		}
 	}
 
 	@Test(priority = 8, dataProvider = "TestDataForDeleteVerificationStatus", dataProviderClass = DataProvidersForVerificationStatusFolder.class)
-	public void verifyDeleteSingleVerificationStatusWithAuthorization(int verificationStatusIdInput) {
-		response = Responses.deleteRequestWithAuthorizationAndQueryParameter("id", verificationStatusIdInput,
-				LoginEmployeeAPITestCases.authToken, APIEndpoints.deleteVerificationStatusEndpoint);
+	public void verify_Delete_Single_Verification_Status_With_Authorization(int verificationStatusId) {
+		test = BaseTest.extent
+				.createTest("Delete verification status with valid and invalid data and with authorization");
 
-		System.out.println(response.getBody().asPrettyString());
+		Response response = Responses.deleteRequestWithAuthorizationAndQueryParameter("id", verificationStatusId,
+				LoginEmployeeAPITestCases.authToken, APIEndpoints.deleteVerificationStatusEndpoint);
 
 		if (response.getBody().asPrettyString().equals("[]")) {
 			BodyValidation.response204Validation(response);
-		} else if (verificationStatusIds.contains(verificationStatusIdInput) == false) {
+		} else if (verificationStatusIds.contains(verificationStatusId) == false) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
 		} else if (response.getStatusCode() == 403) {
 			BodyValidation.responseValidation(response, "Forbidden", 403);
 		} else {
 			BodyValidation.responseValidation(response, 200);
 
-			log.info("\nAfter deleted new verification status get all verification status API response is: ");
-			verifyGetAllVerificationStatusesAPIWithAuthorization("after deleted new verification status");
+			verify_Get_All_Verification_Statuses_API_With_Authorization("after deleted new verification status");
 		}
 	}
 
@@ -213,11 +217,15 @@ public class VerificationStatusFolderAPITestCases {
 				+ newCreatedVerificationStatusColorCode + "\n");
 	}
 
-	public void verifyGetAllVerificationStatusesAPIWithAuthorization(String message) {
+	public void verify_Get_All_Verification_Statuses_API_With_Authorization(String message) {
+		test = BaseTest.extent.createTest("Get all verification statuses with authorization");
+
 		response = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.getAllVerificationStatusesEndpoint);
 
 		BodyValidation.responseValidation(response, 200);
+		test.log(Status.INFO, "Status code for get all verification statuses is: " + response.getStatusCode());
+		test.log(Status.INFO, "Response for get all verification statuses is: " + response.getBody().asPrettyString());
 
 		verificationStatusIds = response.jsonPath().getList("verificationStatusId");
 		log.info("List of verification status Ids " + message + " are: " + verificationStatusIds);

@@ -157,11 +157,13 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 	@Test(priority = 10)
 	public void verify_Get_All_Departments_With_Authorization() {
 		verify_Get_All_Departments_API_With_Authorization("before add new department");
+
+		verify_New_Created_Department_Details("before add new department");
 	}
 
 	@Test(priority = 11, dataProvider = "TestDataForAddDepartment", dataProviderClass = DataProvidersForDepartmentFolder.class)
-	public void verifyAddDepartmentWithAuthorization(String departmentName, int departmentLevel, String departmentColor,
-			String departmentColorCode) {
+	public void verify_Add_Department_With_Authorization(String departmentName, int departmentLevel,
+			String departmentColor, String departmentColorCode) {
 		test = BaseTest.extent.createTest("Add department with valid and invalid data and with authorization");
 
 		String requestPayload = DepartmentFolderPayloads.addDepartmentPayload(departmentName, departmentLevel,
@@ -173,16 +175,23 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 		test.log(Status.INFO, "Status code for add department is: " + response.getStatusCode());
 		test.log(Status.INFO, "Response for add department is: " + response.getBody().asPrettyString());
 
-		if (departmentName.equalsIgnoreCase("")) {
+		if (departmentName.equalsIgnoreCase("") || departmentColor.equalsIgnoreCase("")
+				|| departmentColorCode.equalsIgnoreCase("")) {
 			BodyValidation.response400Validation(response);
-		} else if (departments.contains(departmentName)) {
+		} else if (departments.contains(departmentName) || departmentLevels.contains(departmentLevel)
+				|| departmentColors.contains(departmentColor) || departmentColorCodes.contains(departmentColorCode)) {
 			BodyValidation.responseValidation(response, "Conflict", 409);
 		} else {
 			BodyValidation.responseValidation(response, 200);
 
 			verify_Get_All_Departments_API_With_Authorization("after added new department");
 
+			verify_New_Created_Department_Details("after added new department");
+
 			assertEquals(newCreatedDepartment, departmentName);
+			assertEquals(newCreatedDepartmentLevel, departmentLevel);
+			assertEquals(newCreatedDepartmentColor, departmentColor);
+			assertEquals(newCreatedDepartmentColorCode, departmentColorCode);
 		}
 	}
 
@@ -206,18 +215,27 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 		test.log(Status.INFO, "Status code for update department is: " + response.getStatusCode());
 		test.log(Status.INFO, "Response for update department is: " + response.getBody().asPrettyString());
 
-		if (departmentName.equalsIgnoreCase("")) {
+		if (departmentName.equalsIgnoreCase("") || departmentColor.equalsIgnoreCase("")
+				|| departmentColorCode.equalsIgnoreCase("")) {
 			BodyValidation.response400Validation(response);
-		} else if (departments.contains(departmentName)) {
-			BodyValidation.responseValidation(response, "Conflict", 409);
 		} else if (!departmentIds.contains(departmentId)) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
+		} else if (departments.contains(departmentName) || departmentLevels.contains(departmentLevel)
+				|| departmentColors.contains(departmentColor) || departmentColorCodes.contains(departmentColorCode)) {
+			BodyValidation.responseValidation(response, "Conflict", 409);
 		} else {
-			BodyValidation.responseValidation(response, 200);
+			int contentLength = responseBody.length();
+			BodyValidation.responseValidation(response, 200, String.valueOf(contentLength));
+			assertEquals(responseBody, "Updated Successfully");
 
 			verify_Get_All_Departments_API_With_Authorization("after updated new department");
 
+			verify_New_Created_Department_Details("after updated new department");
+
 			assertEquals(newCreatedDepartment, departmentName);
+			assertEquals(newCreatedDepartmentLevel, departmentLevel);
+			assertEquals(newCreatedDepartmentColor, departmentColor);
+			assertEquals(newCreatedDepartmentColorCode, departmentColorCode);
 		}
 	}
 
@@ -240,7 +258,9 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 		} else if (!departmentIds.contains(departmentId)) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
 		} else {
-			BodyValidation.responseValidation(response, 200);
+			int contentLength = responseBody.length();
+			BodyValidation.responseValidation(response, 200, String.valueOf(contentLength));
+			assertEquals(responseBody, "Department Deleted Successfully");
 
 			verify_Get_All_Departments_API_With_Authorization("after deleted new department");
 		}
@@ -425,11 +445,11 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 
 	public void verify_New_Created_Department_Details(String message) {
 		newCreatedDepartmentId = response.jsonPath().getInt("max { it.departmentId }.departmentId");
-		log.info("Random department Id " + message + " is: " + newCreatedDepartmentId);
+		log.info("New created department Id " + message + " is: " + newCreatedDepartmentId);
 
 		newCreatedDepartment = response.jsonPath()
 				.getString("find { it.departmentId == " + newCreatedDepartmentId + " }.departmentName");
-		log.info("Random department " + message + " is: " + newCreatedDepartment);
+		log.info("New created department " + message + " is: " + newCreatedDepartment);
 
 		newCreatedDepartmentLevel = response.jsonPath()
 				.getInt("find { it.departmentId == " + newCreatedDepartmentId + " }.departmentLevel");

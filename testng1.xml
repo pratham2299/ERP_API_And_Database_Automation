@@ -4,7 +4,7 @@
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="in.task_erp_api.testcases.LoginEmployeeAPITestCases" />
-			<class name="in.task_erp_api.testcases.DesignationFolderAPITestCases" />
+			<class name="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases" />
 		</classes>
 	</test> <!--
 	Test -->

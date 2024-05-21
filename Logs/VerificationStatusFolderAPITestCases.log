@@ -1,0 +1,80 @@
+15:36:24.472 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status Ids before new verification status add are: [3, 1, 21, 9]
+15:36:24.489 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status names before new verification status add are: [Not Verified, Verified, Revert, Reject]
+15:36:24.508 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status levels before new verification status add are: [0, 1, 2, 3]
+15:36:24.533 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status colors before new verification status add are: [Royal Purple, Ultraviolet, Sky, azure]
+15:36:24.549 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status color codes before new verification status add are: [#C2A4F8, #CDB7F3, #BCD6FF, #A1C5FE]
+
+15:36:25.199 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - 
+After added new verification status get all verification status API response is: 
+15:36:25.257 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status Ids after added new verification status are: [3, 1, 21, 9, 23]
+15:36:25.269 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status names after added new verification status are: [Not Verified, Verified, Revert, Reject, Apples]
+15:36:25.280 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status levels after added new verification status are: [0, 1, 2, 3, 11]
+15:36:25.290 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status colors after added new verification status are: [Royal Purple, Ultraviolet, Sky, azure, salmon]
+15:36:25.302 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status color codes after added new verification status are: [#C2A4F8, #CDB7F3, #BCD6FF, #A1C5FE, #B5B5C0]
+
+15:36:25.444 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - New created verification status Id after added new verification status is: 23
+15:36:25.501 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - New created verification status after added new verification status is: Apples
+15:36:25.526 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - New created verification status level after added new verification status is: 11
+15:36:25.549 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - New created verification status color after added new verification status is: salmon
+15:36:25.575 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - New created verification status color code after added new verification status is: #B5B5C0
+
+15:37:57.143 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status Ids before new verification status add are: [3, 1, 21, 9]
+15:37:57.157 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status names before new verification status add are: [Not Verified, Verified, Revert, Reject]
+15:37:57.174 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status levels before new verification status add are: [0, 1, 2, 3]
+15:37:57.190 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status colors before new verification status add are: [Royal Purple, Ultraviolet, Sky, azure]
+15:37:57.209 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status color codes before new verification status add are: [#C2A4F8, #CDB7F3, #BCD6FF, #A1C5FE]
+
+15:37:57.697 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - 
+After added new verification status get all verification status API response is: 
+15:37:57.747 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status Ids after added new verification status are: [3, 1, 21, 9, 28]
+15:37:57.767 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status names after added new verification status are: [Not Verified, Verified, Revert, Reject, Lemon]
+15:37:57.781 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status levels after added new verification status are: [0, 1, 2, 3, 11]
+15:37:57.797 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status colors after added new verification status are: [Royal Purple, Ultraviolet, Sky, azure, lime]
+15:37:57.808 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status color codes after added new verification status are: [#C2A4F8, #CDB7F3, #BCD6FF, #A1C5FE, #EF6AB2]
+
+15:37:57.894 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - New created verification status Id after added new verification status is: 28
+15:37:57.933 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - New created verification status after added new verification status is: Lemon
+15:37:57.952 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - New created verification status level after added new verification status is: 11
+15:37:57.980 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - New created verification status color after added new verification status is: lime
+15:37:58.001 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - New created verification status color code after added new verification status is: #EF6AB2
+
+16:06:26.738 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status Ids before add new verification status are: [3, 1, 21, 9, 33]
+16:06:26.755 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status names before add new verification status are: [Not Verified, Verified, Revert, Reject, vs]
+16:06:26.776 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status levels before add new verification status are: [0, 1, 2, 3, 10]
+16:06:26.804 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status colors before add new verification status are: [Royal Purple, Ultraviolet, Sky, azure, Red]
+16:06:26.822 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status color codes before add new verification status are: [#C2A4F8, #CDB7F3, #BCD6FF, #A1C5FE, #FF0000]
+
+16:06:27.447 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - 
+After added new verification status get all verification status API response is: 
+16:06:27.485 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status Ids after added new verification status are: [3, 1, 21, 9, 33, 34]
+16:06:27.506 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status names after added new verification status are: [Not Verified, Verified, Revert, Reject, vs, Avocado]
+16:06:27.527 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status levels after added new verification status are: [0, 1, 2, 3, 10, 18]
+16:06:27.555 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status colors after added new verification status are: [Royal Purple, Ultraviolet, Sky, azure, Red, white]
+16:06:27.575 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status color codes after added new verification status are: [#C2A4F8, #CDB7F3, #BCD6FF, #A1C5FE, #FF0000, #51C03D]
+
+16:06:27.668 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - New created verification status Id after added new verification status is: 34
+16:06:27.706 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - New created verification status after added new verification status is: Avocado
+16:06:27.725 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - New created verification status level after added new verification status is: 18
+16:06:27.752 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - New created verification status color after added new verification status is: white
+16:06:27.775 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - New created verification status color code after added new verification status is: #51C03D
+
+16:08:01.800 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status Ids before add new verification status are: [3, 1, 9, 39]
+16:08:01.822 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status names before add new verification status are: [Not Verified, Verified, Reject, Revert]
+16:08:01.848 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status levels before add new verification status are: [0, 1, 3, 3]
+16:08:01.875 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status colors before add new verification status are: [Royal Purple, Ultraviolet, azure, cobalt]
+16:08:01.894 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status color codes before add new verification status are: [#C2A4F8, #CDB7F3, #A1C5FE, #8AB6F9]
+
+16:08:02.473 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - 
+After added new verification status get all verification status API response is: 
+16:08:02.515 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status Ids after added new verification status are: [3, 1, 9, 39, 40]
+16:08:02.531 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status names after added new verification status are: [Not Verified, Verified, Reject, Revert, Juniper Berries]
+16:08:02.549 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status levels after added new verification status are: [0, 1, 3, 3, 15]
+16:08:02.566 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status colors after added new verification status are: [Royal Purple, Ultraviolet, azure, cobalt, lavender]
+16:08:02.584 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status color codes after added new verification status are: [#C2A4F8, #CDB7F3, #A1C5FE, #8AB6F9, #864753]
+
+16:08:02.679 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - New created verification status Id after added new verification status is: 40
+16:08:02.713 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - New created verification status after added new verification status is: Juniper Berries
+16:08:02.734 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - New created verification status level after added new verification status is: 15
+16:08:02.755 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - New created verification status color after added new verification status is: lavender
+16:08:02.780 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - New created verification status color code after added new verification status is: #864753
+

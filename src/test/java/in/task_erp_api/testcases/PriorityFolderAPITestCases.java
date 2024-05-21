@@ -66,7 +66,8 @@ public class PriorityFolderAPITestCases extends BaseTest {
 		String requestPayload = PriorityFolderPayloads.updatePriorityWithMaxIdPayload(
 				getPriorityResponse.getBody().asPrettyString(), 4, "Priority", 10, "Yellow", "#123");
 
-		Response response = Responses.putRequestWithoutAuthorization(requestPayload, APIEndpoints.updatePriorityEndpoint);
+		Response response = Responses.putRequestWithoutAuthorization(requestPayload,
+				APIEndpoints.updatePriorityEndpoint);
 
 		BodyValidation.response401Validation(response);
 		test.log(Status.INFO, "Status code for update priority is: " + response.getStatusCode());
@@ -88,6 +89,8 @@ public class PriorityFolderAPITestCases extends BaseTest {
 	@Test(priority = 5)
 	public void verify_Get_All_Priorities_With_Authorization() {
 		verify_Get_All_Priorities_API_With_Authorization("before add new priority");
+
+		verify_New_Created_Priority_Details("before add new priority");
 	}
 
 	@Test(priority = 6, dataProvider = "TestDataForAddPriority", dataProviderClass = DataProvidersForPriorityFolder.class)

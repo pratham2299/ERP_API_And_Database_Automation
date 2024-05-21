@@ -1,159 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="28" passed="15" failed="13" skipped="0">
-  <reporter-output>
-  </reporter-output>
-  <suite started-at="2024-05-21T16:07:57 IST" name="Suite" finished-at="2024-05-21T16:08:11 IST" duration-ms="13862">
-    <groups>
-    </groups>
-    <test started-at="2024-05-21T16:07:57 IST" name="Test" finished-at="2024-05-21T16:08:11 IST" duration-ms="13862">
-      <class name="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases">
-        <test-method is-config="true" signature="extent_Report_Setup()[pri:0, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:01 IST" name="extent_Report_Setup" finished-at="2024-05-21T16:08:01 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- extent_Report_Setup -->
-        <test-method signature="verify_Add_Verification_Status_Without_Authorization()[pri:1, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:01 IST" name="verify_Add_Verification_Status_Without_Authorization" finished-at="2024-05-21T16:08:01 IST" duration-ms="283" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Add_Verification_Status_Without_Authorization -->
-        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:01 IST" name="test_Method_Exection_Result" finished-at="2024-05-21T16:08:01 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verify_Add_Verification_Status_Without_Authorization status=SUCCESS method=VerificationStatusFolderAPITestCases.verify_Add_Verification_Status_Without_Authorization()[pri:1, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Method_Exection_Result -->
-        <test-method signature="verify_Get_All_Verification_Statuses_Without_Authorization()[pri:2, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:01 IST" name="verify_Get_All_Verification_Statuses_Without_Authorization" finished-at="2024-05-21T16:08:01 IST" duration-ms="80" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Get_All_Verification_Statuses_Without_Authorization -->
-        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:01 IST" name="test_Method_Exection_Result" finished-at="2024-05-21T16:08:01 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verify_Get_All_Verification_Statuses_Without_Authorization status=SUCCESS method=VerificationStatusFolderAPITestCases.verify_Get_All_Verification_Statuses_Without_Authorization()[pri:2, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Method_Exection_Result -->
-        <test-method signature="verify_Update_Verification_Status_Without_Authorization()[pri:3, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:01 IST" name="verify_Update_Verification_Status_Without_Authorization" finished-at="2024-05-21T16:08:01 IST" duration-ms="149" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Update_Verification_Status_Without_Authorization -->
-        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:01 IST" name="test_Method_Exection_Result" finished-at="2024-05-21T16:08:01 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verify_Update_Verification_Status_Without_Authorization status=SUCCESS method=VerificationStatusFolderAPITestCases.verify_Update_Verification_Status_Without_Authorization()[pri:3, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Method_Exection_Result -->
-        <test-method signature="verify_Delete_Verification_Status_Without_Authorization()[pri:4, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:01 IST" name="verify_Delete_Verification_Status_Without_Authorization" finished-at="2024-05-21T16:08:01 IST" duration-ms="65" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Delete_Verification_Status_Without_Authorization -->
-        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:01 IST" name="test_Method_Exection_Result" finished-at="2024-05-21T16:08:01 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verify_Delete_Verification_Status_Without_Authorization status=SUCCESS method=VerificationStatusFolderAPITestCases.verify_Delete_Verification_Status_Without_Authorization()[pri:4, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Method_Exection_Result -->
-        <test-method signature="verify_Get_All_Verification_Statuses_With_Authorization()[pri:5, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:01 IST" name="verify_Get_All_Verification_Statuses_With_Authorization" finished-at="2024-05-21T16:08:01 IST" duration-ms="138" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Get_All_Verification_Statuses_With_Authorization -->
-        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:01 IST" name="test_Method_Exection_Result" finished-at="2024-05-21T16:08:01 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verify_Get_All_Verification_Statuses_With_Authorization status=SUCCESS method=VerificationStatusFolderAPITestCases.verify_Get_All_Verification_Statuses_With_Authorization()[pri:5, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Method_Exection_Result -->
-        <test-method signature="verify_Add_Verification_Status_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:02 IST" name="verify_Add_Verification_Status_With_Authorization" data-provider="TestDataForAddVerificationStatus" finished-at="2024-05-21T16:08:02 IST" duration-ms="721" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Juniper Berries]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[15]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[lavender]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[#864753]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Add_Verification_Status_With_Authorization -->
-        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:02 IST" name="test_Method_Exection_Result" finished-at="2024-05-21T16:08:02 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verify_Add_Verification_Status_With_Authorization status=SUCCESS method=VerificationStatusFolderAPITestCases.verify_Add_Verification_Status_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Method_Exection_Result -->
-        <test-method signature="verify_Add_Verification_Status_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:02 IST" name="verify_Add_Verification_Status_With_Authorization" data-provider="TestDataForAddVerificationStatus" finished-at="2024-05-21T16:08:03 IST" duration-ms="399" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Berries]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[teal]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[#5C1469]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[1 expectation failed.
+<!-- Generated by org.testng.reporters.JUnitReportReporter -->
+<testsuite hostname="DESKTOP-BG83L86" failures="13" tests="25" name="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases" time="10.108" errors="0" timestamp="2024-05-21T16:08:12 IST" skipped="0">
+  <testcase classname="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases" name="verify_Add_Verification_Status_Without_Authorization" time="0.283"/>
+  <testcase classname="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases" name="verify_Get_All_Verification_Statuses_Without_Authorization" time="0.081"/>
+  <testcase classname="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases" name="verify_Update_Verification_Status_Without_Authorization" time="0.149"/>
+  <testcase classname="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases" name="verify_Delete_Verification_Status_Without_Authorization" time="0.066"/>
+  <testcase classname="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases" name="verify_Get_All_Verification_Statuses_With_Authorization" time="0.139"/>
+  <testcase classname="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases" name="verify_Add_Verification_Status_With_Authorization" time="0.393">
+    <failure message="1 expectation failed.
+Expected status code &lt;409&gt; but was &lt;200&gt;.
+" type="java.lang.AssertionError">
+      <![CDATA[java.lang.AssertionError: 1 expectation failed.
 Expected status code <409> but was <200>.
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at jdk.internal.reflect.GeneratedMethodAccessor26.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at in.task_erp_api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
+at in.task_erp_api.testcases.VerificationStatusFolderAPITestCases.verify_Add_Verification_Status_With_Authorization(VerificationStatusFolderAPITestCases.java:111)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+    </failure>
+  </testcase> <!-- verify_Add_Verification_Status_With_Authorization -->
+  <testcase classname="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases" name="verify_Add_Verification_Status_With_Authorization" time="0.399">
+    <failure message="1 expectation failed.
+Expected status code &lt;409&gt; but was &lt;200&gt;.
+" type="java.lang.AssertionError">
+      <![CDATA[java.lang.AssertionError: 1 expectation failed.
 Expected status code <409> but was <200>.
 
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
@@ -212,90 +132,15 @@ at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Add_Verification_Status_With_Authorization -->
-        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:03 IST" name="test_Method_Exection_Result" finished-at="2024-05-21T16:08:03 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verify_Add_Verification_Status_With_Authorization status=FAILURE method=VerificationStatusFolderAPITestCases.verify_Add_Verification_Status_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Method_Exection_Result -->
-        <test-method signature="verify_Add_Verification_Status_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:03 IST" name="verify_Add_Verification_Status_With_Authorization" data-provider="TestDataForAddVerificationStatus" finished-at="2024-05-21T16:08:03 IST" duration-ms="423" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Loquats]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[11]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[#19BC54]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Add_Verification_Status_With_Authorization -->
-        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:03 IST" name="test_Method_Exection_Result" finished-at="2024-05-21T16:08:03 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verify_Add_Verification_Status_With_Authorization status=SUCCESS method=VerificationStatusFolderAPITestCases.verify_Add_Verification_Status_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Method_Exection_Result -->
-        <test-method signature="verify_Add_Verification_Status_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:03 IST" name="verify_Add_Verification_Status_With_Authorization" data-provider="TestDataForAddVerificationStatus" finished-at="2024-05-21T16:08:04 IST" duration-ms="392" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Nashi Pear]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[13]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[cobalt]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[#9471DB]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[1 expectation failed.
-Expected status code <409> but was <200>.
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+    </failure>
+  </testcase> <!-- verify_Add_Verification_Status_With_Authorization -->
+  <testcase classname="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases" name="verify_Add_Verification_Status_With_Authorization" time="0.451"/>
+  <testcase classname="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases" name="verify_Add_Verification_Status_With_Authorization" time="0.381"/>
+  <testcase classname="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases" name="verify_Add_Verification_Status_With_Authorization" time="0.411">
+    <failure message="1 expectation failed.
+Expected status code &lt;409&gt; but was &lt;200&gt;.
+" type="java.lang.AssertionError">
+      <![CDATA[java.lang.AssertionError: 1 expectation failed.
 Expected status code <409> but was <200>.
 
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
@@ -352,268 +197,14 @@ at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Add_Verification_Status_With_Authorization -->
-        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:04 IST" name="test_Method_Exection_Result" finished-at="2024-05-21T16:08:04 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verify_Add_Verification_Status_With_Authorization status=FAILURE method=VerificationStatusFolderAPITestCases.verify_Add_Verification_Status_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Method_Exection_Result -->
-        <test-method signature="verify_Add_Verification_Status_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:04 IST" name="verify_Add_Verification_Status_With_Authorization" data-provider="TestDataForAddVerificationStatus" finished-at="2024-05-21T16:08:04 IST" duration-ms="729" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Sultanas]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[15]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[white]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Add_Verification_Status_With_Authorization -->
-        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:04 IST" name="test_Method_Exection_Result" finished-at="2024-05-21T16:08:04 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verify_Add_Verification_Status_With_Authorization status=SUCCESS method=VerificationStatusFolderAPITestCases.verify_Add_Verification_Status_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Method_Exection_Result -->
-        <test-method signature="verify_Add_Verification_Status_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:04 IST" name="verify_Add_Verification_Status_With_Authorization" data-provider="TestDataForAddVerificationStatus" finished-at="2024-05-21T16:08:05 IST" duration-ms="409" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Tomatoes]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[14]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[cyan]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[#CDB7F3]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[1 expectation failed.
-Expected status code <409> but was <200>.
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: 1 expectation failed.
-Expected status code <409> but was <200>.
-
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
-at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-at jdk.internal.reflect.GeneratedMethodAccessor26.invoke(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-at in.task_erp_api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
-at in.task_erp_api.testcases.VerificationStatusFolderAPITestCases.verify_Add_Verification_Status_With_Authorization(VerificationStatusFolderAPITestCases.java:111)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Add_Verification_Status_With_Authorization -->
-        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:05 IST" name="test_Method_Exection_Result" finished-at="2024-05-21T16:08:05 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verify_Add_Verification_Status_With_Authorization status=FAILURE method=VerificationStatusFolderAPITestCases.verify_Add_Verification_Status_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Method_Exection_Result -->
-        <test-method signature="verify_Add_Verification_Status_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:05 IST" name="verify_Add_Verification_Status_With_Authorization" data-provider="TestDataForAddVerificationStatus" finished-at="2024-05-21T16:08:05 IST" duration-ms="380" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[12]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[azure]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[#45E618]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Add_Verification_Status_With_Authorization -->
-        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:05 IST" name="test_Method_Exection_Result" finished-at="2024-05-21T16:08:05 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verify_Add_Verification_Status_With_Authorization status=SUCCESS method=VerificationStatusFolderAPITestCases.verify_Add_Verification_Status_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Method_Exection_Result -->
-        <test-method signature="verify_Add_Verification_Status_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:05 IST" name="verify_Add_Verification_Status_With_Authorization" data-provider="TestDataForAddVerificationStatus" finished-at="2024-05-21T16:08:05 IST" duration-ms="450" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Not Verified]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[14]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[orchid]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[#96AA1F]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Add_Verification_Status_With_Authorization -->
-        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:05 IST" name="test_Method_Exection_Result" finished-at="2024-05-21T16:08:05 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verify_Add_Verification_Status_With_Authorization status=SUCCESS method=VerificationStatusFolderAPITestCases.verify_Add_Verification_Status_With_Authorization(java.lang.String,int,java.lang.String,java.lang.String)[pri:6, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Method_Exection_Result -->
-        <test-method signature="verify_Update_Verification_Status_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:05 IST" name="verify_Update_Verification_Status_With_Authorization" data-provider="TestDataForUpdateVerificationStatus" finished-at="2024-05-21T16:08:06 IST" duration-ms="473" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[40]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Avocado]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[12]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[grey]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[#AA8E42]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[1 expectation failed.
-Expected header "Content-Type" was not "application/json", was "text/plain;charset=UTF-8". Headers are:
+    </failure>
+  </testcase> <!-- verify_Add_Verification_Status_With_Authorization -->
+  <testcase classname="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases" name="verify_Add_Verification_Status_With_Authorization" time="0.730"/>
+  <testcase classname="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases" name="verify_Add_Verification_Status_With_Authorization" time="0.722"/>
+  <testcase classname="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases" name="verify_Add_Verification_Status_With_Authorization" time="0.424"/>
+  <testcase classname="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases" name="verify_Update_Verification_Status_With_Authorization" time="0.474">
+    <failure message="1 expectation failed.
+Expected header &quot;Content-Type&quot; was not &quot;application/json&quot;, was &quot;text/plain;charset=UTF-8&quot;. Headers are:
 Vary=Origin
 Vary=Access-Control-Request-Method
 Vary=Access-Control-Request-Headers
@@ -628,10 +219,8 @@ Content-Length=0
 Date=Tue, 21 May 2024 10:38:05 GMT
 Keep-Alive=timeout=60
 Connection=keep-alive
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+" type="java.lang.AssertionError">
+      <![CDATA[java.lang.AssertionError: 1 expectation failed.
 Expected header "Content-Type" was not "application/json", was "text/plain;charset=UTF-8". Headers are:
 Vary=Origin
 Vary=Access-Control-Request-Method
@@ -702,58 +291,13 @@ at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Update_Verification_Status_With_Authorization -->
-        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:06 IST" name="test_Method_Exection_Result" finished-at="2024-05-21T16:08:06 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verify_Update_Verification_Status_With_Authorization status=FAILURE method=VerificationStatusFolderAPITestCases.verify_Update_Verification_Status_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Method_Exection_Result -->
-        <test-method signature="verify_Update_Verification_Status_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:06 IST" name="verify_Update_Verification_Status_With_Authorization" data-provider="TestDataForUpdateVerificationStatus" finished-at="2024-05-21T16:08:06 IST" duration-ms="440" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[40]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Starfruit]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[3]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[mint green]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[#ACD987]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[1 expectation failed.
-Expected status code <409> but was <200>.
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+    </failure>
+  </testcase> <!-- verify_Update_Verification_Status_With_Authorization -->
+  <testcase classname="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases" name="verify_Update_Verification_Status_With_Authorization" time="0.440">
+    <failure message="1 expectation failed.
+Expected status code &lt;409&gt; but was &lt;200&gt;.
+" type="java.lang.AssertionError">
+      <![CDATA[java.lang.AssertionError: 1 expectation failed.
 Expected status code <409> but was <200>.
 
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
@@ -810,58 +354,139 @@ at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Update_Verification_Status_With_Authorization -->
-        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:06 IST" name="test_Method_Exection_Result" finished-at="2024-05-21T16:08:06 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verify_Update_Verification_Status_With_Authorization status=FAILURE method=VerificationStatusFolderAPITestCases.verify_Update_Verification_Status_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Method_Exection_Result -->
-        <test-method signature="verify_Update_Verification_Status_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:06 IST" name="verify_Update_Verification_Status_With_Authorization" data-provider="TestDataForUpdateVerificationStatus" finished-at="2024-05-21T16:08:07 IST" duration-ms="475" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[40]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[19]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[blue]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[#8BCDD0]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[1 expectation failed.
-Expected status code <400> but was <200>.
+    </failure>
+  </testcase> <!-- verify_Update_Verification_Status_With_Authorization -->
+  <testcase classname="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases" name="verify_Update_Verification_Status_With_Authorization" time="0.478">
+    <failure message="1 expectation failed.
+Expected status code &lt;409&gt; but was &lt;200&gt;.
+" type="java.lang.AssertionError">
+      <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <409> but was <200>.
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at jdk.internal.reflect.GeneratedMethodAccessor26.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at in.task_erp_api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
+at in.task_erp_api.testcases.VerificationStatusFolderAPITestCases.verify_Update_Verification_Status_With_Authorization(VerificationStatusFolderAPITestCases.java:150)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+    </failure>
+  </testcase> <!-- verify_Update_Verification_Status_With_Authorization -->
+  <testcase classname="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases" name="verify_Update_Verification_Status_With_Authorization" time="0.513">
+    <failure message="1 expectation failed.
+Expected status code &lt;409&gt; but was &lt;200&gt;.
+" type="java.lang.AssertionError">
+      <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <409> but was <200>.
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at jdk.internal.reflect.GeneratedMethodAccessor26.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at in.task_erp_api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
+at in.task_erp_api.testcases.VerificationStatusFolderAPITestCases.verify_Update_Verification_Status_With_Authorization(VerificationStatusFolderAPITestCases.java:150)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+    </failure>
+  </testcase> <!-- verify_Update_Verification_Status_With_Authorization -->
+  <testcase classname="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases" name="verify_Update_Verification_Status_With_Authorization" time="0.439">
+    <failure message="1 expectation failed.
+Expected status code &lt;400&gt; but was &lt;200&gt;.
+" type="java.lang.AssertionError">
+      <![CDATA[java.lang.AssertionError: 1 expectation failed.
 Expected status code <400> but was <200>.
 
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
@@ -918,58 +543,13 @@ at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Update_Verification_Status_With_Authorization -->
-        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:07 IST" name="test_Method_Exection_Result" finished-at="2024-05-21T16:08:07 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verify_Update_Verification_Status_With_Authorization status=FAILURE method=VerificationStatusFolderAPITestCases.verify_Update_Verification_Status_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Method_Exection_Result -->
-        <test-method signature="verify_Update_Verification_Status_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:07 IST" name="verify_Update_Verification_Status_With_Authorization" data-provider="TestDataForUpdateVerificationStatus" finished-at="2024-05-21T16:08:07 IST" duration-ms="512" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[40]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Juniper Berries]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[15]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[sky blue]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[#06FAD5]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[1 expectation failed.
-Expected status code <409> but was <200>.
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+    </failure>
+  </testcase> <!-- verify_Update_Verification_Status_With_Authorization -->
+  <testcase classname="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases" name="verify_Update_Verification_Status_With_Authorization" time="0.476">
+    <failure message="1 expectation failed.
+Expected status code &lt;409&gt; but was &lt;200&gt;.
+" type="java.lang.AssertionError">
+      <![CDATA[java.lang.AssertionError: 1 expectation failed.
 Expected status code <409> but was <200>.
 
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
@@ -1026,58 +606,13 @@ at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Update_Verification_Status_With_Authorization -->
-        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:07 IST" name="test_Method_Exection_Result" finished-at="2024-05-21T16:08:07 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verify_Update_Verification_Status_With_Authorization status=FAILURE method=VerificationStatusFolderAPITestCases.verify_Update_Verification_Status_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Method_Exection_Result -->
-        <test-method signature="verify_Update_Verification_Status_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:07 IST" name="verify_Update_Verification_Status_With_Authorization" data-provider="TestDataForUpdateVerificationStatus" finished-at="2024-05-21T16:08:08 IST" duration-ms="442" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[40]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Papaw]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[11]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[#E05DD4]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[1 expectation failed.
-Expected status code <400> but was <200>.
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+    </failure>
+  </testcase> <!-- verify_Update_Verification_Status_With_Authorization -->
+  <testcase classname="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases" name="verify_Update_Verification_Status_With_Authorization" time="0.476">
+    <failure message="1 expectation failed.
+Expected status code &lt;400&gt; but was &lt;200&gt;.
+" type="java.lang.AssertionError">
+      <![CDATA[java.lang.AssertionError: 1 expectation failed.
 Expected status code <400> but was <200>.
 
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
@@ -1134,166 +669,14 @@ at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Update_Verification_Status_With_Authorization -->
-        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:08 IST" name="test_Method_Exection_Result" finished-at="2024-05-21T16:08:08 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verify_Update_Verification_Status_With_Authorization status=FAILURE method=VerificationStatusFolderAPITestCases.verify_Update_Verification_Status_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Method_Exection_Result -->
-        <test-method signature="verify_Update_Verification_Status_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:08 IST" name="verify_Update_Verification_Status_With_Authorization" data-provider="TestDataForUpdateVerificationStatus" finished-at="2024-05-21T16:08:08 IST" duration-ms="477" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[40]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Strawberries]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[13]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[azure]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[#30BE91]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[1 expectation failed.
-Expected status code <409> but was <200>.
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: 1 expectation failed.
-Expected status code <409> but was <200>.
-
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
-at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-at jdk.internal.reflect.GeneratedMethodAccessor26.invoke(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-at in.task_erp_api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
-at in.task_erp_api.testcases.VerificationStatusFolderAPITestCases.verify_Update_Verification_Status_With_Authorization(VerificationStatusFolderAPITestCases.java:150)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Update_Verification_Status_With_Authorization -->
-        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:08 IST" name="test_Method_Exection_Result" finished-at="2024-05-21T16:08:08 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verify_Update_Verification_Status_With_Authorization status=FAILURE method=VerificationStatusFolderAPITestCases.verify_Update_Verification_Status_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Method_Exection_Result -->
-        <test-method signature="verify_Update_Verification_Status_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:08 IST" name="verify_Update_Verification_Status_With_Authorization" data-provider="TestDataForUpdateVerificationStatus" finished-at="2024-05-21T16:08:09 IST" duration-ms="438" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[40]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Cantaloupe]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[16]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[ivory]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[1 expectation failed.
-Expected status code <400> but was <200>.
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+    </failure>
+  </testcase> <!-- verify_Update_Verification_Status_With_Authorization -->
+  <testcase classname="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases" name="verify_Update_Verification_Status_With_Authorization" time="0.473"/>
+  <testcase classname="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases" name="verify_Update_Verification_Status_With_Authorization" time="0.443">
+    <failure message="1 expectation failed.
+Expected status code &lt;400&gt; but was &lt;200&gt;.
+" type="java.lang.AssertionError">
+      <![CDATA[java.lang.AssertionError: 1 expectation failed.
 Expected status code <400> but was <200>.
 
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
@@ -1350,206 +733,12 @@ at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Update_Verification_Status_With_Authorization -->
-        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:09 IST" name="test_Method_Exection_Result" finished-at="2024-05-21T16:08:09 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verify_Update_Verification_Status_With_Authorization status=FAILURE method=VerificationStatusFolderAPITestCases.verify_Update_Verification_Status_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Method_Exection_Result -->
-        <test-method signature="verify_Update_Verification_Status_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:09 IST" name="verify_Update_Verification_Status_With_Authorization" data-provider="TestDataForUpdateVerificationStatus" finished-at="2024-05-21T16:08:09 IST" duration-ms="475" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[40]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Avocado]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[17]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[grey]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[#C2A4F8]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[1 expectation failed.
-Expected status code <409> but was <200>.
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: 1 expectation failed.
-Expected status code <409> but was <200>.
-
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
-at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-at jdk.internal.reflect.GeneratedMethodAccessor26.invoke(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-at in.task_erp_api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
-at in.task_erp_api.testcases.VerificationStatusFolderAPITestCases.verify_Update_Verification_Status_With_Authorization(VerificationStatusFolderAPITestCases.java:150)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Update_Verification_Status_With_Authorization -->
-        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:09 IST" name="test_Method_Exection_Result" finished-at="2024-05-21T16:08:09 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verify_Update_Verification_Status_With_Authorization status=FAILURE method=VerificationStatusFolderAPITestCases.verify_Update_Verification_Status_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Method_Exection_Result -->
-        <test-method signature="verify_Update_Verification_Status_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:09 IST" name="verify_Update_Verification_Status_With_Authorization" data-provider="TestDataForUpdateVerificationStatus" finished-at="2024-05-21T16:08:10 IST" duration-ms="472" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[68]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Limes]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[white]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[#8A8FD5]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Update_Verification_Status_With_Authorization -->
-        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:10 IST" name="test_Method_Exection_Result" finished-at="2024-05-21T16:08:10 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verify_Update_Verification_Status_With_Authorization status=SUCCESS method=VerificationStatusFolderAPITestCases.verify_Update_Verification_Status_With_Authorization(int,java.lang.String,int,java.lang.String,java.lang.String)[pri:7, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Method_Exection_Result -->
-        <test-method signature="verify_Delete_Single_Verification_Status_With_Authorization(int)[pri:8, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:10 IST" name="verify_Delete_Single_Verification_Status_With_Authorization" data-provider="TestDataForDeleteVerificationStatus" finished-at="2024-05-21T16:08:10 IST" duration-ms="472" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[51]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Delete_Single_Verification_Status_With_Authorization -->
-        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:10 IST" name="test_Method_Exection_Result" finished-at="2024-05-21T16:08:10 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verify_Delete_Single_Verification_Status_With_Authorization status=SUCCESS method=VerificationStatusFolderAPITestCases.verify_Delete_Single_Verification_Status_With_Authorization(int)[pri:8, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Method_Exection_Result -->
-        <test-method signature="verify_Delete_Single_Verification_Status_With_Authorization(int)[pri:8, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:10 IST" name="verify_Delete_Single_Verification_Status_With_Authorization" data-provider="TestDataForDeleteVerificationStatus" finished-at="2024-05-21T16:08:11 IST" duration-ms="399" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[40]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[1 expectation failed.
-Expected header "Content-Type" was not "application/json", was "text/plain;charset=UTF-8". Headers are:
+    </failure>
+  </testcase> <!-- verify_Update_Verification_Status_With_Authorization -->
+  <testcase classname="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases" name="verify_Delete_Single_Verification_Status_With_Authorization" time="0.473"/>
+  <testcase classname="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases" name="verify_Delete_Single_Verification_Status_With_Authorization" time="0.395">
+    <failure message="1 expectation failed.
+Expected header &quot;Content-Type&quot; was not &quot;application/json&quot;, was &quot;text/plain;charset=UTF-8&quot;. Headers are:
 Vary=Origin
 Vary=Access-Control-Request-Method
 Vary=Access-Control-Request-Headers
@@ -1564,10 +753,8 @@ Content-Length=20
 Date=Tue, 21 May 2024 10:38:10 GMT
 Keep-Alive=timeout=60
 Connection=keep-alive
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+" type="java.lang.AssertionError">
+      <![CDATA[java.lang.AssertionError: 1 expectation failed.
 Expected header "Content-Type" was not "application/json", was "text/plain;charset=UTF-8". Headers are:
 Vary=Origin
 Vary=Access-Control-Request-Method
@@ -1638,34 +825,11 @@ at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Delete_Single_Verification_Status_With_Authorization -->
-        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:11 IST" name="test_Method_Exection_Result" finished-at="2024-05-21T16:08:11 IST" duration-ms="2" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verify_Delete_Single_Verification_Status_With_Authorization status=FAILURE method=VerificationStatusFolderAPITestCases.verify_Delete_Single_Verification_Status_With_Authorization(int)[pri:8, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Method_Exection_Result -->
-        <test-method signature="verify_Delete_Single_Verification_Status_With_Authorization(int)[pri:8, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:11 IST" name="verify_Delete_Single_Verification_Status_With_Authorization" data-provider="TestDataForDeleteVerificationStatus" finished-at="2024-05-21T16:08:11 IST" duration-ms="395" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[39]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[1 expectation failed.
-Expected header "Content-Type" was not "application/json", was "text/plain;charset=UTF-8". Headers are:
+    </failure>
+  </testcase> <!-- verify_Delete_Single_Verification_Status_With_Authorization -->
+  <testcase classname="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases" name="verify_Delete_Single_Verification_Status_With_Authorization" time="0.399">
+    <failure message="1 expectation failed.
+Expected header &quot;Content-Type&quot; was not &quot;application/json&quot;, was &quot;text/plain;charset=UTF-8&quot;. Headers are:
 Vary=Origin
 Vary=Access-Control-Request-Method
 Vary=Access-Control-Request-Headers
@@ -1680,10 +844,8 @@ Content-Length=20
 Date=Tue, 21 May 2024 10:38:10 GMT
 Keep-Alive=timeout=60
 Connection=keep-alive
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+" type="java.lang.AssertionError">
+      <![CDATA[java.lang.AssertionError: 1 expectation failed.
 Expected header "Content-Type" was not "application/json", was "text/plain;charset=UTF-8". Headers are:
 Vary=Origin
 Vary=Access-Control-Request-Method
@@ -1754,82 +916,6 @@ at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Delete_Single_Verification_Status_With_Authorization -->
-        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a]" started-at="2024-05-21T16:08:11 IST" name="test_Method_Exection_Result" finished-at="2024-05-21T16:08:11 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verify_Delete_Single_Verification_Status_With_Authorization status=FAILURE method=VerificationStatusFolderAPITestCases.verify_Delete_Single_Verification_Status_With_Authorization(int)[pri:8, instance:in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@4b9df8a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Method_Exection_Result -->
-      </class> <!-- in.task_erp_api.testcases.VerificationStatusFolderAPITestCases -->
-      <class name="in.task_erp_api.testcases.LoginEmployeeAPITestCases">
-        <test-method is-config="true" signature="startBackendServer()[pri:0, instance:in.task_erp_api.testcases.LoginEmployeeAPITestCases@58fb7731]" started-at="2024-05-21T16:07:56 IST" name="startBackendServer" finished-at="2024-05-21T16:07:57 IST" duration-ms="660" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startBackendServer -->
-        <test-method is-config="true" signature="extent_Report_Setup()[pri:0, instance:in.task_erp_api.testcases.LoginEmployeeAPITestCases@58fb7731]" started-at="2024-05-21T16:07:57 IST" name="extent_Report_Setup" finished-at="2024-05-21T16:07:57 IST" duration-ms="255" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- extent_Report_Setup -->
-        <test-method signature="verify_Login_Employee_By_Giving_Valid_Data()[pri:1, instance:in.task_erp_api.testcases.LoginEmployeeAPITestCases@58fb7731]" started-at="2024-05-21T16:07:57 IST" name="verify_Login_Employee_By_Giving_Valid_Data" finished-at="2024-05-21T16:08:00 IST" duration-ms="2559" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Login_Employee_By_Giving_Valid_Data -->
-        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.LoginEmployeeAPITestCases@58fb7731]" started-at="2024-05-21T16:08:00 IST" name="test_Method_Exection_Result" finished-at="2024-05-21T16:08:00 IST" duration-ms="12" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verify_Login_Employee_By_Giving_Valid_Data status=SUCCESS method=LoginEmployeeAPITestCases.verify_Login_Employee_By_Giving_Valid_Data()[pri:1, instance:in.task_erp_api.testcases.LoginEmployeeAPITestCases@58fb7731] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Method_Exection_Result -->
-        <test-method signature="verify_Login_Employee_By_Giving_Invalid_LoginId()[pri:2, instance:in.task_erp_api.testcases.LoginEmployeeAPITestCases@58fb7731]" started-at="2024-05-21T16:08:00 IST" name="verify_Login_Employee_By_Giving_Invalid_LoginId" finished-at="2024-05-21T16:08:00 IST" duration-ms="109" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Login_Employee_By_Giving_Invalid_LoginId -->
-        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.LoginEmployeeAPITestCases@58fb7731]" started-at="2024-05-21T16:08:00 IST" name="test_Method_Exection_Result" finished-at="2024-05-21T16:08:00 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verify_Login_Employee_By_Giving_Invalid_LoginId status=SUCCESS method=LoginEmployeeAPITestCases.verify_Login_Employee_By_Giving_Invalid_LoginId()[pri:2, instance:in.task_erp_api.testcases.LoginEmployeeAPITestCases@58fb7731] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Method_Exection_Result -->
-        <test-method signature="verify_Login_Employee_By_Giving_Invalid_Password()[pri:3, instance:in.task_erp_api.testcases.LoginEmployeeAPITestCases@58fb7731]" started-at="2024-05-21T16:08:00 IST" name="verify_Login_Employee_By_Giving_Invalid_Password" finished-at="2024-05-21T16:08:01 IST" duration-ms="540" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Login_Employee_By_Giving_Invalid_Password -->
-        <test-method is-config="true" signature="test_Method_Exection_Result(org.testng.ITestResult)[pri:0, instance:in.task_erp_api.testcases.LoginEmployeeAPITestCases@58fb7731]" started-at="2024-05-21T16:08:01 IST" name="test_Method_Exection_Result" finished-at="2024-05-21T16:08:01 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verify_Login_Employee_By_Giving_Invalid_Password status=SUCCESS method=LoginEmployeeAPITestCases.verify_Login_Employee_By_Giving_Invalid_Password()[pri:3, instance:in.task_erp_api.testcases.LoginEmployeeAPITestCases@58fb7731] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Method_Exection_Result -->
-        <test-method is-config="true" signature="flush_Extent_Report()[pri:0, instance:in.task_erp_api.testcases.LoginEmployeeAPITestCases@58fb7731]" started-at="2024-05-21T16:08:11 IST" name="flush_Extent_Report" finished-at="2024-05-21T16:08:11 IST" duration-ms="347" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- flush_Extent_Report -->
-      </class> <!-- in.task_erp_api.testcases.LoginEmployeeAPITestCases -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
-</testng-results>
+    </failure>
+  </testcase> <!-- verify_Delete_Single_Verification_Status_With_Authorization -->
+</testsuite> <!-- in.task_erp_api.testcases.VerificationStatusFolderAPITestCases -->

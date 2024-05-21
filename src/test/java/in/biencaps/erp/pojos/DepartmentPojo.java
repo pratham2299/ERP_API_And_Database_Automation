@@ -15,14 +15,14 @@ public class DepartmentPojo {
 	public DepartmentPojo() {
 	}
 
-	// Parameterized constructor
-	public DepartmentPojo(String departmentName, int departmentLevel, String departmentColor,
-			String departmentColorCode) {
-		this.departmentName = departmentName;
-		this.departmentLevel = departmentLevel;
-		this.departmentColor = departmentColor;
-		this.departmentColorCode = departmentColorCode;
-	}
+//	// Parameterized constructor
+//	public DepartmentPojo(String departmentName, int departmentLevel, String departmentColor,
+//			String departmentColorCode) {
+//		this.departmentName = departmentName;
+//		this.departmentLevel = departmentLevel;
+//		this.departmentColor = departmentColor;
+//		this.departmentColorCode = departmentColorCode;
+//	}
 
 	public int getDepartmentId() {
 		return departmentId;

@@ -15,8 +15,13 @@ public class DepartmentFolderPayloads {
 
 	public static String addDepartmentPayload(String designationName, int designationLevel, String designationColor,
 			String designationColorCode) {
-		DepartmentPojo departmentObj = new DepartmentPojo(designationName, designationLevel, designationColor,
-				designationColorCode);
+		DepartmentPojo departmentObj = new DepartmentPojo();
+
+		// Update the fields of the object with the maximum departmentId
+		departmentObj.setDepartmentName(designationName);
+		departmentObj.setDepartmentLevel(designationLevel);
+		departmentObj.setDepartmentColor(designationColor);
+		departmentObj.setDepartmentColorCode(designationColorCode);
 		try {
 			return objectMapper.writeValueAsString(departmentObj);
 		} catch (Exception e) {
