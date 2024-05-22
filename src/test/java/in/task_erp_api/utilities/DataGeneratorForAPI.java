@@ -21,6 +21,10 @@ public class DataGeneratorForAPI {
 	public static String generateFakeDepartment() {
 		return faker.company().industry();
 	}
+	
+	public static String generateFakeDesignation() {
+		return faker.company().profession();
+	}
 
 	public static String generateFakeColor() {
 		return faker.color().name();

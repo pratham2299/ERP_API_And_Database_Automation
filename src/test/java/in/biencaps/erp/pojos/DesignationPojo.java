@@ -4,6 +4,7 @@ public class DesignationPojo {
 	private int designationId;
 	private String designation;
 	private Department department;
+	private DepartmentPojo randomDepartment;
 
 	// Getters and Setters
 	public int getDesignationId() {
@@ -28,6 +29,14 @@ public class DesignationPojo {
 
 	public void setDepartment(Department department) {
 		this.department = department;
+	}
+	
+	public DepartmentPojo getDepartmentpojo() {
+		return randomDepartment;
+	}
+
+	public void setDepartmentPojo(DepartmentPojo departmentPojo) {
+		this.randomDepartment = departmentPojo;
 	}
 
 	public static class Department {

@@ -1,7 +1,7 @@
 package in.task_erp_api.endpoints;
 
 public interface APIEndpoints {
-	String baseURL = "http://192.168.0.156:10002/erp";
+	String baseURL = "https://erp.biencaps.in:10004/erp";
 
 	// Login Employee folder endpoints
 	String loginEmployeeEndpoint = baseURL + "/auth/login";

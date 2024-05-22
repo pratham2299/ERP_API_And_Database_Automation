@@ -5,6 +5,8 @@ import java.util.*;
 import org.apache.logging.log4j.*;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
+
 import in.task_erp_api.bodyValidations.*;
 import in.task_erp_api.endpoints.*;
 import in.task_erp_api.payloads.*;
@@ -15,7 +17,7 @@ import io.restassured.response.*;
 import static org.testng.Assert.*;
 import static org.hamcrest.Matchers.*;
 
-public class RoleFolderAPITestCases {
+public class RoleFolderAPITestCases extends BaseTest {
 	public static final Logger log = LogManager.getLogger(RoleFolderAPITestCases.class);
 	public static int newCreatedRoleId;
 	private int newCreatedRoleLevel;
@@ -29,72 +31,82 @@ public class RoleFolderAPITestCases {
 	public Response response;
 
 	@Test(priority = 1)
-	public void verifyAddRoleWithoutAuthorization() {
-		String requestPayload = RoleFolderPayloads.giveRolePayloadForAddRole("Role", 10);
+	public void verify_Add_Role_Without_Authorization() {
+		test = BaseTest.extent.createTest("Add role without authorization");
 
-		response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.addRoleEndpoint);
+		String requestPayload = RoleFolderPayloads.addRolePayload("Role", 10);
+
+		Response response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.addRoleEndpoint);
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO, "Status code for add role is: " + response.getStatusCode());
+		test.log(Status.INFO, "Response for add role is: " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 2)
-	public void verifyGetAllRoleWithoutAuthorization() {
-		response = Responses.getRequestWithoutAuthorization(APIEndpoints.getAllRolesEndpoint);
+	public void verify_Get_All_Roles_Without_Authorization() {
+		test = BaseTest.extent.createTest("Get all roles without authorization");
+
+		Response response = Responses.getRequestWithoutAuthorization(APIEndpoints.getAllRolesEndpoint);
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO, "Status code for get all roles is: " + response.getStatusCode());
+		test.log(Status.INFO, "Response for get all roles is: " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 3)
-	public void verifyUpdateRoleWithoutAuthorization() {
-		String requestPayload = RoleFolderPayloads.giveRolePayloadForUpdateRole(24, "Role", 5);
+	public void verify_Update_Role_Without_Authorization() throws Throwable {
+		test = BaseTest.extent.createTest("Update role without authorization");
 
-		response = Responses.putRequestWithoutAuthorization(requestPayload, APIEndpoints.updateRoleEndpoint);
+		String requestPayload = RoleFolderPayloads.updateRoleWithMaxIdPayload(24, "Role", 5);
+
+		Response response = Responses.putRequestWithoutAuthorization(requestPayload, APIEndpoints.updateRoleEndpoint);
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO, "Status code for update role is: " + response.getStatusCode());
+		test.log(Status.INFO, "Response for update role is: " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 4)
-	public void deleteSingleRoleWithoutAuthorization() {
-		String requestPayload = RoleFolderPayloads.giveRolePayloadForDeleteRole(24);
+	public void verify_Delete_Role_Without_Authorization() {
+		test = BaseTest.extent.createTest("Delete role without authorization");
 
-		response = Responses.deleteRequestWithoutAuthorizationAndPayload(requestPayload,
+		String requestPayload = RoleFolderPayloads.deleteRolePayload(24);
+
+		Response response = Responses.deleteRequestWithoutAuthorizationAndPayload(requestPayload,
 				APIEndpoints.deleteRoleEndpoint);
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO, "Status code for delete role is: " + response.getStatusCode());
+		test.log(Status.INFO, "Response for delete role is: " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 5)
-	public void verifyGetRoleByLevelWithoutAuthorization() {
-		response = Responses.getRequestWithoutAuthorizationAndPathParameter(APIEndpoints.getAllRolesByLevelEndpoint, 1);
+	public void verify_Get_Role_By_Level_Without_Authorization() {
+		Response response = Responses
+				.getRequestWithoutAuthorizationAndPathParameter(APIEndpoints.getAllRolesByLevelEndpoint, 1);
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO, "Status code for get role by level is: " + response.getStatusCode());
+		test.log(Status.INFO, "Response for get role by level is: " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 6)
-	public void verifyGetAllRoleWithAuthorization() {
-		response = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
-				APIEndpoints.getAllRolesEndpoint);
-
-		BodyValidation.responseValidation(response, 200);
-
-		roleIds = response.jsonPath().getList("roleId");
-		log.info("List of role Ids before new role add are: " + roleIds);
-
-		roles = response.jsonPath().getList("roleName");
-		log.info("List of roles before new role add are: " + roles);
-
-		roleLevels = response.jsonPath().getList("roleLevel");
-		log.info("List of role Levels before new role add are: " + roleLevels + "\n");
+	public void verify_Get_All_Roles_With_Authorization() {
+		verify_Get_All_Roles_API_With_Authorization("before add new role");
 	}
 
-	@Test(priority = 7, dataProvider = "TestDataForAddRole", dataProviderClass = DataProvidersForRoleFolder.class, enabled = false)
-	public void verifyAddRoleWithAuthorization(String roleNameInput, int roleLevelInput) {
-		String requestPayload = RoleFolderPayloads.giveRolePayloadForAddRole(roleNameInput, roleLevelInput);
+	@Test(priority = 7, dataProvider = "TestDataForAddRole", dataProviderClass = DataProvidersForRoleFolder.class)
+	public void verify_Add_Role_With_Authorization(String roleNameInput, int roleLevelInput) {
+		test = BaseTest.extent.createTest("Add role with valid and invalid data and with authorization");
 
-		response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
+		String requestPayload = RoleFolderPayloads.addRolePayload(roleNameInput, roleLevelInput);
+
+		Response response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.addRoleEndpoint);
-
-		System.out.println(response.getBody().asPrettyString());
+		test.log(Status.INFO, "Request payload for add role is: " + response.getStatusCode());
+		test.log(Status.INFO, "Status code for add role is: " + response.getStatusCode());
+		test.log(Status.INFO, "Response for add role is: " + response.getBody().asPrettyString());
 
 		if (roleNameInput.equalsIgnoreCase("")) {
 			BodyValidation.response400Validation(response);
@@ -103,37 +115,33 @@ public class RoleFolderAPITestCases {
 		} else {
 			BodyValidation.responseValidation(response, 201);
 
-			verifyGetAllRoleAPIWithAuthorization("after added new role");
+			verify_Get_All_Roles_API_With_Authorization("after added new role");
 
-			newCreatedRoleId = response.jsonPath().getInt("max { it.roleId }.roleId");
-			log.info("New created Role Id after added new role is: " + newCreatedRoleId);
+			verify_New_Created_Role_Details("after added new role");
 
-			newCreatedRole = response.jsonPath().getString("find { it.roleId == " + newCreatedRoleId + " }.role");
-			log.info("New created Role after added new role is: " + newCreatedRole);
 			assertEquals(newCreatedRole, "ROLE_" + roleNameInput.toUpperCase());
 
-			newCreatedRoleName = response.jsonPath()
-					.getString("find { it.roleId == " + newCreatedRoleId + " }.roleName");
-			log.info("New created Role Name after added new role is: " + newCreatedRoleName);
 			assertEquals(newCreatedRoleName, roleNameInput);
 
-			newCreatedRoleLevel = response.jsonPath()
-					.getInt("find { it.roleId == " + newCreatedRoleId + " }.roleLevel");
-			log.info("New created Role Level after added new role is: " + newCreatedRoleLevel + "\n");
 			assertEquals(newCreatedRoleLevel, roleLevelInput);
 		}
 	}
 
-	@Test(priority = 8, dataProvider = "TestDataForUpdateRole", dataProviderClass = DataProvidersForRoleFolder.class, enabled = false)
-	public void verifyUpdateRoleWithAuthorization(int roleIdInput, String roleNameInput, int roleLevelInput) {
-		String requestPayload = RoleFolderPayloads.giveRolePayloadForUpdateRole(roleIdInput, roleNameInput,
+	@Test(priority = 8, dataProvider = "TestDataForUpdateRole", dataProviderClass = DataProvidersForRoleFolder.class)
+	public void verify_Update_Role_With_Authorization(int roleIdInput, String roleNameInput, int roleLevelInput)
+			throws Throwable {
+		test = BaseTest.extent.createTest("Update role with valid and invalid data and with authorization");
+
+		String requestPayload = RoleFolderPayloads.updateRoleWithMaxIdPayload(roleIdInput, roleNameInput,
 				roleLevelInput);
 
-		response = Responses.putRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
+		Response response = Responses.putRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.updateRoleEndpoint);
 
 		String responseBody = response.getBody().asPrettyString();
-		System.out.println(response.getBody().asPrettyString());
+		test.log(Status.INFO, "Request payload for update role is: " + response.getStatusCode());
+		test.log(Status.INFO, "Status code for update role is: " + response.getStatusCode());
+		test.log(Status.INFO, "Response for update role is: " + response.getBody().asPrettyString());
 
 		if (roleNameInput.equalsIgnoreCase("")) {
 			BodyValidation.response400Validation(response);
@@ -146,101 +154,111 @@ public class RoleFolderAPITestCases {
 			BodyValidation.responseValidation(response, 200, String.valueOf(contentLength));
 			assertEquals(responseBody, "Role update successfully");
 
-			verifyGetAllRoleAPIWithAuthorization("after updated new role");
+			verify_Get_All_Roles_API_With_Authorization("after updated new role");
 
-			newCreatedRoleId = response.jsonPath().getInt("max { it.roleId }.roleId");
-			log.info("New created Role Id after updated new role is: " + newCreatedRoleId);
+			verify_New_Created_Role_Details("after updated new role");
 
-			newCreatedRole = response.jsonPath().getString("find { it.roleId == " + newCreatedRoleId + " }.role");
-			log.info("New created Role after updated new role is: " + newCreatedRole);
 			assertEquals(newCreatedRole, "ROLE_" + roleNameInput.toUpperCase());
 
-			newCreatedRoleName = response.jsonPath()
-					.getString("find { it.roleId == " + newCreatedRoleId + " }.roleName");
-			log.info("New created Role Name after updated new role is: " + newCreatedRoleName);
 			assertEquals(newCreatedRoleName, roleNameInput);
 
-			newCreatedRoleLevel = response.jsonPath()
-					.getInt("find { it.roleId == " + newCreatedRoleId + " }.roleLevel");
-			log.info("New created Role Level after updated new role is: " + newCreatedRoleLevel + "\n");
 			assertEquals(newCreatedRoleLevel, roleLevelInput);
 		}
 	}
 
-	@Test(priority = 9, dataProvider = "TestDataForDeleteRole", dataProviderClass = DataProvidersForRoleFolder.class, enabled = false)
-	public void verifyDeleteSingleRoleWithAuthorization(int roleIdInput) {
-		if (roleIds != null) {
-			String requestPayload = RoleFolderPayloads.giveRolePayloadForDeleteRole(roleIdInput);
+	@Test(priority = 9, dataProvider = "TestDataForDeleteRole", dataProviderClass = DataProvidersForRoleFolder.class)
+	public void verify_Delete_Role_With_Authorization(int roleIdInput) {
+		test = BaseTest.extent.createTest("Delete role with valid and invalid data and with authorization");
 
-			response = Responses.deleteRequestWithAuthorizationAndPayload(requestPayload,
-					LoginEmployeeAPITestCases.authToken, APIEndpoints.deleteRoleEndpoint);
+		String requestPayload = RoleFolderPayloads.deleteRolePayload(roleIdInput);
 
-			String responseBody = response.getBody().asPrettyString();
+		Response response = Responses.deleteRequestWithAuthorizationAndPayload(requestPayload,
+				LoginEmployeeAPITestCases.authToken, APIEndpoints.deleteRoleEndpoint);
 
-			if (response.getBody().asPrettyString().equals("[]")) {
-				BodyValidation.response204Validation(response);
-			} else if (response.getStatusCode() == 403) {
-				BodyValidation.responseValidation(response, "Forbidden", 403);
-			} else if (!roleIds.contains(roleIdInput)) {
-				BodyValidation.responseValidation(response, "Not Found", 404);
-			} else {
-				int contentLength = responseBody.length();
-				BodyValidation.responseValidation(response, 200, String.valueOf(contentLength));
-				assertEquals(responseBody, "Role Deleted Successfully");
+		String responseBody = response.getBody().asPrettyString();
+		test.log(Status.INFO, "Request payload for delete role is: " + response.getStatusCode());
+		test.log(Status.INFO, "Status code for delete role is: " + response.getStatusCode());
+		test.log(Status.INFO, "Response for delete role is: " + response.getBody().asPrettyString());
 
-				verifyGetAllRoleAPIWithAuthorization("after deleted new role");
-			}
+		if (response.getBody().asPrettyString().equals("[]")) {
+			BodyValidation.response204Validation(response);
+		} else if (response.getStatusCode() == 403) {
+			BodyValidation.responseValidation(response, "Forbidden", 403);
+		} else if (!roleIds.contains(roleIdInput)) {
+			BodyValidation.responseValidation(response, "Not Found", 404);
 		} else {
-			log.info("Role Ids are null");
+			int contentLength = responseBody.length();
+			BodyValidation.responseValidation(response, 200, String.valueOf(contentLength));
+			assertEquals(responseBody, "Role Deleted Successfully");
+
+			verify_Get_All_Roles_API_With_Authorization("after deleted new role");
 		}
 	}
 
 	@Test(priority = 10, dataProvider = "TestDataForGetRoleByLevel", dataProviderClass = DataProvidersForRoleFolder.class)
-	public void verifyGetRoleByLevelWithAuthorization(int roleLevelInput) {
-		if (roleLevels != null) {
-			response = Responses.getRequestWithAuthorizationAndPathParameter(LoginEmployeeAPITestCases.authToken,
-					APIEndpoints.getAllRolesByLevelEndpoint, roleLevelInput);
+	public void verify_Get_Role_By_Level_With_Authorization(int roleLevelInput) {
+		test = BaseTest.extent.createTest("Get role by level with valid and invalid data and with authorization");
 
-			if (!roleLevels.contains(roleLevelInput)) {
-				BodyValidation.responseValidation(response, "Not Found", 404);
-			} else {
-				BodyValidation.responseValidation(response, 200);
+		Response response = Responses.getRequestWithAuthorizationAndPathParameter(LoginEmployeeAPITestCases.authToken,
+				APIEndpoints.getAllRolesByLevelEndpoint, roleLevelInput);
+		test.log(Status.INFO, "Status code for get role by level is: " + response.getStatusCode());
+		test.log(Status.INFO, "Response for get role by level is: " + response.getBody().asPrettyString());
 
-				response.then().body("roleId", hasItem(greaterThanOrEqualTo(roleLevelInput))).body("roleLevel",
-						everyItem(greaterThanOrEqualTo(roleLevelInput)));
-
-				if (roleLevelInput == 1) {
-					response.then().body("[0].roleLevel", equalTo(roleLevelInput))
-							.body("[1].roleLevel", equalTo(roleLevelInput + 1))
-							.body("[2].roleLevel", equalTo(roleLevelInput + 2))
-							.body("[3].roleLevel", equalTo(roleLevelInput + 3))
-							.body("[4].roleLevel", equalTo(roleLevelInput + 4));
-				} else if (roleLevelInput == 2) {
-					response.then().body("[0].roleLevel", equalTo(roleLevelInput))
-							.body("[1].roleLevel", equalTo(roleLevelInput + 1))
-							.body("[2].roleLevel", equalTo(roleLevelInput + 2))
-							.body("[3].roleLevel", equalTo(roleLevelInput + 3));
-				} else if (roleLevelInput == 3) {
-					response.then().body("[0].roleLevel", equalTo(roleLevelInput))
-							.body("[1].roleLevel", equalTo(roleLevelInput + 1))
-							.body("[2].roleLevel", equalTo(roleLevelInput + 2));
-				} else if (roleLevelInput == 4) {
-					response.then().body("[0].roleLevel", equalTo(roleLevelInput)).body("[1].roleLevel",
-							equalTo(roleLevelInput + 1));
-				} else {
-					response.then().body("[0].roleLevel", equalTo(roleLevelInput));
-				}
-			}
+		if (!roleLevels.contains(roleLevelInput)) {
+			BodyValidation.responseValidation(response, "Not Found", 404);
 		} else {
-			log.info("Role levels are null");
+			BodyValidation.responseValidation(response, 200);
+
+			response.then().body("roleId", hasItem(greaterThanOrEqualTo(roleLevelInput))).body("roleLevel",
+					everyItem(greaterThanOrEqualTo(roleLevelInput)));
+
+			if (roleLevelInput == 1) {
+				response.then().body("[0].roleLevel", equalTo(roleLevelInput))
+						.body("[1].roleLevel", equalTo(roleLevelInput + 1))
+						.body("[2].roleLevel", equalTo(roleLevelInput + 2))
+						.body("[3].roleLevel", equalTo(roleLevelInput + 3))
+						.body("[4].roleLevel", equalTo(roleLevelInput + 4));
+			} else if (roleLevelInput == 2) {
+				response.then().body("[0].roleLevel", equalTo(roleLevelInput))
+						.body("[1].roleLevel", equalTo(roleLevelInput + 1))
+						.body("[2].roleLevel", equalTo(roleLevelInput + 2))
+						.body("[3].roleLevel", equalTo(roleLevelInput + 3));
+			} else if (roleLevelInput == 3) {
+				response.then().body("[0].roleLevel", equalTo(roleLevelInput))
+						.body("[1].roleLevel", equalTo(roleLevelInput + 1))
+						.body("[2].roleLevel", equalTo(roleLevelInput + 2));
+			} else if (roleLevelInput == 4) {
+				response.then().body("[0].roleLevel", equalTo(roleLevelInput)).body("[1].roleLevel",
+						equalTo(roleLevelInput + 1));
+			} else {
+				response.then().body("[0].roleLevel", equalTo(roleLevelInput));
+			}
 		}
 	}
 
-	public void verifyGetAllRoleAPIWithAuthorization(String message) {
+	public void verify_New_Created_Role_Details(String message) {
+		newCreatedRoleId = response.jsonPath().getInt("max { it.roleId }.roleId");
+		log.info("New created role Id " + message + " is: " + newCreatedRoleId);
+
+		newCreatedRole = response.jsonPath().getString("find { it.roleId == " + newCreatedRoleId + " }.role");
+		log.info("New created role " + message + " is: " + newCreatedRole);
+
+		newCreatedRoleName = response.jsonPath().getString("find { it.roleId == " + newCreatedRoleId + " }.roleName");
+		log.info("New created role name " + message + " is: " + newCreatedRoleName);
+
+		newCreatedRoleLevel = response.jsonPath().getInt("find { it.roleId == " + newCreatedRoleId + " }.roleLevel");
+		log.info("New created role level " + message + " is: " + newCreatedRoleLevel + "\n");
+	}
+
+	public void verify_Get_All_Roles_API_With_Authorization(String message) {
+		test = BaseTest.extent.createTest("Get all roles with authorization");
+
 		response = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.getAllRolesEndpoint);
 
 		BodyValidation.responseValidation(response, 200);
+		test.log(Status.INFO, "Status code for get all roles is: " + response.getStatusCode());
+		test.log(Status.INFO, "Response for get all roles is: " + response.getBody().asPrettyString());
 
 		roleIds = response.jsonPath().getList("roleId");
 		log.info("List of role Ids " + message + " are: " + roleIds);

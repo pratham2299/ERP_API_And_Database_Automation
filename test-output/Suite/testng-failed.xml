@@ -3,17 +3,24 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases">
+      <class name="in.task_erp_api.testcases.DesignationFolderAPITestCases">
         <methods>
           <include name="extent_Report_Setup"/>
           <include name="startBackendServer"/>
           <include name="flush_Extent_Report"/>
-          <include name="verify_Update_Verification_Status_With_Authorization" invocation-numbers="0 1 2 3 4 5 6 7"/>
           <include name="test_Method_Exection_Result"/>
-          <include name="verify_Delete_Single_Verification_Status_With_Authorization" invocation-numbers="1 2"/>
-          <include name="verify_Add_Verification_Status_With_Authorization" invocation-numbers="1 3 5"/>
+          <include name="verify_Update_Designation_With_Authorization" invocation-numbers="0"/>
         </methods>
-      </class> <!-- in.task_erp_api.testcases.VerificationStatusFolderAPITestCases -->
+      </class> <!-- in.task_erp_api.testcases.DesignationFolderAPITestCases -->
+      <class name="in.task_erp_api.testcases.DepartmentFolderAPITestCases">
+        <methods>
+          <include name="extent_Report_Setup"/>
+          <include name="startBackendServer"/>
+          <include name="flush_Extent_Report"/>
+          <include name="test_Method_Exection_Result"/>
+          <include name="verifyUpdateDepartmentWithAuthorization" invocation-numbers="1 2 4 5 6 7"/>
+        </methods>
+      </class> <!-- in.task_erp_api.testcases.DepartmentFolderAPITestCases -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

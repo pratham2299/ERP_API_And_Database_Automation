@@ -1,45 +1,46 @@
 package in.task_erp_api.payloads;
 
-import java.util.HashMap;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
-import com.google.gson.Gson;
+import in.biencaps.erp.pojos.RolePojo;
 
 public class RoleFolderPayloads {
-	private static Gson gson = new Gson();
+	// Create ObjectMapper instance
+	static ObjectMapper objectMapper = new ObjectMapper();
 
-	public static String giveRolePayloadForAddRole(String fakeRole, int fakeRoleLevel) {
-		HashMap<String, Object> roleMap = new HashMap<>();
-		roleMap.put("role", fakeRole);
-		roleMap.put("roleLevel", fakeRoleLevel);
+	public static String addRolePayload(String role, int roleLevel) {
+		RolePojo roleObj = new RolePojo();
+		roleObj.setRole(role);
+		roleObj.setRoleLevel(roleLevel);
 
-		String payload = gson.toJson(roleMap);
-		return payload;
+		try {
+			return objectMapper.writeValueAsString(roleObj);
+		} catch (Exception e) {
+			throw new RuntimeException("Failed to convert Role object to JSON", e);
+		}
 	}
 
-	public static String giveRolePayloadForUpdateRole(int fakeRoleId, String fakeRole, int fakeRoleLevel) {
-		HashMap<String, Object> roleMap = new HashMap<>();
-		roleMap.put("roleId", fakeRoleId);
-		roleMap.put("role", fakeRole);
-		roleMap.put("roleLevel", fakeRoleLevel);
+	public static String updateRoleWithMaxIdPayload(int roleId, String role, int roleLevel) throws Throwable {
+		RolePojo roleObj = new RolePojo();
+		roleObj.setRoleId(roleId);
+		roleObj.setRole(role);
+		roleObj.setRoleLevel(roleLevel);
 
-		String payload = gson.toJson(roleMap);
-		return payload;
+		try {
+			return objectMapper.writeValueAsString(roleObj);
+		} catch (Exception e) {
+			throw new RuntimeException("Failed to convert Role object to JSON", e);
+		}
 	}
 
-	public static String giveRolePayloadForUpdateRole(int fakeRoleId, int fakeRoleLevel) {
-		HashMap<String, Object> roleMap = new HashMap<>();
-		roleMap.put("roleId", fakeRoleId);
-		roleMap.put("roleLevel", fakeRoleLevel);
+	public static String deleteRolePayload(int roleId) {
+		RolePojo roleObj = new RolePojo();
+		roleObj.setRoleId(roleId);
 
-		String payload = gson.toJson(roleMap);
-		return payload;
-	}
-
-	public static String giveRolePayloadForDeleteRole(int fakeRoleId) {
-		HashMap<String, Integer> roleMap = new HashMap<>();
-		roleMap.put("roleId", fakeRoleId);
-
-		String payload = gson.toJson(roleMap);
-		return payload;
+		try {
+			return objectMapper.writeValueAsString(roleObj);
+		} catch (Exception e) {
+			throw new RuntimeException("Failed to convert Role object to JSON", e);
+		}
 	}
 }

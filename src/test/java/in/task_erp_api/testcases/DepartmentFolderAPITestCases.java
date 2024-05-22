@@ -128,8 +128,8 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 	public void verify_Update_Department_Without_Authorization() throws Throwable {
 		test = BaseTest.extent.createTest("Update department without authorization");
 
-		Response getDepartmentResposne = Responses
-				.getRequestWithoutAuthorization(APIEndpoints.getAllDepartmentsEndpoint);
+		Response getDepartmentResposne = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
+				APIEndpoints.getAllDepartmentsEndpoint);
 
 		String requestPayload = DepartmentFolderPayloads.updateDepartmentWithMaxIdPayload(
 				getDepartmentResposne.getBody().asPrettyString(), 4, "Testing", 10, "Red", "#FF0000");
@@ -271,10 +271,11 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 		test = BaseTest.extent.createTest("Get user id with authorization");
 
 		// Calling get all employees API
-		Response getEmployeesResponse = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
-				APIEndpoints.getAllEmployeesEndpoint);
+		Response getEmployeesResponse = Responses.getRequestWithAuthorizationAndThreeQueryParameter(
+				LoginEmployeeAPITestCases.authToken, APIEndpoints.getAllEmployeesEndpoint, "page", 0, "size", 20, "key",
+				"");
 
-		String maxValueOfUserId = getEmployeesResponse.jsonPath().getString("max { it.userId }.userId");
+		String maxValueOfUserId = getEmployeesResponse.jsonPath().getString("data.max { it.userId }.userId");
 		log.info("Max value of user Id is: " + maxValueOfUserId);
 
 		String numericPart = maxValueOfUserId.substring(3);
@@ -284,8 +285,15 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 		int new_numeric_part = numeric_part + 1;
 		String newNumericPart = String.valueOf(new_numeric_part);
 
-		String newUserId = "BIE0" + newNumericPart;
-		log.info("New User Id for get user id is: " + newUserId + "\n");
+		String newUserId = "";
+
+		if (Constants.environment.equalsIgnoreCase("test")) {
+			newUserId = "INC0" + newNumericPart;
+			log.info("New User Id for get user id is: " + newUserId + "\n");
+		} else {
+			newUserId = "BIE0" + newNumericPart;
+			log.info("New User Id for get user id is: " + newUserId + "\n");
+		}
 
 		// Calling get user Id API
 		Response response = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
@@ -325,7 +333,7 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 	}
 
 	@Test(priority = 16)
-	public void verifyGetEmployeesByDepartmentNameByGivingInvalidDepartmentName() {
+	public void verify_Get_Employees_By_Department_By_Giving_Invalid_Department() {
 		String fakeDepartmentName = faker.company().profession();
 
 		if (departments != null) {
@@ -341,7 +349,7 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 	}
 
 	@Test(priority = 17)
-	public void verifyGetAllEmployeesByDesignationNameWithAuthorization() {
+	public void verify_Get_All_Employees_By_Designation_With_Authorization() {
 		if (DesignationFolderAPITestCases.designations != null) {
 			int randomIndexForDesignationName = random.nextInt(DesignationFolderAPITestCases.designations.size());
 			String randomDesignationName = DesignationFolderAPITestCases.designations
@@ -364,7 +372,7 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 	}
 
 	@Test(priority = 18)
-	public void verifyGetAllEmployeesByDesignationNameByGivingInvalidDesignationName() {
+	public void verify_Get_All_Employees_By_Designation_By_Giving_Invalid_Designation() {
 		String fakeDesignation = faker.company().profession();
 
 		if (DesignationFolderAPITestCases.designations != null) {
@@ -381,7 +389,7 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 	}
 
 	@Test(priority = 19)
-	public void verifyGetAllAssigneeWithAuthorizationByGivingValidRoleLevel() {
+	public void verify_Get_All_Assignee_With_Authorization_By_Giving_Valid_Role_Level() {
 		if (RoleFolderAPITestCases.roleIds != null) {
 			int randomIndexForRoleId = random.nextInt(RoleFolderAPITestCases.roleIds.size());
 			int randomRoleId = RoleFolderAPITestCases.roleIds.get(randomIndexForRoleId);
@@ -399,7 +407,7 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 	}
 
 	@Test(priority = 20)
-	public void verifyGetHigherAuthorityWithAuthorization() {
+	public void verify_Get_Higher_Authority_With_Authorization() {
 		if (RoleFolderAPITestCases.roleLevels != null && departments != null) {
 			int randomIndexForRoleLevel = random.nextInt(RoleFolderAPITestCases.roleLevels.size());
 			int randomRoleLevel = RoleFolderAPITestCases.roleLevels.get(randomIndexForRoleLevel);
@@ -422,7 +430,7 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 	}
 
 	@Test(priority = 21)
-	public void verifyGetHigherAuthorityByGivingInvalidDepartment() {
+	public void verify_Get_Higher_Authority_By_Giving_Invalid_Department() {
 		if (departments != null && RoleFolderAPITestCases.roleLevels != null) {
 			int randomIndexForRoleLevel = random.nextInt(RoleFolderAPITestCases.roleLevels.size());
 			int randomRoleLevel = RoleFolderAPITestCases.roleLevels.get(randomIndexForRoleLevel);

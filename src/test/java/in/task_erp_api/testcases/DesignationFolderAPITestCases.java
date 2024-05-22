@@ -8,8 +8,10 @@ import static org.testng.Assert.*;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Faker;
 
+import in.biencaps.erp.pojos.DepartmentPojo;
 import in.task_erp_api.bodyValidations.*;
 import in.task_erp_api.endpoints.*;
 import in.task_erp_api.payloads.*;
@@ -32,9 +34,10 @@ public class DesignationFolderAPITestCases extends BaseTest {
 	public void verify_Add_Designation_Without_Authorization() {
 		test = BaseTest.extent.createTest("Add designation without authorization");
 
-		String requestPayload = DesignationFolderPayloads.giveDesignationPayloadForAddDesignation("Designation");
+		String requestPayload = DesignationFolderPayloads.addDesignationPayload("Designation", 3);
 
-		response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.addDesignationEndpoint);
+		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
+				APIEndpoints.addDesignationEndpoint);
 
 		BodyValidation.response401Validation(response);
 		test.log(Status.INFO, "Status code for add designation is: " + response.getStatusCode());
@@ -47,7 +50,8 @@ public class DesignationFolderAPITestCases extends BaseTest {
 
 		String requestPayload = DesignationFolderPayloads.giveDesignationPayloadForGetAllDesignationsByDepartment(10);
 
-		response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.getAllDesignationsEndpoint);
+		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
+				APIEndpoints.getAllDesignationsEndpoint);
 
 		BodyValidation.response401Validation(response);
 		test.log(Status.INFO, "Status code for get all designations by department is: " + response.getStatusCode());
@@ -59,7 +63,7 @@ public class DesignationFolderAPITestCases extends BaseTest {
 	public void verify_Get_All_Designation_Without_Authorization() {
 		test = BaseTest.extent.createTest("Get all designations without authorization");
 
-		response = Responses.getRequestWithoutAuthorization(APIEndpoints.getAllDesignationsEndpoint);
+		Response response = Responses.getRequestWithoutAuthorization(APIEndpoints.getAllDesignationsEndpoint);
 
 		BodyValidation.response401Validation(response);
 		test.log(Status.INFO, "Status code for get all designations is: " + response.getStatusCode());
@@ -67,10 +71,25 @@ public class DesignationFolderAPITestCases extends BaseTest {
 	}
 
 	@Test(priority = 4)
-	public void verify_Update_Designation_Without_Authorization() {
+	public void verify_Update_Designation_Without_Authorization() throws Throwable {
 		test = BaseTest.extent.createTest("Update designation without authorization");
 
-		String requestPayload = DesignationFolderPayloads.giveDesignationPayloadForUpdateDesignation(7, "Designation");
+		Response getDesignationResponse = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
+				APIEndpoints.getAllDesignationsEndpoint);
+
+		// Creating object instance
+		ObjectMapper objectMapper = new ObjectMapper();
+
+		// Getting get all departments API response
+		Response getDepartmentResponse = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
+				APIEndpoints.getAllDepartmentsEndpoint);
+
+		// reading value for use in update designation
+		List<DepartmentPojo> departments = objectMapper.readValue(getDepartmentResponse.getBody().asPrettyString(),
+				objectMapper.getTypeFactory().constructCollectionType(List.class, DepartmentPojo.class));
+
+		String requestPayload = DesignationFolderPayloads.updateDesignationWithMaxIdPayload(
+				getDesignationResponse.getBody().asPrettyString(), 7, "Designation", departments);
 
 		response = Responses.putRequestWithoutAuthorization(requestPayload, APIEndpoints.updateDesignationEndpoint);
 
@@ -83,7 +102,7 @@ public class DesignationFolderAPITestCases extends BaseTest {
 	public void verify_Delete_Designation_Without_Authorization() {
 		test = BaseTest.extent.createTest("Delete designation without authorization");
 
-		response = Responses.deleteRequestWithoutAuthorizationAndQueryParameter("designation", "Designation",
+		Response response = Responses.deleteRequestWithoutAuthorizationAndQueryParameter("designation", "Designation",
 				APIEndpoints.deleteDesignationEndpoint);
 
 		BodyValidation.response401Validation(response);
@@ -93,7 +112,7 @@ public class DesignationFolderAPITestCases extends BaseTest {
 
 	@Test(priority = 6)
 	public void verify_Get_All_Designation_WithAuthorization() {
-		response = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
+		Response response = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.getAllDesignationsEndpoint);
 
 		BodyValidation.responseValidation(response, 200);
@@ -106,16 +125,18 @@ public class DesignationFolderAPITestCases extends BaseTest {
 	}
 
 	@Test(priority = 7, dataProvider = "TestDataForAddDesignation", dataProviderClass = DataProvidersForDesignationFolder.class)
-	public void verifyAddDesignationWithAuthorization(String designationName) {
-		String requestPayload = DesignationFolderPayloads.giveDesignationPayloadForAddDesignation(designationName);
+	public void verify_Add_Designation_With_Authorization(String designationName, int departmentId) {
+		String requestPayload = DesignationFolderPayloads.addDesignationPayload(designationName, departmentId);
 
-		response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
+		Response response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.addDesignationEndpoint);
 
 		if (designationName.equalsIgnoreCase("")) {
 			BodyValidation.response400Validation(response);
+		} else if (!DepartmentFolderAPITestCases.departmentIds.contains(departmentId)) {
+			BodyValidation.responseValidation(response, "Not Found", 404);
 		} else if (designations.contains(designationName)) {
-			BodyValidation.responseValidation(response, "Unprocessable Entity", 422);
+			BodyValidation.responseValidation(response, "Conflict", 409);
 		} else {
 			BodyValidation.responseValidation(response, 201);
 
@@ -134,7 +155,7 @@ public class DesignationFolderAPITestCases extends BaseTest {
 		String requestPayload = DesignationFolderPayloads
 				.giveDesignationPayloadForGetAllDesignationsByDepartment(fakeDepartmentId);
 
-		response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
+		Response response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.getAllDesignationByDepartmentEndpoint);
 
 		if (response.getStatusCode() == 404) {
@@ -145,13 +166,28 @@ public class DesignationFolderAPITestCases extends BaseTest {
 	}
 
 	@Test(priority = 9, dataProvider = "TestDataForUpdateDesignation", dataProviderClass = DataProvidersForDesignationFolder.class)
-	public void verify_Update_Designation_With_Authorization(int designationId, String designationName) {
+	public void verify_Update_Designation_With_Authorization(int designationId, String designationName)
+			throws Throwable {
 		test = BaseTest.extent.createTest("Update designation with valid and invalid data and with authorization");
 
-		String requestPayload = DesignationFolderPayloads.giveDesignationPayloadForUpdateDesignation(designationId,
-				designationName);
+		Response getDesignationResponse = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
+				APIEndpoints.getAllDesignationsEndpoint);
 
-		response = Responses.putRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
+		// Creating object instance
+		ObjectMapper objectMapper = new ObjectMapper();
+
+		// Getting get all departments API response
+		Response getDepartmentResponse = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
+				APIEndpoints.getAllDepartmentsEndpoint);
+
+		// reading value for use in update designation
+		List<DepartmentPojo> departments = objectMapper.readValue(getDepartmentResponse.getBody().asPrettyString(),
+				objectMapper.getTypeFactory().constructCollectionType(List.class, DepartmentPojo.class));
+
+		String requestPayload = DesignationFolderPayloads.updateDesignationWithMaxIdPayload(
+				getDesignationResponse.getBody().asPrettyString(), designationId, designationName, departments);
+
+		Response response = Responses.putRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.updateDesignationEndpoint);
 
 		String responseBody = response.getBody().asPrettyString();
@@ -161,12 +197,14 @@ public class DesignationFolderAPITestCases extends BaseTest {
 
 		if (designationName.equalsIgnoreCase("")) {
 			BodyValidation.response400Validation(response);
-		} else if (designations.contains(designationName)) {
-			BodyValidation.responseValidation(response, "Conflict", 409);
 		} else if (!designationIds.contains(designationId)) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
+		} else if (designations.contains(designationName)) {
+			BodyValidation.responseValidation(response, "Conflict", 409);
 		} else {
-			BodyValidation.responseValidation(response, 200);
+			int contentLength = responseBody.length();
+			BodyValidation.responseValidation(response, 200, String.valueOf(contentLength));
+			assertEquals(responseBody, "Updated Successfully");
 
 			verify_Get_All_Designation_API_With_Authorization("after updated new designation");
 
@@ -178,7 +216,7 @@ public class DesignationFolderAPITestCases extends BaseTest {
 	public void verify_Delete_Designation_With_Authorization(String designationName) {
 		test = BaseTest.extent.createTest("Delete designation with valid and invalid data and with authorization");
 
-		response = Responses.deleteRequestWithAuthorizationAndQueryParameter("designation", designationName,
+		Response response = Responses.deleteRequestWithAuthorizationAndQueryParameter("designation", designationName,
 				LoginEmployeeAPITestCases.authToken, APIEndpoints.deleteDesignationEndpoint);
 
 		String responseBody = response.getBody().asPrettyString();
@@ -193,7 +231,9 @@ public class DesignationFolderAPITestCases extends BaseTest {
 		} else if (!designations.contains(designationName)) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
 		} else {
-			BodyValidation.responseValidation(response, 200);
+			int contentLength = responseBody.length();
+			BodyValidation.responseValidation(response, 200, String.valueOf(contentLength));
+			assertEquals(responseBody, "Designation deleted Successfully");
 
 			verify_Get_All_Designation_API_With_Authorization("after deleted new designation");
 		}

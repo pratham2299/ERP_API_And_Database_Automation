@@ -22,14 +22,6 @@ public class StatusPojo {
 	public StatusPojo() {
 	}
 
-	// Parameterized constructor
-	public StatusPojo(String status, int statusLevel, String statusColor, String statusColorCode) {
-		this.status = status;
-		this.statusLevel = statusLevel;
-		this.statusColor = statusColor;
-		this.statusColorCode = statusColorCode;
-	}
-
 	// Getters and Setters
 	public int getStatusId() {
 		return statusId;

@@ -38,7 +38,7 @@ public class EmployeeFolderAPITestCases {
 	public static String authTokenOfSuperAdmin;
 
 	@Test(priority = 1)
-	public void verifyAddEmployeeWithoutAuthorization() {
+	public void verify_Add_Employee_Without_Authorization() {
 		String requestPayload = "{\r\n" + "    \"userId\": \"BIE009\",\r\n"
 				+ "    \"empFullName\": \"Vishal Lohbande\",\r\n" + "    \"empStatus\": \"ACTIVE\",\r\n"
 				+ "    \"designation\" : {\r\n" + "        \"designationId\" : 8\r\n" + "    },\r\n"
@@ -58,7 +58,7 @@ public class EmployeeFolderAPITestCases {
 	}
 
 	@Test(priority = 2)
-	public void verifyGetSingleEmployeeWithoutAuthorization() {
+	public void verify_GetSingleEmployeeWithoutAuthorization() {
 		String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForGetSingleEmployee("BIE018");
 
 		response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.getSingleEmployeeEndpoint);

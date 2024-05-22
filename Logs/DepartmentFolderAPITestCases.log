@@ -436,3 +436,630 @@
 15:20:53.977 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Departments are null
 15:20:53.980 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Role levels are null
 15:20:53.980 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Departments are null
+15:51:29.326 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids before add new department are:[1, 2, 4, 3, 5, 6, 7, 8]
+15:51:29.339 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names before add new department are:[Frontend, Backend, Management, QA, UI/UX, Mobile, Video, Graphics]
+15:51:29.353 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels before add new department are:[0, 1, 2, 3, 4, 5, 6, 7]
+15:51:29.366 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors before add new department are:[turquoise, royal blue, teal, rust, bright pink, magenta, cherry, melon]
+15:51:29.380 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes before add new department are:[#BBE4E7, #A6B1D0, #A1D0CE, #F3CEA9, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA]
+
+15:51:29.403 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id before add new department is: 8
+15:51:29.426 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department before add new department is: Graphics
+15:51:29.443 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level before add new department is: 7
+15:51:29.465 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color before add new department is: melon
+15:51:29.483 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code before add new department is: #FDBEBA
+
+15:51:30.060 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after added new department are:[1, 2, 4, 3, 5, 6, 7, 8, 96]
+15:51:30.070 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after added new department are:[Frontend, Backend, Management, QA, UI/UX, Mobile, Video, Graphics, Packaging and Containers]
+15:51:30.082 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after added new department are:[0, 1, 2, 3, 4, 5, 6, 7, 19]
+15:51:30.096 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after added new department are:[turquoise, royal blue, teal, rust, bright pink, magenta, cherry, melon, salmon]
+15:51:30.109 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after added new department are:[#BBE4E7, #A6B1D0, #A1D0CE, #F3CEA9, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA, #C12F94]
+
+15:51:30.127 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id after added new department is: 96
+15:51:30.146 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department after added new department is: Packaging and Containers
+15:51:30.165 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level after added new department is: 19
+15:51:30.186 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color after added new department is: salmon
+15:51:30.204 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code after added new department is: #C12F94
+
+15:51:33.664 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after updated new department are:[1, 2, 4, 3, 5, 6, 7, 8, 96]
+15:51:33.676 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after updated new department are:[Frontend, Backend, Management, QA, UI/UX, Mobile, Video, Graphics, Executive Office]
+15:51:33.687 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after updated new department are:[0, 1, 2, 3, 4, 5, 6, 7, 14]
+15:51:33.702 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after updated new department are:[turquoise, royal blue, teal, rust, bright pink, magenta, cherry, melon, plum]
+15:51:33.715 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after updated new department are:[#BBE4E7, #A6B1D0, #A1D0CE, #F3CEA9, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA, #3E052F]
+
+15:51:33.735 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id after updated new department is: 96
+15:51:33.753 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department after updated new department is: Executive Office
+15:51:33.771 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level after updated new department is: 14
+15:51:33.789 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color after updated new department is: plum
+15:51:33.809 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code after updated new department is: #3E052F
+
+15:51:38.775 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after deleted new department are:[1, 2, 4, 3, 5, 6, 7, 8]
+15:51:38.785 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after deleted new department are:[Frontend, Backend, Management, QA, UI/UX, Mobile, Video, Graphics]
+15:51:38.796 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after deleted new department are:[0, 1, 2, 3, 4, 5, 6, 7]
+15:51:38.807 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after deleted new department are:[turquoise, royal blue, teal, rust, bright pink, magenta, cherry, melon]
+15:51:38.819 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after deleted new department are:[#BBE4E7, #A6B1D0, #A1D0CE, #F3CEA9, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA]
+
+15:51:39.316 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Random department name for get all employees by department is : UI/UX
+
+15:51:39.407 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Designations are null
+15:51:39.410 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Designations are null
+15:51:39.413 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Random role Id for get all assignee is: 13
+
+15:51:39.790 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Random role level for get all higher authority is: 2
+15:51:39.790 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department name  for get all higher authority is: QA
+
+15:51:40.160 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Random role level for get all higher authority is: 5
+
+15:56:19.793 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids before add new department are:[1, 2, 4, 3, 5, 6, 7, 8]
+15:56:19.822 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names before add new department are:[Frontend, Backend, Management, QA, UI/UX, Mobile, Video, Graphics]
+15:56:19.846 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels before add new department are:[0, 1, 2, 3, 4, 5, 6, 7]
+15:56:19.865 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors before add new department are:[turquoise, royal blue, teal, rust, bright pink, magenta, cherry, melon]
+15:56:19.897 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes before add new department are:[#BBE4E7, #A6B1D0, #A1D0CE, #F3CEA9, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA]
+
+15:56:19.936 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id before add new department is: 8
+15:56:19.974 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department before add new department is: Graphics
+15:56:20.008 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level before add new department is: 7
+15:56:20.041 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color before add new department is: melon
+15:56:20.071 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code before add new department is: #FDBEBA
+
+15:56:20.708 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after added new department are:[1, 2, 4, 3, 5, 6, 7, 8, 101]
+15:56:20.724 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after added new department are:[Frontend, Backend, Management, QA, UI/UX, Mobile, Video, Graphics, Media Production]
+15:56:20.746 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after added new department are:[0, 1, 2, 3, 4, 5, 6, 7, 14]
+15:56:20.763 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after added new department are:[turquoise, royal blue, teal, rust, bright pink, magenta, cherry, melon, green]
+15:56:20.783 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after added new department are:[#BBE4E7, #A6B1D0, #A1D0CE, #F3CEA9, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA, #0481EC]
+
+15:56:20.812 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id after added new department is: 101
+15:56:20.837 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department after added new department is: Media Production
+15:56:20.873 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level after added new department is: 14
+15:56:20.904 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color after added new department is: green
+15:56:20.971 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code after added new department is: #0481EC
+
+15:56:24.616 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after updated new department are:[1, 2, 4, 3, 5, 6, 7, 8, 101]
+15:56:24.637 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after updated new department are:[Frontend, Backend, Management, QA, UI/UX, Mobile, Video, Graphics, Online Media]
+15:56:24.665 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after updated new department are:[0, 1, 2, 3, 4, 5, 6, 7, 15]
+15:56:24.688 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after updated new department are:[turquoise, royal blue, teal, rust, bright pink, magenta, cherry, melon, azure]
+15:56:24.711 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after updated new department are:[#BBE4E7, #A6B1D0, #A1D0CE, #F3CEA9, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA, #0DC76A]
+
+15:56:24.744 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id after updated new department is: 101
+15:56:24.791 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department after updated new department is: Online Media
+15:56:24.829 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level after updated new department is: 15
+15:56:24.864 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color after updated new department is: azure
+15:56:24.897 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code after updated new department is: #0DC76A
+
+15:56:30.118 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after deleted new department are:[1, 2, 4, 3, 5, 6, 7, 8, 101]
+15:56:30.134 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after deleted new department are:[Frontend, Backend, Management, QA, UI/UX, Mobile, Video, Graphics, Online Media]
+15:56:30.154 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after deleted new department are:[0, 1, 2, 3, 4, 5, 6, 7, 15]
+15:56:30.178 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after deleted new department are:[turquoise, royal blue, teal, rust, bright pink, magenta, cherry, melon, azure]
+15:56:30.199 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after deleted new department are:[#BBE4E7, #A6B1D0, #A1D0CE, #F3CEA9, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA, #FF9DCF]
+
+15:56:30.740 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after deleted new department are:[1, 2, 4, 3, 5, 6, 7, 8]
+15:56:30.755 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after deleted new department are:[Frontend, Backend, Management, QA, UI/UX, Mobile, Video, Graphics]
+15:56:30.773 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after deleted new department are:[0, 1, 2, 3, 4, 5, 6, 7]
+15:56:30.791 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after deleted new department are:[turquoise, royal blue, teal, rust, bright pink, magenta, cherry, melon]
+15:56:30.806 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after deleted new department are:[#BBE4E7, #A6B1D0, #A1D0CE, #F3CEA9, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA]
+
+15:56:30.879 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Random department name for get all employees by department is : Graphics
+
+15:56:31.368 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Designations are null
+15:56:31.373 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Designations are null
+15:56:31.378 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Random role Id for get all assignee is: 5
+
+15:56:31.734 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Random role level for get all higher authority is: 2
+15:56:31.735 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department name  for get all higher authority is: Graphics
+
+15:56:32.121 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Random role level for get all higher authority is: 1
+
+16:08:45.611 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids before add new department are:[1, 2, 4, 3, 5, 6, 7, 8]
+16:08:45.645 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names before add new department are:[Frontend, Backend, Management, QA, UI/UX, Mobile, Video, Graphics]
+16:08:45.656 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels before add new department are:[0, 1, 2, 3, 4, 5, 6, 7]
+16:08:45.668 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors before add new department are:[turquoise, royal blue, teal, rust, bright pink, magenta, cherry, melon]
+16:08:45.680 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes before add new department are:[#BBE4E7, #A6B1D0, #A1D0CE, #F3CEA9, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA]
+
+16:08:45.703 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id before add new department is: 8
+16:08:45.728 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department before add new department is: Graphics
+16:08:45.746 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level before add new department is: 7
+16:08:45.770 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color before add new department is: melon
+16:08:45.790 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code before add new department is: #FDBEBA
+
+16:08:46.306 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after added new department are:[1, 2, 4, 3, 5, 6, 7, 8, 106]
+16:08:46.321 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after added new department are:[Frontend, Backend, Management, QA, UI/UX, Mobile, Video, Graphics, Renewables & Environment]
+16:08:46.336 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after added new department are:[0, 1, 2, 3, 4, 5, 6, 7, 18]
+16:08:46.363 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after added new department are:[turquoise, royal blue, teal, rust, bright pink, magenta, cherry, melon, orchid]
+16:08:46.382 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after added new department are:[#BBE4E7, #A6B1D0, #A1D0CE, #F3CEA9, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA, #A56BB8]
+
+16:08:46.402 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id after added new department is: 106
+16:08:46.419 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department after added new department is: Renewables & Environment
+16:08:46.437 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level after added new department is: 18
+16:08:46.453 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color after added new department is: orchid
+16:08:46.471 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code after added new department is: #A56BB8
+
+16:08:54.606 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after deleted new department are:[1, 2, 4, 3, 5, 6, 7, 8]
+16:08:54.617 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after deleted new department are:[Frontend, Backend, Management, QA, UI/UX, Mobile, Video, Graphics]
+16:08:54.644 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after deleted new department are:[0, 1, 2, 3, 4, 5, 6, 7]
+16:08:54.656 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after deleted new department are:[turquoise, royal blue, teal, rust, bright pink, magenta, cherry, melon]
+16:08:54.669 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after deleted new department are:[#BBE4E7, #A6B1D0, #A1D0CE, #F3CEA9, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA]
+
+16:08:55.628 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Random department name for get all employees by department is : Mobile
+
+16:08:56.122 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Designations are null
+16:08:56.125 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Designations are null
+16:08:56.128 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Random role Id for get all assignee is: 14
+
+16:08:56.588 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Random role level for get all higher authority is: 1
+16:08:56.588 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department name  for get all higher authority is: Graphics
+
+16:08:57.142 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Random role level for get all higher authority is: 19
+
+16:16:45.507 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids before add new department are:[1, 2, 4, 3, 5, 6, 7, 8]
+16:16:45.522 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names before add new department are:[Frontend, Backend, Management, QA, UI/UX, Mobile, Video, Graphics]
+16:16:45.537 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels before add new department are:[0, 1, 2, 3, 4, 5, 6, 7]
+16:16:45.570 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors before add new department are:[turquoise, royal blue, teal, rust, bright pink, magenta, cherry, melon]
+16:16:45.589 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes before add new department are:[#BBE4E7, #A6B1D0, #A1D0CE, #F3CEA9, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA]
+
+16:16:45.615 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id before add new department is: 8
+16:16:45.641 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department before add new department is: Graphics
+16:16:45.662 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level before add new department is: 7
+16:16:45.687 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color before add new department is: melon
+16:16:45.712 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code before add new department is: #FDBEBA
+
+16:16:46.237 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after added new department are:[1, 2, 4, 3, 5, 6, 7, 8, 111]
+16:16:46.248 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after added new department are:[Frontend, Backend, Management, QA, UI/UX, Mobile, Video, Graphics, Translation and Localization]
+16:16:46.263 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after added new department are:[0, 1, 2, 3, 4, 5, 6, 7, 14]
+16:16:46.278 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after added new department are:[turquoise, royal blue, teal, rust, bright pink, magenta, cherry, melon, azure]
+16:16:46.292 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after added new department are:[#BBE4E7, #A6B1D0, #A1D0CE, #F3CEA9, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA, #DBF285]
+
+16:16:46.320 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id after added new department is: 111
+16:16:46.363 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department after added new department is: Translation and Localization
+16:16:46.386 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level after added new department is: 14
+16:16:46.410 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color after added new department is: azure
+16:16:46.429 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code after added new department is: #DBF285
+
+16:16:50.157 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after updated new department are:[1, 2, 4, 3, 5, 6, 7, 8, 111]
+16:16:50.168 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after updated new department are:[Frontend, Backend, Management, QA, UI/UX, Mobile, Video, Graphics, International Trade and Development]
+16:16:50.182 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after updated new department are:[0, 1, 2, 3, 4, 5, 6, 7, 10]
+16:16:50.199 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after updated new department are:[turquoise, royal blue, teal, rust, bright pink, magenta, cherry, melon, blue]
+16:16:50.216 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after updated new department are:[#BBE4E7, #A6B1D0, #A1D0CE, #F3CEA9, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA, #66383B]
+
+16:16:50.242 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id after updated new department is: 111
+16:16:50.266 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department after updated new department is: International Trade and Development
+16:16:50.295 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level after updated new department is: 10
+16:16:50.321 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color after updated new department is: blue
+16:16:50.343 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code after updated new department is: #66383B
+
+16:16:55.059 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after deleted new department are:[1, 2, 4, 3, 5, 6, 7, 8, 111]
+16:16:55.069 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after deleted new department are:[Frontend, Backend, Management, QA, UI/UX, Mobile, Video, Graphics, International Trade and Development]
+16:16:55.079 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after deleted new department are:[0, 1, 2, 3, 4, 5, 6, 7, 10]
+16:16:55.092 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after deleted new department are:[turquoise, royal blue, teal, rust, bright pink, magenta, cherry, melon, blue]
+16:16:55.105 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after deleted new department are:[#BBE4E7, #A6B1D0, #A1D0CE, #F3CEA9, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA, #FFBDD1]
+
+16:16:55.553 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after deleted new department are:[1, 2, 4, 3, 5, 6, 7, 8]
+16:16:55.563 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after deleted new department are:[Frontend, Backend, Management, QA, UI/UX, Mobile, Video, Graphics]
+16:16:55.575 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after deleted new department are:[0, 1, 2, 3, 4, 5, 6, 7]
+16:16:55.583 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after deleted new department are:[turquoise, royal blue, teal, rust, bright pink, magenta, cherry, melon]
+16:16:55.596 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after deleted new department are:[#BBE4E7, #A6B1D0, #A1D0CE, #F3CEA9, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA]
+
+16:16:56.038 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Max value of user Id is: INC018
+16:16:56.038 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New User Id for get user id is: BIE019
+
+16:16:56.443 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Random department name for get all employees by department is : Video
+
+16:16:56.910 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Designations are null
+16:16:56.913 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Designations are null
+16:16:56.915 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Random role Id for get all assignee is: 13
+
+16:16:57.364 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Random role level for get all higher authority is: 4
+16:16:57.364 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department name  for get all higher authority is: Frontend
+
+16:16:57.775 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Random role level for get all higher authority is: 3
+
+16:19:45.432 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids before add new department are:[1, 2, 3, 4, 5, 6, 7, 8]
+16:19:45.459 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names before add new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Graphics]
+16:19:45.568 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels before add new department are:[0, 1, 2, 3, 4, 5, 6, 7]
+16:19:45.679 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors before add new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, melon]
+16:19:45.698 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes before add new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA]
+
+16:19:45.738 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id before add new department is: 8
+16:19:45.765 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department before add new department is: Graphics
+16:19:45.796 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level before add new department is: 7
+16:19:45.819 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color before add new department is: melon
+16:19:45.843 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code before add new department is: #FDBEBA
+
+16:19:47.225 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after added new department are:[1, 2, 3, 4, 5, 6, 7, 8, 29]
+16:19:47.242 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after added new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Graphics, Building Materials]
+16:19:47.258 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after added new department are:[0, 1, 2, 3, 4, 5, 6, 7, 17]
+16:19:47.274 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after added new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, melon, lavender]
+16:19:47.291 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after added new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA, #1B241F]
+
+16:19:47.317 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id after added new department is: 29
+16:19:47.346 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department after added new department is: Building Materials
+16:19:47.375 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level after added new department is: 17
+16:19:47.464 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color after added new department is: lavender
+16:19:47.490 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code after added new department is: #1B241F
+
+16:19:54.909 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after updated new department are:[1, 2, 3, 4, 5, 6, 7, 8, 29]
+16:19:54.923 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after updated new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Graphics, Gambling & Casinos]
+16:19:54.940 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after updated new department are:[0, 1, 2, 3, 4, 5, 6, 7, 16]
+16:19:54.955 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after updated new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, melon, pink]
+16:19:54.966 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after updated new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA, #8A84D5]
+
+16:19:54.987 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id after updated new department is: 29
+16:19:55.008 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department after updated new department is: Gambling & Casinos
+16:19:55.029 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level after updated new department is: 16
+16:19:55.054 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color after updated new department is: pink
+16:19:55.080 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code after updated new department is: #8A84D5
+
+16:20:11.322 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after deleted new department are:[1, 2, 3, 4, 5, 6, 7, 8]
+16:20:11.339 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after deleted new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Graphics]
+16:20:11.363 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after deleted new department are:[0, 1, 2, 3, 4, 5, 6, 7]
+16:20:11.380 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after deleted new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, melon]
+16:20:11.405 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after deleted new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA]
+
+16:20:12.585 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Max value of user Id is: INC020
+16:20:12.585 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New User Id for get user id is: BIE021
+
+16:20:13.269 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Random department name for get all employees by department is : Backend
+
+16:20:14.576 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Designations are null
+16:20:14.579 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Designations are null
+16:20:14.581 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Random role Id for get all assignee is: 3
+
+16:20:15.412 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Random role level for get all higher authority is: 2
+16:20:15.412 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department name  for get all higher authority is: Graphics
+
+16:20:16.132 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Random role level for get all higher authority is: 5
+
+17:16:30.326 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids before add new department are:[1, 2, 3, 4, 5, 6, 7, 8]
+17:16:30.336 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names before add new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Graphics]
+17:16:30.349 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels before add new department are:[0, 1, 2, 3, 4, 5, 6, 7]
+17:16:30.374 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors before add new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, melon]
+17:16:30.391 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes before add new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA]
+
+17:16:30.415 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id before add new department is: 8
+17:16:30.441 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department before add new department is: Graphics
+17:16:30.461 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level before add new department is: 7
+17:16:30.489 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color before add new department is: melon
+17:16:30.510 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code before add new department is: #FDBEBA
+
+17:16:37.378 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after updated new department are:[1, 2, 3, 4, 5, 6, 7, 8, 34]
+17:16:37.389 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after updated new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Shipbuilding, Translation and Localization]
+17:16:37.399 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after updated new department are:[0, 1, 2, 3, 4, 5, 6, 13, 18]
+17:16:37.419 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after updated new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, tan, turquoise]
+17:16:37.431 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after updated new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #4B2B60, #91C311]
+
+17:16:37.463 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id after updated new department is: 34
+17:16:37.482 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department after updated new department is: Translation and Localization
+17:16:37.499 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level after updated new department is: 18
+17:16:37.515 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color after updated new department is: turquoise
+17:16:37.530 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code after updated new department is: #91C311
+
+17:16:49.643 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after deleted new department are:[1, 2, 3, 4, 5, 6, 7, 8]
+17:16:49.655 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after deleted new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Shipbuilding]
+17:16:49.668 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after deleted new department are:[0, 1, 2, 3, 4, 5, 6, 13]
+17:16:49.680 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after deleted new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, tan]
+17:16:49.691 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after deleted new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA]
+
+17:16:50.915 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Max value of user Id is: INC020
+17:16:50.915 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New User Id for get user id is: INC021
+
+17:16:51.456 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Random department name for get all employees by department is : QA
+
+17:16:52.913 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Designations are null
+17:16:52.916 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Designations are null
+17:16:52.919 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Random role Id for get all assignee is: 13
+
+17:16:53.582 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Random role level for get all higher authority is: 2
+17:16:53.582 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department name  for get all higher authority is: Management
+
+17:16:54.140 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Random role level for get all higher authority is: 1
+
+17:20:23.812 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids before add new department are:[1, 2, 3, 4, 5, 6, 7, 8]
+17:20:23.826 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names before add new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Graphics]
+17:20:23.840 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels before add new department are:[0, 1, 2, 3, 4, 5, 6, 7]
+17:20:23.859 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors before add new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, melon]
+17:20:23.879 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes before add new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA]
+
+17:20:23.982 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id before add new department is: 8
+17:20:24.023 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department before add new department is: Graphics
+17:20:24.041 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level before add new department is: 7
+17:20:24.061 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color before add new department is: melon
+17:20:24.086 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code before add new department is: #FDBEBA
+
+17:20:25.579 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after added new department are:[1, 2, 3, 4, 5, 6, 7, 8, 39]
+17:20:25.594 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after added new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Graphics, Legal Services]
+17:20:25.611 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after added new department are:[0, 1, 2, 3, 4, 5, 6, 7, 13]
+17:20:25.629 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after added new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, melon, silver]
+17:20:25.646 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after added new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA, #602072]
+
+17:20:25.672 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id after added new department is: 39
+17:20:25.692 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department after added new department is: Legal Services
+17:20:25.712 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level after added new department is: 13
+17:20:25.738 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color after added new department is: silver
+17:20:25.759 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code after added new department is: #602072
+
+17:20:42.231 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after deleted new department are:[1, 2, 3, 4, 5, 6, 7, 8, 39]
+17:20:42.247 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after deleted new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Graphics, Fund-Raising]
+17:20:42.262 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after deleted new department are:[0, 1, 2, 3, 4, 5, 6, 7, 13]
+17:20:42.276 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after deleted new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, melon, pink]
+17:20:42.293 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after deleted new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA, #F4A3B3]
+
+17:20:43.466 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after deleted new department are:[1, 2, 3, 4, 5, 6, 7, 8]
+17:20:43.494 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after deleted new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Graphics]
+17:20:43.508 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after deleted new department are:[0, 1, 2, 3, 4, 5, 6, 7]
+17:20:43.518 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after deleted new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, melon]
+17:20:43.532 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after deleted new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA]
+
+17:20:44.404 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Max value of user Id is: INC020
+17:20:44.405 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New User Id for get user id is: INC021
+
+17:20:45.010 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Random department name for get all employees by department is : QA
+
+17:20:46.122 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Designations are null
+17:20:46.125 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Designations are null
+17:20:46.130 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Role Ids are null
+17:20:46.133 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Role Levels are null
+17:20:46.133 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Departments are null
+17:20:46.136 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Role levels are null
+17:20:46.136 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Departments are null
+17:22:40.012 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids before add new department are:[1, 2, 3, 4, 5, 6, 7, 8]
+17:22:40.025 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names before add new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Graphics]
+17:22:40.042 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels before add new department are:[0, 1, 2, 3, 4, 5, 6, 7]
+17:22:40.059 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors before add new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, melon]
+17:22:40.080 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes before add new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA]
+
+17:22:40.168 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id before add new department is: 8
+17:22:40.204 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department before add new department is: Graphics
+17:22:40.223 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level before add new department is: 7
+17:22:40.252 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color before add new department is: melon
+17:22:40.272 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code before add new department is: #FDBEBA
+
+17:22:41.503 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after added new department are:[1, 2, 3, 4, 5, 6, 7, 8, 44]
+17:22:41.514 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after added new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Graphics, Ranching]
+17:22:41.532 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after added new department are:[0, 1, 2, 3, 4, 5, 6, 7, 16]
+17:22:41.549 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after added new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, melon, plum]
+17:22:41.571 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after added new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA, #9D7059]
+
+17:22:41.592 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id after added new department is: 44
+17:22:41.614 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department after added new department is: Ranching
+17:22:41.634 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level after added new department is: 16
+17:22:41.654 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color after added new department is: plum
+17:22:41.675 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code after added new department is: #9D7059
+
+17:22:47.888 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after updated new department are:[1, 2, 3, 4, 5, 6, 7, 8, 44]
+17:22:47.897 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after updated new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Graphics, Computer Hardware]
+17:22:47.906 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after updated new department are:[0, 1, 2, 3, 4, 5, 6, 7, 11]
+17:22:47.916 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after updated new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, melon, salmon]
+17:22:47.926 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after updated new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA, #D9B1F7]
+
+17:22:47.942 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id after updated new department is: 44
+17:22:47.963 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department after updated new department is: Computer Hardware
+17:22:47.976 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level after updated new department is: 11
+17:22:47.993 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color after updated new department is: salmon
+17:22:48.013 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code after updated new department is: #D9B1F7
+
+17:22:59.054 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after deleted new department are:[1, 2, 3, 4, 5, 6, 7, 8, 44]
+17:22:59.064 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after deleted new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Graphics, Computer Hardware]
+17:22:59.074 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after deleted new department are:[0, 1, 2, 3, 4, 5, 6, 7, 11]
+17:22:59.086 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after deleted new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, melon, salmon]
+17:22:59.096 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after deleted new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA, #FDBEBA]
+
+17:23:00.154 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after deleted new department are:[1, 2, 3, 4, 5, 6, 7, 8]
+17:23:00.164 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after deleted new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Graphics]
+17:23:00.175 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after deleted new department are:[0, 1, 2, 3, 4, 5, 6, 7]
+17:23:00.188 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after deleted new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, melon]
+17:23:00.195 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after deleted new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA]
+
+17:23:01.045 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Max value of user Id is: INC020
+17:23:01.045 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New User Id for get user id is: INC021
+
+17:23:01.757 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Random department name for get all employees by department is : Backend
+
+17:23:03.079 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Designations are null
+17:23:03.083 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Designations are null
+17:23:03.088 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Role Ids are null
+17:23:03.090 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Role Levels are null
+17:23:03.090 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Departments are null
+17:23:03.098 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Role levels are null
+17:23:03.098 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Departments are null
+17:27:51.331 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids before add new department are:[1, 2, 3, 4, 5, 6, 7, 8]
+17:27:51.343 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names before add new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Graphics]
+17:27:51.356 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels before add new department are:[0, 1, 2, 3, 4, 5, 6, 7]
+17:27:51.372 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors before add new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, melon]
+17:27:51.391 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes before add new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA]
+
+17:27:51.478 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id before add new department is: 8
+17:27:51.520 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department before add new department is: Graphics
+17:27:51.541 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level before add new department is: 7
+17:27:51.572 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color before add new department is: melon
+17:27:51.593 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code before add new department is: #FDBEBA
+
+17:27:58.573 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after updated new department are:[1, 2, 3, 4, 5, 6, 7, 49, 8]
+17:27:58.583 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after updated new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Museums and Institutions, Medical Devices]
+17:27:58.598 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after updated new department are:[0, 1, 2, 3, 4, 5, 6, 14, 19]
+17:27:58.615 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after updated new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, turquoise, lime]
+17:27:58.629 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after updated new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #AC1EAE, #39E0D1]
+
+17:27:58.655 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id after updated new department is: 49
+17:27:58.680 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department after updated new department is: Museums and Institutions
+17:27:58.708 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level after updated new department is: 14
+17:27:58.731 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color after updated new department is: turquoise
+17:27:58.758 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code after updated new department is: #AC1EAE
+
+17:28:10.274 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after deleted new department are:[1, 2, 3, 4, 5, 6, 7, 49, 8]
+17:28:10.285 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after deleted new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Museums and Institutions, Medical Devices]
+17:28:10.294 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after deleted new department are:[0, 1, 2, 3, 4, 5, 6, 14, 19]
+17:28:10.305 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after deleted new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, turquoise, lime]
+17:28:10.312 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after deleted new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #AC1EAE, #39E0D1]
+
+17:28:11.306 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after deleted new department are:[1, 2, 3, 4, 5, 6, 7, 8]
+17:28:11.323 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after deleted new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Medical Devices]
+17:28:11.343 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after deleted new department are:[0, 1, 2, 3, 4, 5, 6, 19]
+17:28:11.356 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after deleted new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, lime]
+17:28:11.371 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after deleted new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #39E0D1]
+
+17:28:12.368 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Max value of user Id is: INC020
+17:28:12.369 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New User Id for get user id is: INC021
+
+17:28:12.946 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Random department name for get all employees by department is : Frontend
+
+17:28:13.995 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Designations are null
+17:28:13.999 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Designations are null
+17:28:14.005 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Role Ids are null
+17:28:14.009 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Role Levels are null
+17:28:14.010 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Departments are null
+17:28:14.014 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Role levels are null
+17:28:14.014 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Departments are null
+17:31:10.424 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids before add new department are:[1, 2, 3, 4, 5, 6, 7, 8]
+17:31:10.439 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names before add new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Medical Devices]
+17:31:10.453 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels before add new department are:[0, 1, 2, 3, 4, 5, 6, 19]
+17:31:10.468 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors before add new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, lime]
+17:31:10.484 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes before add new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #39E0D1]
+
+17:31:10.614 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id before add new department is: 8
+17:31:10.666 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department before add new department is: Medical Devices
+17:31:10.691 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level before add new department is: 19
+17:31:10.717 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color before add new department is: lime
+17:31:10.736 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code before add new department is: #39E0D1
+
+17:31:17.789 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after updated new department are:[1, 2, 3, 4, 5, 6, 7, 8, 54]
+17:31:17.800 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after updated new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Mining & Metals, Wine and Spirits]
+17:31:17.811 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after updated new department are:[0, 1, 2, 3, 4, 5, 6, 15, 19]
+17:31:17.824 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after updated new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, red, silver]
+17:31:17.837 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after updated new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #7D05CB, #ACCFD0]
+
+17:31:17.856 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id after updated new department is: 54
+17:31:17.874 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department after updated new department is: Wine and Spirits
+17:31:17.890 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level after updated new department is: 19
+17:31:17.907 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color after updated new department is: silver
+17:31:17.924 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code after updated new department is: #ACCFD0
+
+17:31:29.335 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after deleted new department are:[1, 2, 3, 4, 5, 6, 7, 8, 54]
+17:31:29.347 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after deleted new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Graphics, Wine and Spirits]
+17:31:29.357 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after deleted new department are:[0, 1, 2, 3, 4, 5, 6, 7, 19]
+17:31:29.372 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after deleted new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, melon, silver]
+17:31:29.382 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after deleted new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA, #ACCFD0]
+
+17:31:30.465 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after deleted new department are:[1, 2, 3, 4, 5, 6, 7, 8]
+17:31:30.490 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after deleted new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Graphics]
+17:31:30.505 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after deleted new department are:[0, 1, 2, 3, 4, 5, 6, 7]
+17:31:30.515 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after deleted new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, melon]
+17:31:30.529 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after deleted new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA]
+
+17:31:31.434 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Max value of user Id is: INC020
+17:31:31.435 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New User Id for get user id is: INC021
+
+17:31:31.972 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Random department name for get all employees by department is : UI/UX
+
+17:31:33.009 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Designations are null
+17:31:33.012 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Designations are null
+17:31:33.017 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Role Ids are null
+17:31:33.021 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Role Levels are null
+17:31:33.021 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Departments are null
+17:31:33.024 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Role levels are null
+17:31:33.024 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Departments are null
+17:34:32.776 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids before add new department are:[1, 2, 3, 4, 5, 6, 7, 8]
+17:34:32.787 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names before add new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Graphics]
+17:34:32.800 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels before add new department are:[0, 1, 2, 3, 4, 5, 6, 7]
+17:34:32.817 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors before add new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, melon]
+17:34:32.835 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes before add new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA]
+
+17:34:32.916 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id before add new department is: 8
+17:34:32.954 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department before add new department is: Graphics
+17:34:32.973 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level before add new department is: 7
+17:34:32.999 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color before add new department is: melon
+17:34:33.024 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code before add new department is: #FDBEBA
+
+17:34:34.211 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after added new department are:[1, 2, 3, 4, 5, 6, 7, 8, 59]
+17:34:34.228 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after added new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Graphics, Paper & Forest Products]
+17:34:34.245 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after added new department are:[0, 1, 2, 3, 4, 5, 6, 7, 14]
+17:34:34.262 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after added new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, melon, sky blue]
+17:34:34.279 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after added new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA, #23C79C]
+
+17:34:34.301 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id after added new department is: 59
+17:34:34.323 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department after added new department is: Paper & Forest Products
+17:34:34.343 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level after added new department is: 14
+17:34:34.362 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color after added new department is: sky blue
+17:34:34.387 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code after added new department is: #23C79C
+
+17:34:40.494 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after updated new department are:[1, 2, 3, 4, 5, 6, 7, 8, 59]
+17:34:40.504 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after updated new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Graphics, Business Supplies and Equipment]
+17:34:40.514 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after updated new department are:[0, 1, 2, 3, 4, 5, 6, 7, 13]
+17:34:40.525 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after updated new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, melon, mint green]
+17:34:40.536 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after updated new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA, #680B14]
+
+17:34:40.554 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id after updated new department is: 59
+17:34:40.570 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department after updated new department is: Business Supplies and Equipment
+17:34:40.586 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level after updated new department is: 13
+17:34:40.604 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color after updated new department is: mint green
+17:34:40.625 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code after updated new department is: #680B14
+
+17:34:51.827 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after deleted new department are:[1, 2, 3, 4, 5, 6, 7, 8]
+17:34:51.835 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after deleted new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Graphics]
+17:34:51.846 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after deleted new department are:[0, 1, 2, 3, 4, 5, 6, 7]
+17:34:51.856 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after deleted new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, melon]
+17:34:51.869 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after deleted new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA]
+
+17:34:52.622 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Max value of user Id is: INC020
+17:34:52.622 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New User Id for get user id is: INC021
+
+17:34:53.144 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Random department name for get all employees by department is : Video
+
+17:34:54.228 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Designations are null
+17:34:54.230 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Designations are null
+17:34:54.234 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Role Ids are null
+17:34:54.237 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Role Levels are null
+17:34:54.237 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Departments are null
+17:34:54.240 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Role levels are null
+17:34:54.240 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Departments are null
+17:36:29.893 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids before add new department are:[1, 2, 3, 4, 5, 6, 7, 8]
+17:36:29.924 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names before add new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Graphics]
+17:36:29.949 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels before add new department are:[0, 1, 2, 3, 4, 5, 6, 7]
+17:36:29.971 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors before add new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, melon]
+17:36:29.991 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes before add new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA]
+
+17:36:30.138 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id before add new department is: 8
+17:36:30.189 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department before add new department is: Graphics
+17:36:30.229 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level before add new department is: 7
+17:36:30.279 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color before add new department is: melon
+17:36:30.351 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code before add new department is: #FDBEBA
+
+17:36:31.744 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after added new department are:[1, 2, 3, 4, 5, 6, 7, 8, 64]
+17:36:31.781 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after added new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Graphics, Health, Wellness and Fitness]
+17:36:31.810 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after added new department are:[0, 1, 2, 3, 4, 5, 6, 7, 15]
+17:36:31.846 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after added new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, melon, silver]
+17:36:31.863 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after added new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA, #C18AF1]
+
+17:36:31.888 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id after added new department is: 64
+17:36:31.910 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department after added new department is: Health, Wellness and Fitness
+17:36:31.943 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level after added new department is: 15
+17:36:31.967 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color after added new department is: silver
+17:36:31.995 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code after added new department is: #C18AF1
+
+17:36:38.447 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after updated new department are:[1, 2, 3, 4, 5, 6, 7, 8, 64]
+17:36:38.466 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after updated new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Graphics, International Affairs]
+17:36:38.483 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after updated new department are:[0, 1, 2, 3, 4, 5, 6, 7, 16]
+17:36:38.496 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after updated new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, melon, gold]
+17:36:38.507 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after updated new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA, #2DA0DB]
+
+17:36:38.528 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department Id after updated new department is: 64
+17:36:38.553 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department after updated new department is: International Affairs
+17:36:38.578 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department level after updated new department is: 16
+17:36:38.597 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color after updated new department is: gold
+17:36:38.625 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New created department color code after updated new department is: #2DA0DB
+
+17:36:49.957 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department Ids after deleted new department are:[1, 2, 3, 4, 5, 6, 7, 8]
+17:36:49.969 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department names after deleted new department are:[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Graphics]
+17:36:49.977 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department levels after deleted new department are:[0, 1, 2, 3, 4, 5, 6, 7]
+17:36:49.990 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department colors after deleted new department are:[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, melon]
+17:36:50.005 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - List of department color codes after deleted new department are:[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA]
+
+17:36:50.904 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Max value of user Id is: INC020
+17:36:50.906 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - New User Id for get user id is: INC021
+
+17:36:51.546 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Random department name for get all employees by department is : Mobile
+
+17:36:52.644 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Designations are null
+17:36:52.647 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Designations are null
+17:36:52.656 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Role Ids are null
+17:36:52.659 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Role Levels are null
+17:36:52.659 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Departments are null
+17:36:52.662 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Role levels are null
+17:36:52.662 --> in.task_erp_api.testcases.DepartmentFolderAPITestCases - Departments are null

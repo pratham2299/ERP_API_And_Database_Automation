@@ -9,10 +9,17 @@ import com.fasterxml.jackson.databind.*;
 import in.biencaps.erp.pojos.*;
 
 public class StatusFolderPayloads {
+	// Create ObjectMapper instance
+	static ObjectMapper objectMapper = new ObjectMapper();
+
 	public static String addStatusPayload(String status, int statusLevel, String statusColor, String statusColorCode) {
-		StatusPojo statusObj = new StatusPojo(status, statusLevel, statusColor, statusColorCode);
+		StatusPojo statusObj = new StatusPojo();
+		statusObj.setStatus(status);
+		statusObj.setStatusLevel(statusLevel);
+		statusObj.setStatusColor(statusColor);
+		statusObj.setStatusColorCode(statusColorCode);
+
 		try {
-			ObjectMapper objectMapper = new ObjectMapper();
 			return objectMapper.writeValueAsString(statusObj);
 		} catch (Exception e) {
 			throw new RuntimeException("Failed to convert Status object to JSON", e);
@@ -21,9 +28,6 @@ public class StatusFolderPayloads {
 
 	public static String updateStatusWithMaxIdPayload(String jsonResponse, int newStatusId, String newStatus,
 			int newStatusLevel, String newStatusColor, String newStatusColorCode) throws Throwable {
-		// Create ObjectMapper instance
-		ObjectMapper objectMapper = new ObjectMapper();
-
 		// Deserialize JSON array to List<Status>
 		List<StatusPojo> statusList = objectMapper.readValue(jsonResponse, new TypeReference<List<StatusPojo>>() {
 		});

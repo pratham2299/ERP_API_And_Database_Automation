@@ -1,8 +1,6 @@
 package in.task_erp_api.payloads;
 
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 import java.util.function.Supplier;
 
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -13,6 +11,7 @@ import in.biencaps.erp.pojos.*;
 
 public class DesignationFolderPayloads {
 	private static Gson gson = new Gson();
+	private static Random random = new Random();
 
 	public static String addDesignationPayload(String designation, int departmentId) {
 		// Create the inner department entity
@@ -32,8 +31,7 @@ public class DesignationFolderPayloads {
 	}
 
 	public static String updateDesignationWithMaxIdPayload(String jsonResponse, int newDesignationId,
-			String newDesignation, int newDesignationLevel, String newDesignationColor, String newDesignationColorCode)
-			throws Throwable {
+			String newDesignation, List<DepartmentPojo> departments) throws Throwable {
 		// Create ObjectMapper instance
 		ObjectMapper objectMapper = new ObjectMapper();
 
@@ -58,9 +56,9 @@ public class DesignationFolderPayloads {
 		// Update the fields of the object with the maximum DesignationId
 		maxDesignationIdObject.setDesignationId(newDesignationId);
 		maxDesignationIdObject.setDesignation(newDesignation);
-		maxDesignationIdObject.setDesignationLevel(newDesignationLevel);
-		maxDesignationIdObject.setDesignationColor(newDesignationColor);
-		maxDesignationIdObject.setDesignationColorCode(newDesignationColorCode);
+
+		DepartmentPojo randomDepartment = departments.get(random.nextInt(departments.size()));
+		maxDesignationIdObject.setDepartmentPojo(randomDepartment);
 
 		// Serialize the updated list back to JSON
 		return objectMapper.writeValueAsString(DesignationList);

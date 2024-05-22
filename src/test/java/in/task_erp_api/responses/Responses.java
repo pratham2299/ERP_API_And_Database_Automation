@@ -67,6 +67,15 @@ public class Responses {
 		return response;
 	}
 
+	public static Response getRequestWithoutAuthorizationAndThreeQueryParameter(String endpoint,
+			String queryParameterKey1, int queryParameterValue1, String queryParameterKey2, int queryParameterValue2,
+			String queryParameterKey3, String queryParameterValue3) {
+		response = given().queryParam(queryParameterKey1, queryParameterValue1)
+				.queryParam(queryParameterKey2, queryParameterValue2)
+				.queryParam(queryParameterKey3, queryParameterValue3).when().get(endpoint);
+		return response;
+	}
+
 	public static Response putRequestWithoutAuthorization(String requestPayload, String endpoint) {
 		response = given().contentType(ContentType.JSON).body(requestPayload).when().put(endpoint);
 		return response;
@@ -161,6 +170,16 @@ public class Responses {
 		response = given().header("Authorization", "Bearer " + authToken)
 				.queryParam(queryParameterKey1, queryParameterValue1)
 				.queryParam(queryParameterKey2, queryParameterValue2).when().get(endpoint);
+		return response;
+	}
+
+	public static Response getRequestWithAuthorizationAndThreeQueryParameter(String authToken, String endpoint,
+			String queryParameterKey1, int queryParameterValue1, String queryParameterKey2, int queryParameterValue2,
+			String queryParameterKey3, String queryParameterValue3) {
+		response = given().header("Authorization", "Bearer " + authToken)
+				.queryParam(queryParameterKey1, queryParameterValue1)
+				.queryParam(queryParameterKey2, queryParameterValue2)
+				.queryParam(queryParameterKey3, queryParameterValue3).when().get(endpoint);
 		return response;
 	}
 
