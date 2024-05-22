@@ -147,10 +147,14 @@ public class DesignationFolderAPITestCases extends BaseTest {
 	}
 
 	@Test(priority = 8)
-	public void verifyGetAllDesignationByDepartmentWithAuthorization() {
-		int[] departmentIds = { 1, 2, 3, 4, 10, new Faker().number().numberBetween(50, 100), };
-		int randomIndexForDepartmentId = random.nextInt(departmentIds.length);
-		int fakeDepartmentId = departmentIds[randomIndexForDepartmentId];
+	public void verify_Get_All_Designation_By_Department_With_Authorization() {
+		// Getting get all departments API response
+		Response getDepartmentResponse = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
+				APIEndpoints.getAllDepartmentsEndpoint);
+
+		List<Integer> departmentIds = getDepartmentResponse.jsonPath().getList("departmentId");
+		int randomIndexForDepartmentId = random.nextInt(departmentIds.size());
+		int fakeDepartmentId = departmentIds.get(randomIndexForDepartmentId);
 
 		String requestPayload = DesignationFolderPayloads
 				.giveDesignationPayloadForGetAllDesignationsByDepartment(fakeDepartmentId);
