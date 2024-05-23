@@ -9,6 +9,10 @@ import com.github.javafaker.Faker;
 public class DataGeneratorForAPI {
 	private static Faker faker = new Faker();
 	private static Random random = new Random();
+	
+	public static String generateFakeTaskTitle() {
+		return faker.book().title();
+	}
 
 	public static String generateFakePriority() {
 		return faker.animal().name();

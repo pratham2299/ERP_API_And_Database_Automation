@@ -41,8 +41,9 @@ public class StatusFolderAPITestCases extends BaseTest {
 		Response response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.addStatusEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "Status code for add status is: " + response.getStatusCode());
-		test.log(Status.INFO, "Response for add status is: " + response.getBody().asPrettyString());
+		test.log(Status.INFO, "API Endpoint for add status is => " + APIEndpoints.addStatusEndpoint);
+		test.log(Status.INFO, "Status code for add status is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for add status is => " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 2)
@@ -52,8 +53,9 @@ public class StatusFolderAPITestCases extends BaseTest {
 		Response response = Responses.getRequestWithoutAuthorization(APIEndpoints.getAllStatusesEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "Status code for get all statuses is: " + response.getStatusCode());
-		test.log(Status.INFO, "Response for get all statuses is: " + response.getBody().asPrettyString());
+		test.log(Status.INFO, "API Endpoint for get all statuses is => " + APIEndpoints.getAllStatusesEndpoint);
+		test.log(Status.INFO, "Status code for get all statuses is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for get all statuses is => " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 3)
@@ -69,8 +71,9 @@ public class StatusFolderAPITestCases extends BaseTest {
 		Response response = Responses.putRequestWithoutAuthorization(requestPayload, APIEndpoints.updateStatusEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "Status code for update status is: " + response.getStatusCode());
-		test.log(Status.INFO, "Response for update status is: " + response.getBody().asPrettyString());
+		test.log(Status.INFO, "API Endpoint for update status is => " + APIEndpoints.updateStatusEndpoint);
+		test.log(Status.INFO, "Status code for update status is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for update status is => " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 4)
@@ -81,8 +84,9 @@ public class StatusFolderAPITestCases extends BaseTest {
 				APIEndpoints.deleteStatusEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "Status code for delete status is: " + response.getStatusCode());
-		test.log(Status.INFO, "Response for delete status is: " + response.getBody().asPrettyString());
+		test.log(Status.INFO, "API Endpoint for delete status is => " + APIEndpoints.deleteStatusEndpoint);
+		test.log(Status.INFO, "Status code for delete status is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for delete status is => " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 5)
@@ -99,12 +103,12 @@ public class StatusFolderAPITestCases extends BaseTest {
 
 		Response response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.addStatusEndpoint);
-		test.log(Status.INFO, "Request payload for add status is: " + requestPayload);
-		test.log(Status.INFO, "Status code for add status is: " + response.getStatusCode());
-		test.log(Status.INFO, "Response for add status is: " + response.getBody().asPrettyString());
+		test.log(Status.INFO, "API Endpoint for add status is => " + APIEndpoints.addStatusEndpoint);
+		test.log(Status.INFO, "Request payload for add status is => " + requestPayload);
+		test.log(Status.INFO, "Status code for add status is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for add status is => " + response.getBody().asPrettyString());
 
-		if (statusName.equalsIgnoreCase("") || statusColor.equalsIgnoreCase("")
-				|| statusColorCode.equalsIgnoreCase("")) {
+		if (statusName.isBlank() || statusColor.isBlank() || statusColorCode.isBlank()) {
 			BodyValidation.response400Validation(response);
 		} else if (statuses.contains(statusName) || statusLevels.contains(statusLevel)
 				|| statusColors.contains(statusColor) || statusColorCodes.contains(statusColorCode)) {
@@ -142,12 +146,12 @@ public class StatusFolderAPITestCases extends BaseTest {
 				APIEndpoints.updateStatusEndpoint);
 
 		String responseBody = response.getBody().asPrettyString();
-		test.log(Status.INFO, "Request paylaod for update status is: " + requestPayload);
-		test.log(Status.INFO, "Status code for update status is: " + response.getStatusCode());
-		test.log(Status.INFO, "Response for update status is: " + response.getBody().asPrettyString());
+		test.log(Status.INFO, "API Endpoint for update status is => " + APIEndpoints.updateStatusEndpoint);
+		test.log(Status.INFO, "Request paylaod for update status is => " + requestPayload);
+		test.log(Status.INFO, "Status code for update status is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for update status is => " + response.getBody().asPrettyString());
 
-		if (statusName.equalsIgnoreCase("") || statusColor.equalsIgnoreCase("")
-				|| statusColorCode.equalsIgnoreCase("")) {
+		if (statusName.isBlank() || statusColor.isBlank() || statusColorCode.isBlank()) {
 			BodyValidation.response400Validation(response);
 		} else if (!statusIds.contains(statusId)) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
@@ -180,9 +184,10 @@ public class StatusFolderAPITestCases extends BaseTest {
 				LoginEmployeeAPITestCases.authToken, APIEndpoints.deleteStatusEndpoint);
 
 		String responseBody = response.getBody().asPrettyString();
-		test.log(Status.INFO, "Request paylaod for delete status is: " + statusName);
-		test.log(Status.INFO, "Response body for delete status is: " + response.getBody().asPrettyString());
-		test.log(Status.INFO, "Status code for delete status is: " + response.getStatusCode());
+		test.log(Status.INFO, "API Endpoint for delete status is => " + APIEndpoints.deleteStatusEndpoint);
+		test.log(Status.INFO, "Request paylaod for delete status is => " + statusName);
+		test.log(Status.INFO, "Response body for delete status is => " + response.getBody().asPrettyString());
+		test.log(Status.INFO, "Status code for delete status is => " + response.getStatusCode());
 
 		if (response.getBody().asPrettyString().equals("[]")) {
 			BodyValidation.response204Validation(response);
@@ -201,22 +206,22 @@ public class StatusFolderAPITestCases extends BaseTest {
 
 	public void verify_New_Created_Status_Details(String message) {
 		newCreatedStatusId = response.jsonPath().getInt("max { it.statusId }.statusId");
-		log.info("New created status Id " + message + " is: " + newCreatedStatusId);
+		log.info("New created status Id " + message + " is => " + newCreatedStatusId);
 
 		newCreatedStatus = response.jsonPath().getString("find { it.statusId == " + newCreatedStatusId + " }.status");
-		log.info("New created status " + message + " is: " + newCreatedStatus);
+		log.info("New created status " + message + " is => " + newCreatedStatus);
 
 		newCreatedStatusLevel = response.jsonPath()
 				.getInt("find { it.statusId == " + newCreatedStatusId + " }.statusLevel");
-		log.info("New created status level " + message + " is: " + newCreatedStatusLevel);
+		log.info("New created status level " + message + " is => " + newCreatedStatusLevel);
 
 		newCreatedStatusColor = response.jsonPath()
 				.getString("find { it.statusId == " + newCreatedStatusId + " }.statusColor");
-		log.info("New created status color " + message + " is: " + newCreatedStatusColor);
+		log.info("New created status color " + message + " is => " + newCreatedStatusColor);
 
 		newCreatedStatusColorCode = response.jsonPath()
 				.getString("find { it.statusId == " + newCreatedStatusId + " }.statusColorCode");
-		log.info("New created status color code " + message + " is: " + newCreatedStatusColorCode + "\n");
+		log.info("New created status color code " + message + " is => " + newCreatedStatusColorCode + "\n");
 	}
 
 	public void verify_Get_All_Statuses_API_With_Authorization(String message) {
@@ -226,22 +231,23 @@ public class StatusFolderAPITestCases extends BaseTest {
 				APIEndpoints.getAllStatusesEndpoint);
 
 		BodyValidation.responseValidation(response, 200);
-		test.log(Status.INFO, "Status code for get all statuses is: " + response.getStatusCode());
-		test.log(Status.INFO, "Response for get all statuses is: " + response.getBody().asPrettyString());
+		test.log(Status.INFO, "API Endpoint for get all statuses is => " + APIEndpoints.getAllStatusesEndpoint);
+		test.log(Status.INFO, "Status code for get all statuses is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for get all statuses is => " + response.getBody().asPrettyString());
 
 		statusIds = response.jsonPath().getList("statusId");
-		log.info("List of status Ids " + message + " are: " + statusIds);
+		log.info("List of status Ids " + message + " are => " + statusIds);
 
 		statuses = response.jsonPath().getList("status");
-		log.info("List of status names " + message + " are: " + statuses);
+		log.info("List of status names " + message + " are => " + statuses);
 
 		statusLevels = response.jsonPath().getList("statusLevel");
-		log.info("List of status levels " + message + " are: " + statusLevels);
+		log.info("List of status levels " + message + " are => " + statusLevels);
 
 		statusColors = response.jsonPath().getList("statusColor");
-		log.info("List of status colors " + message + " are: " + statusColors);
+		log.info("List of status colors " + message + " are => " + statusColors);
 
 		statusColorCodes = response.jsonPath().getList("statusColorCode");
-		log.info("List of status colors " + message + " are: " + statusColorCodes + "\n");
+		log.info("List of status colors " + message + " are => " + statusColorCodes + "\n");
 	}
 }

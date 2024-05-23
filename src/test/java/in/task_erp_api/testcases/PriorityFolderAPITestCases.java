@@ -41,8 +41,8 @@ public class PriorityFolderAPITestCases extends BaseTest {
 		Response response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.addPriorityEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "Status code for add priority is: " + response.getStatusCode());
-		test.log(Status.INFO, "Response for add priority is: " + response.getBody().asPrettyString());
+		test.log(Status.INFO, "Status code for add priority is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for add priority is => " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 2)
@@ -52,8 +52,8 @@ public class PriorityFolderAPITestCases extends BaseTest {
 		Response response = Responses.getRequestWithoutAuthorization(APIEndpoints.getAllPrioritiesEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "Status code for get all priorities is: " + response.getStatusCode());
-		test.log(Status.INFO, "Response for get all priorities is: " + response.getBody().asPrettyString());
+		test.log(Status.INFO, "Status code for get all priorities is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for get all priorities is => " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 3)
@@ -70,8 +70,8 @@ public class PriorityFolderAPITestCases extends BaseTest {
 				APIEndpoints.updatePriorityEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "Status code for update priority is: " + response.getStatusCode());
-		test.log(Status.INFO, "Response for update priority is: " + response.getBody().asPrettyString());
+		test.log(Status.INFO, "Status code for update priority is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for update priority is => " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 4)
@@ -82,8 +82,8 @@ public class PriorityFolderAPITestCases extends BaseTest {
 				APIEndpoints.deletePriorityEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "Status code for delete priority is: " + response.getStatusCode());
-		test.log(Status.INFO, "Response for delete priority is: " + response.getBody().asPrettyString());
+		test.log(Status.INFO, "Status code for delete priority is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for delete priority is => " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 5)
@@ -103,12 +103,12 @@ public class PriorityFolderAPITestCases extends BaseTest {
 
 		Response response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.addPriorityEndpoint);
-		test.log(Status.INFO, "Request payload for add priority is: " + requestPayload);
-		test.log(Status.INFO, "Status code for add priority is: " + response.getStatusCode());
-		test.log(Status.INFO, "Response for add priority is: " + response.getBody().asPrettyString());
+		test.log(Status.INFO, "Request payload for add priority is => " + requestPayload);
+		test.log(Status.INFO, "Status code for add priority is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for add priority is => " + response.getBody().asPrettyString());
 
-		if (priorityName.equalsIgnoreCase("") || priorityColor.equalsIgnoreCase("")
-				|| priorityColorCode.equalsIgnoreCase("")) {
+		if (priorityName.isBlank() || priorityColor.isBlank()
+				|| priorityColorCode.isBlank()) {
 			BodyValidation.response400Validation(response);
 		} else if (priorities.contains(priorityName) || priorityLevels.contains(priorityLevel)
 				|| priorityColors.contains(priorityColor) || priorityColorCodes.contains(priorityColorCode)) {
@@ -146,12 +146,12 @@ public class PriorityFolderAPITestCases extends BaseTest {
 				APIEndpoints.updatePriorityEndpoint);
 
 		String responseBody = response.getBody().asPrettyString();
-		test.log(Status.INFO, "Request paylaod for update priority is: " + requestPayload);
-		test.log(Status.INFO, "Status code for update priority is: " + response.getStatusCode());
-		test.log(Status.INFO, "Response for update priority is: " + response.getBody().asPrettyString());
+		test.log(Status.INFO, "Request paylaod for update priority is => " + requestPayload);
+		test.log(Status.INFO, "Status code for update priority is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for update priority is => " + response.getBody().asPrettyString());
 
-		if (priorityName.equalsIgnoreCase("") || priorityColor.equalsIgnoreCase("")
-				|| priorityColorCode.equalsIgnoreCase("")) {
+		if (priorityName.isBlank() || priorityColor.isBlank()
+				|| priorityColorCode.isBlank()) {
 			BodyValidation.response400Validation(response);
 		} else if (!priorityIds.contains(priorityId)) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
@@ -185,9 +185,9 @@ public class PriorityFolderAPITestCases extends BaseTest {
 				LoginEmployeeAPITestCases.authToken, APIEndpoints.deletePriorityEndpoint);
 
 		String responseBody = response.getBody().asPrettyString();
-		test.log(Status.INFO, "Request paylaod for delete priority is: " + priorityName);
-		test.log(Status.INFO, "Response body for delete priority is: " + response.getBody().asPrettyString());
-		test.log(Status.INFO, "Status code for delete priority is: " + response.getStatusCode());
+		test.log(Status.INFO, "Request paylaod for delete priority is => " + priorityName);
+		test.log(Status.INFO, "Response body for delete priority is => " + response.getBody().asPrettyString());
+		test.log(Status.INFO, "Status code for delete priority is => " + response.getStatusCode());
 
 		if (response.getBody().asPrettyString().equals("[]")) {
 			BodyValidation.response204Validation(response);
@@ -206,23 +206,23 @@ public class PriorityFolderAPITestCases extends BaseTest {
 
 	public void verify_New_Created_Priority_Details(String message) {
 		newCreatedPriorityId = response.jsonPath().getInt("max { it.priorityId }.priorityId");
-		log.info("New created priority Id " + message + " is: " + newCreatedPriorityId);
+		log.info("New created priority Id " + message + " is => " + newCreatedPriorityId);
 
 		newCreatedPriority = response.jsonPath()
 				.getString("find { it.priorityId == " + newCreatedPriorityId + " }.priority");
-		log.info("New created priority " + message + " is: " + newCreatedPriority);
+		log.info("New created priority " + message + " is => " + newCreatedPriority);
 
 		newCreatedPriorityLevel = response.jsonPath()
 				.getInt("find { it.priorityId == " + newCreatedPriorityId + " }.priorityLevel");
-		log.info("New created priority level " + message + " is: " + newCreatedPriorityLevel);
+		log.info("New created priority level " + message + " is => " + newCreatedPriorityLevel);
 
 		newCreatedPriorityColor = response.jsonPath()
 				.getString("find { it.priorityId == " + newCreatedPriorityId + " }.priorityColor");
-		log.info("New created priority color " + message + " is: " + newCreatedPriorityColor);
+		log.info("New created priority color " + message + " is => " + newCreatedPriorityColor);
 
 		newCreatedPriorityColorCode = response.jsonPath()
 				.getString("find { it.priorityId == " + newCreatedPriorityId + " }.priorityColorCode");
-		log.info("New created priority color code " + message + " is: " + newCreatedPriorityColorCode + "\n");
+		log.info("New created priority color code " + message + " is => " + newCreatedPriorityColorCode + "\n");
 	}
 
 	public void verify_Get_All_Priorities_API_With_Authorization(String message) {
@@ -232,22 +232,22 @@ public class PriorityFolderAPITestCases extends BaseTest {
 				APIEndpoints.getAllPrioritiesEndpoint);
 
 		BodyValidation.responseValidation(response, 200);
-		test.log(Status.INFO, "Status code for get all priorities is: " + response.getStatusCode());
-		test.log(Status.INFO, "Response for get all priorities is: " + response.getBody().asPrettyString());
+		test.log(Status.INFO, "Status code for get all priorities is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for get all priorities is => " + response.getBody().asPrettyString());
 
 		priorityIds = response.jsonPath().getList("priorityId");
-		log.info("List of priority Ids " + message + " are: " + priorityIds);
+		log.info("List of priority Ids " + message + " are => " + priorityIds);
 
 		priorities = response.jsonPath().getList("priority");
-		log.info("List of priority names " + message + " are: " + priorities);
+		log.info("List of priority names " + message + " are => " + priorities);
 
 		priorityLevels = response.jsonPath().getList("priorityLevel");
-		log.info("List of priority levels " + message + " are: " + priorityLevels);
+		log.info("List of priority levels " + message + " are => " + priorityLevels);
 
 		priorityColors = response.jsonPath().getList("priorityColor");
-		log.info("List of priority colors " + message + " are: " + priorityColors);
+		log.info("List of priority colors " + message + " are => " + priorityColors);
 
 		priorityColorCodes = response.jsonPath().getList("priorityColorCode");
-		log.info("List of priority color codes " + message + " are: " + priorityColorCodes + "\n");
+		log.info("List of priority color codes " + message + " are => " + priorityColorCodes + "\n");
 	}
 }

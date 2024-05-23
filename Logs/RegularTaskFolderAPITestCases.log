@@ -1,0 +1,19 @@
+17:07:16.497 --> in.task_erp_api.testcases.RegularTaskFolderAPITestCases - List of regular task Ids after added new regular task are: [55]
+17:07:16.511 --> in.task_erp_api.testcases.RegularTaskFolderAPITestCases - List of regular tasks after added new regular task are: [ERP Check]
+
+17:07:16.606 --> in.task_erp_api.testcases.RegularTaskFolderAPITestCases - New regular task Id after added new regular task is: 55
+17:07:16.638 --> in.task_erp_api.testcases.RegularTaskFolderAPITestCases - New regular task Id after added new regular task is: ERP Check
+17:07:18.723 --> in.task_erp_api.testcases.RegularTaskFolderAPITestCases - List of regular task Ids after updated new regular task are: [55]
+17:07:18.737 --> in.task_erp_api.testcases.RegularTaskFolderAPITestCases - List of regular tasks after updated new regular task are: [Mr Standfast]
+
+17:07:18.754 --> in.task_erp_api.testcases.RegularTaskFolderAPITestCases - New regular task Id after updated new regular task is: 55
+17:07:18.770 --> in.task_erp_api.testcases.RegularTaskFolderAPITestCases - New regular task Id after updated new regular task is: Mr Standfast
+17:07:22.241 --> in.task_erp_api.testcases.RegularTaskFolderAPITestCases - List of regular task Ids after deleted new regular task are: []
+17:07:22.251 --> in.task_erp_api.testcases.RegularTaskFolderAPITestCases - List of regular tasks after deleted new regular task are: []
+
+17:34:10.764 --> in.task_erp_api.testcases.RegularTaskFolderAPITestCases - List of regular task Ids after added new regular task are: []
+17:34:10.774 --> in.task_erp_api.testcases.RegularTaskFolderAPITestCases - List of regular tasks after added new regular task are: []
+
+17:35:03.797 --> in.task_erp_api.testcases.RegularTaskFolderAPITestCases - List of regular task Ids after added new regular task are: []
+17:35:03.805 --> in.task_erp_api.testcases.RegularTaskFolderAPITestCases - List of regular tasks after added new regular task are: []
+

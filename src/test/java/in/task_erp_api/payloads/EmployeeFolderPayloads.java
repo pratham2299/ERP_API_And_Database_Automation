@@ -97,6 +97,14 @@ public class EmployeeFolderPayloads {
 		String payload = gson.toJson(employeeMap);
 		return payload;
 	}
+	
+	public static String giveEmployeePayloadForGetTaskOwners(int roleLevel) {
+		HashMap<String, Object> employeeMap = new HashMap<String, Object>();
+		employeeMap.put("roleLevel", roleLevel);
+
+		String payload = gson.toJson(employeeMap);
+		return payload;
+	}
 
 	public static String giveEmployeePayloadForUpdatePassword(String loginId, String oldPassword, String newPassword,
 			String confirmPassword) {

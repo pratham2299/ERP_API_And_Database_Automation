@@ -3,15 +3,13 @@ package in.task_erp_api.testcases;
 import java.util.*;
 
 import org.apache.logging.log4j.*;
-import org.apache.logging.log4j.Logger;
 import static org.testng.Assert.*;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import com.aventstack.extentreports.Status;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.github.javafaker.Faker;
 
-import in.biencaps.erp.pojos.DepartmentPojo;
+import in.biencaps.erp.pojos.*;
 import in.task_erp_api.bodyValidations.*;
 import in.task_erp_api.endpoints.*;
 import in.task_erp_api.payloads.*;
@@ -40,8 +38,8 @@ public class DesignationFolderAPITestCases extends BaseTest {
 				APIEndpoints.addDesignationEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "Status code for add designation is: " + response.getStatusCode());
-		test.log(Status.INFO, "Response for add designation is: " + response.getBody().asPrettyString());
+		test.log(Status.INFO, "Status code for add designation is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for add designation is => " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 2)
@@ -54,9 +52,9 @@ public class DesignationFolderAPITestCases extends BaseTest {
 				APIEndpoints.getAllDesignationsEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "Status code for get all designations by department is: " + response.getStatusCode());
+		test.log(Status.INFO, "Status code for get all designations by department is => " + response.getStatusCode());
 		test.log(Status.INFO,
-				"Response for get all designations by department is: " + response.getBody().asPrettyString());
+				"Response for get all designations by department is => " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 3)
@@ -66,8 +64,8 @@ public class DesignationFolderAPITestCases extends BaseTest {
 		Response response = Responses.getRequestWithoutAuthorization(APIEndpoints.getAllDesignationsEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "Status code for get all designations is: " + response.getStatusCode());
-		test.log(Status.INFO, "Response for get all designations is: " + response.getBody().asPrettyString());
+		test.log(Status.INFO, "Status code for get all designations is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for get all designations is => " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 4)
@@ -94,8 +92,8 @@ public class DesignationFolderAPITestCases extends BaseTest {
 		response = Responses.putRequestWithoutAuthorization(requestPayload, APIEndpoints.updateDesignationEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "Status code for update designation is: " + response.getStatusCode());
-		test.log(Status.INFO, "Response for update designation is: " + response.getBody().asPrettyString());
+		test.log(Status.INFO, "Status code for update designation is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for update designation is => " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 5)
@@ -106,8 +104,8 @@ public class DesignationFolderAPITestCases extends BaseTest {
 				APIEndpoints.deleteDesignationEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "Status code for delete designation is: " + response.getStatusCode());
-		test.log(Status.INFO, "Response for delete designation is: " + response.getBody().asPrettyString());
+		test.log(Status.INFO, "Status code for delete designation is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for delete designation is => " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 6)
@@ -118,10 +116,10 @@ public class DesignationFolderAPITestCases extends BaseTest {
 		BodyValidation.responseValidation(response, 200);
 
 		designationIds = response.jsonPath().getList("designationId");
-		log.info("List of designation Ids before new designation add are: " + designationIds);
+		log.info("List of designation Ids before new designation add are => " + designationIds);
 
 		designations = response.jsonPath().getList("designation");
-		log.info("List of designation names before new designation add are: " + designations + "\n");
+		log.info("List of designation names before new designation add are => " + designations + "\n");
 	}
 
 	@Test(priority = 7, dataProvider = "TestDataForAddDesignation", dataProviderClass = DataProvidersForDesignationFolder.class)
@@ -131,7 +129,7 @@ public class DesignationFolderAPITestCases extends BaseTest {
 		Response response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.addDesignationEndpoint);
 
-		if (designationName.equalsIgnoreCase("")) {
+		if (designationName.isBlank()) {
 			BodyValidation.response400Validation(response);
 		} else if (!DepartmentFolderAPITestCases.departmentIds.contains(departmentId)) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
@@ -195,11 +193,11 @@ public class DesignationFolderAPITestCases extends BaseTest {
 				APIEndpoints.updateDesignationEndpoint);
 
 		String responseBody = response.getBody().asPrettyString();
-		test.log(Status.INFO, "Request paylaod for update designation is: " + designationName);
-		test.log(Status.INFO, "Response body for update designation is: " + response.getBody().asPrettyString());
-		test.log(Status.INFO, "Status code for update designation is: " + response.getStatusCode());
+		test.log(Status.INFO, "Request paylaod for update designation is => " + designationName);
+		test.log(Status.INFO, "Response body for update designation is => " + response.getBody().asPrettyString());
+		test.log(Status.INFO, "Status code for update designation is => " + response.getStatusCode());
 
-		if (designationName.equalsIgnoreCase("")) {
+		if (designationName.isBlank()) {
 			BodyValidation.response400Validation(response);
 		} else if (!designationIds.contains(designationId)) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
@@ -224,9 +222,9 @@ public class DesignationFolderAPITestCases extends BaseTest {
 				LoginEmployeeAPITestCases.authToken, APIEndpoints.deleteDesignationEndpoint);
 
 		String responseBody = response.getBody().asPrettyString();
-		test.log(Status.INFO, "Request paylaod for delete designation is: " + designationName);
-		test.log(Status.INFO, "Response body for delete designation is: " + response.getBody().asPrettyString());
-		test.log(Status.INFO, "Status code for delete designation is: " + response.getStatusCode());
+		test.log(Status.INFO, "Request paylaod for delete designation is => " + designationName);
+		test.log(Status.INFO, "Response body for delete designation is => " + response.getBody().asPrettyString());
+		test.log(Status.INFO, "Status code for delete designation is => " + response.getStatusCode());
 
 		if (responseBody.equals("[]")) {
 			BodyValidation.response204Validation(response);
@@ -250,20 +248,20 @@ public class DesignationFolderAPITestCases extends BaseTest {
 				APIEndpoints.getAllDesignationsEndpoint);
 
 		BodyValidation.responseValidation(response, 200);
-		test.log(Status.INFO, "Status code for get all designations is: " + response.getStatusCode());
-		test.log(Status.INFO, "Response for get all designations is: " + response.getBody().asPrettyString());
+		test.log(Status.INFO, "Status code for get all designations is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for get all designations is => " + response.getBody().asPrettyString());
 
 		designationIds = response.jsonPath().getList("designationId");
-		log.info("List of designation Ids " + message + " are: " + designationIds);
+		log.info("List of designation Ids " + message + " are => " + designationIds);
 
 		designations = response.jsonPath().getList("designation");
-		log.info("List of designation names " + message + " are: " + designations + "\n");
+		log.info("List of designation names " + message + " are => " + designations + "\n");
 
 		newCreatedDesignationId = response.jsonPath().getInt("max { it.designationId }.designationId");
-		log.info("New created Designation Id " + message + " is: " + newCreatedDesignationId);
+		log.info("New created Designation Id " + message + " is => " + newCreatedDesignationId);
 
 		newCreatedDesignation = response.jsonPath()
 				.getString("find { it.designationId == " + newCreatedDesignationId + " }.designation");
-		log.info("New created Designation " + message + " is: " + newCreatedDesignation + "\n");
+		log.info("New created Designation " + message + " is => " + newCreatedDesignation + "\n");
 	}
 }

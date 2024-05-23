@@ -52,7 +52,7 @@ public interface APIEndpoints {
 	String updateEmployeeEndpoint = baseURL + "/employee/update";
 	String updatePasswordEndpoint = baseURL + "/employee/update/user/cred";
 	String getSingleEmployeeEndpoint = baseURL + "/employee/single";
-	String getSearchEmployeeEndpoint = baseURL + "/employee/search";
+	String getTaskOwnersEndpoint = baseURL + "/employee/get/task-owners";
 	String getAllActiveUsersInfoEndpoint = baseURL + "/employee/get/active";
 	String getAllEmployeesIdAndNameEndpoint = baseURL + "/employee/all";
 	String getAssignedTaskInfoByRoleEndpoint = baseURL + "/employee/get/assigned/task/info/";

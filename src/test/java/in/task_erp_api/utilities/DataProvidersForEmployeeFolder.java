@@ -13,7 +13,7 @@ public class DataProvidersForEmployeeFolder {
 	@DataProvider(name = "TestDataForAddEmployee")
 	public Object[][] testDataForAddEmployee() {
 		int user_id_last_digits = faker.number().numberBetween(100, 150);
-		String userId = "BIE0" + String.valueOf(user_id_last_digits);
+		String userId = "INC0" + String.valueOf(user_id_last_digits);
 		String employeeFullName = faker.name().fullName();
 
 		int randomIndexForDesignationId = random.nextInt(DesignationFolderAPITestCases.designationIds.size());
@@ -56,7 +56,7 @@ public class DataProvidersForEmployeeFolder {
 				{ "", employeeFullName, "ACTIVE", randomValidDesignationId, randomValidDepartmentId, randomValidRoleId,
 						employeePersonalEmail, fakeEmployeeMobileNumber1, employeeJoiningDate,
 						fakeEmployeeMobileNumber2, employeeDOB, randomBloodGroup, fakeEmployeeAddress },
-				{ "BIE018", employeeFullName, "ACTIVE", randomValidDesignationId, randomValidDepartmentId,
+				{ "INC012", employeeFullName, "ACTIVE", randomValidDesignationId, randomValidDepartmentId,
 						randomValidRoleId, employeePersonalEmail, fakeEmployeeMobileNumber1, employeeJoiningDate,
 						fakeEmployeeMobileNumber2, employeeDOB, randomBloodGroup, fakeEmployeeAddress },
 				{ userId, "", "ACTIVE", randomValidDesignationId, randomValidDepartmentId, randomValidRoleId,
@@ -86,13 +86,12 @@ public class DataProvidersForEmployeeFolder {
 	@DataProvider(name = "TestDataForGetAllEmployees")
 	public Object[][] TestDataForGetAllEmployees() {
 
-		return new Object[][] { { LoginEmployeeAPITestCases.authToken },
-				{ EmployeeFolderAPITestCases.authTokenOfSuperAdmin } };
+		return new Object[][] { { LoginEmployeeAPITestCases.authToken } };
 	}
 
 	@DataProvider(name = "TestDataForUpdateEmployee")
 	public Object[][] testDataForUpdateEmployee() {
-		int validEmployeeId = 26;
+		int validEmployeeId = 4;
 
 		int invalidEmployeeId = faker.number().numberBetween(50, 100);
 
@@ -199,15 +198,15 @@ public class DataProvidersForEmployeeFolder {
 		String confirmPassword = newPassword;
 
 		int user_id_last_digits = faker.number().numberBetween(100, 150);
-		String invalidUserId = "BIE0" + String.valueOf(user_id_last_digits);
+		String invalidUserId = "INC0" + String.valueOf(user_id_last_digits);
 
-		return new Object[][] { { "BIE018", oldPassword, "Pass@1234", "Pass@1234" },
+		return new Object[][] { { "INC018", oldPassword, "Pass@123", "Pass@123" },
 				{ "", oldPassword, newPassword, confirmPassword },
 				{ invalidUserId, oldPassword, newPassword, confirmPassword },
-				{ "BIE018", "", newPassword, confirmPassword },
-				{ "BIE018", "Pratham@123", newPassword, confirmPassword },
-				{ "BIE018", oldPassword, "", confirmPassword }, { "BIE018", oldPassword, newPassword, "" },
-				{ "BIE018", oldPassword, newPassword, faker.internet().domainName() } };
+				{ "INC018", "", newPassword, confirmPassword },
+				{ "INC018", "Pratham@123", newPassword, confirmPassword },
+				{ "INC018", oldPassword, "", confirmPassword }, { "INC018", oldPassword, newPassword, "" },
+				{ "INC018", oldPassword, newPassword, faker.internet().domainName() } };
 	}
 
 	@DataProvider(name = "TestDataForGetEncryptedEmail")
@@ -216,7 +215,7 @@ public class DataProvidersForEmployeeFolder {
 		String randomUserId = EmployeeFolderAPITestCases.userIds.get(randomIndexForUserId);
 
 		int user_id_last_digits = faker.number().numberBetween(100, 150);
-		String invalidUserId = "BIE0" + String.valueOf(user_id_last_digits);
+		String invalidUserId = "INC0" + String.valueOf(user_id_last_digits);
 
 		return new Object[][] { { randomUserId }, { invalidUserId } };
 	}
@@ -227,20 +226,20 @@ public class DataProvidersForEmployeeFolder {
 		String randomUserId = EmployeeFolderAPITestCases.userIds.get(randomIndexForUserId);
 
 		int user_id_last_digits = faker.number().numberBetween(100, 150);
-		String invalidUserId = "BIE0" + String.valueOf(user_id_last_digits);
+		String invalidUserId = "INC0" + String.valueOf(user_id_last_digits);
 
 		return new Object[][] { { randomUserId }, { invalidUserId } };
 	}
 
 	@DataProvider(name = "TestDataForAddToken")
 	public Object[][] testDataForAddToken() {
-		String token = "hrkc gulv nhiv yaoz";
+		String token = Constants.gmailKey;
 
 		int randomIndexForUserId = random.nextInt(EmployeeFolderAPITestCases.userIds.size());
 		String randomUserId = EmployeeFolderAPITestCases.userIds.get(randomIndexForUserId);
 
 		int user_id_last_digits = faker.number().numberBetween(100, 150);
-		String invalidUserId = "BIE0" + String.valueOf(user_id_last_digits);
+		String invalidUserId = "INC0" + String.valueOf(user_id_last_digits);
 
 		return new Object[][] { { token, randomUserId }, { token, invalidUserId }, { "", randomUserId }, };
 	}

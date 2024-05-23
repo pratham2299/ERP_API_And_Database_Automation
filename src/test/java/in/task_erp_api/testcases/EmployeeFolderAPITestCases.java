@@ -52,112 +52,117 @@ public class EmployeeFolderAPITestCases {
 				+ "    \"empMobile2\" : \"\",\r\n" + "    \"empDOB\" : \"\",\r\n" + "    \"eempBloodGroup\" : \"\",\r\n"
 				+ "    \"empAddress\" : \"\"\r\n" + "}\r\n" + "";
 
-		response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.addEmployeeEndpoint);
+		Response response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.addEmployeeEndpoint);
 
 		BodyValidation.response401Validation(response);
 	}
 
 	@Test(priority = 2)
-	public void verify_GetSingleEmployeeWithoutAuthorization() {
+	public void verify_Get_Single_Employee_Without_Authorization() {
 		String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForGetSingleEmployee("BIE018");
 
-		response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.getSingleEmployeeEndpoint);
+		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
+				APIEndpoints.getSingleEmployeeEndpoint);
 
 		BodyValidation.response401Validation(response);
 	}
 
 	@Test(priority = 3)
-	public void verifyGetUserIdWithoutAuthorization() {
-		response = Responses.getRequestWithoutAuthorization(APIEndpoints.getUserIdEndpoint);
-
-		BodyValidation.response401Validation(response);
-	}
-
-	@Test(priority = 4)
-	public void verifyGetSearchEmployeeWithoutAuthorization() {
-		response = Responses.getRequestWithoutAuthorizationAndOneQueryParameter(APIEndpoints.getUserIdEndpoint, "key",
-				"Pratham");
+	public void verify_Get_UserId_Without_Authorization() {
+		Response response = Responses.getRequestWithoutAuthorization(APIEndpoints.getUserIdEndpoint);
 
 		BodyValidation.response401Validation(response);
 	}
 
 	@Test(priority = 5)
-	public void verifyGetReportingAuthorityWithoutAuthorization() {
-		response = Responses.getRequestWithoutAuthorizationAndTwoQueryParameter(
+	public void verify_Get_Reporting_Authority_Without_Authorization() {
+		Response response = Responses.getRequestWithoutAuthorizationAndTwoQueryParameter(
 				APIEndpoints.getAllHigherAuthoritiesEndpoint, "role", 1, "department", "Testing");
 
 		BodyValidation.response401Validation(response);
 	}
 
 	@Test(priority = 6)
-	public void verifyGetAllAssigneeWithoutAuthorization() {
+	public void verify_Get_All_Assignee_Without_Authorization() {
 		String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForGetAssignee(3);
 
-		response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.getAllAssigneesEndpoint);
+		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
+				APIEndpoints.getAllAssigneesEndpoint);
 
 		BodyValidation.response401Validation(response);
 	}
 
 	@Test(priority = 7)
-	public void verifyGetAllEmployeeWithoutAuthorization() {
-		response = Responses.getRequestWithoutAuthorization(APIEndpoints.getAllEmployeesEndpoint);
+	public void verify_Get_Encrypted_Email_Without_Authorization() {
+		Response response = Responses.getRequestWithoutAuthorizationAndOneQueryParameter(
+				APIEndpoints.getEncryptedEmailEndpoint, "userId", "INC004");
 
 		BodyValidation.response401Validation(response);
 	}
 
 	@Test(priority = 8)
-	public void verifyGetAllActiveUsersinfoWithoutAuthorization() {
-		response = Responses.getRequestWithoutAuthorization(APIEndpoints.getAllActiveUsersInfoEndpoint);
+	public void verify_Get_All_Employee_Without_Authorization() {
+		Response response = Responses.getRequestWithoutAuthorizationAndThreeQueryParameter(
+				APIEndpoints.getAllEmployeesEndpoint, "page", 0, "size", 20, "key", "");
 
 		BodyValidation.response401Validation(response);
 	}
 
 	@Test(priority = 9)
-	public void verifyGetAllEmployeeIdAndNamesWithoutAuthorization() {
-		response = Responses.getRequestWithoutAuthorization(APIEndpoints.getAllEmployeesIdAndNameEndpoint);
+	public void verify_Get_All_Active_Users_Info_Without_Authorization() {
+		Response response = Responses.getRequestWithoutAuthorization(APIEndpoints.getAllActiveUsersInfoEndpoint);
 
 		BodyValidation.response401Validation(response);
 	}
 
 	@Test(priority = 10)
-	public void verifyGetAssignedTaskInfoByRoleWithoutAuthorization() {
-		response = Responses.getRequestWithoutAuthorizationPathParameterAndOneQueryParameter(
-				APIEndpoints.getAssignedTaskInfoByRoleEndpoint, "Team Lead", "date", "2024/02/15");
+	public void verify_Get_All_Employee_Id_And_Names_Without_Authorization() {
+		Response response = Responses.getRequestWithoutAuthorization(APIEndpoints.getAllEmployeesIdAndNameEndpoint);
 
 		BodyValidation.response401Validation(response);
 	}
 
 	@Test(priority = 11)
-	public void verifyGetSearchEmployeeInLevelWithoutAuthorization() {
-		String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForSearchEmployeeInLevel("Prat", "2024-03-13",
-				"Team Lead");
-
-		response = Responses.postRequestWithoutAuthorization(requestPayload,
-				APIEndpoints.getSearchEmployeeInLevelEndpoint);
+	public void verify_Get_Assigned_Task_Info_By_Role_Without_Authorization() {
+		Response response = Responses.getRequestWithoutAuthorizationPathParameterAndOneQueryParameter(
+				APIEndpoints.getAssignedTaskInfoByRoleEndpoint, "Team Lead", "date", "2024/02/15");
 
 		BodyValidation.response401Validation(response);
 	}
 
 	@Test(priority = 12)
-	public void verifyAddTokenForWebWithoutAuthorization() {
-		String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForAddToken("hpyn gyje jpsp ipqr", "BIE018");
+	public void verify_Get_Search_Employee_In_Level_Without_Authorization() {
+		String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForSearchEmployeeInLevel("Prat", "2024-03-13",
+				"Team Lead");
 
-		response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.addTokenForWebEndpoint);
+		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
+				APIEndpoints.getSearchEmployeeInLevelEndpoint);
 
 		BodyValidation.response401Validation(response);
 	}
 
 	@Test(priority = 13)
-	public void verifyAddTokenForMobileWithoutAuthorization() {
+	public void verify_Add_Token_For_Web_Without_Authorization() {
 		String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForAddToken("hpyn gyje jpsp ipqr", "BIE018");
 
-		response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.addTokenForMobileEndpoint);
+		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
+				APIEndpoints.addTokenForWebEndpoint);
 
 		BodyValidation.response401Validation(response);
 	}
 
 	@Test(priority = 14)
-	public void verifyUpdateEmployeeWithoutAuthorization() {
+	public void verify_Add_Token_For_Mobile_Without_Authorization() {
+		String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForAddToken("hpyn gyje jpsp ipqr", "BIE018");
+
+		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
+				APIEndpoints.addTokenForMobileEndpoint);
+
+		BodyValidation.response401Validation(response);
+	}
+
+	@Test(priority = 15)
+	public void verify_Update_Employee_Without_Authorization() {
 		String requestPayload = "{\r\n" + "    \"empId\" : 7,\r\n"
 				+ "    \"empFullName\" : \"Prathamesh Dhasade\", \r\n"
 				+ "    \"empMobile1\" : \"9834530434\",    			\r\n"
@@ -175,61 +180,62 @@ public class EmployeeFolderAPITestCases {
 				+ "    \"empEmailOfficial\" : \"prathamesh@biencaps.com\",     \r\n"
 				+ "    \"empEmailPersonal\" : \"prathameshdhasade99@gmail.com\"\r\n" + "}\r\n" + "";
 
-		response = Responses.putRequestWithoutAuthorization(requestPayload, APIEndpoints.updateEmployeeEndpoint);
-
-		BodyValidation.response401Validation(response);
-	}
-
-	@Test(priority = 15)
-	public void verifyUpdatePasswordWithoutAuthorization() {
-		String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForUpdatePassword("BIE018", "Pass@123",
-				"Pass@1234", "Pass@1234");
-
-		response = Responses.putRequestWithoutAuthorization(requestPayload, APIEndpoints.updatePasswordEndpoint);
+		Response response = Responses.putRequestWithoutAuthorization(requestPayload,
+				APIEndpoints.updateEmployeeEndpoint);
 
 		BodyValidation.response401Validation(response);
 	}
 
 	@Test(priority = 16)
-	public void verifyLoginSuperAdminByGivingValidData() {
-		String requestPayload = LoginFolderPayloads.loginEmployee("BIE025", "Pass@123");
+	public void verify_Update_Password_Without_Authorization() {
+		String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForUpdatePassword("BIE018", "Pass@123",
+				"Pass@1234", "Pass@1234");
 
-		response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.loginEmployeeEndpoint);
+		Response response = Responses.putRequestWithoutAuthorization(requestPayload,
+				APIEndpoints.updatePasswordEndpoint);
 
-		BodyValidation.responseValidation(response, 200);
-
-		authTokenOfSuperAdmin = response.jsonPath().getString("token");
-		log.info("Token of super admin for add employee is: " + authTokenOfSuperAdmin + "\n");
+		BodyValidation.response401Validation(response);
 	}
 
-	@Test(priority = 17, dataProvider = "TestDataForGetAllEmployees", dataProviderClass = DataProvidersForEmployeeFolder.class)
-	public void verifyGetAllEmployeesWithAuthorization(String authTokenInput) {
-		response = Responses.getRequestWithAuthorization(authTokenInput, APIEndpoints.getAllEmployeesEndpoint);
+	@Test(priority = 17)
+	public void verify_Get_Task_Owners_Without_Authorization() {
+		String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForGetTaskOwners(2);
 
-		if (authTokenInput.equalsIgnoreCase(LoginEmployeeAPITestCases.authToken)) {
+		Response response = Responses.putRequestWithoutAuthorization(requestPayload,
+				APIEndpoints.getTaskOwnersEndpoint);
+
+		BodyValidation.response401Validation(response);
+	}
+
+	@Test(priority = 16, dataProvider = "TestDataForGetAllEmployees", dataProviderClass = DataProvidersForEmployeeFolder.class)
+	public void verify_Get_All_Employee_With_Authorization(String authTokenInput) {
+		response = Responses.getRequestWithAuthorizationAndThreeQueryParameter(authTokenInput,
+				APIEndpoints.getAllEmployeesEndpoint, "page", 0, "size", 20, "key", "");
+
+		if (!authTokenInput.equalsIgnoreCase(LoginEmployeeAPITestCases.authToken)) {
 			BodyValidation.responseValidation(response, "Unauthorized", 401);
 		} else {
 			BodyValidation.responseValidation(response, 200);
 
-			userIds = response.jsonPath().getList("userId");
+			userIds = response.jsonPath().getList("data.userId");
 			log.info("List of user Ids are: " + userIds);
 
-			maxValueOfUserId = response.jsonPath().getString("max { it.userId }.userId");
+			maxValueOfUserId = response.jsonPath().getString("data.max { it.userId }.userId");
 			log.info("Max value of user Id is: " + maxValueOfUserId);
 
-			empIds = response.jsonPath().getList("empId");
+			empIds = response.jsonPath().getList("data.empId");
 			log.info("List of employee Ids are: " + empIds);
 
-			employeeFullNames = response.jsonPath().getList("empFullName");
+			employeeFullNames = response.jsonPath().getList("data.empFullName");
 			log.info("List of employee full names are: " + employeeFullNames + "\n");
 
 			// Extract the list of employees from the response
-			employees = response.jsonPath().getList("$");
+			employees = response.jsonPath().getList("data");
 		}
 	}
 
 	@Test(priority = 18)
-	public void verifyGetSingleEmployeeWithAuthorization() {
+	public void verify_Get_Single_Employee_With_Authorization() {
 		if (userIds != null) {
 			int randomIndexForUserId = random.nextInt(userIds.size());
 			String randomUserId = userIds.get(randomIndexForUserId);
@@ -237,8 +243,8 @@ public class EmployeeFolderAPITestCases {
 
 			String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForGetSingleEmployee(randomUserId);
 
-			response = Responses.postRequestWithAuthorization(requestPayload, authTokenOfSuperAdmin,
-					APIEndpoints.getSingleEmployeeEndpoint);
+			Response response = Responses.postRequestWithAuthorization(requestPayload,
+					LoginEmployeeAPITestCases.authToken, APIEndpoints.getSingleEmployeeEndpoint);
 
 			BodyValidation.responseValidation(response, 200);
 
@@ -253,15 +259,15 @@ public class EmployeeFolderAPITestCases {
 	}
 
 	@Test(priority = 19)
-	public void verifyGetSingleEmployeeByGivingInvalidUserId() {
+	public void verify_Get_Single_Employee_By_Giving_Invalid_UserId() {
 		if (userIds != null) {
 			int numeric_part_of_user_id = faker.number().numberBetween(50, 100);
-			String fakeUserId = "BIE0" + String.valueOf(numeric_part_of_user_id);
+			String fakeUserId = "INC0" + String.valueOf(numeric_part_of_user_id);
 
 			String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForGetSingleEmployee(fakeUserId);
 
-			response = Responses.postRequestWithAuthorization(requestPayload, authTokenOfSuperAdmin,
-					APIEndpoints.getSingleEmployeeEndpoint);
+			Response response = Responses.postRequestWithAuthorization(requestPayload,
+					LoginEmployeeAPITestCases.authToken, APIEndpoints.getSingleEmployeeEndpoint);
 
 			BodyValidation.responseValidation(response, "Not Found", 404);
 
@@ -271,8 +277,26 @@ public class EmployeeFolderAPITestCases {
 		}
 	}
 
-	@Test(dependsOnMethods = "verifyLoginSuperAdminByGivingValidData", dataProvider = "TestDataForAddEmployee", dataProviderClass = DataProvidersForEmployeeFolder.class, enabled = false)
-	public void verifyAddEmployeeWithAuthorization(String userId, String employeeFullName, String employeeStatus,
+	@Test(priority = 20)
+	public void verify_Get_Task_Owners_With_Authorization() {
+		if (RoleFolderAPITestCases.roleLevels != null) {
+			int randomIndexForRoleLevel = random.nextInt(RoleFolderAPITestCases.roleLevels.size());
+			int randomRoleLevel = RoleFolderAPITestCases.roleLevels.get(randomIndexForRoleLevel);
+			log.info("Random role level for get reporting authority is: " + randomRoleLevel + "\n");
+
+			String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForGetTaskOwners(randomRoleLevel);
+
+			Response response = Responses.postRequestWithAuthorization(requestPayload,
+					LoginEmployeeAPITestCases.authToken, APIEndpoints.getTaskOwnersEndpoint);
+
+			BodyValidation.responseValidation(response, "OK", 200);
+		} else {
+			log.error("Role levels are null");
+		}
+	}
+
+	@Test(dataProvider = "TestDataForAddEmployee", dataProviderClass = DataProvidersForEmployeeFolder.class, enabled = false)
+	public void verify_Add_Employee_With_Authorization(String userId, String employeeFullName, String employeeStatus,
 			int designationId, int departmentId, int roleId, String employeePersonalEmail, String employeeMobileNumber1,
 			String employeeJoiningDate, String employeeMobileNumber2, String employeeDOB, String employeeBloodGroup,
 			String employeeAddress) {
@@ -301,17 +325,15 @@ public class EmployeeFolderAPITestCases {
 					+ employeeDOB + "\",\r\n" + "    \"eempBloodGroup\" : \"" + employeeBloodGroup + "\",\r\n"
 					+ "    \"empAddress\" : \"" + employeeAddress + "\"\r\n" + "}\r\n" + "";
 
-			response = Responses.postRequestWithAuthorization(requestPayload, authTokenOfSuperAdmin,
-					APIEndpoints.addEmployeeEndpoint);
+			Response response = Responses.postRequestWithAuthorization(requestPayload,
+					LoginEmployeeAPITestCases.authToken, APIEndpoints.addEmployeeEndpoint);
 
-			if (userId.equalsIgnoreCase("") || employeeFullName.equalsIgnoreCase("")
-					|| employeeStatus.equalsIgnoreCase("") || employeePersonalEmail.equalsIgnoreCase("")
-					|| employeeMobileNumber1.equalsIgnoreCase("") || employeeJoiningDate.equalsIgnoreCase("")
-					|| employeeMobileNumber2.equalsIgnoreCase("") || employeeDOB.equalsIgnoreCase("")
-					|| employeeBloodGroup.equalsIgnoreCase("") || employeeAddress.equalsIgnoreCase("")
-					|| matcher.matches() == false || employeeMobileNumber1.length() < 10
-					|| employeeMobileNumber1.length() > 10 || employeeMobileNumber2.length() < 10
-					|| employeeMobileNumber2.length() > 10) {
+			if (userId.isBlank() || employeeFullName.isBlank() || employeeStatus.isBlank()
+					|| employeePersonalEmail.isBlank() || employeeMobileNumber1.isBlank()
+					|| employeeJoiningDate.isBlank() || employeeMobileNumber2.isBlank() || employeeDOB.isBlank()
+					|| employeeBloodGroup.isBlank() || employeeAddress.isBlank() || matcher.matches() == false
+					|| employeeMobileNumber1.length() < 10 || employeeMobileNumber1.length() > 10
+					|| employeeMobileNumber2.length() < 10 || employeeMobileNumber2.length() > 10) {
 				BodyValidation.response400Validation(response);
 			} else if (DesignationFolderAPITestCases.designationIds.contains(designationId) == false) {
 				BodyValidation.responseValidation(response, "Not Found", 404);
@@ -332,7 +354,7 @@ public class EmployeeFolderAPITestCases {
 	}
 
 	@Test(priority = 20)
-	public void verifyGetUserIdWithAuthorization() {
+	public void verify_Get_User_Id_With_Authorization() {
 		if (userIds != null) {
 			String numericPart = maxValueOfUserId.substring(3);
 
@@ -341,10 +363,11 @@ public class EmployeeFolderAPITestCases {
 			int new_numeric_part = numeric_part + 1;
 			String newNumericPart = String.valueOf(new_numeric_part);
 
-			String newUserId = "BIE0" + newNumericPart;
+			String newUserId = "INC0" + newNumericPart;
 			log.info("New User Id for get user id is: " + newUserId + "\n");
 
-			response = Responses.getRequestWithAuthorization(authTokenOfSuperAdmin, APIEndpoints.getUserIdEndpoint);
+			Response response = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
+					APIEndpoints.getUserIdEndpoint);
 
 			int responseBodyLength = response.getBody().asPrettyString().length();
 			String contentLength = String.valueOf(responseBodyLength);
@@ -358,9 +381,9 @@ public class EmployeeFolderAPITestCases {
 	}
 
 	@Test(priority = 21)
-	public void verifyGetAllEmployeeIdAndNamesWithAuthorization(ITestContext context) {
+	public void verify_Get_All_Employee_Id_And_Names_With_Authorization(ITestContext context) {
 		if (employees != null) {
-			response = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
+			Response response = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
 					APIEndpoints.getAllEmployeesIdAndNameEndpoint);
 
 			BodyValidation.responseValidation(response, 200);
@@ -407,48 +430,8 @@ public class EmployeeFolderAPITestCases {
 		}
 	}
 
-	@Test(priority = 22)
-	public void verifyGetSearchEmployeeWithAuthorization() {
-		if (employeeFullNames != null) {
-			int randomIndexForEmployeeName = random.nextInt(employeeFullNames.size());
-			String randomEmployeeName = employeeFullNames.get(randomIndexForEmployeeName);
-			log.info("Random employee name for search employee is: " + randomEmployeeName);
-
-			response = Responses.getRequestWithAuthorizationAndOneQueryParameter(authTokenOfSuperAdmin,
-					APIEndpoints.getSearchEmployeeEndpoint, "key", randomEmployeeName);
-
-			BodyValidation.responseValidation(response, 200);
-
-			String employeeFullNameFromResponse = response.jsonPath().getString("[0].empFullName");
-			log.info("Employee full name from response for search employee is: " + employeeFullNameFromResponse + "\n");
-
-			assertEquals(employeeFullNameFromResponse, randomEmployeeName,
-					"Employee full name from response does not match with random employee full name");
-			assertTrue(employeeFullNames.contains(randomEmployeeName));
-		} else {
-			log.info("List of employee full names are null");
-		}
-	}
-
-	@Test(priority = 23)
-	public void verifyGetSearchEmployeeByGivingInvalidEmployeeName() {
-		String fakeEmployeeName = faker.name().lastName();
-
-		if (employeeFullNames != null) {
-			response = Responses.getRequestWithAuthorizationAndOneQueryParameter(LoginEmployeeAPITestCases.authToken,
-					APIEndpoints.getSearchEmployeeEndpoint, "key", fakeEmployeeName);
-
-			BodyValidation.responseValidation(response, 200);
-
-			assertFalse(employeeFullNames.contains(fakeEmployeeName));
-
-		} else {
-			log.info("List of employee full names are null");
-		}
-	}
-
 	@Test(priority = 24)
-	public void verifyGetReportingAuthorityWithAuthorization() {
+	public void verify_Get_Reporting_Authority_With_Authorization() {
 		if (DepartmentFolderAPITestCases.departments != null && RoleFolderAPITestCases.roleLevels != null) {
 			int randomIndexForDepartment = random.nextInt(DepartmentFolderAPITestCases.departments.size());
 			String randomDepartment = DepartmentFolderAPITestCases.departments.get(randomIndexForDepartment);
@@ -458,9 +441,9 @@ public class EmployeeFolderAPITestCases {
 			int randomRoleLevel = RoleFolderAPITestCases.roleLevels.get(randomIndexForRoleLevel);
 			log.info("Random department for get reporting authority is: " + randomRoleLevel + "\n");
 
-			response = Responses.getRequestWithAuthorizationAndTwoQueryParameter(LoginEmployeeAPITestCases.authToken,
-					APIEndpoints.getAllHigherAuthoritiesEndpoint, "role", randomRoleLevel, "department",
-					randomDepartment);
+			Response response = Responses.getRequestWithAuthorizationAndTwoQueryParameter(
+					LoginEmployeeAPITestCases.authToken, APIEndpoints.getAllHigherAuthoritiesEndpoint, "role",
+					randomRoleLevel, "department", randomDepartment);
 
 			BodyValidation.responseValidation(response, 200);
 
@@ -473,7 +456,7 @@ public class EmployeeFolderAPITestCases {
 	}
 
 	@Test(priority = 25)
-	public void verifyGetReportingAuthorityByGivingInvalidDepartment() {
+	public void verify_Get_Reporting_Authority_By_Giving_Invalid_Department() {
 		if (DepartmentFolderAPITestCases.departments != null && RoleFolderAPITestCases.roleLevels != null) {
 			int randomIndexForRoleLevel = random.nextInt(RoleFolderAPITestCases.roleLevels.size());
 			int randomRoleLevel = RoleFolderAPITestCases.roleLevels.get(randomIndexForRoleLevel);
@@ -481,9 +464,9 @@ public class EmployeeFolderAPITestCases {
 
 			String fakeDepartment = faker.country().name();
 
-			response = Responses.getRequestWithAuthorizationAndTwoQueryParameter(LoginEmployeeAPITestCases.authToken,
-					APIEndpoints.getAllHigherAuthoritiesEndpoint, "role", randomRoleLevel, "department",
-					fakeDepartment);
+			Response response = Responses.getRequestWithAuthorizationAndTwoQueryParameter(
+					LoginEmployeeAPITestCases.authToken, APIEndpoints.getAllHigherAuthoritiesEndpoint, "role",
+					randomRoleLevel, "department", fakeDepartment);
 
 			assertEquals(DepartmentFolderAPITestCases.departments.contains(fakeDepartment), false,
 					"Department name is not contain in department name list");
@@ -496,7 +479,7 @@ public class EmployeeFolderAPITestCases {
 	}
 
 	@Test(priority = 26)
-	public void verifyGetAllAssigneeWithAuthorizationByGivingValidRoleLevel() {
+	public void verify_Get_All_Assignee_With_Authorization_By_Giving_Valid_Role_Level() {
 		if (RoleFolderAPITestCases.roleLevels != null) {
 			int randomIndexForRoleLevel = random.nextInt(RoleFolderAPITestCases.roleLevels.size());
 			int randomRoleLevel = RoleFolderAPITestCases.roleLevels.get(randomIndexForRoleLevel);
@@ -504,8 +487,8 @@ public class EmployeeFolderAPITestCases {
 
 			String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForGetAssignee(randomRoleLevel);
 
-			response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
-					APIEndpoints.getAllAssigneesEndpoint);
+			Response response = Responses.postRequestWithAuthorization(requestPayload,
+					LoginEmployeeAPITestCases.authToken, APIEndpoints.getAllAssigneesEndpoint);
 
 			BodyValidation.responseValidation(response, 200);
 
@@ -517,8 +500,8 @@ public class EmployeeFolderAPITestCases {
 	}
 
 	@Test(priority = 27, enabled = false)
-	public void verifyGetAllActiveUsersinfoWithAuthorization() {
-		response = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
+	public void verify_Get_All_Active_Users_Info_With_Authorization() {
+		Response response = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.getAllActiveUsersInfoEndpoint);
 
 		BodyValidation.responseValidation(response, 200);
@@ -531,9 +514,9 @@ public class EmployeeFolderAPITestCases {
 	}
 
 	@Test(priority = 28, dataProvider = "TestDataForGetAssignedTaskInfoByRole", dataProviderClass = DataProvidersForEmployeeFolder.class)
-	public void verifyGetAssignedTaskInfoByRoleWithAuthorization(String roleNameInput, String dateFormatInput) {
+	public void verify_Get_Assigned_Task_Info_By_Role_With_Authorization(String roleNameInput, String dateFormatInput) {
 		if (RoleFolderAPITestCases.roles != null) {
-			response = Responses.getRequestWithAuthorizationPathParameterAndOneQueryParameter(
+			Response response = Responses.getRequestWithAuthorizationPathParameterAndOneQueryParameter(
 					LoginEmployeeAPITestCases.authToken, APIEndpoints.getAssignedTaskInfoByRoleEndpoint, roleNameInput,
 					"date", dateFormatInput);
 
@@ -557,7 +540,7 @@ public class EmployeeFolderAPITestCases {
 	}
 
 	@Test(priority = 29, dataProvider = "TestDataForUpdateEmployee", dataProviderClass = DataProvidersForEmployeeFolder.class, enabled = false)
-	public void verifyUpdateEmployeeWithAuthorization(int employeeId, String employeeFullName,
+	public void verify_Update_Employee_With_Authorization(int employeeId, String employeeFullName,
 			String employeeMobileNumber1, String employeeStatus, String employeeMobileNumber2,
 			String employeeBloodGroup, String employeeOfficeLocation, String employeeJoiningDate, int roleId,
 			int designationId, int departmentId, String employeeAddress, String employeeDOB,
@@ -579,26 +562,26 @@ public class EmployeeFolderAPITestCases {
 					employeeOfficeLocation, employeeJoiningDate, roleId, designationId, departmentId, employeeAddress,
 					employeeDOB, employeeEmailOfficial, employeePersonalEmail);
 
-			response = Responses.putRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
-					APIEndpoints.updateEmployeeEndpoint);
+			Response response = Responses.putRequestWithAuthorization(requestPayload,
+					LoginEmployeeAPITestCases.authToken, APIEndpoints.updateEmployeeEndpoint);
 
 			String responseBody = response.getBody().asPrettyString();
 
-			if (employeeFullName.equalsIgnoreCase("")) {
+			if (employeeFullName.isBlank()) {
 				BodyValidation.response400Validation(response);
 			} else if (!employeeIds.contains(employeeId)) {
 				BodyValidation.responseValidation(response, "Not Found", 404);
-			} else if (employeeStatus.equalsIgnoreCase("")) {
+			} else if (employeeStatus.isBlank()) {
 				BodyValidation.response400Validation(response);
-			} else if (employeeOfficeLocation.equalsIgnoreCase("")) {
+			} else if (employeeOfficeLocation.isBlank()) {
 				BodyValidation.response400Validation(response);
-			} else if (employeeJoiningDate.equalsIgnoreCase("")) {
+			} else if (employeeJoiningDate.isBlank()) {
 				BodyValidation.response400Validation(response);
-			} else if (employeeEmailOfficial.equalsIgnoreCase("") || matcherForOfficialEmail.matches() == false) {
+			} else if (employeeEmailOfficial.isBlank() || matcherForOfficialEmail.matches() == false) {
 				BodyValidation.response400Validation(response);
-			} else if (employeePersonalEmail.equalsIgnoreCase("") || matcherForPersonalEmail.matches() == false) {
+			} else if (employeePersonalEmail.isBlank() || matcherForPersonalEmail.matches() == false) {
 				BodyValidation.response400Validation(response);
-			} else if (employeeMobileNumber1.equalsIgnoreCase("") || employeeMobileNumber1.length() < 10
+			} else if (employeeMobileNumber1.isBlank() || employeeMobileNumber1.length() < 10
 					|| employeeMobileNumber1.length() > 10 || employeeMobileNumber2.length() < 10
 					|| employeeMobileNumber2.length() > 10) {
 				BodyValidation.response400Validation(response);
@@ -621,7 +604,7 @@ public class EmployeeFolderAPITestCases {
 	}
 
 	@Test(priority = 30, dataProvider = "TestDataForUpdatePassword", dataProviderClass = DataProvidersForEmployeeFolder.class)
-	public void verifyUpdatePasswordWithAuthorization(String userId, String oldPassword, String newPassword,
+	public void verify_Update_Password_With_Authorization(String userId, String oldPassword, String newPassword,
 			String confirmPassword) {
 		String userPassword = LoginEmployeeAPITestCases.password;
 
@@ -632,11 +615,10 @@ public class EmployeeFolderAPITestCases {
 		log.info("New password is: " + newPassword + "\n");
 
 		if (userIds != null) {
-			response = Responses.putRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
-					APIEndpoints.updatePasswordEndpoint);
+			Response response = Responses.putRequestWithAuthorization(requestPayload,
+					LoginEmployeeAPITestCases.authToken, APIEndpoints.updatePasswordEndpoint);
 
-			if (userId.equalsIgnoreCase("") || oldPassword.equalsIgnoreCase("") || newPassword.equalsIgnoreCase("")
-					|| confirmPassword.equalsIgnoreCase("")) {
+			if (userId.isBlank() || oldPassword.isBlank() || newPassword.isBlank() || confirmPassword.isBlank()) {
 				BodyValidation.response400Validation(response);
 			} else if (confirmPassword.equalsIgnoreCase(newPassword) == false
 					|| userPassword.equalsIgnoreCase(oldPassword) == false) {
@@ -655,11 +637,11 @@ public class EmployeeFolderAPITestCases {
 	}
 
 	@Test(priority = 31, dataProvider = "TestDataForGetEncryptedEmail", dataProviderClass = DataProvidersForEmployeeFolder.class)
-	public void verifyGetEncryptedEmailWithAuthorization(String userIdInput) {
+	public void verify_Get_Encrypted_Email_With_Authorization(String userIdInput) {
 		log.info("User Id for get encrypted email using data provider is: " + userIdInput + "\n");
 
-		response = Responses.getRequestWithAuthorizationAndOneQueryParameter(LoginEmployeeAPITestCases.authToken,
-				APIEndpoints.getEncryptedEmailEndpoint, "userId", userIdInput);
+		Response response = Responses.getRequestWithAuthorizationAndOneQueryParameter(
+				LoginEmployeeAPITestCases.authToken, APIEndpoints.getEncryptedEmailEndpoint, "userId", userIdInput);
 
 		if (userIds.contains(userIdInput) == false) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
@@ -669,18 +651,19 @@ public class EmployeeFolderAPITestCases {
 	}
 
 	@Test(priority = 32, dataProvider = "TestDataForSearchEmployeeInLevel", dataProviderClass = DataProvidersForEmployeeFolder.class)
-	public void verifyGetSearchEmployeeInLevelWithAuthorization(String keyInput, String roleInput, String dateInput) {
+	public void verify_Get_Search_Employee_In_Level_With_Authorization(String keyInput, String roleInput,
+			String dateInput) {
 		String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForSearchEmployeeInLevel(keyInput, roleInput,
 				dateInput);
 
-		response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
+		Response response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.getSearchEmployeeInLevelEndpoint);
 
-		if (dateInput.equalsIgnoreCase("")) {
+		if (dateInput.isBlank()) {
 			BodyValidation.response400Validation(response);
-		} else if (response.getStatusCode() == 400 && dateInput.equalsIgnoreCase("") == false) {
+		} else if (response.getStatusCode() == 400 && dateInput.isBlank() == false) {
 			BodyValidation.response400Validation(response);
-		} else if (!RoleFolderAPITestCases.roles.contains(roleInput) || roleInput.equalsIgnoreCase("")) {
+		} else if (!RoleFolderAPITestCases.roles.contains(roleInput) || roleInput.isBlank()) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
 		} else {
 			BodyValidation.responseValidation(response, 200);
@@ -688,9 +671,9 @@ public class EmployeeFolderAPITestCases {
 	}
 
 	@Test(priority = 33, dataProvider = "TestDataForAddForgotPassword", dataProviderClass = DataProvidersForEmployeeFolder.class, enabled = false)
-	public void verifyAddForgotPasswordWithAuthorization(String userIdInput) {
-		response = Responses.postRequestWithAuthorizationAndOneQueryParameter(LoginEmployeeAPITestCases.authToken,
-				APIEndpoints.addForgotPasswordEndpoint, "userId", userIdInput);
+	public void verify_Add_Forgot_Password_With_Authorization(String userIdInput) {
+		Response response = Responses.postRequestWithAuthorizationAndOneQueryParameter(
+				LoginEmployeeAPITestCases.authToken, APIEndpoints.addForgotPasswordEndpoint, "userId", userIdInput);
 
 		if (userIds.contains(userIdInput) == false) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
@@ -700,18 +683,17 @@ public class EmployeeFolderAPITestCases {
 	}
 
 	@Test(priority = 34, dataProvider = "TestDataForAddToken", dataProviderClass = DataProvidersForEmployeeFolder.class)
-	public void verifyAddTokenForWebWithAuthorization(String tokenInput, String userIdInput) {
+	public void verify_Add_Token_For_Web_With_Authorization(String tokenInput, String userIdInput) {
 		String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForAddToken(tokenInput, userIdInput);
 
-		response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
+		Response response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.addTokenForWebEndpoint);
 
 		String responseBody = response.getBody().asPrettyString();
-		System.out.println(responseBody);
 
-		if (tokenInput.equalsIgnoreCase("")) {
+		if (tokenInput.isBlank()) {
 			BodyValidation.response400Validation(response);
-		} else if (userIdInput.equalsIgnoreCase("") || !userIds.contains(userIdInput)) {
+		} else if (userIdInput.isBlank() || !userIds.contains(userIdInput)) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
 		} else {
 			assertEquals(responseBody, "token updated");
@@ -721,18 +703,17 @@ public class EmployeeFolderAPITestCases {
 	}
 
 	@Test(priority = 35, dataProvider = "TestDataForAddToken", dataProviderClass = DataProvidersForEmployeeFolder.class)
-	public void verifyAddTokenForMobileWithAuthorization(String tokenInput, String userIdInput) {
+	public void verify_Add_Token_For_Mobile_With_Authorization(String tokenInput, String userIdInput) {
 		String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForAddToken(tokenInput, userIdInput);
 
-		response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
+		Response response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.addTokenForMobileEndpoint);
 
 		String responseBody = response.getBody().asPrettyString();
-		System.out.println(responseBody);
 
-		if (tokenInput.equalsIgnoreCase("")) {
+		if (tokenInput.isBlank()) {
 			BodyValidation.response400Validation(response);
-		} else if (userIds.contains(userIdInput) == false || userIdInput.equalsIgnoreCase("")) {
+		} else if (userIds.contains(userIdInput) == false || userIdInput.isBlank()) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
 		} else {
 			assertEquals(responseBody, "token updated");

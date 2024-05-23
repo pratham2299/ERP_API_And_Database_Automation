@@ -43,8 +43,10 @@ public class VerificationStatusFolderAPITestCases extends BaseTest {
 				APIEndpoints.addVerificationStatusEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "Status code for add verification status is: " + response.getStatusCode());
-		test.log(Status.INFO, "Response for add verification status is: " + response.getBody().asPrettyString());
+		test.log(Status.INFO,
+				"API endpoint for add verification status is => " + APIEndpoints.addVerificationStatusEndpoint);
+		test.log(Status.INFO, "Status code for add verification status is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for add verification status is => " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 2)
@@ -54,8 +56,10 @@ public class VerificationStatusFolderAPITestCases extends BaseTest {
 		Response response = Responses.getRequestWithoutAuthorization(APIEndpoints.getAllVerificationStatusesEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "Status code for get all verification statuses is: " + response.getStatusCode());
-		test.log(Status.INFO, "Response for get all verification statuses is: " + response.getBody().asPrettyString());
+		test.log(Status.INFO, "API endpoint for get all verification statuses is => "
+				+ APIEndpoints.getAllVerificationStatusesEndpoint);
+		test.log(Status.INFO, "Status code for get all verification statuses is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for get all verification statuses is => " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 3)
@@ -72,8 +76,10 @@ public class VerificationStatusFolderAPITestCases extends BaseTest {
 				APIEndpoints.updateVerificationStatusEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "Status code for update verification status is: " + response.getStatusCode());
-		test.log(Status.INFO, "Response for update verification status is: " + response.getBody().asPrettyString());
+		test.log(Status.INFO,
+				"API endpoint for update verification status is => " + APIEndpoints.updateVerificationStatusEndpoint);
+		test.log(Status.INFO, "Status code for update verification status is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for update verification status is => " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 4)
@@ -84,8 +90,10 @@ public class VerificationStatusFolderAPITestCases extends BaseTest {
 				APIEndpoints.deleteVerificationStatusEndpoint, "id", "8");
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "Status code for delete verification status is: " + response.getStatusCode());
-		test.log(Status.INFO, "Response for delete verification status is: " + response.getBody().asPrettyString());
+		test.log(Status.INFO,
+				"API endpoint for delete verification status is => " + APIEndpoints.deleteVerificationStatusEndpoint);
+		test.log(Status.INFO, "Status code for delete verification status is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for delete verification status is => " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 5)
@@ -103,12 +111,14 @@ public class VerificationStatusFolderAPITestCases extends BaseTest {
 
 		Response response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.addVerificationStatusEndpoint);
-		test.log(Status.INFO, "Request payload for add verification status is: " + requestPayload);
-		test.log(Status.INFO, "Status code for add verification status is: " + response.getStatusCode());
-		test.log(Status.INFO, "Response for add verification status is: " + response.getBody().asPrettyString());
+		test.log(Status.INFO,
+				"API endpoint for add verification status is => " + APIEndpoints.addVerificationStatusEndpoint);
+		test.log(Status.INFO, "Request payload for add verification status is => " + requestPayload);
+		test.log(Status.INFO, "Status code for add verification status is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for add verification status is => " + response.getBody().asPrettyString());
 
-		if (verificationStatus.equalsIgnoreCase("") || verificationColor.equalsIgnoreCase("")
-				|| verificationColorCode.equalsIgnoreCase("")) {
+		if (verificationStatus.isBlank() || verificationColor.isBlank()
+				|| verificationColorCode.isBlank()) {
 			BodyValidation.response400Validation(response);
 		} else if (verificationStatuses.contains(verificationStatus) || verificationLevels.contains(verificationLevel)
 				|| verificationColors.contains(verificationColor)
@@ -145,12 +155,14 @@ public class VerificationStatusFolderAPITestCases extends BaseTest {
 
 		Response response = Responses.putRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.updateVerificationStatusEndpoint);
-		test.log(Status.INFO, "Request payload for update verification status is: " + requestPayload);
-		test.log(Status.INFO, "Status code for update verification status is: " + response.getStatusCode());
-		test.log(Status.INFO, "Response for update verification status is: " + response.getBody().asPrettyString());
+		test.log(Status.INFO,
+				"API endpoint for update verification status is => " + APIEndpoints.updateVerificationStatusEndpoint);
+		test.log(Status.INFO, "Request payload for update verification status is => " + requestPayload);
+		test.log(Status.INFO, "Status code for update verification status is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for update verification status is => " + response.getBody().asPrettyString());
 
-		if (verificationStatus.equalsIgnoreCase("") || verificationColor.equalsIgnoreCase("")
-				|| verificationColorCode.equalsIgnoreCase("")) {
+		if (verificationStatus.isBlank() || verificationColor.isBlank()
+				|| verificationColorCode.isBlank()) {
 			BodyValidation.response400Validation(response);
 		} else if (verificationStatusIds.contains(verificationStatusId) == false) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
@@ -180,6 +192,10 @@ public class VerificationStatusFolderAPITestCases extends BaseTest {
 
 		Response response = Responses.deleteRequestWithAuthorizationAndQueryParameter("id", verificationStatusId,
 				LoginEmployeeAPITestCases.authToken, APIEndpoints.deleteVerificationStatusEndpoint);
+		test.log(Status.INFO,
+				"API endpoint for delete verification status is => " + APIEndpoints.deleteVerificationStatusEndpoint);
+		test.log(Status.INFO, "Status code for delete verification status is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for delete verification status is => " + response.getBody().asPrettyString());
 
 		if (response.getBody().asPrettyString().equals("[]")) {
 			BodyValidation.response204Validation(response);
@@ -197,23 +213,23 @@ public class VerificationStatusFolderAPITestCases extends BaseTest {
 	public void verifyNewCreatedVerificationStatusDetails(String message) {
 		newCreatedVerificationStatusId = response.jsonPath()
 				.getInt("max { it.verificationStatusId }.verificationStatusId");
-		log.info("New created verification status Id " + message + " is: " + newCreatedVerificationStatusId);
+		log.info("New created verification status Id " + message + " is => " + newCreatedVerificationStatusId);
 
 		newCreatedVerificationStatus = response.jsonPath().getString(
 				"find { it.verificationStatusId == " + newCreatedVerificationStatusId + " }.verificationStatus");
-		log.info("New created verification status " + message + " is: " + newCreatedVerificationStatus);
+		log.info("New created verification status " + message + " is => " + newCreatedVerificationStatus);
 
 		newCreatedVerificationLevel = response.jsonPath()
 				.getInt("find { it.verificationStatusId == " + newCreatedVerificationStatusId + " }.verificationLevel");
-		log.info("New created verification status level " + message + " is: " + newCreatedVerificationLevel);
+		log.info("New created verification status level " + message + " is => " + newCreatedVerificationLevel);
 
 		newCreatedVerificationStatusColor = response.jsonPath().getString(
 				"find { it.verificationStatusId == " + newCreatedVerificationStatusId + " }.verificationColor");
-		log.info("New created verification status color " + message + " is: " + newCreatedVerificationStatusColor);
+		log.info("New created verification status color " + message + " is => " + newCreatedVerificationStatusColor);
 
 		newCreatedVerificationStatusColorCode = response.jsonPath().getString(
 				"find { it.verificationStatusId == " + newCreatedVerificationStatusId + " }.verificationColorCode");
-		log.info("New created verification status color code " + message + " is: "
+		log.info("New created verification status color code " + message + " is => "
 				+ newCreatedVerificationStatusColorCode + "\n");
 	}
 
@@ -224,22 +240,24 @@ public class VerificationStatusFolderAPITestCases extends BaseTest {
 				APIEndpoints.getAllVerificationStatusesEndpoint);
 
 		BodyValidation.responseValidation(response, 200);
-		test.log(Status.INFO, "Status code for get all verification statuses is: " + response.getStatusCode());
-		test.log(Status.INFO, "Response for get all verification statuses is: " + response.getBody().asPrettyString());
+		test.log(Status.INFO, "API endpoint for get all verification statuses is => "
+				+ APIEndpoints.getAllVerificationStatusesEndpoint);
+		test.log(Status.INFO, "Status code for get all verification statuses is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for get all verification statuses is => " + response.getBody().asPrettyString());
 
 		verificationStatusIds = response.jsonPath().getList("verificationStatusId");
-		log.info("List of verification status Ids " + message + " are: " + verificationStatusIds);
+		log.info("List of verification status Ids " + message + " are => " + verificationStatusIds);
 
 		verificationStatuses = response.jsonPath().getList("verificationStatus");
-		log.info("List of verification status names " + message + " are: " + verificationStatuses);
+		log.info("List of verification status names " + message + " are => " + verificationStatuses);
 
 		verificationLevels = response.jsonPath().getList("verificationLevel");
-		log.info("List of verification status levels " + message + " are: " + verificationLevels);
+		log.info("List of verification status levels " + message + " are => " + verificationLevels);
 
 		verificationColors = response.jsonPath().getList("verificationColor");
-		log.info("List of verification status colors " + message + " are: " + verificationColors);
+		log.info("List of verification status colors " + message + " are => " + verificationColors);
 
 		verificationColorCodes = response.jsonPath().getList("verificationColorCode");
-		log.info("List of verification status color codes " + message + " are: " + verificationColorCodes + "\n");
+		log.info("List of verification status color codes " + message + " are => " + verificationColorCodes + "\n");
 	}
 }

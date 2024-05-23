@@ -29,11 +29,11 @@ public class LoginEmployeeAPITestCases extends BaseTest {
 		response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.loginEmployeeEndpoint);
 
 		BodyValidation.responseValidation(response, 200);
-		test.log(Status.INFO, "Status code for login employee is: " + response.getStatusCode());
-		test.log(Status.INFO, "Response for login employee is: " + response.getBody().asPrettyString());
+		test.log(Status.INFO, "Status code for login employee is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for login employee is => " + response.getBody().asPrettyString());
 
 		authToken = response.jsonPath().getString("token");
-		log.info("Token is: " + authToken + "\n");
+		log.info("Token is => " + authToken + "\n");
 	}
 
 	@Test(priority = 2)
@@ -45,8 +45,8 @@ public class LoginEmployeeAPITestCases extends BaseTest {
 		response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.loginEmployeeEndpoint);
 
 		BodyValidation.responseValidation(response, "Not Found", 404);
-		test.log(Status.INFO, "Status code for login employee is: " + response.getStatusCode());
-		test.log(Status.INFO, "Response for login employee is: " + response.getBody().asPrettyString());
+		test.log(Status.INFO, "Status code for login employee is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for login employee is => " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 3)
@@ -58,7 +58,7 @@ public class LoginEmployeeAPITestCases extends BaseTest {
 		response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.loginEmployeeEndpoint);
 
 		BodyValidation.response400Validation(response);
-		test.log(Status.INFO, "Status code for login employee is: " + response.getStatusCode());
-		test.log(Status.INFO, "Response for login employee is: " + response.getBody().asPrettyString());
+		test.log(Status.INFO, "Status code for login employee is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for login employee is => " + response.getBody().asPrettyString());
 	}
 }
