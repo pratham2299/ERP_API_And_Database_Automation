@@ -37,7 +37,7 @@ public class MilestoneFolderAPITestCases {
 		String requestPayload = MilestoneFolderPayloads.givemilestonePayloadForAddmilestone(projectIdInput);
 
 		response = Responses.postRequestWithAuthorization(requestPayload,
-				EmployeeFolderAPITestCases.authTokenOfSuperAdmin, APIEndpoints.getAllMilestonesEndpoint);
+				LoginEmployeeAPITestCases.authToken, APIEndpoints.getAllMilestonesEndpoint);
 
 		System.out.println(response.getBody().asPrettyString());
 

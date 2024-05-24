@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>53/3/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>107/6/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu May 23 18:00:59 IST 2024</td>
+<td>Started on:</td><td>Fri May 24 14:43:00 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>41 seconds (41460 ms)</td>
+<tr><td>Total time:</td><td>73 seconds (73425 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,95 +76,9 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Encrypted_Email_Without_Authorization()'><b>verify_Get_Encrypted_Email_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Employee_With_Authorization()'><b>verify_Update_Employee_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: 4, Prathamesh Dhasade, 2023/11/01, ACTIVE, 5, 33, 4, 834113595461, 9850708611, prathamesh@biencaps.com, prathameshdhasade99@gmail.com, Narhe, Pune, A+, 1999/08/22, Bibwewadi, Pune</td>
 <td><div><pre>java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;401&gt; but was &lt;200&gt;.
-
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at in.task_erp_api.bodyValidations.BodyValidation.response401Validation(BodyValidation.java:47)
-	at in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Encrypted_Email_Without_Authorization(EmployeeFolderAPITestCases.java:100)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace223363383", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace223363383'><pre>java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;401&gt; but was &lt;200&gt;.
-
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor26.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at in.task_erp_api.bodyValidations.BodyValidation.response401Validation(BodyValidation.java:47)
-	at in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Encrypted_Email_Without_Authorization(EmployeeFolderAPITestCases.java:100)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Password_With_Authorization()'><b>verify_Update_Password_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: INC018, Pass@123, Pass@123, Pass@123</td>
-<td><div><pre>java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;200&gt; but was &lt;401&gt;.
+Expected status code &lt;422&gt; but was &lt;200&gt;.
 
 	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
@@ -181,11 +95,11 @@ Expected status code &lt;200&gt; but was &lt;401&gt;.
 	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
 	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
 	at in.task_erp_api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
-	at in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Password_With_Authorization(EmployeeFolderAPITestCases.java:629)
+	at in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Employee_With_Authorization(EmployeeFolderAPITestCases.java:674)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace156954340", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace156954340'><pre>java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;200&gt; but was &lt;401&gt;.
+... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace850268617", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace850268617'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;422&gt; but was &lt;200&gt;.
 
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
@@ -211,7 +125,7 @@ Expected status code &lt;200&gt; but was &lt;401&gt;.
 	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
 	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
 	at in.task_erp_api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
-	at in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Password_With_Authorization(EmployeeFolderAPITestCases.java:629)
+	at in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Employee_With_Authorization(EmployeeFolderAPITestCases.java:674)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -242,13 +156,11 @@ Expected status code &lt;200&gt; but was &lt;401&gt;.
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
 <tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Task_Owners_With_Authorization()'><b>verify_Get_Task_Owners_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Employee_With_Authorization()'><b>verify_Update_Employee_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: 4, Prathamesh Dhasade, , ACTIVE, 5, 33, 4, 9834530434, 9850708611, prathamesh@biencaps.com, prathameshdhasade99@gmail.com, Narhe, Pune, A+, 1999/08/22, Bibwewadi, Pune</td>
 <td><div><pre>java.lang.AssertionError: 1 expectation failed.
-JSON path status doesn&apos;t match.
-Expected: &lt;200&gt;
-  Actual: &lt;[null, null, null, null, null, null, null, null, null, null, null, null, null, null]&gt;
+Expected status code &lt;400&gt; but was &lt;200&gt;.
 
 	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
@@ -260,18 +172,16 @@ Expected: &lt;200&gt;
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:270)
-	at io.restassured.specification.ResponseSpecification$body$2.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
-	at in.task_erp_api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:61)
-	at in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Task_Owners_With_Authorization(EmployeeFolderAPITestCases.java:292)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at in.task_erp_api.bodyValidations.BodyValidation.response400Validation(BodyValidation.java:38)
+	at in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Employee_With_Authorization(EmployeeFolderAPITestCases.java:666)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1649566957", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1649566957'><pre>java.lang.AssertionError: 1 expectation failed.
-JSON path status doesn&apos;t match.
-Expected: &lt;200&gt;
-  Actual: &lt;[null, null, null, null, null, null, null, null, null, null, null, null, null, null]&gt;
+... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace180256054", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace180256054'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;400&gt; but was &lt;200&gt;.
 
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
@@ -292,12 +202,12 @@ Expected: &lt;200&gt;
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:270)
-	at io.restassured.specification.ResponseSpecification$body$2.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
-	at in.task_erp_api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:61)
-	at in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Task_Owners_With_Authorization(EmployeeFolderAPITestCases.java:292)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at in.task_erp_api.bodyValidations.BodyValidation.response400Validation(BodyValidation.java:38)
+	at in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Employee_With_Authorization(EmployeeFolderAPITestCases.java:666)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -328,7 +238,339 @@ Expected: &lt;200&gt;
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Employee_With_Authorization()'><b>verify_Update_Employee_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: 4, Prathamesh Dhasade, 2023/11/01, ACTIVE, 5, 33, 4, 9834530434, 834113595461, prathamesh@biencaps.com, prathameshdhasade99@gmail.com, Narhe, Pune, A+, 1999/08/22, Bibwewadi, Pune</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;422&gt; but was &lt;200&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at in.task_erp_api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
+	at in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Employee_With_Authorization(EmployeeFolderAPITestCases.java:674)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1393428647", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1393428647'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;422&gt; but was &lt;200&gt;.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at jdk.internal.reflect.GeneratedMethodAccessor26.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at in.task_erp_api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
+	at in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Employee_With_Authorization(EmployeeFolderAPITestCases.java:674)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Employee_With_Authorization()'><b>verify_Update_Employee_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: 4, Prathamesh Dhasade, 2023/11/01, ACTIVE, 5, 33, 4, 9834530434, 80121568, prathamesh@biencaps.com, prathameshdhasade99@gmail.com, Narhe, Pune, A+, 1999/08/22, Bibwewadi, Pune</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;422&gt; but was &lt;200&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at in.task_erp_api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
+	at in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Employee_With_Authorization(EmployeeFolderAPITestCases.java:674)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1653271137", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1653271137'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;422&gt; but was &lt;200&gt;.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at jdk.internal.reflect.GeneratedMethodAccessor26.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at in.task_erp_api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
+	at in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Employee_With_Authorization(EmployeeFolderAPITestCases.java:674)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.DepartmentFolderAPITestCases.verify_Get_Employees_By_Department_Name_With_Authorization()'><b>verify_Get_Employees_By_Department_Name_With_Authorization</b><br>Test class: in.task_erp_api.testcases.DepartmentFolderAPITestCases</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;404&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at in.task_erp_api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:10)
+	at in.task_erp_api.testcases.DepartmentFolderAPITestCases.verify_Get_Employees_By_Department_Name_With_Authorization(DepartmentFolderAPITestCases.java:350)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace694541704", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace694541704'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;404&gt;.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at jdk.internal.reflect.GeneratedMethodAccessor26.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at in.task_erp_api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:10)
+	at in.task_erp_api.testcases.DepartmentFolderAPITestCases.verify_Get_Employees_By_Department_Name_With_Authorization(DepartmentFolderAPITestCases.java:350)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.DepartmentFolderAPITestCases@4cc6fa2a</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Employee_With_Authorization()'><b>verify_Update_Employee_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: 4, Prathamesh Dhasade, 2023/11/01, ACTIVE, 5, 33, 4, 80121568, 9850708611, prathamesh@biencaps.com, prathameshdhasade99@gmail.com, Narhe, Pune, A+, 1999/08/22, Bibwewadi, Pune</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;422&gt; but was &lt;200&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at in.task_erp_api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
+	at in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Employee_With_Authorization(EmployeeFolderAPITestCases.java:674)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1728752676", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1728752676'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;422&gt; but was &lt;200&gt;.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at jdk.internal.reflect.GeneratedMethodAccessor26.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at in.task_erp_api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
+	at in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Employee_With_Authorization(EmployeeFolderAPITestCases.java:674)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -339,270 +581,540 @@ Expected: &lt;200&gt;
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Employee_Without_Authorization()'><b>verify_Update_Employee_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
+<td title='in.task_erp_api.testcases.DepartmentFolderAPITestCases.verify_Get_All_Departments_With_Authorization()'><b>verify_Get_All_Departments_With_Authorization</b><br>Test class: in.task_erp_api.testcases.DepartmentFolderAPITestCases</td>
 <td></td>
 <td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
+<td>in.task_erp_api.testcases.DepartmentFolderAPITestCases@4cc6fa2a</td></tr>
 <tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Search_Employee_In_Level_Without_Authorization()'><b>verify_Get_Search_Employee_In_Level_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
+<td title='in.task_erp_api.testcases.DepartmentFolderAPITestCases.verify_Get_All_Employees_By_Designation_By_Giving_Invalid_Designation()'><b>verify_Get_All_Employees_By_Designation_By_Giving_Invalid_Designation</b><br>Test class: in.task_erp_api.testcases.DepartmentFolderAPITestCases</td>
 <td></td>
 <td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
+<td>in.task_erp_api.testcases.DepartmentFolderAPITestCases@4cc6fa2a</td></tr>
 <tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Reporting_Authority_Without_Authorization()'><b>verify_Get_Reporting_Authority_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Search_Employee_In_Level_With_Authorization()'><b>verify_Get_Search_Employee_In_Level_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: Shivkumar Tengse, , 2024-05-24</td>
 <td></td>
 <td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
 <tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Add_Token_For_Web_With_Authorization()'><b>verify_Add_Token_For_Web_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: jxyn mast qqtg jhkh, INC019</td>
+<td title='in.task_erp_api.testcases.DesignationFolderAPITestCases.verify_Update_Designation_Without_Authorization()'><b>verify_Update_Designation_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.DesignationFolderAPITestCases</td>
 <td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Password_With_Authorization()'><b>verify_Update_Password_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: INC018, Pratham@123, t90ymsr, t90ymsr</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Password_With_Authorization()'><b>verify_Update_Password_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: , Pass@123, t90ymsr, t90ymsr</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Single_Employee_With_Authorization()'><b>verify_Get_Single_Employee_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Add_Token_For_Mobile_With_Authorization()'><b>verify_Add_Token_For_Mobile_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: jxyn mast qqtg jhkh, INC0131</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_All_Employee_Id_And_Names_Without_Authorization()'><b>verify_Get_All_Employee_Id_And_Names_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.RoleFolderAPITestCases.verify_Get_All_Roles_Without_Authorization()'><b>verify_Get_All_Roles_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.RoleFolderAPITestCases</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.RoleFolderAPITestCases@7b5a12ae</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Add_Token_For_Mobile_Without_Authorization()'><b>verify_Add_Token_For_Mobile_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
+<td>1</td>
+<td>in.task_erp_api.testcases.DesignationFolderAPITestCases@4ba302e0</td></tr>
 <tr>
 <td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_All_Active_Users_Info_Without_Authorization()'><b>verify_Get_All_Active_Users_Info_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
 <td></td>
 <td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Assigned_Task_Info_By_Role_With_Authorization()'><b>verify_Get_Assigned_Task_Info_By_Role_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: Russian, 2024-02-24</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Assigned_Task_Info_By_Role_With_Authorization()'><b>verify_Get_Assigned_Task_Info_By_Role_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: Lead, 02-2024-24</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Password_With_Authorization()'><b>verify_Update_Password_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: INC0139, Pass@123, t90ymsr, t90ymsr</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Task_Owners_Without_Authorization()'><b>verify_Get_Task_Owners_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
 <tr>
 <td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_User_Id_With_Authorization()'><b>verify_Get_User_Id_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
 <td></td>
 <td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
 <tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_All_Employee_Without_Authorization()'><b>verify_Get_All_Employee_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
+<td title='in.task_erp_api.testcases.StatusFolderAPITestCases.verify_Update_Status_Without_Authorization()'><b>verify_Update_Status_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.StatusFolderAPITestCases</td>
 <td></td>
 <td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
+<td>in.task_erp_api.testcases.StatusFolderAPITestCases@57ac5227</td></tr>
 <tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Search_Employee_In_Level_With_Authorization()'><b>verify_Get_Search_Employee_In_Level_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: Om Dhumal, Biotechnology, 2024-05-23</td>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Password_With_Authorization()'><b>verify_Update_Password_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: INC0105, Pass@123, zggizlv, zggizlv</td>
 <td></td>
 <td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
 <tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Add_Token_For_Web_With_Authorization()'><b>verify_Add_Token_For_Web_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: , INC019</td>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Employee_With_Authorization()'><b>verify_Update_Employee_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: 4, Prathamesh Dhasade, 2023/11/01, ACTIVE, 5, 33, 4, 9834530434, 9850708611, prathamesh@biencaps.com, prathameshdhasade99@gmail.com, , A+, 1999/08/22, Bibwewadi, Pune</td>
 <td></td>
 <td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
 <tr>
-<td title='in.task_erp_api.testcases.LoginEmployeeAPITestCases.verify_Login_Employee_By_Giving_Invalid_LoginId()'><b>verify_Login_Employee_By_Giving_Invalid_LoginId</b><br>Test class: in.task_erp_api.testcases.LoginEmployeeAPITestCases</td>
+<td title='in.task_erp_api.testcases.DepartmentFolderAPITestCases.verify_Get_User_Id_Without_Authorization()'><b>verify_Get_User_Id_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.DepartmentFolderAPITestCases</td>
 <td></td>
 <td>0</td>
-<td>in.task_erp_api.testcases.LoginEmployeeAPITestCases@17cdf2d0</td></tr>
+<td>in.task_erp_api.testcases.DepartmentFolderAPITestCases@4cc6fa2a</td></tr>
 <tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_UserId_Without_Authorization()'><b>verify_Get_UserId_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Employee_With_Authorization()'><b>verify_Update_Employee_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: 4, , 2023/11/01, ACTIVE, 5, 33, 4, 9834530434, 9850708611, prathamesh@biencaps.com, prathameshdhasade99@gmail.com, Narhe, Pune, A+, 1999/08/22, Bibwewadi, Pune</td>
 <td></td>
 <td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
 <tr>
-<td title='in.task_erp_api.testcases.LoginEmployeeAPITestCases.verify_Login_Employee_By_Giving_Valid_Data()'><b>verify_Login_Employee_By_Giving_Valid_Data</b><br>Test class: in.task_erp_api.testcases.LoginEmployeeAPITestCases</td>
-<td></td>
-<td>4</td>
-<td>in.task_erp_api.testcases.LoginEmployeeAPITestCases@17cdf2d0</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Add_Token_For_Web_With_Authorization()'><b>verify_Add_Token_For_Web_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: jxyn mast qqtg jhkh, INC0114</td>
+<td title='in.task_erp_api.testcases.StatusFolderAPITestCases.verify_Get_All_Status_Without_Authorization()'><b>verify_Get_All_Status_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.StatusFolderAPITestCases</td>
 <td></td>
 <td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Password_With_Authorization()'><b>verify_Update_Password_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: INC018, Pass@123, t90ymsr, </td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Encrypted_Email_With_Authorization()'><b>verify_Get_Encrypted_Email_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: INC016</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Reporting_Authority_With_Authorization()'><b>verify_Get_Reporting_Authority_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Password_With_Authorization()'><b>verify_Update_Password_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: INC018, , t90ymsr, t90ymsr</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Search_Employee_In_Level_With_Authorization()'><b>verify_Get_Search_Employee_In_Level_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: Om Dhumal, Developer, 05-2024-23</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Single_Employee_Without_Authorization()'><b>verify_Get_Single_Employee_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.LoginEmployeeAPITestCases.verify_Login_Employee_By_Giving_Invalid_Password()'><b>verify_Login_Employee_By_Giving_Invalid_Password</b><br>Test class: in.task_erp_api.testcases.LoginEmployeeAPITestCases</td>
-<td></td>
-<td>1</td>
-<td>in.task_erp_api.testcases.LoginEmployeeAPITestCases@17cdf2d0</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Password_Without_Authorization()'><b>verify_Update_Password_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Search_Employee_In_Level_With_Authorization()'><b>verify_Get_Search_Employee_In_Level_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: Delena, Developer, 2024-05-23</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.RoleFolderAPITestCases.verify_Get_All_Roles_With_Authorization()'><b>verify_Get_All_Roles_With_Authorization</b><br>Test class: in.task_erp_api.testcases.RoleFolderAPITestCases</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.RoleFolderAPITestCases@7b5a12ae</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Password_With_Authorization()'><b>verify_Update_Password_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: INC018, Pass@123, t90ymsr, rowe.info</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Add_Token_For_Mobile_With_Authorization()'><b>verify_Add_Token_For_Mobile_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: , INC020</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Add_Token_For_Web_Without_Authorization()'><b>verify_Add_Token_For_Web_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Search_Employee_In_Level_With_Authorization()'><b>verify_Get_Search_Employee_In_Level_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: Om Dhumal, Developer, 2024-05-23</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Search_Employee_In_Level_With_Authorization()'><b>verify_Get_Search_Employee_In_Level_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: Om Dhumal, , 2024-05-23</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Single_Employee_By_Giving_Invalid_UserId()'><b>verify_Get_Single_Employee_By_Giving_Invalid_UserId</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Add_Token_For_Mobile_With_Authorization()'><b>verify_Add_Token_For_Mobile_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: jxyn mast qqtg jhkh, INC020</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_All_Employee_Id_And_Names_With_Authorization()'><b>verify_Get_All_Employee_Id_And_Names_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: org.testng.TestRunner@37ffe4f3</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Assigned_Task_Info_By_Role_Without_Authorization()'><b>verify_Get_Assigned_Task_Info_By_Role_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Assigned_Task_Info_By_Role_With_Authorization()'><b>verify_Get_Assigned_Task_Info_By_Role_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: Italian, 02-2024-24</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Search_Employee_In_Level_With_Authorization()'><b>verify_Get_Search_Employee_In_Level_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: Om Dhumal, Developer, </td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Add_Employee_Without_Authorization()'><b>verify_Add_Employee_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_All_Assignee_Without_Authorization()'><b>verify_Get_All_Assignee_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
-<td></td>
-<td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
-<tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_All_Employee_With_Authorization()'><b>verify_Get_All_Employee_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJJTkMwMDQiLCJpYXQiOjE3MTY0Njc0NjIsImV4cCI6MTcxNzU0NzQ2Mn0.8EEMCdjsVdiA3WNZnDEcAcMVlVp2wrBytgjiqEGvlcOuqG-aQuu5iJU0mvvOeuMO2Xg7CDxNJupa__3p5Yr0rg</td>
-<td></td>
-<td>1</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
+<td>in.task_erp_api.testcases.StatusFolderAPITestCases@57ac5227</td></tr>
 <tr>
 <td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Reporting_Authority_By_Giving_Invalid_Department()'><b>verify_Get_Reporting_Authority_By_Giving_Invalid_Department</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
 <td></td>
 <td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Search_Employee_In_Level_With_Authorization()'><b>verify_Get_Search_Employee_In_Level_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: Shivkumar Tengse, Admin, </td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.DesignationFolderAPITestCases.verify_Delete_Designation_Without_Authorization()'><b>verify_Delete_Designation_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.DesignationFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.DesignationFolderAPITestCases@4ba302e0</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.DepartmentFolderAPITestCases.verify_Get_All_Assignee_With_Authorization_By_Giving_Valid_Role_Level()'><b>verify_Get_All_Assignee_With_Authorization_By_Giving_Valid_Role_Level</b><br>Test class: in.task_erp_api.testcases.DepartmentFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.DepartmentFolderAPITestCases@4cc6fa2a</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Employee_With_Authorization()'><b>verify_Update_Employee_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: 4, Prathamesh Dhasade, 2023/11/01, ACTIVE, 5, 33, 4, 9834530434, 9850708611, prathamesh@biencaps.com, example@gmail, Narhe, Pune, A+, 1999/08/22, Bibwewadi, Pune</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Assigned_Task_Info_By_Role_With_Authorization()'><b>verify_Get_Assigned_Task_Info_By_Role_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: Admin, 2024-02-25</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.DesignationFolderAPITestCases.verify_Get_All_Designation_Without_Authorization()'><b>verify_Get_All_Designation_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.DesignationFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.DesignationFolderAPITestCases@4ba302e0</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Employee_With_Authorization()'><b>verify_Update_Employee_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: 4, Prathamesh Dhasade, 2023/11/01, ACTIVE, 5, 33, 4, 9834530434, 9850708611, example@gmail, prathameshdhasade99@gmail.com, Narhe, Pune, A+, 1999/08/22, Bibwewadi, Pune</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Employee_With_Authorization()'><b>verify_Update_Employee_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: 4, Prathamesh Dhasade, 2023/11/01, ACTIVE, 5, 33, 4, 9834530434, 9850708611, prathamesh@biencaps.com, prathameshdhasade99@gmail.com, Narhe, Pune, A+, 1999/08/22, Bibwewadi, Pune</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Employee_With_Authorization()'><b>verify_Update_Employee_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: 4, Prathamesh Dhasade, 2023/11/01, ACTIVE, 5, 33, 4, 9834530434, 9850708611, prathamesh@biencaps.com, prathameshdhasade99@gmail.com, Narhe, Pune, A+, 1999/08/22, Bibwewadi, Pune</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Search_Employee_In_Level_With_Authorization()'><b>verify_Get_Search_Employee_In_Level_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: Shivkumar Tengse, Admin, 05-2024-24</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.StatusFolderAPITestCases.verify_Add_Status_Without_Authorization()'><b>verify_Add_Status_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.StatusFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.StatusFolderAPITestCases@57ac5227</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Employee_With_Authorization()'><b>verify_Update_Employee_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: 4, Prathamesh Dhasade, 2023/11/01, ACTIVE, 5, 33, 4, 9834530434, 9850708611, prathamesh@biencaps.com, prathameshdhasade99@gmail.com, Narhe, Pune, A+, 1999/08/22, Bibwewadi, Pune</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Password_With_Authorization()'><b>verify_Update_Password_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: INC018, Pass@123, zggizlv, </td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Single_Employee_With_Authorization()'><b>verify_Get_Single_Employee_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Employee_With_Authorization()'><b>verify_Update_Employee_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: 4, Prathamesh Dhasade, 2023/11/01, ACTIVE, 76, 33, 4, 9834530434, 9850708611, prathamesh@biencaps.com, prathameshdhasade99@gmail.com, Narhe, Pune, A+, 1999/08/22, Bibwewadi, Pune</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.DepartmentFolderAPITestCases.verify_Get_All_Assignee_Without_Authorization()'><b>verify_Get_All_Assignee_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.DepartmentFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.DepartmentFolderAPITestCases@4cc6fa2a</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.DesignationFolderAPITestCases.verify_Get_All_Designation_By_Department_With_Authorization()'><b>verify_Get_All_Designation_By_Department_With_Authorization</b><br>Test class: in.task_erp_api.testcases.DesignationFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.DesignationFolderAPITestCases@4ba302e0</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Search_Employee_In_Level_Without_Authorization()'><b>verify_Get_Search_Employee_In_Level_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Task_Owners_Without_Authorization()'><b>verify_Get_Task_Owners_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Password_With_Authorization()'><b>verify_Update_Password_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: INC004, , zggizlv, zggizlv</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.DepartmentFolderAPITestCases.verify_Update_Department_Without_Authorization()'><b>verify_Update_Department_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.DepartmentFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.DepartmentFolderAPITestCases@4cc6fa2a</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.DepartmentFolderAPITestCases.verify_Get_Employees_By_Department_Name_Without_Authorization()'><b>verify_Get_Employees_By_Department_Name_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.DepartmentFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.DepartmentFolderAPITestCases@4cc6fa2a</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.LoginEmployeeAPITestCases.verify_Login_Employee_By_Giving_Valid_Data()'><b>verify_Login_Employee_By_Giving_Valid_Data</b><br>Test class: in.task_erp_api.testcases.LoginEmployeeAPITestCases</td>
+<td></td>
+<td>2</td>
+<td>in.task_erp_api.testcases.LoginEmployeeAPITestCases@25bc0606</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.DepartmentFolderAPITestCases.verify_Get_User_Id_With_Authorization()'><b>verify_Get_User_Id_With_Authorization</b><br>Test class: in.task_erp_api.testcases.DepartmentFolderAPITestCases</td>
+<td></td>
+<td>1</td>
+<td>in.task_erp_api.testcases.DepartmentFolderAPITestCases@4cc6fa2a</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.DepartmentFolderAPITestCases.verify_Get_Higher_Authority_With_Authorization()'><b>verify_Get_Higher_Authority_With_Authorization</b><br>Test class: in.task_erp_api.testcases.DepartmentFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.DepartmentFolderAPITestCases@4cc6fa2a</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.RoleFolderAPITestCases.verify_Get_All_Roles_Without_Authorization()'><b>verify_Get_All_Roles_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.RoleFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.RoleFolderAPITestCases@e98770d</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.DesignationFolderAPITestCases.verify_Add_Designation_Without_Authorization()'><b>verify_Add_Designation_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.DesignationFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.DesignationFolderAPITestCases@4ba302e0</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Employee_Without_Authorization()'><b>verify_Update_Employee_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Employee_With_Authorization()'><b>verify_Update_Employee_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: 4, Prathamesh Dhasade, 2023/11/01, ACTIVE, 5, 99, 4, 9834530434, 9850708611, prathamesh@biencaps.com, prathameshdhasade99@gmail.com, Narhe, Pune, A+, 1999/08/22, Bibwewadi, Pune</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Employee_With_Authorization()'><b>verify_Update_Employee_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: 4, Prathamesh Dhasade, 2023/11/01, ACTIVE, 5, 33, 55, 9834530434, 9850708611, prathamesh@biencaps.com, prathameshdhasade99@gmail.com, Narhe, Pune, A+, 1999/08/22, Bibwewadi, Pune</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Assigned_Task_Info_By_Role_With_Authorization()'><b>verify_Get_Assigned_Task_Info_By_Role_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: Korean, 2024-02-25</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.RoleFolderAPITestCases.verify_Get_All_Roles_With_Authorization()'><b>verify_Get_All_Roles_With_Authorization</b><br>Test class: in.task_erp_api.testcases.RoleFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.RoleFolderAPITestCases@e98770d</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.DepartmentFolderAPITestCases.verify_Delete_Department_Without_Authorization()'><b>verify_Delete_Department_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.DepartmentFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.DepartmentFolderAPITestCases@4cc6fa2a</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_All_Employees_Ids_And_Names_Without_Authorization()'><b>verify_Get_All_Employees_Ids_And_Names_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Password_Without_Authorization()'><b>verify_Update_Password_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.VerificationStatusFolderAPITestCases.verify_Get_All_Verification_Statuses_With_Authorization()'><b>verify_Get_All_Verification_Statuses_With_Authorization</b><br>Test class: in.task_erp_api.testcases.VerificationStatusFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@40f1be1b</td></tr>
 <tr>
 <td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_All_Assignee_With_Authorization_By_Giving_Valid_Role_Level()'><b>verify_Get_All_Assignee_With_Authorization_By_Giving_Valid_Role_Level</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
 <td></td>
 <td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
 <tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Encrypted_Email_With_Authorization()'><b>verify_Get_Encrypted_Email_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: INC0149</td>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Password_With_Authorization()'><b>verify_Update_Password_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: INC004, Pratham@123, zggizlv, zggizlv</td>
 <td></td>
 <td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
 <tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Password_With_Authorization()'><b>verify_Update_Password_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: INC018, Pass@123, , t90ymsr</td>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Employee_With_Authorization()'><b>verify_Update_Employee_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: 4, Prathamesh Dhasade, 2023/11/01, ACTIVE, 5, 33, 4, , 9850708611, prathamesh@biencaps.com, prathameshdhasade99@gmail.com, Narhe, Pune, A+, 1999/08/22, Bibwewadi, Pune</td>
 <td></td>
 <td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
 <tr>
-<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Assigned_Task_Info_By_Role_With_Authorization()'><b>verify_Get_Assigned_Task_Info_By_Role_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: Lead, 2024-02-24</td>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Add_Token_For_Web_With_Authorization()'><b>verify_Add_Token_For_Web_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: , INC019</td>
 <td></td>
 <td>0</td>
-<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@5af3a0f</td></tr>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_Without_Authorization()'><b>verify_Update_Priority_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.PriorityFolderAPITestCases</td>
+<td></td>
+<td>1</td>
+<td>in.task_erp_api.testcases.PriorityFolderAPITestCases@43aaf813</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.PriorityFolderAPITestCases.verify_Add_Priority_Without_Authorization()'><b>verify_Add_Priority_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.PriorityFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.PriorityFolderAPITestCases@43aaf813</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.PriorityFolderAPITestCases.verify_Get_All_Priorities_With_Authorization()'><b>verify_Get_All_Priorities_With_Authorization</b><br>Test class: in.task_erp_api.testcases.PriorityFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.PriorityFolderAPITestCases@43aaf813</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.DepartmentFolderAPITestCases.verify_Get_Employees_By_Department_By_Giving_Invalid_Department()'><b>verify_Get_Employees_By_Department_By_Giving_Invalid_Department</b><br>Test class: in.task_erp_api.testcases.DepartmentFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.DepartmentFolderAPITestCases@4cc6fa2a</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Password_With_Authorization()'><b>verify_Update_Password_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: INC004, Pass@123, Pass@123, Pass@123</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Employee_With_Authorization()'><b>verify_Update_Employee_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: 98, Prathamesh Dhasade, 2023/11/01, ACTIVE, 5, 33, 4, 9834530434, 9850708611, prathamesh@biencaps.com, prathameshdhasade99@gmail.com, Narhe, Pune, A+, 1999/08/22, Bibwewadi, Pune</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Search_Employee_In_Level_With_Authorization()'><b>verify_Get_Search_Employee_In_Level_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: Shivkumar Tengse, Admin, 2024-05-24</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_All_Employee_Id_And_Names_With_Authorization()'><b>verify_Get_All_Employee_Id_And_Names_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Assigned_Task_Info_By_Role_With_Authorization()'><b>verify_Get_Assigned_Task_Info_By_Role_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: Admin, 02-2024-23</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.VerificationStatusFolderAPITestCases.verify_Delete_Verification_Status_Without_Authorization()'><b>verify_Delete_Verification_Status_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.VerificationStatusFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@40f1be1b</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Encrypted_Email_With_Authorization()'><b>verify_Get_Encrypted_Email_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: INC019</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.PriorityFolderAPITestCases.verify_Get_All_Priority_Without_Authorization()'><b>verify_Get_All_Priority_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.PriorityFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.PriorityFolderAPITestCases@43aaf813</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.DepartmentFolderAPITestCases.verify_Add_Department_Without_Authorization()'><b>verify_Add_Department_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.DepartmentFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.DepartmentFolderAPITestCases@4cc6fa2a</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.LoginEmployeeAPITestCases.verify_Login_Employee_By_Giving_Invalid_Password()'><b>verify_Login_Employee_By_Giving_Invalid_Password</b><br>Test class: in.task_erp_api.testcases.LoginEmployeeAPITestCases</td>
+<td></td>
+<td>1</td>
+<td>in.task_erp_api.testcases.LoginEmployeeAPITestCases@25bc0606</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Single_Employee_Without_Authorization()'><b>verify_Get_Single_Employee_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Encrypted_Email_With_Authorization()'><b>verify_Get_Encrypted_Email_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: INC0113</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.LoginEmployeeAPITestCases.verify_Login_Employee_By_Giving_Invalid_LoginId()'><b>verify_Login_Employee_By_Giving_Invalid_LoginId</b><br>Test class: in.task_erp_api.testcases.LoginEmployeeAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.LoginEmployeeAPITestCases@25bc0606</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Add_Token_For_Mobile_With_Authorization()'><b>verify_Add_Token_For_Mobile_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: jxyn mast qqtg jhkh, INC001</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_All_Employee_With_Authorization()'><b>verify_Get_All_Employee_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJJTkMwMDQiLCJpYXQiOjE3MTY1NDE5ODIsImV4cCI6MTcxNzYyMTk4Mn0.4vPMJNf6WD6ebYlRbsIeSTmdIKiDl88-NNnZhlTNrYEcYyGck_f17gJeFWhICZbgqaQPyJ7AoFybnSA61HtDdg</td>
+<td></td>
+<td>1</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_All_Employees_Without_Authorization()'><b>verify_Get_All_Employees_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_All_Assignees_Without_Authorization()'><b>verify_Get_All_Assignees_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Single_Employee_By_Giving_Invalid_UserId()'><b>verify_Get_Single_Employee_By_Giving_Invalid_UserId</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.DesignationFolderAPITestCases.verify_Get_All_Designation_By_Department_Without_Authorization()'><b>verify_Get_All_Designation_By_Department_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.DesignationFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.DesignationFolderAPITestCases@4ba302e0</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Task_Owners_With_Authorization()'><b>verify_Get_Task_Owners_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.DepartmentFolderAPITestCases.verify_Get_Higher_Authority_Without_Authorization()'><b>verify_Get_Higher_Authority_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.DepartmentFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.DepartmentFolderAPITestCases@4cc6fa2a</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Add_Employee_Without_Authorization()'><b>verify_Add_Employee_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Add_Token_For_Mobile_Without_Authorization()'><b>verify_Add_Token_For_Mobile_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Add_Token_For_Web_With_Authorization()'><b>verify_Add_Token_For_Web_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: jxyn mast qqtg jhkh, INC0122</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Assigned_Task_Info_By_Role_With_Authorization()'><b>verify_Get_Assigned_Task_Info_By_Role_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: English, 02-2024-23</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Assigned_Task_Info_By_Role_Without_Authorization()'><b>verify_Get_Assigned_Task_Info_By_Role_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Add_Token_For_Web_With_Authorization()'><b>verify_Add_Token_For_Web_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: jxyn mast qqtg jhkh, INC019</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.DepartmentFolderAPITestCases.verify_Get_All_Employees_By_Designation_Name_Without_Authorization()'><b>verify_Get_All_Employees_By_Designation_Name_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.DepartmentFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.DepartmentFolderAPITestCases@4cc6fa2a</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_UserId_Without_Authorization()'><b>verify_Get_UserId_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.VerificationStatusFolderAPITestCases.verify_Get_All_Verification_Statuses_Without_Authorization()'><b>verify_Get_All_Verification_Statuses_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.VerificationStatusFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@40f1be1b</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.VerificationStatusFolderAPITestCases.verify_Add_Verification_Status_Without_Authorization()'><b>verify_Add_Verification_Status_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.VerificationStatusFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@40f1be1b</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Add_Token_For_Web_Without_Authorization()'><b>verify_Add_Token_For_Web_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.StatusFolderAPITestCases.verify_Get_All_Status_With_Authorization()'><b>verify_Get_All_Status_With_Authorization</b><br>Test class: in.task_erp_api.testcases.StatusFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.StatusFolderAPITestCases@57ac5227</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Search_Employee_In_Level_With_Authorization()'><b>verify_Get_Search_Employee_In_Level_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: Shivkumar Tengse, Chemicals, 2024-05-24</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Reporting_Authority_With_Authorization()'><b>verify_Get_Reporting_Authority_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Password_With_Authorization()'><b>verify_Update_Password_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: INC004, Pass@123, , zggizlv</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_All_Reporting_Authorities_Without_Authorization()'><b>verify_Get_All_Reporting_Authorities_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.DepartmentFolderAPITestCases.verify_Get_All_Employees_By_Designation_With_Authorization()'><b>verify_Get_All_Employees_By_Designation_With_Authorization</b><br>Test class: in.task_erp_api.testcases.DepartmentFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.DepartmentFolderAPITestCases@4cc6fa2a</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.VerificationStatusFolderAPITestCases.verify_Update_Verification_Status_Without_Authorization()'><b>verify_Update_Verification_Status_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.VerificationStatusFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.VerificationStatusFolderAPITestCases@40f1be1b</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Employee_With_Authorization()'><b>verify_Update_Employee_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: 4, Prathamesh Dhasade, 2023/11/01, ACTIVE, 5, 33, 4, 9834530434, 9850708611, prathamesh@biencaps.com, prathameshdhasade99@gmail.com, Narhe, Pune, A+, 1999/08/22, Bibwewadi, Pune</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Add_Token_For_Mobile_With_Authorization()'><b>verify_Add_Token_For_Mobile_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: jxyn mast qqtg jhkh, INC0146</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.PriorityFolderAPITestCases.verify_Delete_Single_Priority_Without_Authorization()'><b>verify_Delete_Single_Priority_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.PriorityFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.PriorityFolderAPITestCases@43aaf813</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.DesignationFolderAPITestCases.verify_Get_All_Designation_With_Authorization()'><b>verify_Get_All_Designation_With_Authorization</b><br>Test class: in.task_erp_api.testcases.DesignationFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.DesignationFolderAPITestCases@4ba302e0</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Password_With_Authorization()'><b>verify_Update_Password_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: , Pass@123, zggizlv, zggizlv</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.DepartmentFolderAPITestCases.verify_Get_All_Departments_Without_Authorization()'><b>verify_Get_All_Departments_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.DepartmentFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.DepartmentFolderAPITestCases@4cc6fa2a</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.DepartmentFolderAPITestCases.verify_Get_Higher_Authority_By_Giving_Invalid_Department()'><b>verify_Get_Higher_Authority_By_Giving_Invalid_Department</b><br>Test class: in.task_erp_api.testcases.DepartmentFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.DepartmentFolderAPITestCases@4cc6fa2a</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.StatusFolderAPITestCases.verify_Delete_Status_Without_Authorization()'><b>verify_Delete_Status_Without_Authorization</b><br>Test class: in.task_erp_api.testcases.StatusFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.StatusFolderAPITestCases@57ac5227</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Add_Token_For_Mobile_With_Authorization()'><b>verify_Add_Token_For_Mobile_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: , INC001</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Update_Password_With_Authorization()'><b>verify_Update_Password_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: INC004, Pass@123, zggizlv, collier.biz</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
+<tr>
+<td title='in.task_erp_api.testcases.EmployeeFolderAPITestCases.verify_Get_Search_Employee_In_Level_With_Authorization()'><b>verify_Get_Search_Employee_In_Level_With_Authorization</b><br>Test class: in.task_erp_api.testcases.EmployeeFolderAPITestCases<br>Parameters: Kortney, Admin, 2024-05-24</td>
+<td></td>
+<td>0</td>
+<td>in.task_erp_api.testcases.EmployeeFolderAPITestCases@14c01636</td></tr>
 </table><p>
 </body>
 </html>

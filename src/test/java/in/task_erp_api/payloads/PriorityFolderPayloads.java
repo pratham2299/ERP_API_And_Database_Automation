@@ -15,7 +15,7 @@ public class PriorityFolderPayloads {
 			String priorityColorCode) {
 		PriorityPojo priorityObj = new PriorityPojo(priority, priorityLevel, priorityColor, priorityColorCode);
 		try {
-			return objectMapper.writeValueAsString(priorityObj);
+			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(priorityObj);
 		} catch (Exception e) {
 			throw new RuntimeException("Failed to convert Priority object to JSON", e);
 		}
@@ -48,6 +48,6 @@ public class PriorityFolderPayloads {
 		maxPriorityIdObject.setPriorityColorCode(newPriorityColorCode);
 
 		// Serialize the updated list back to JSON
-		return objectMapper.writeValueAsString(priorityList);
+		return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(priorityList);
 	}
 }

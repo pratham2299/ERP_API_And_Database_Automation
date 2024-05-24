@@ -1,21 +1,17 @@
 package in.biencaps.erp.pojos;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
+@JsonInclude(JsonInclude.Include.NON_DEFAULT)
 public class StatusPojo {
-	@JsonProperty("statusId")
 	private int statusId;
 
-	@JsonProperty("status")
 	private String status;
 
-	@JsonProperty("statusLevel")
 	private int statusLevel;
 
-	@JsonProperty("statusColor")
 	private String statusColor;
 
-	@JsonProperty("statusColorCode")
 	private String statusColorCode;
 
 	// Default constructor

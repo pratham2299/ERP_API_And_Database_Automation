@@ -57,8 +57,7 @@ public class RegularTaskFolderAPITestCases extends BaseTest {
 	public void verify_Update_Regular_Task_Without_Authorization() {
 		test = BaseTest.extent.createTest("Update regular task without authorization");
 
-		String requestPayload = RegularTaskFolderPayloads.giveRegularTaskPayloadForUpdateRegularTask(10,
-				"Closure Mail");
+		String requestPayload = RegularTaskFolderPayloads.updateRegularTaskPayload(10, "Closure Mail");
 
 		Response response = Responses.putRequestWithoutAuthorization(requestPayload,
 				APIEndpoints.updateRegularTaskEndpoint);

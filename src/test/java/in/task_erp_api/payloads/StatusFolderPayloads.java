@@ -20,7 +20,7 @@ public class StatusFolderPayloads {
 		statusObj.setStatusColorCode(statusColorCode);
 
 		try {
-			return objectMapper.writeValueAsString(statusObj);
+			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(statusObj);
 		} catch (Exception e) {
 			throw new RuntimeException("Failed to convert Status object to JSON", e);
 		}
@@ -53,6 +53,6 @@ public class StatusFolderPayloads {
 		maxStatusIdObject.setStatusColorCode(newStatusColorCode);
 
 		// Serialize the updated list back to JSON
-		return objectMapper.writeValueAsString(statusList);
+		return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(statusList);
 	}
 }

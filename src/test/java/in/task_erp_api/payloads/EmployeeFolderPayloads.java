@@ -2,138 +2,175 @@ package in.task_erp_api.payloads;
 
 import java.util.*;
 
-import com.google.gson.Gson;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import in.biencaps.erp.pojos.*;
 
 public class EmployeeFolderPayloads {
-	private static Gson gson = new Gson();
+	static ObjectMapper objectMapper = new ObjectMapper();
 
-	public static String giveEmployeePayloadForAddEmployee(String userId, String employeeFullName,
-			String employeeStatus, int designationId, int departmentId, int roleId, String employeePersonalEmail,
-			String employeeMobileNumber1, String employeeJoiningDate, String employeeMobileNumber2, String employeeDOB,
-			String employeeBloodGroup, String employeeAddress) {
-		HashMap<String, Object> employeeMap = new HashMap<String, Object>();
-		employeeMap.put("userId", userId);
-		employeeMap.put("empFullName", employeeFullName);
-		employeeMap.put("empStatus", employeeStatus);
-
-		// Designation
-		Map<String, Integer> designation = new HashMap<>();
-		designation.put("designationId", designationId);
-		employeeMap.put("designation", designation);
+	public static String addEmployeePayload(String employeeFullName, String userId, String employeeJoiningDate,
+			String employeeStatus, int departmentId, int designationId, int roleId, int reportingAuthorityEmpId,
+			String employeePersonalEmail, String employeeMobileNumber1, String employeeOfficeLocation) {
+		EmployeePojo employeeObj = new EmployeePojo();
+		employeeObj.setEmpFullName(employeeFullName);
+		employeeObj.setUserId(userId);
+		employeeObj.setEmpJoiningDate(employeeJoiningDate);
+		employeeObj.setEmpStatus(employeeStatus);
 
 		// Department
-		Map<String, Integer> department = new HashMap<>();
-		department.put("departmentId", departmentId);
-		employeeMap.put("department", department);
+		DepartmentPojo departmentObj = new DepartmentPojo();
+		departmentObj.setDepartmentId(departmentId);
+		employeeObj.setDepartment(departmentObj);
+
+		// Designation
+		DesignationPojo designationObj = new DesignationPojo();
+		designationObj.setDesignationId(designationId);
+		employeeObj.setDesignation(designationObj);
 
 		// Role
-		List<Map<String, Integer>> roleList = new ArrayList<>();
-		Map<String, Integer> role = new HashMap<>();
-		role.put("roleId", roleId);
-		roleList.add(role);
-		employeeMap.put("role", roleList);
+		RolePojo roleObj = new RolePojo();
+		roleObj.setRoleId(roleId);
+		employeeObj.setRole(Arrays.asList(roleObj));
 
 		// Reporting Authorities
-		List<Map<String, Integer>> reportingAuthoritiesList = new ArrayList<>();
-		Map<String, Integer> reportingAuthority1 = new HashMap<>();
-		reportingAuthority1.put("empId", 8);
-		reportingAuthoritiesList.add(reportingAuthority1);
-		Map<String, Integer> reportingAuthority2 = new HashMap<>();
-		reportingAuthority2.put("empId", 14);
-		reportingAuthoritiesList.add(reportingAuthority2);
-		employeeMap.put("reportingAuthorities", reportingAuthoritiesList);
+		// Create a list for reporting authorities
+		List<ReportingAuthorityPojo> reportingAuthorities = new ArrayList<>();
 
-		employeeMap.put("empEmailPersonal", employeePersonalEmail);
-		employeeMap.put("empMobile1", employeeMobileNumber1);
-		employeeMap.put("empOfficeLocation", "Pune");
-		employeeMap.put("empJoiningDate", employeeJoiningDate);
-		employeeMap.put("empMobile2", employeeMobileNumber2);
-		employeeMap.put("empDOB", employeeDOB);
-		employeeMap.put("empBloodGroup", employeeBloodGroup);
-		employeeMap.put("empAddress", employeeAddress);
+		// Randomly decide the number of reporting authorities to add (1 or 2 in this
+		// example)
+		Random random = new Random();
+		int numberOfAuthorities = random.nextInt(3) + 1; // will be either 1 or 2
 
-		String payload = gson.toJson(employeeMap);
-		return payload;
+		for (int i = 0; i < numberOfAuthorities; i++) {
+			ReportingAuthorityPojo authority = new ReportingAuthorityPojo();
+			authority.setEmpId(random.nextInt(reportingAuthorityEmpId) + 1); // random empId between 1 and 100
+			reportingAuthorities.add(authority);
+		}
+
+		employeeObj.setEmpEmailPersonal(employeePersonalEmail);
+		employeeObj.setEmpMobile1(employeeMobileNumber1);
+		employeeObj.setEmpOfficeLocation(employeeOfficeLocation);
+
+		try {
+			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(employeeObj);
+		} catch (Exception e) {
+			throw new RuntimeException("Failed to convert Employee object to JSON", e);
+		}
 	}
 
-	public static String giveEmployeePayloadForUpdateEmployee(int employeeId, String employeeFullName,
-			String employeeMobileNumber1, String employeeStatus, String employeeMobileNumber2,
-			String employeeBloodGroup, String employeeOfficeLocation, String employeeJoiningDate, int roleId,
-			int designationId, int departmentId, String employeeAddress, String employeeDOB,
-			String employeeEmailOfficial, String employeePersonalEmail) {
-		String requestPayload = "{\r\n" + "    \"empId\" : " + employeeId + ",\r\n" + "    \"empFullName\" : \""
-				+ employeeFullName + "\", \r\n" + "    \"empMobile1\" : \"" + employeeMobileNumber1
-				+ "\",    			\r\n" + "    \"status\" : \"" + employeeStatus + "\",        		\r\n"
-				+ "    \"empMobile2\" : \"" + employeeMobileNumber2 + "\",          				\r\n"
-				+ "    \"empBloodGroup\" : \"" + employeeBloodGroup + "\",      \r\n" + "    \"empOfficeLocation\" : \""
-				+ employeeOfficeLocation + "\",   \r\n" + "    \"empJoiningDate\" : \"" + employeeJoiningDate
-				+ "\",      \r\n" + "    \"reportingAuthority\" : [\r\n" + "        {\r\n"
-				+ "            \"empId\" : 14\r\n" + "        },\r\n" + "        {\r\n"
-				+ "            \"empId\" : 8\r\n" + "        }\r\n" + "    ],                       \r\n"
-				+ "    \"role\" : [\r\n" + "        {\r\n" + "            \"roleId\" : " + roleId + "\r\n"
-				+ "        }\r\n" + "    ],               \r\n" + "    \"designation\" : {\r\n"
-				+ "        \"designationId\" : " + designationId + "\r\n" + "    },       \r\n"
-				+ "    \"department\" : { \r\n" + "        \"departmentId\" : " + departmentId + "\r\n"
-				+ "    },         \r\n" + "    \"empAddress\" : \"" + employeeAddress + "\",       \r\n"
-				+ "    \"empDOB\" : \"" + employeeDOB + "\",        \r\n" + "    \"empEmailOfficial\" : \""
-				+ employeeEmailOfficial + "\",     \r\n" + "    \"empEmailPersonal\" : \"" + employeePersonalEmail
-				+ "\"\r\n" + "}\r\n" + "";
+	public static String updateEmployeePayload(int employeeId, String employeeFullName, String employeeJoiningDate,
+			String employeeStatus, int departmentId, int designationId, int roleId, String employeeMobileNumber1,
+			String employeeMobileNumber2, String employeeEmailOfficial, String employeePersonalEmail,
+			String employeeOfficeLocation, String employeeBloodGroup, String employeeDOB, String employeeAddress) {
+		EmployeePojo employeeObj = new EmployeePojo();
+		employeeObj.setEmpId(employeeId);
+		employeeObj.setEmpFullName(employeeFullName);
+		employeeObj.setEmpJoiningDate(employeeJoiningDate);
+		employeeObj.setEmpStatus(employeeStatus);
 
-		return requestPayload;
+		// Department
+		DepartmentPojo departmentObj = new DepartmentPojo();
+		departmentObj.setDepartmentId(departmentId);
+		employeeObj.setDepartment(departmentObj);
+
+		// Designation
+		DesignationPojo designationObj = new DesignationPojo();
+		designationObj.setDesignationId(designationId);
+		employeeObj.setDesignation(designationObj);
+
+		// Role
+		RolePojo roleObj = new RolePojo();
+		roleObj.setRoleId(roleId);
+		employeeObj.setRole(Arrays.asList(roleObj));
+
+		employeeObj.setEmpMobile1(employeeMobileNumber1);
+		employeeObj.setEmpMobile2(employeeMobileNumber2);
+		employeeObj.setEmpEmailOfficial(employeeEmailOfficial);
+		;
+		employeeObj.setEmpEmailPersonal(employeePersonalEmail);
+		employeeObj.setEmpOfficeLocation(employeeOfficeLocation);
+		employeeObj.setEmpBloodGroup(employeeBloodGroup);
+		employeeObj.setEmpDOB(employeeDOB);
+		employeeObj.setEmpAddress(employeeAddress);
+
+		try {
+			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(employeeObj);
+		} catch (Exception e) {
+			throw new RuntimeException("Failed to convert Employee object to JSON", e);
+		}
 	}
 
-	public static String giveEmployeePayloadForGetSingleEmployee(String fakeUserId) {
-		HashMap<String, Object> employeeMap = new HashMap<String, Object>();
-		employeeMap.put("userId", fakeUserId);
+	public static String getSingleEmployeePayload(String fakeUserId) {
+		EmployeePojo employeeObj = new EmployeePojo();
+		employeeObj.setUserId(fakeUserId);
 
-		String payload = gson.toJson(employeeMap);
-		return payload;
+		try {
+			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(employeeObj);
+		} catch (Exception e) {
+			throw new RuntimeException("Failed to convert Employee object to JSON", e);
+		}
 	}
 
-	public static String giveEmployeePayloadForGetAssignee(int roleLevel) {
-		HashMap<String, Object> employeeMap = new HashMap<String, Object>();
-		employeeMap.put("roleLevel", roleLevel);
+	public static String getAssigneePayload(int roleLevel) {
+		RolePojo roleObj = new RolePojo();
+		roleObj.setRoleLevel(roleLevel);
 
-		String payload = gson.toJson(employeeMap);
-		return payload;
-	}
-	
-	public static String giveEmployeePayloadForGetTaskOwners(int roleLevel) {
-		HashMap<String, Object> employeeMap = new HashMap<String, Object>();
-		employeeMap.put("roleLevel", roleLevel);
-
-		String payload = gson.toJson(employeeMap);
-		return payload;
+		try {
+			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(roleObj);
+		} catch (Exception e) {
+			throw new RuntimeException("Failed to convert Role object to JSON", e);
+		}
 	}
 
-	public static String giveEmployeePayloadForUpdatePassword(String loginId, String oldPassword, String newPassword,
+	public static String getTaskOwnersPayload(int roleLevel) {
+		RolePojo roleObj = new RolePojo();
+		roleObj.setRoleLevel(roleLevel);
+
+		try {
+			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(roleObj);
+		} catch (Exception e) {
+			throw new RuntimeException("Failed to convert Role object to JSON", e);
+		}
+	}
+
+	public static String updatePasswordPayload(String loginId, String oldPassword, String newPassword,
 			String confirmPassword) {
-		HashMap<String, Object> employeeMap = new HashMap<>();
-		employeeMap.put("loginId", loginId);
-		employeeMap.put("oldPassword", oldPassword);
-		employeeMap.put("newPassword", newPassword);
-		employeeMap.put("confirmPassword", confirmPassword);
+		EmployeePojo employeeObj = new EmployeePojo();
+		employeeObj.setLoginId(loginId);
+		employeeObj.setOldPassword(oldPassword);
+		employeeObj.setNewPassword(newPassword);
+		employeeObj.setConfirmPassword(confirmPassword);
 
-		String payload = gson.toJson(employeeMap);
-		return payload;
+		try {
+			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(employeeObj);
+		} catch (Exception e) {
+			throw new RuntimeException("Failed to convert Employee object to JSON", e);
+		}
 	}
 
 	public static String giveEmployeePayloadForSearchEmployeeInLevel(String key, String role, String date) {
-		HashMap<String, Object> employeeMap = new HashMap<>();
-		employeeMap.put("key", key);
-		employeeMap.put("role", role);
-		employeeMap.put("date", date);
+		EmployeePojo employeeObj = new EmployeePojo();
+		employeeObj.setKey(key);
+		employeeObj.setRoleName(role);
+		employeeObj.setDate(date);
 
-		String payload = gson.toJson(employeeMap);
-		return payload;
+		try {
+			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(employeeObj);
+		} catch (Exception e) {
+			throw new RuntimeException("Failed to convert Employee object to JSON", e);
+		}
 	}
 
 	public static String giveEmployeePayloadForAddToken(String token, String userId) {
-		HashMap<String, Object> employeeMap = new HashMap<>();
-		employeeMap.put("token", token);
-		employeeMap.put("userId", userId);
+		EmployeePojo employeeObj = new EmployeePojo();
+		employeeObj.setToken(token);
+		employeeObj.setUserId(userId);
 
-		String payload = gson.toJson(employeeMap);
-		return payload;
+		try {
+			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(employeeObj);
+		} catch (Exception e) {
+			throw new RuntimeException("Failed to convert Employee object to JSON", e);
+		}
 	}
 }

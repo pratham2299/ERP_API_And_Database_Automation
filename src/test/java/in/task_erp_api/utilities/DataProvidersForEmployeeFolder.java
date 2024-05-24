@@ -12,9 +12,11 @@ public class DataProvidersForEmployeeFolder {
 
 	@DataProvider(name = "TestDataForAddEmployee")
 	public Object[][] testDataForAddEmployee() {
-		int user_id_last_digits = faker.number().numberBetween(100, 150);
-		String userId = "INC0" + String.valueOf(user_id_last_digits);
-		String employeeFullName = faker.name().fullName();
+		int randomIndexForUserId = random.nextInt(EmployeeFolderAPITestCases.userIds.size());
+		String randomUserId = EmployeeFolderAPITestCases.userIds.get(randomIndexForUserId);
+
+		String validUserId = EmployeeFolderAPITestCases.newUserId;
+		String employeeFullName = DataGeneratorForAPI.generateFakeFullName();
 
 		int randomIndexForDesignationId = random.nextInt(DesignationFolderAPITestCases.designationIds.size());
 		int randomValidDesignationId = DesignationFolderAPITestCases.designationIds.get(randomIndexForDesignationId);
@@ -30,6 +32,8 @@ public class DataProvidersForEmployeeFolder {
 		int randomIndexForRoleId = random.nextInt(roleIds.length);
 		int randomValidRoleId = roleIds[randomIndexForRoleId];
 
+		int randomInvalidReportingAuthorityEmpId = faker.number().numberBetween(50, 100);
+
 		int randomInvalidRoleId = faker.number().numberBetween(50, 100);
 
 		String employeePersonalEmail = faker.internet().emailAddress();
@@ -39,48 +43,45 @@ public class DataProvidersForEmployeeFolder {
 		String randomInvalidEmployeePersonalEmail = employeeInvalidPersonalEmails[randomIndexForEmail];
 
 		String fakeEmployeeMobileNumber1 = DataGeneratorForAPI.generateRandomMobileNumber();
+		String invalidMobileNumber1 = DataGeneratorForAPI.generateRandomInvalidDigitMobileNumber(1, 9);
+		String invalidMobileNumber2 = DataGeneratorForAPI.generateRandomInvalidDigitMobileNumber(11, 20);
 		String employeeJoiningDate = DataGeneratorForAPI.generateRandomFutureDate();
-		String fakeEmployeeMobileNumber2 = DataGeneratorForAPI.generateRandomMobileNumber();
-		String employeeDOB = DataGeneratorForAPI.generateRandomDateRangeForDOB("yyyy-MM-dd");
 
-		String[] bloodGroups = { "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" };
-		int randomIndexForBloodGroup = random.nextInt(bloodGroups.length);
-		String randomBloodGroup = bloodGroups[randomIndexForBloodGroup];
-
-		String fakeEmployeeAddress = faker.address().fullAddress();
+		String fakeOfficeLocation = "Narhe, Pune";
 
 		return new Object[][] {
-				{ userId, employeeFullName, "ACTIVE", randomValidDesignationId, randomValidDepartmentId,
-						randomValidRoleId, employeePersonalEmail, fakeEmployeeMobileNumber1, employeeJoiningDate,
-						fakeEmployeeMobileNumber2, employeeDOB, randomBloodGroup, fakeEmployeeAddress },
-				{ "", employeeFullName, "ACTIVE", randomValidDesignationId, randomValidDepartmentId, randomValidRoleId,
-						employeePersonalEmail, fakeEmployeeMobileNumber1, employeeJoiningDate,
-						fakeEmployeeMobileNumber2, employeeDOB, randomBloodGroup, fakeEmployeeAddress },
-				{ "INC012", employeeFullName, "ACTIVE", randomValidDesignationId, randomValidDepartmentId,
-						randomValidRoleId, employeePersonalEmail, fakeEmployeeMobileNumber1, employeeJoiningDate,
-						fakeEmployeeMobileNumber2, employeeDOB, randomBloodGroup, fakeEmployeeAddress },
-				{ userId, "", "ACTIVE", randomValidDesignationId, randomValidDepartmentId, randomValidRoleId,
-						employeePersonalEmail, fakeEmployeeMobileNumber1, employeeJoiningDate,
-						fakeEmployeeMobileNumber2, employeeDOB, randomBloodGroup, fakeEmployeeAddress },
-				{ userId, employeeFullName, "ACTIVE", randomInvalidDesignationId, randomValidDepartmentId,
-						randomValidRoleId, employeePersonalEmail, fakeEmployeeMobileNumber1, employeeJoiningDate,
-						fakeEmployeeMobileNumber2, employeeDOB, randomBloodGroup, fakeEmployeeAddress },
-				{ userId, employeeFullName, "ACTIVE", randomValidDesignationId, randomInvalidDepartmentId,
-						randomValidRoleId, employeePersonalEmail, fakeEmployeeMobileNumber1, employeeJoiningDate,
-						fakeEmployeeMobileNumber2, employeeDOB, randomBloodGroup, fakeEmployeeAddress },
-				{ userId, employeeFullName, "ACTIVE", randomValidDesignationId, randomValidDepartmentId,
-						randomInvalidRoleId, employeePersonalEmail, fakeEmployeeMobileNumber1, employeeJoiningDate,
-						fakeEmployeeMobileNumber2, employeeDOB, randomBloodGroup, fakeEmployeeAddress },
-				{ userId, employeeFullName, "ACTIVE", randomValidDesignationId, randomValidDepartmentId,
-						randomValidRoleId, "", fakeEmployeeMobileNumber1, employeeJoiningDate,
-						fakeEmployeeMobileNumber2, employeeDOB, randomBloodGroup, fakeEmployeeAddress },
-				{ userId, employeeFullName, "ACTIVE", randomValidDesignationId, randomValidDepartmentId,
-						randomValidRoleId, randomInvalidEmployeePersonalEmail, fakeEmployeeMobileNumber1,
-						employeeJoiningDate, fakeEmployeeMobileNumber2, employeeDOB, randomBloodGroup,
-						fakeEmployeeAddress },
-				{ userId, employeeFullName, "ACTIVE", randomValidDesignationId, randomValidDepartmentId,
-						randomValidRoleId, employeePersonalEmail, fakeEmployeeMobileNumber1, "",
-						fakeEmployeeMobileNumber2, employeeDOB, randomBloodGroup, fakeEmployeeAddress } };
+				{ employeeFullName, validUserId, employeeJoiningDate, "ACTIVE", randomValidDepartmentId,
+						randomValidDesignationId, randomValidRoleId, 1, employeePersonalEmail,
+						fakeEmployeeMobileNumber1, fakeOfficeLocation },
+				{ "", validUserId, employeeJoiningDate, "ACTIVE", randomValidDepartmentId, randomValidDesignationId,
+						randomValidRoleId, 1, employeePersonalEmail, fakeEmployeeMobileNumber1, fakeOfficeLocation },
+				{ employeeFullName, randomUserId, employeeJoiningDate, "ACTIVE", randomValidDepartmentId,
+						randomValidDesignationId, randomValidRoleId, 1, employeePersonalEmail,
+						fakeEmployeeMobileNumber1, fakeOfficeLocation },
+				{ employeeFullName, validUserId, employeeJoiningDate, "ACTIVE", randomInvalidDepartmentId,
+						randomValidDesignationId, randomValidRoleId, 1, employeePersonalEmail,
+						fakeEmployeeMobileNumber1, fakeOfficeLocation },
+				{ employeeFullName, validUserId, employeeJoiningDate, "ACTIVE", randomValidDepartmentId,
+						randomInvalidDesignationId, randomValidRoleId, 1, employeePersonalEmail,
+						fakeEmployeeMobileNumber1, fakeOfficeLocation },
+				{ employeeFullName, validUserId, employeeJoiningDate, "ACTIVE", randomValidDepartmentId,
+						randomValidDesignationId, randomInvalidRoleId, 1, employeePersonalEmail,
+						fakeEmployeeMobileNumber1, fakeOfficeLocation },
+				{ employeeFullName, validUserId, employeeJoiningDate, "ACTIVE", randomValidDepartmentId,
+						randomValidDesignationId, randomValidRoleId, randomInvalidReportingAuthorityEmpId,
+						employeePersonalEmail, fakeEmployeeMobileNumber1, fakeOfficeLocation },
+				{ employeeFullName, validUserId, employeeJoiningDate, "ACTIVE", randomValidDepartmentId,
+						randomValidDesignationId, randomValidRoleId, 1, randomInvalidEmployeePersonalEmail,
+						fakeEmployeeMobileNumber1, fakeOfficeLocation },
+				{ employeeFullName, validUserId, employeeJoiningDate, "ACTIVE", randomValidDepartmentId,
+						randomValidDesignationId, randomValidRoleId, 1, employeePersonalEmail, invalidMobileNumber1,
+						fakeOfficeLocation },
+				{ employeeFullName, validUserId, employeeJoiningDate, "ACTIVE", randomValidDepartmentId,
+						randomValidDesignationId, randomValidRoleId, 1, employeePersonalEmail, invalidMobileNumber2,
+						fakeOfficeLocation },
+				{ employeeFullName, validUserId, employeeJoiningDate, "ACTIVE", randomValidDepartmentId,
+						randomValidDesignationId, randomValidRoleId, 1, employeePersonalEmail,
+						fakeEmployeeMobileNumber1, "" }, };
 	}
 
 	@DataProvider(name = "TestDataForGetAllEmployees")
@@ -120,62 +121,84 @@ public class DataProvidersForEmployeeFolder {
 		int randomIndexForBloodGroup = random.nextInt(bloodGroups.length);
 		String randomBloodGroup = bloodGroups[randomIndexForBloodGroup];
 
+		String invalidMobileNumber1 = DataGeneratorForAPI.generateRandomInvalidDigitMobileNumber(1, 9);
+		String invalidMobileNumber2 = DataGeneratorForAPI.generateRandomInvalidDigitMobileNumber(11, 20);
+
+		String fakeOfficeLocation = "Narhe, Pune";
+
 		return new Object[][] {
-				{ validEmployeeId, "Prathamesh Dhasade", "9834530434", "ACTIVE", "9850708611", randomBloodGroup,
-						"Narhe, Pune", "2023/11/01", randomValidRoleId, randomValidDesignationId,
-						randomValidDepartmentId, "Bibwewadi, Pune", "1999/08/22", "prathamesh@biencaps.com",
-						"prathameshdhasade99@gmail.com" },
-				{ invalidEmployeeId, "Prathamesh Dhasade", "9834530434", "ACTIVE", "9850708611", randomBloodGroup,
-						"Narhe, Pune", "2023/11/01", randomValidRoleId, randomValidDesignationId,
-						randomValidDepartmentId, "Bibwewadi, Pune", "1999/08/22", "prathamesh@biencaps.com",
-						"prathameshdhasade99@gmail.com" },
-				{ validEmployeeId, "", "9834530434", "ACTIVE", "9850708611", randomBloodGroup, "Narhe, Pune",
-						"2023/11/01", randomValidRoleId, randomValidDesignationId, randomValidDepartmentId,
-						"Bibwewadi, Pune", "1999/08/22", "prathamesh@biencaps.com", "prathameshdhasade99@gmail.com" },
-				{ validEmployeeId, "Prathamesh Dhasade", "", "ACTIVE", "9850708611", randomBloodGroup, "Narhe, Pune",
-						"2023/11/01", randomValidRoleId, randomValidDesignationId, randomValidDepartmentId,
-						"Bibwewadi, Pune", "1999/08/22", "prathamesh@biencaps.com", "prathameshdhasade99@gmail.com" },
-				{ validEmployeeId, "Prathamesh Dhasade", "98345", "ACTIVE", "9850708611", randomBloodGroup,
-						"Narhe, Pune", "2023/11/01", randomValidRoleId, randomValidDesignationId,
-						randomValidDepartmentId, "Bibwewadi, Pune", "1999/08/22", "prathamesh@biencaps.com",
-						"prathameshdhasade99@gmail.com" },
-				{ validEmployeeId, "Prathamesh Dhasade", "98345304340000000", "ACTIVE", "9850708611", randomBloodGroup,
-						"Narhe, Pune", "2023/11/01", randomValidRoleId, randomValidDesignationId,
-						randomValidDepartmentId, "Bibwewadi, Pune", "1999/08/22", "prathamesh@biencaps.com",
-						"prathameshdhasade99@gmail.com" },
-				{ validEmployeeId, "Prathamesh Dhasade", "9834530434", "ACTIVE", "985", randomBloodGroup, "Narhe, Pune",
-						"2023/11/01", randomValidRoleId, randomValidDesignationId, randomValidDepartmentId,
-						"Bibwewadi, Pune", "1999/08/22", "prathamesh@biencaps.com", "prathameshdhasade99@gmail.com" },
-				{ validEmployeeId, "Prathamesh Dhasade", "9834530434", "ACTIVE", "98507086110000000000",
-						randomBloodGroup, "Narhe, Pune", "2023/11/01", randomValidRoleId, randomValidDesignationId,
-						randomValidDepartmentId, "Bibwewadi, Pune", "1999/08/22", "prathamesh@biencaps.com",
-						"prathameshdhasade99@gmail.com" },
-				{ validEmployeeId, "Prathamesh Dhasade", "9834530434", "ACTIVE", "9850708611", randomBloodGroup, "",
-						"2023/11/01", randomValidRoleId, randomValidDesignationId, randomValidDepartmentId,
-						"Bibwewadi, Pune", "1999/08/22", "prathamesh@biencaps.com", "prathameshdhasade99@gmail.com" },
-				{ validEmployeeId, "Prathamesh Dhasade", "9834530434", "ACTIVE", "9850708611", randomBloodGroup,
-						"Narhe, Pune", "", randomValidRoleId, randomValidDesignationId, randomValidDepartmentId,
-						"Bibwewadi, Pune", "1999/08/22", "prathamesh@biencaps.com", "prathameshdhasade99@gmail.com" },
-				{ validEmployeeId, "Prathamesh Dhasade", "9834530434", "ACTIVE", "9850708611", randomBloodGroup,
-						"Narhe, Pune", "2023/11/01", randomInvalidRoleId, randomValidDesignationId,
-						randomValidDepartmentId, "Bibwewadi, Pune", "1999/08/22", "prathamesh@biencaps.com",
-						"prathameshdhasade99@gmail.com" },
-				{ validEmployeeId, "Prathamesh Dhasade", "9834530434", "ACTIVE", "9850708611", randomBloodGroup,
-						"Narhe, Pune", "2023/11/01", randomValidRoleId, randomInvalidDesignationId,
-						randomValidDepartmentId, "Bibwewadi, Pune", "1999/08/22", "prathamesh@biencaps.com",
-						"prathameshdhasade99@gmail.com" },
-				{ validEmployeeId, "Prathamesh Dhasade", "9834530434", "ACTIVE", "9850708611", randomBloodGroup,
-						"Narhe, Pune", "2023/11/01", randomValidRoleId, randomValidDesignationId,
-						randomInvalidDepartmentId, "Bibwewadi, Pune", "1999/08/22", "prathamesh@biencaps.com",
-						"prathameshdhasade99@gmail.com" },
-				{ validEmployeeId, "Prathamesh Dhasade", "9834530434", "ACTIVE", "9850708611", randomBloodGroup,
-						"Narhe, Pune", "2023/11/01", randomValidRoleId, randomValidDesignationId,
-						randomValidDepartmentId, "Bibwewadi, Pune", "1999/08/22", randomInvalidEmployeeEmail,
-						"prathameshdhasade99@gmail.com" },
-				{ validEmployeeId, "Prathamesh Dhasade", "9834530434", "ACTIVE", "9850708611", randomBloodGroup,
-						"Narhe, Pune", "2023/11/01", randomValidRoleId, randomValidDesignationId,
-						randomValidDepartmentId, "Bibwewadi, Pune", "1999/08/22", "prathamesh@biencaps.com",
-						randomInvalidEmployeeEmail } };
+				{ validEmployeeId, "Prathamesh Dhasade", "2023/11/01", "ACTIVE", randomValidDepartmentId,
+						randomValidDesignationId, randomValidRoleId, "9834530434", "9850708611",
+						"prathamesh@biencaps.com", "prathameshdhasade99@gmail.com", fakeOfficeLocation,
+						randomBloodGroup, "1999/08/22", "Bibwewadi, Pune" },
+				{ invalidEmployeeId, "Prathamesh Dhasade", "2023/11/01", "ACTIVE", randomValidDepartmentId,
+						randomValidDesignationId, randomValidRoleId, "9834530434", "9850708611",
+						"prathamesh@biencaps.com", "prathameshdhasade99@gmail.com", fakeOfficeLocation,
+						randomBloodGroup, "1999/08/22", "Bibwewadi, Pune" },
+				{ validEmployeeId, "", "2023/11/01", "ACTIVE", randomValidDepartmentId, randomValidDesignationId,
+						randomValidRoleId, "9834530434", "9850708611", "prathamesh@biencaps.com",
+						"prathameshdhasade99@gmail.com", fakeOfficeLocation, randomBloodGroup, "1999/08/22",
+						"Bibwewadi, Pune" },
+				{ validEmployeeId, "Prathamesh Dhasade", "", "ACTIVE", randomValidDepartmentId,
+						randomValidDesignationId, randomValidRoleId, "9834530434", "9850708611",
+						"prathamesh@biencaps.com", "prathameshdhasade99@gmail.com", fakeOfficeLocation,
+						randomBloodGroup, "1999/08/22", "Bibwewadi, Pune" },
+				{ validEmployeeId, "Prathamesh Dhasade", "2023/11/01", "ACTIVE", randomInvalidDepartmentId,
+						randomValidDesignationId, randomValidRoleId, "9834530434", "9850708611",
+						"prathamesh@biencaps.com", "prathameshdhasade99@gmail.com", fakeOfficeLocation,
+						randomBloodGroup, "1999/08/22", "Bibwewadi, Pune" },
+				{ validEmployeeId, "Prathamesh Dhasade", "2023/11/01", "ACTIVE", randomValidDepartmentId,
+						randomInvalidDesignationId, randomValidRoleId, "9834530434", "9850708611",
+						"prathamesh@biencaps.com", "prathameshdhasade99@gmail.com", fakeOfficeLocation,
+						randomBloodGroup, "1999/08/22", "Bibwewadi, Pune" },
+				{ validEmployeeId, "Prathamesh Dhasade", "2023/11/01", "ACTIVE", randomValidDepartmentId,
+						randomValidDesignationId, randomInvalidRoleId, "9834530434", "9850708611",
+						"prathamesh@biencaps.com", "prathameshdhasade99@gmail.com", fakeOfficeLocation,
+						randomBloodGroup, "1999/08/22", "Bibwewadi, Pune" },
+				{ validEmployeeId, "Prathamesh Dhasade", "2023/11/01", "ACTIVE", randomValidDepartmentId,
+						randomValidDesignationId, randomValidRoleId, "", "9850708611", "prathamesh@biencaps.com",
+						"prathameshdhasade99@gmail.com", fakeOfficeLocation, randomBloodGroup, "1999/08/22",
+						"Bibwewadi, Pune" },
+				{ validEmployeeId, "Prathamesh Dhasade", "2023/11/01", "ACTIVE", randomValidDepartmentId,
+						randomValidDesignationId, randomValidRoleId, invalidMobileNumber1, "9850708611",
+						"prathamesh@biencaps.com", "prathameshdhasade99@gmail.com", fakeOfficeLocation,
+						randomBloodGroup, "1999/08/22", "Bibwewadi, Pune" },
+				{ validEmployeeId, "Prathamesh Dhasade", "2023/11/01", "ACTIVE", randomValidDepartmentId,
+						randomValidDesignationId, randomValidRoleId, invalidMobileNumber2, "9850708611",
+						"prathamesh@biencaps.com", "prathameshdhasade99@gmail.com", fakeOfficeLocation,
+						randomBloodGroup, "1999/08/22", "Bibwewadi, Pune" },
+				{ validEmployeeId, "Prathamesh Dhasade", "2023/11/01", "ACTIVE", randomValidDepartmentId,
+						randomValidDesignationId, randomValidRoleId, "9834530434", invalidMobileNumber1,
+						"prathamesh@biencaps.com", "prathameshdhasade99@gmail.com", fakeOfficeLocation,
+						randomBloodGroup, "1999/08/22", "Bibwewadi, Pune" },
+				{ validEmployeeId, "Prathamesh Dhasade", "2023/11/01", "ACTIVE", randomValidDepartmentId,
+						randomValidDesignationId, randomValidRoleId, "9834530434", invalidMobileNumber2,
+						"prathamesh@biencaps.com", "prathameshdhasade99@gmail.com", fakeOfficeLocation,
+						randomBloodGroup, "1999/08/22", "Bibwewadi, Pune" },
+				{ validEmployeeId, "Prathamesh Dhasade", "2023/11/01", "ACTIVE", randomValidDepartmentId,
+						randomValidDesignationId, randomValidRoleId, "9834530434", "9850708611",
+						"prathamesh@biencaps.com", "prathameshdhasade99@gmail.com", "", randomBloodGroup, "1999/08/22",
+						"Bibwewadi, Pune" },
+				{ validEmployeeId, "Prathamesh Dhasade", "2023/11/01", "ACTIVE", randomValidDepartmentId,
+						randomValidDesignationId, randomValidRoleId, "9834530434", "9850708611",
+						"prathamesh@biencaps.com", "prathameshdhasade99@gmail.com", fakeOfficeLocation,
+						randomBloodGroup, "1999/08/22", "Bibwewadi, Pune" },
+				{ validEmployeeId, "Prathamesh Dhasade", "2023/11/01", "ACTIVE", randomValidDepartmentId,
+						randomValidDesignationId, randomValidRoleId, "9834530434", "9850708611",
+						"prathamesh@biencaps.com", "prathameshdhasade99@gmail.com", fakeOfficeLocation,
+						randomBloodGroup, "1999/08/22", "Bibwewadi, Pune" },
+				{ validEmployeeId, "Prathamesh Dhasade", "2023/11/01", "ACTIVE", randomValidDepartmentId,
+						randomValidDesignationId, randomValidRoleId, "9834530434", "9850708611",
+						"prathamesh@biencaps.com", "prathameshdhasade99@gmail.com", fakeOfficeLocation,
+						randomBloodGroup, "1999/08/22", "Bibwewadi, Pune" },
+				{ validEmployeeId, "Prathamesh Dhasade", "2023/11/01", "ACTIVE", randomValidDepartmentId,
+						randomValidDesignationId, randomValidRoleId, "9834530434", "9850708611",
+						randomInvalidEmployeeEmail, "prathameshdhasade99@gmail.com", fakeOfficeLocation,
+						randomBloodGroup, "1999/08/22", "Bibwewadi, Pune" },
+				{ validEmployeeId, "Prathamesh Dhasade", "2023/11/01", "ACTIVE", randomValidDepartmentId,
+						randomValidDesignationId, randomValidRoleId, "9834530434", "9850708611",
+						"prathamesh@biencaps.com", randomInvalidEmployeeEmail, fakeOfficeLocation, randomBloodGroup,
+						"1999/08/22", "Bibwewadi, Pune" } };
 	}
 
 	@DataProvider(name = "TestDataForGetAssignedTaskInfoByRole")
@@ -193,20 +216,21 @@ public class DataProvidersForEmployeeFolder {
 
 	@DataProvider(name = "TestDataForUpdatePassword")
 	public Object[][] testDataForUpdatePassword() {
-		String oldPassword = LoginEmployeeAPITestCases.password;
+		String validUserId = Constants.employeeUserId;
+		String oldPassword = Constants.employeePassword;
 		String newPassword = faker.internet().password(5, 10);
 		String confirmPassword = newPassword;
 
 		int user_id_last_digits = faker.number().numberBetween(100, 150);
 		String invalidUserId = "INC0" + String.valueOf(user_id_last_digits);
 
-		return new Object[][] { { "INC018", oldPassword, "Pass@123", "Pass@123" },
+		return new Object[][] { { validUserId, oldPassword, "Pass@123", "Pass@123" },
 				{ "", oldPassword, newPassword, confirmPassword },
 				{ invalidUserId, oldPassword, newPassword, confirmPassword },
-				{ "INC018", "", newPassword, confirmPassword },
-				{ "INC018", "Pratham@123", newPassword, confirmPassword },
-				{ "INC018", oldPassword, "", confirmPassword }, { "INC018", oldPassword, newPassword, "" },
-				{ "INC018", oldPassword, newPassword, faker.internet().domainName() } };
+				{ validUserId, "", newPassword, confirmPassword },
+				{ validUserId, "Pratham@123", newPassword, confirmPassword },
+				{ validUserId, oldPassword, "", confirmPassword }, { "INC018", oldPassword, newPassword, "" },
+				{ validUserId, oldPassword, newPassword, faker.internet().domainName() } };
 	}
 
 	@DataProvider(name = "TestDataForGetEncryptedEmail")

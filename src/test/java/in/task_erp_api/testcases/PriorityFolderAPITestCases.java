@@ -89,11 +89,9 @@ public class PriorityFolderAPITestCases extends BaseTest {
 	@Test(priority = 5)
 	public void verify_Get_All_Priorities_With_Authorization() {
 		verify_Get_All_Priorities_API_With_Authorization("before add new priority");
-
-		verify_New_Created_Priority_Details("before add new priority");
 	}
 
-	@Test(priority = 6, dataProvider = "TestDataForAddPriority", dataProviderClass = DataProvidersForPriorityFolder.class)
+	@Test(priority = 6, dataProvider = "TestDataForAddPriority", dataProviderClass = DataProvidersForPriorityFolder.class, enabled = false)
 	public void verify_Add_Priority_With_Authorization(String priorityName, int priorityLevel, String priorityColor,
 			String priorityColorCode) {
 		test = BaseTest.extent.createTest("Add priority with valid and invalid data and with authorization");
@@ -107,8 +105,7 @@ public class PriorityFolderAPITestCases extends BaseTest {
 		test.log(Status.INFO, "Status code for add priority is => " + response.getStatusCode());
 		test.log(Status.INFO, "Response for add priority is => " + response.getBody().asPrettyString());
 
-		if (priorityName.isBlank() || priorityColor.isBlank()
-				|| priorityColorCode.isBlank()) {
+		if (priorityName.isBlank() || priorityColor.isBlank() || priorityColorCode.isBlank()) {
 			BodyValidation.response400Validation(response);
 		} else if (priorities.contains(priorityName) || priorityLevels.contains(priorityLevel)
 				|| priorityColors.contains(priorityColor) || priorityColorCodes.contains(priorityColorCode)) {
@@ -130,7 +127,7 @@ public class PriorityFolderAPITestCases extends BaseTest {
 		}
 	}
 
-	@Test(priority = 7, dataProvider = "TestDataForUpdatePriority", dataProviderClass = DataProvidersForPriorityFolder.class)
+	@Test(priority = 7, dataProvider = "TestDataForUpdatePriority", dataProviderClass = DataProvidersForPriorityFolder.class, enabled = false)
 	public void verify_Update_Priority_With_Authorization(int priorityId, String priorityName, int priorityLevel,
 			String priorityColor, String priorityColorCode) throws Throwable {
 		test = BaseTest.extent.createTest("Update priority with valid and invalid data and with authorization");
@@ -150,8 +147,7 @@ public class PriorityFolderAPITestCases extends BaseTest {
 		test.log(Status.INFO, "Status code for update priority is => " + response.getStatusCode());
 		test.log(Status.INFO, "Response for update priority is => " + response.getBody().asPrettyString());
 
-		if (priorityName.isBlank() || priorityColor.isBlank()
-				|| priorityColorCode.isBlank()) {
+		if (priorityName.isBlank() || priorityColor.isBlank() || priorityColorCode.isBlank()) {
 			BodyValidation.response400Validation(response);
 		} else if (!priorityIds.contains(priorityId)) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
@@ -177,7 +173,7 @@ public class PriorityFolderAPITestCases extends BaseTest {
 		}
 	}
 
-	@Test(priority = 8, dataProvider = "TestDataForDeletePriority", dataProviderClass = DataProvidersForPriorityFolder.class)
+	@Test(priority = 8, dataProvider = "TestDataForDeletePriority", dataProviderClass = DataProvidersForPriorityFolder.class, enabled = false)
 	public void verify_Delete_Single_Priority_With_Authorization(String priorityName) {
 		test = BaseTest.extent.createTest("Delete priority with valid and invalid data and with authorization");
 

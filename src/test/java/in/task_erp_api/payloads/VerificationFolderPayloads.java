@@ -21,7 +21,7 @@ public class VerificationFolderPayloads {
 		VerificationObj.setVerificationColor(verificationColor);
 		VerificationObj.setVerificationColorCode(verificationColorCode);
 		try {
-			return objectMapper.writeValueAsString(VerificationObj);
+			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(VerificationObj);
 		} catch (Exception e) {
 			throw new RuntimeException("Failed to convert verification object to JSON", e);
 		}
@@ -57,7 +57,7 @@ public class VerificationFolderPayloads {
 		maxVerificationIdObject.setVerificationColorCode(newVerificationColorCode);
 
 		// Serialize the updated list back to JSON
-		return objectMapper.writeValueAsString(VerificationList);
+		return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(VerificationList);
 	}
 
 }

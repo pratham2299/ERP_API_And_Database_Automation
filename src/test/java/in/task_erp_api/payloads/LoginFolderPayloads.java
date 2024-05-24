@@ -1,18 +1,21 @@
 package in.task_erp_api.payloads;
 
-import java.util.HashMap;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
-import com.google.gson.Gson;
+import in.biencaps.erp.pojos.LoginPojo;
 
 public class LoginFolderPayloads {
-	private static Gson gson = new Gson();
+	static ObjectMapper objectMapper = new ObjectMapper();
 
-	public static String loginEmployee(String loginId, String password) {
-		HashMap<String, Object> loginEmployeeMap = new HashMap<>();
-		loginEmployeeMap.put("loginId", loginId);
-		loginEmployeeMap.put("password", password);
+	public static String loginEmployeePayload(String loginId, String password) {
+		LoginPojo loginObj = new LoginPojo();
+		loginObj.setLoginId(loginId);
+		loginObj.setPassword(password);
 
-		String payload = gson.toJson(loginEmployeeMap);
-		return payload;
+		try {
+			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(loginObj);
+		} catch (Exception e) {
+			throw new RuntimeException("Failed to convert Login object to JSON", e);
+		}
 	}
 }

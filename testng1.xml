@@ -4,7 +4,15 @@
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="in.task_erp_api.testcases.LoginEmployeeAPITestCases" />
+			<class name="in.task_erp_api.testcases.PriorityFolderAPITestCases" />
+			<class name="in.task_erp_api.testcases.StatusFolderAPITestCases" />
+			<class
+				name="in.task_erp_api.testcases.DesignationFolderAPITestCases" />
 			<class name="in.task_erp_api.testcases.RoleFolderAPITestCases" />
+			<class
+				name="in.task_erp_api.testcases.DepartmentFolderAPITestCases" />
+			<class
+				name="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases" />
 			<class name="in.task_erp_api.testcases.EmployeeFolderAPITestCases" />
 		</classes>
 	</test> <!--

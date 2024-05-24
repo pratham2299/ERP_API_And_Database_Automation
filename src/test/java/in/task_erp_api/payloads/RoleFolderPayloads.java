@@ -14,7 +14,7 @@ public class RoleFolderPayloads {
 		roleObj.setRoleLevel(roleLevel);
 
 		try {
-			return objectMapper.writeValueAsString(roleObj);
+			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(roleObj);
 		} catch (Exception e) {
 			throw new RuntimeException("Failed to convert Role object to JSON", e);
 		}
@@ -27,7 +27,7 @@ public class RoleFolderPayloads {
 		roleObj.setRoleLevel(roleLevel);
 
 		try {
-			return objectMapper.writeValueAsString(roleObj);
+			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(roleObj);
 		} catch (Exception e) {
 			throw new RuntimeException("Failed to convert Role object to JSON", e);
 		}
@@ -38,7 +38,7 @@ public class RoleFolderPayloads {
 		roleObj.setRoleId(roleId);
 
 		try {
-			return objectMapper.writeValueAsString(roleObj);
+			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(roleObj);
 		} catch (Exception e) {
 			throw new RuntimeException("Failed to convert Role object to JSON", e);
 		}

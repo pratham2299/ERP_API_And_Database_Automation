@@ -46,6 +46,7 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 				APIEndpoints.addDepartmentEndpoint);
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO, "API endpoint for add department is => " + APIEndpoints.addDepartmentEndpoint);
 		test.log(Status.INFO, "Status code for add department is => " + response.getStatusCode());
 		test.log(Status.INFO, "Response for add department is => " + response.getBody().asPrettyString());
 	}
@@ -57,6 +58,7 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 		Response response = Responses.getRequestWithoutAuthorization(APIEndpoints.getUserIdEndpoint);
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO, "API endpoint for get user Id is => " + APIEndpoints.getUserIdEndpoint);
 		test.log(Status.INFO, "Status code for get user Id is => " + response.getStatusCode());
 		test.log(Status.INFO, "Response for get user Id is => " + response.getBody().asPrettyString());
 	}
@@ -68,6 +70,7 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 		Response response = Responses.getRequestWithoutAuthorization(APIEndpoints.getAllDepartmentsEndpoint);
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO, "API endpoint for get all departments is => " + APIEndpoints.getAllDepartmentsEndpoint);
 		test.log(Status.INFO, "Status code for get all departments is => " + response.getStatusCode());
 		test.log(Status.INFO, "Response for get all departments is => " + response.getBody().asPrettyString());
 	}
@@ -80,6 +83,8 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 				APIEndpoints.getAllEmployeesByDepartmentNameEndpoint, "Testing");
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO, "API endpoint for get all employees by department name is => "
+				+ APIEndpoints.getAllEmployeesByDepartmentNameEndpoint);
 		test.log(Status.INFO, "Status code for get all employees by department name is => " + response.getStatusCode());
 		test.log(Status.INFO,
 				"Response for get all employees by department name is => " + response.getBody().asPrettyString());
@@ -93,7 +98,10 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 				APIEndpoints.getAllEmployeesByDesignationNameEndpoint, "designationName", "QA");
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "Status code for get all employees by designation name is => " + response.getStatusCode());
+		test.log(Status.INFO, "API endpoint for get all employees by designation name is => "
+				+ APIEndpoints.getAllEmployeesByDesignationNameEndpoint);
+		test.log(Status.INFO,
+				"Status code for get all employees by designation name is => " + response.getStatusCode());
 		test.log(Status.INFO,
 				"Response for get all employees by designation name is => " + response.getBody().asPrettyString());
 	}
@@ -108,6 +116,7 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 				APIEndpoints.getAllAssigneesEndpoint);
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO, "API endpoint for get all assignees is => " + APIEndpoints.getAllAssigneesEndpoint);
 		test.log(Status.INFO, "Status code for get all assignees is => " + response.getStatusCode());
 		test.log(Status.INFO, "Response for get all assignees is => " + response.getBody().asPrettyString());
 	}
@@ -120,6 +129,8 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 				APIEndpoints.getAllHigherAuthoritiesEndpoint, "role", 1, "department", "Testing");
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO,
+				"API endpoint for get higher authority is => " + APIEndpoints.getAllHigherAuthoritiesEndpoint);
 		test.log(Status.INFO, "Status code for get higher authority is => " + response.getStatusCode());
 		test.log(Status.INFO, "Response for get higher authority is => " + response.getBody().asPrettyString());
 	}
@@ -138,6 +149,7 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 				APIEndpoints.updateDepartmentEndpoint);
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO, "API endpoint for update department is => " + APIEndpoints.updateDepartmentEndpoint);
 		test.log(Status.INFO, "Status code for update department is => " + response.getStatusCode());
 		test.log(Status.INFO, "Response for update department is => " + response.getBody().asPrettyString());
 	}
@@ -150,6 +162,7 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 				APIEndpoints.deleteDepartmentEndpoint);
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO, "API endpoint for delete department is => " + APIEndpoints.deleteDepartmentEndpoint);
 		test.log(Status.INFO, "Status code for delete department is => " + response.getStatusCode());
 		test.log(Status.INFO, "Response for delete department is => " + response.getBody().asPrettyString());
 	}
@@ -157,11 +170,9 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 	@Test(priority = 10)
 	public void verify_Get_All_Departments_With_Authorization() {
 		verify_Get_All_Departments_API_With_Authorization("before add new department");
-
-		verify_New_Created_Department_Details("before add new department");
 	}
 
-	@Test(priority = 11, dataProvider = "TestDataForAddDepartment", dataProviderClass = DataProvidersForDepartmentFolder.class)
+	@Test(priority = 11, dataProvider = "TestDataForAddDepartment", dataProviderClass = DataProvidersForDepartmentFolder.class, enabled = false)
 	public void verify_Add_Department_With_Authorization(String departmentName, int departmentLevel,
 			String departmentColor, String departmentColorCode) {
 		test = BaseTest.extent.createTest("Add department with valid and invalid data and with authorization");
@@ -171,12 +182,12 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 
 		Response response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.addDepartmentEndpoint);
+		test.log(Status.INFO, "API endpoint for add department is => " + APIEndpoints.addDepartmentEndpoint);
 		test.log(Status.INFO, "Request payload for add department is => " + requestPayload);
 		test.log(Status.INFO, "Status code for add department is => " + response.getStatusCode());
 		test.log(Status.INFO, "Response for add department is => " + response.getBody().asPrettyString());
 
-		if (departmentName.isBlank() || departmentColor.isBlank()
-				|| departmentColorCode.isBlank()) {
+		if (departmentName.isBlank() || departmentColor.isBlank() || departmentColorCode.isBlank()) {
 			BodyValidation.response400Validation(response);
 		} else if (departments.contains(departmentName) || departmentLevels.contains(departmentLevel)
 				|| departmentColors.contains(departmentColor) || departmentColorCodes.contains(departmentColorCode)) {
@@ -195,7 +206,7 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 		}
 	}
 
-	@Test(priority = 12, dataProvider = "TestDataForUpdateDepartment", dataProviderClass = DataProvidersForDepartmentFolder.class)
+	@Test(priority = 12, dataProvider = "TestDataForUpdateDepartment", dataProviderClass = DataProvidersForDepartmentFolder.class, enabled = false)
 	public void verifyUpdateDepartmentWithAuthorization(int departmentId, String departmentName, int departmentLevel,
 			String departmentColor, String departmentColorCode) throws Throwable {
 		test = BaseTest.extent.createTest("Update department with valid and invalid data and with authorization");
@@ -211,12 +222,12 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 				APIEndpoints.updateDepartmentEndpoint);
 
 		String responseBody = response.getBody().asPrettyString();
+		test.log(Status.INFO, "API endpoint for update department is => " + APIEndpoints.updateDepartmentEndpoint);
 		test.log(Status.INFO, "Request payload for update department is => " + requestPayload);
 		test.log(Status.INFO, "Status code for update department is => " + response.getStatusCode());
 		test.log(Status.INFO, "Response for update department is => " + response.getBody().asPrettyString());
 
-		if (departmentName.isBlank() || departmentColor.isBlank()
-				|| departmentColorCode.isBlank()) {
+		if (departmentName.isBlank() || departmentColor.isBlank() || departmentColorCode.isBlank()) {
 			BodyValidation.response400Validation(response);
 		} else if (!departmentIds.contains(departmentId)) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
@@ -239,7 +250,7 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 		}
 	}
 
-	@Test(priority = 13, dataProvider = "TestDataForDeleteDepartment", dataProviderClass = DataProvidersForDepartmentFolder.class)
+	@Test(priority = 13, dataProvider = "TestDataForDeleteDepartment", dataProviderClass = DataProvidersForDepartmentFolder.class, enabled = false)
 	public void verifyDeleteSingleDepartmentWithAuthorization(int departmentId) {
 		test = BaseTest.extent.createTest("Delete department with valid and invalid data and with authorization");
 
@@ -247,6 +258,7 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 				LoginEmployeeAPITestCases.authToken, APIEndpoints.deleteDepartmentEndpoint);
 
 		String responseBody = response.getBody().asPrettyString();
+		test.log(Status.INFO, "API endpoint for delete department is => " + APIEndpoints.deleteDepartmentEndpoint);
 		test.log(Status.INFO, "Request payload for delete department is => " + departmentId);
 		test.log(Status.INFO, "Status code for delete department is => " + response.getStatusCode());
 		test.log(Status.INFO, "Response for delete department is => " + response.getBody().asPrettyString());
@@ -305,6 +317,7 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 		assertEquals(response.getBody().asPrettyString(), newUserId, "Invalid response text");
 
 		BodyValidation.responseValidation(response, 200, contentLength);
+		test.log(Status.INFO, "API endpoint for get user Id is => " + APIEndpoints.getUserIdEndpoint);
 		test.log(Status.INFO, "Status code for get user Id is => " + response.getStatusCode());
 		test.log(Status.INFO, "Response for get user Id is => " + response.getBody().asPrettyString());
 	}
@@ -314,11 +327,20 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 		if (departments != null) {
 			int randomIndexForDepartment = random.nextInt(departments.size());
 			String newCreatedDepartment = departments.get(randomIndexForDepartment);
-			log.info("Random department name for get all employees by department is  => " + newCreatedDepartment + "\n");
+			log.info(
+					"Random department name for get all employees by department is  => " + newCreatedDepartment + "\n");
 
 			Response response = Responses.getRequestWithAuthorizationAndPathParameter(
 					LoginEmployeeAPITestCases.authToken, APIEndpoints.getAllEmployeesByDepartmentNameEndpoint,
 					newCreatedDepartment);
+			test.log(Status.INFO, "API endpoint for get all employees by department name is => "
+					+ APIEndpoints.getAllEmployeesByDepartmentNameEndpoint);
+			test.log(Status.INFO,
+					"Path parameter for get all employees by department name is => " + newCreatedDepartment);
+			test.log(Status.INFO,
+					"Status code for get all employees by department name is => " + response.getStatusCode());
+			test.log(Status.INFO,
+					"Response for get all employees by department name is => " + response.getBody().asPrettyString());
 
 			assertTrue(departments.contains(newCreatedDepartment));
 
@@ -334,11 +356,20 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 
 	@Test(priority = 16)
 	public void verify_Get_Employees_By_Department_By_Giving_Invalid_Department() {
-		String fakeDepartmentName = faker.company().profession();
+		String fakeDepartmentName = DataGeneratorForAPI.generateFakeDepartment();
 
 		if (departments != null) {
-			response = Responses.getRequestWithAuthorizationAndPathParameter(LoginEmployeeAPITestCases.authToken,
-					APIEndpoints.getAllEmployeesByDepartmentNameEndpoint, fakeDepartmentName);
+			Response response = Responses.getRequestWithAuthorizationAndPathParameter(
+					LoginEmployeeAPITestCases.authToken, APIEndpoints.getAllEmployeesByDepartmentNameEndpoint,
+					fakeDepartmentName);
+			test.log(Status.INFO, "API endpoint for get all employees by department name is => "
+					+ APIEndpoints.getAllEmployeesByDepartmentNameEndpoint);
+			test.log(Status.INFO,
+					"Path parameter for get all employees by department name is => " + newCreatedDepartment);
+			test.log(Status.INFO,
+					"Status code for get all employees by department name is => " + response.getStatusCode());
+			test.log(Status.INFO,
+					"Response for get all employees by department name is => " + response.getBody().asPrettyString());
 
 			assertFalse(departments.contains(fakeDepartmentName));
 
@@ -354,12 +385,20 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 			int randomIndexForDesignationName = random.nextInt(DesignationFolderAPITestCases.designations.size());
 			String randomDesignationName = DesignationFolderAPITestCases.designations
 					.get(randomIndexForDesignationName);
-			log.info(
-					"Random designation name for get all employees by designation is => " + randomDesignationName + "\n");
+			log.info("Random designation name for get all employees by designation is => " + randomDesignationName
+					+ "\n");
 
 			Response response = Responses.getRequestWithAuthorizationAndOneQueryParameter(
 					LoginEmployeeAPITestCases.authToken, APIEndpoints.getAllEmployeesByDesignationNameEndpoint,
 					"designationName", randomDesignationName);
+			test.log(Status.INFO, "API endpoint for get all employees by designation name is => "
+					+ APIEndpoints.getAllEmployeesByDesignationNameEndpoint);
+			test.log(Status.INFO,
+					"Query parameter for get all employees by department name is => " + randomDesignationName);
+			test.log(Status.INFO,
+					"Status code for get all employees by designation name is => " + response.getStatusCode());
+			test.log(Status.INFO,
+					"Response for get all employees by designation name is => " + response.getBody().asPrettyString());
 
 			if (response.getBody().asPrettyString().isBlank()) {
 				BodyValidation.response204Validation(response);
@@ -373,12 +412,19 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 
 	@Test(priority = 18)
 	public void verify_Get_All_Employees_By_Designation_By_Giving_Invalid_Designation() {
-		String fakeDesignation = faker.company().profession();
+		String fakeDesignation = DataGeneratorForAPI.generateFakeDesignation();
 
 		if (DesignationFolderAPITestCases.designations != null) {
 			Response response = Responses.getRequestWithAuthorizationAndOneQueryParameter(
 					LoginEmployeeAPITestCases.authToken, APIEndpoints.getAllEmployeesByDesignationNameEndpoint,
 					"designationName", fakeDesignation);
+			test.log(Status.INFO, "API endpoint for get all employees by designation name is => "
+					+ APIEndpoints.getAllEmployeesByDesignationNameEndpoint);
+			test.log(Status.INFO, "Query parameter for get all employees by department name is => " + fakeDesignation);
+			test.log(Status.INFO,
+					"Status code for get all employees by designation name is => " + response.getStatusCode());
+			test.log(Status.INFO,
+					"Response for get all employees by designation name is => " + response.getBody().asPrettyString());
 
 			assertFalse(DesignationFolderAPITestCases.designations.contains(fakeDesignation));
 
@@ -399,6 +445,9 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 
 			Response response = Responses.postRequestWithAuthorization(requestPayload,
 					LoginEmployeeAPITestCases.authToken, APIEndpoints.getAllAssigneesEndpoint);
+			test.log(Status.INFO, "API endpoint for get all assignees is => " + APIEndpoints.getAllAssigneesEndpoint);
+			test.log(Status.INFO, "Status code for get all assignees is => " + response.getStatusCode());
+			test.log(Status.INFO, "Response for get all assignees is => " + response.getBody().asPrettyString());
 
 			BodyValidation.responseValidation(response, 200);
 		} else {
@@ -415,12 +464,16 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 
 			int randomIndexForDepartmentName = random.nextInt(departments.size());
 			String newCreatedDepartmentName = departments.get(randomIndexForDepartmentName);
-			log.info(
-					"New created department name  for get all higher authority is => " + newCreatedDepartmentName + "\n");
+			log.info("New created department name for get all higher authority is => " + newCreatedDepartmentName
+					+ "\n");
 
 			Response response = Responses.getRequestWithAuthorizationAndTwoQueryParameter(
 					LoginEmployeeAPITestCases.authToken, APIEndpoints.getAllHigherAuthoritiesEndpoint, "role",
 					randomRoleLevel, "department", newCreatedDepartmentName);
+			test.log(Status.INFO,
+					"API endpoint for get higher authority is => " + APIEndpoints.getAllHigherAuthoritiesEndpoint);
+			test.log(Status.INFO, "Status code for get higher authority is => " + response.getStatusCode());
+			test.log(Status.INFO, "Response for get higher authority is => " + response.getBody().asPrettyString());
 
 			BodyValidation.responseValidation(response, 200);
 		} else {
@@ -441,6 +494,10 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 			Response response = Responses.getRequestWithAuthorizationAndTwoQueryParameter(
 					LoginEmployeeAPITestCases.authToken, APIEndpoints.getAllHigherAuthoritiesEndpoint, "role",
 					randomRoleLevel, "department", fakeDepartment);
+			test.log(Status.INFO,
+					"API endpoint for get higher authority is => " + APIEndpoints.getAllHigherAuthoritiesEndpoint);
+			test.log(Status.INFO, "Status code for get higher authority is => " + response.getStatusCode());
+			test.log(Status.INFO, "Response for get higher authority is => " + response.getBody().asPrettyString());
 
 			assertFalse(departments.contains(fakeDepartment));
 

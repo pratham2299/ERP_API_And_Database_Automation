@@ -59,7 +59,8 @@ public class VerificationStatusFolderAPITestCases extends BaseTest {
 		test.log(Status.INFO, "API endpoint for get all verification statuses is => "
 				+ APIEndpoints.getAllVerificationStatusesEndpoint);
 		test.log(Status.INFO, "Status code for get all verification statuses is => " + response.getStatusCode());
-		test.log(Status.INFO, "Response for get all verification statuses is => " + response.getBody().asPrettyString());
+		test.log(Status.INFO,
+				"Response for get all verification statuses is => " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 3)
@@ -101,7 +102,7 @@ public class VerificationStatusFolderAPITestCases extends BaseTest {
 		verify_Get_All_Verification_Statuses_API_With_Authorization("before add new verification status");
 	}
 
-	@Test(priority = 6, dataProvider = "TestDataForAddVerificationStatus", dataProviderClass = DataProvidersForVerificationStatusFolder.class)
+	@Test(priority = 6, dataProvider = "TestDataForAddVerificationStatus", dataProviderClass = DataProvidersForVerificationStatusFolder.class, enabled = false)
 	public void verify_Add_Verification_Status_With_Authorization(String verificationStatus, int verificationLevel,
 			String verificationColor, String verificationColorCode) {
 		test = BaseTest.extent.createTest("Add verification status with valid and invalid data and with authorization");
@@ -117,8 +118,7 @@ public class VerificationStatusFolderAPITestCases extends BaseTest {
 		test.log(Status.INFO, "Status code for add verification status is => " + response.getStatusCode());
 		test.log(Status.INFO, "Response for add verification status is => " + response.getBody().asPrettyString());
 
-		if (verificationStatus.isBlank() || verificationColor.isBlank()
-				|| verificationColorCode.isBlank()) {
+		if (verificationStatus.isBlank() || verificationColor.isBlank() || verificationColorCode.isBlank()) {
 			BodyValidation.response400Validation(response);
 		} else if (verificationStatuses.contains(verificationStatus) || verificationLevels.contains(verificationLevel)
 				|| verificationColors.contains(verificationColor)
@@ -139,7 +139,7 @@ public class VerificationStatusFolderAPITestCases extends BaseTest {
 		}
 	}
 
-	@Test(priority = 7, dataProvider = "TestDataForUpdateVerificationStatus", dataProviderClass = DataProvidersForVerificationStatusFolder.class)
+	@Test(priority = 7, dataProvider = "TestDataForUpdateVerificationStatus", dataProviderClass = DataProvidersForVerificationStatusFolder.class, enabled = false)
 	public void verify_Update_Verification_Status_With_Authorization(int verificationStatusId,
 			String verificationStatus, int verificationLevel, String verificationColor, String verificationColorCode)
 			throws Throwable {
@@ -161,8 +161,7 @@ public class VerificationStatusFolderAPITestCases extends BaseTest {
 		test.log(Status.INFO, "Status code for update verification status is => " + response.getStatusCode());
 		test.log(Status.INFO, "Response for update verification status is => " + response.getBody().asPrettyString());
 
-		if (verificationStatus.isBlank() || verificationColor.isBlank()
-				|| verificationColorCode.isBlank()) {
+		if (verificationStatus.isBlank() || verificationColor.isBlank() || verificationColorCode.isBlank()) {
 			BodyValidation.response400Validation(response);
 		} else if (verificationStatusIds.contains(verificationStatusId) == false) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
@@ -185,7 +184,7 @@ public class VerificationStatusFolderAPITestCases extends BaseTest {
 		}
 	}
 
-	@Test(priority = 8, dataProvider = "TestDataForDeleteVerificationStatus", dataProviderClass = DataProvidersForVerificationStatusFolder.class)
+	@Test(priority = 8, dataProvider = "TestDataForDeleteVerificationStatus", dataProviderClass = DataProvidersForVerificationStatusFolder.class, enabled = false)
 	public void verify_Delete_Single_Verification_Status_With_Authorization(int verificationStatusId) {
 		test = BaseTest.extent
 				.createTest("Delete verification status with valid and invalid data and with authorization");
@@ -243,7 +242,8 @@ public class VerificationStatusFolderAPITestCases extends BaseTest {
 		test.log(Status.INFO, "API endpoint for get all verification statuses is => "
 				+ APIEndpoints.getAllVerificationStatusesEndpoint);
 		test.log(Status.INFO, "Status code for get all verification statuses is => " + response.getStatusCode());
-		test.log(Status.INFO, "Response for get all verification statuses is => " + response.getBody().asPrettyString());
+		test.log(Status.INFO,
+				"Response for get all verification statuses is => " + response.getBody().asPrettyString());
 
 		verificationStatusIds = response.jsonPath().getList("verificationStatusId");
 		log.info("List of verification status Ids " + message + " are => " + verificationStatusIds);

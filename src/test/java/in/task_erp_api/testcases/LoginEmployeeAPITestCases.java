@@ -24,7 +24,7 @@ public class LoginEmployeeAPITestCases extends BaseTest {
 	public void verify_Login_Employee_By_Giving_Valid_Data() {
 		test = BaseTest.extent.createTest("Login employee by giving valid data");
 
-		String requestPayload = LoginFolderPayloads.loginEmployee("INC004", password);
+		String requestPayload = LoginFolderPayloads.loginEmployeePayload("INC004", password);
 
 		response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.loginEmployeeEndpoint);
 
@@ -40,7 +40,7 @@ public class LoginEmployeeAPITestCases extends BaseTest {
 	public void verify_Login_Employee_By_Giving_Invalid_LoginId() {
 		test = BaseTest.extent.createTest("Login employee by giving invalid login Id");
 
-		String requestPayload = LoginFolderPayloads.loginEmployee("INC0120", "Pass@123");
+		String requestPayload = LoginFolderPayloads.loginEmployeePayload("INC0120", "Pass@123");
 
 		response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.loginEmployeeEndpoint);
 
@@ -53,7 +53,7 @@ public class LoginEmployeeAPITestCases extends BaseTest {
 	public void verify_Login_Employee_By_Giving_Invalid_Password() {
 		test = BaseTest.extent.createTest("Login employee by giving invalid password");
 
-		String requestPayload = LoginFolderPayloads.loginEmployee("INC012", "Pass@12345");
+		String requestPayload = LoginFolderPayloads.loginEmployeePayload("INC012", "Pass@12345");
 
 		response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.loginEmployeeEndpoint);
 

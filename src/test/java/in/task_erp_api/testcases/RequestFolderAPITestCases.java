@@ -94,7 +94,7 @@ public class RequestFolderAPITestCases {
 	public void verifyGetAllRequestsAnalyticWithAuthorization(int employeeIdInput) {
 		String requestPayload = RequestFolderPayloads.giveRolePayloadForGetAllRequestsAnalytic(employeeIdInput);
 		response = Responses.postRequestWithAuthorization(requestPayload,
-				EmployeeFolderAPITestCases.authTokenOfSuperAdmin, APIEndpoints.getAllRequestAnalyticsEndpoint);
+				LoginEmployeeAPITestCases.authToken, APIEndpoints.getAllRequestAnalyticsEndpoint);
 
 		if (response.getBody().asPrettyString().equalsIgnoreCase("")) {
 			BodyValidation.response204Validation(response);

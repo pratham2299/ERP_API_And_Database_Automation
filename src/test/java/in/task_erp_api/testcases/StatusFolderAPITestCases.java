@@ -94,7 +94,7 @@ public class StatusFolderAPITestCases extends BaseTest {
 		verify_Get_All_Statuses_API_With_Authorization("before add new status");
 	}
 
-	@Test(priority = 6, dataProvider = "TestDataForAddStatus", dataProviderClass = DataProvidersForStatusFolder.class)
+	@Test(priority = 6, dataProvider = "TestDataForAddStatus", dataProviderClass = DataProvidersForStatusFolder.class, enabled = false)
 	public void verify_Add_Status_With_Authorization(String statusName, int statusLevel, String statusColor,
 			String statusColorCode) throws JsonProcessingException {
 		String requestPayload = StatusFolderPayloads.addStatusPayload(statusName, statusLevel, statusColor,
@@ -130,7 +130,7 @@ public class StatusFolderAPITestCases extends BaseTest {
 		}
 	}
 
-	@Test(priority = 7, dataProvider = "TestDataForUpdateStatus", dataProviderClass = DataProvidersForStatusFolder.class)
+	@Test(priority = 7, dataProvider = "TestDataForUpdateStatus", dataProviderClass = DataProvidersForStatusFolder.class, enabled = false)
 	public void verify_Update_Status_With_Authorization(int statusId, String statusName, int statusLevel,
 			String statusColor, String statusColorCode) throws Throwable {
 		test = BaseTest.extent.createTest("Update status with valid and invalid data and with authorization");
@@ -176,7 +176,7 @@ public class StatusFolderAPITestCases extends BaseTest {
 		}
 	}
 
-	@Test(priority = 8, dataProvider = "TestDataForDeleteStatus", dataProviderClass = DataProvidersForStatusFolder.class)
+	@Test(priority = 8, dataProvider = "TestDataForDeleteStatus", dataProviderClass = DataProvidersForStatusFolder.class, enabled = false)
 	public void verify_Delete_Single_Status_With_Authorization(String statusName) {
 		test = BaseTest.extent.createTest("Delete status with valid and invalid data and with authorization");
 

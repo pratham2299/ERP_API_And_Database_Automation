@@ -23,7 +23,6 @@ public class ProjectFolderAPITestCases {
 	public static List<Integer> projectManagerEmployeeIds;
 	public static List<Integer> projectStatusIds;
 
-	String authTokenOfSuperAdmin;
 	public static int newCreatedProjectId;
 
 	public Response response;
@@ -140,22 +139,10 @@ public class ProjectFolderAPITestCases {
 		BodyValidation.responseValidation(response, 200);
 	}
 
-	@Test(priority = 11)
-	public void verifyLoginSuperAdminByGivingValidData() {
-		String requestPayload = LoginFolderPayloads.loginEmployee("BIE025", "Pass@123");
-
-		response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.loginEmployeeEndpoint);
-
-		BodyValidation.responseValidation(response, 200);
-
-		authTokenOfSuperAdmin = response.jsonPath().getString("token");
-		log.info("Token of super admin for add employee is: " + authTokenOfSuperAdmin + "\n");
-	}
-
 	@Test(priority = 12, dataProvider = "TestDataForGetAllProjectsForAnUserId", dataProviderClass = DataProvidersForProjectFolder.class)
 	public void verifyGetAllProjectsForAnUserIdWithAuthorization(String userIdInput) {
 		if (EmployeeFolderAPITestCases.userIds != null) {
-			response = Responses.getRequestWithAuthorizationAndPathParameter(authTokenOfSuperAdmin,
+			response = Responses.getRequestWithAuthorizationAndPathParameter(LoginEmployeeAPITestCases.authToken,
 					APIEndpoints.getAllProjectForAnUserIdEndpoint, userIdInput);
 
 			if (response.getBody().asPrettyString().equalsIgnoreCase("[]")) {
@@ -172,7 +159,7 @@ public class ProjectFolderAPITestCases {
 
 	@Test(priority = 13)
 	public void verifyGetAllProjectManagersWithAuthorization() {
-		response = Responses.getRequestWithAuthorization(authTokenOfSuperAdmin,
+		response = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.getAllProjectManagersEndpoint);
 
 		BodyValidation.responseValidation(response, 200);
@@ -201,7 +188,7 @@ public class ProjectFolderAPITestCases {
 
 	@Test(priority = 14)
 	public void verifyGetAllProjectStatusWithAuthorization() {
-		response = Responses.getRequestWithAuthorization(authTokenOfSuperAdmin,
+		response = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.getAllProjectStatusEndpoint);
 
 		BodyValidation.responseValidation(response, 200);
@@ -218,7 +205,7 @@ public class ProjectFolderAPITestCases {
 
 	@Test(priority = 15, dataProvider = "TestDataForGetAllProjectsByDepartment", dataProviderClass = DataProvidersForProjectFolder.class)
 	public void verifyGetAllProjectByDepartmentWithAuthorization(String departmentNameInput) {
-		response = Responses.getRequestWithAuthorizationAndOneQueryParameter(authTokenOfSuperAdmin,
+		response = Responses.getRequestWithAuthorizationAndOneQueryParameter(LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.getAllProjectByDepartmentEndpoint, "deptName", departmentNameInput);
 
 		if (response.getBody().asPrettyString().equalsIgnoreCase("[]")) {
@@ -238,7 +225,7 @@ public class ProjectFolderAPITestCases {
 		int randomDepartmentIdForPayload = departmentPayloads[randomIndexForDepartmentIdForPayload];
 
 		String requestPayload = "{\r\n" + "    \"department\" : [" + randomDepartmentIdForPayload + "]\r\n" + "}";
-		response = Responses.postRequestWithAuthorization(requestPayload, authTokenOfSuperAdmin,
+		response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.getAllProjectAssigneeEndpoint);
 
 		if (DepartmentFolderAPITestCases.departmentIds.contains(randomDepartmentIdForPayload) == false) {
@@ -259,7 +246,7 @@ public class ProjectFolderAPITestCases {
 					projectEndDate, projectManagerEmployeeId, projectStatusId, projectPriorityId, projectDepartmentId1,
 					projectDepartmentId2, projectEmployeeId1, projectEmployeeId2);
 
-			response = Responses.postRequestWithAuthorization(requestPayload, authTokenOfSuperAdmin,
+			response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 					APIEndpoints.addProjectEndpoint);
 
 			if (projectName.equalsIgnoreCase("") || projectStartDate.equalsIgnoreCase("")
@@ -302,7 +289,7 @@ public class ProjectFolderAPITestCases {
 					projectStartDate, projectEndDate, projectManagerEmployeeId, projectStatusId, projectPriorityId,
 					projectDepartmentId1, projectDepartmentId2, projectEmployeeId1, projectEmployeeId2);
 
-			response = Responses.putRequestWithAuthorization(requestPayload, authTokenOfSuperAdmin,
+			response = Responses.putRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 					APIEndpoints.updateProjectEndpoint);
 
 			if (projectName.equalsIgnoreCase("") || projectStartDate.equalsIgnoreCase("")

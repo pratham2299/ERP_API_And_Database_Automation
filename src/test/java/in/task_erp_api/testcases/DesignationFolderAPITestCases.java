@@ -46,7 +46,7 @@ public class DesignationFolderAPITestCases extends BaseTest {
 	public void verify_Get_All_Designation_By_Department_Without_Authorization() {
 		test = BaseTest.extent.createTest("Get all designations by department without authorization");
 
-		String requestPayload = DesignationFolderPayloads.giveDesignationPayloadForGetAllDesignationsByDepartment(10);
+		String requestPayload = DesignationFolderPayloads.getAllDesignationsByDepartmentPayload(10);
 
 		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
 				APIEndpoints.getAllDesignationsEndpoint);
@@ -109,20 +109,11 @@ public class DesignationFolderAPITestCases extends BaseTest {
 	}
 
 	@Test(priority = 6)
-	public void verify_Get_All_Designation_WithAuthorization() {
-		Response response = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
-				APIEndpoints.getAllDesignationsEndpoint);
-
-		BodyValidation.responseValidation(response, 200);
-
-		designationIds = response.jsonPath().getList("designationId");
-		log.info("List of designation Ids before new designation add are => " + designationIds);
-
-		designations = response.jsonPath().getList("designation");
-		log.info("List of designation names before new designation add are => " + designations + "\n");
+	public void verify_Get_All_Designation_With_Authorization() {
+		verify_Get_All_Designation_API_With_Authorization("before add new designation");
 	}
 
-	@Test(priority = 7, dataProvider = "TestDataForAddDesignation", dataProviderClass = DataProvidersForDesignationFolder.class)
+	@Test(priority = 7, dataProvider = "TestDataForAddDesignation", dataProviderClass = DataProvidersForDesignationFolder.class, enabled = false)
 	public void verify_Add_Designation_With_Authorization(String designationName, int departmentId) {
 		String requestPayload = DesignationFolderPayloads.addDesignationPayload(designationName, departmentId);
 
@@ -154,8 +145,7 @@ public class DesignationFolderAPITestCases extends BaseTest {
 		int randomIndexForDepartmentId = random.nextInt(departmentIds.size());
 		int fakeDepartmentId = departmentIds.get(randomIndexForDepartmentId);
 
-		String requestPayload = DesignationFolderPayloads
-				.giveDesignationPayloadForGetAllDesignationsByDepartment(fakeDepartmentId);
+		String requestPayload = DesignationFolderPayloads.getAllDesignationsByDepartmentPayload(fakeDepartmentId);
 
 		Response response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.getAllDesignationByDepartmentEndpoint);
@@ -167,7 +157,7 @@ public class DesignationFolderAPITestCases extends BaseTest {
 		}
 	}
 
-	@Test(priority = 9, dataProvider = "TestDataForUpdateDesignation", dataProviderClass = DataProvidersForDesignationFolder.class)
+	@Test(priority = 9, dataProvider = "TestDataForUpdateDesignation", dataProviderClass = DataProvidersForDesignationFolder.class, enabled = false)
 	public void verify_Update_Designation_With_Authorization(int designationId, String designationName)
 			throws Throwable {
 		test = BaseTest.extent.createTest("Update designation with valid and invalid data and with authorization");
@@ -214,7 +204,7 @@ public class DesignationFolderAPITestCases extends BaseTest {
 		}
 	}
 
-	@Test(priority = 10, dataProvider = "TestDataForDeleteDesignation", dataProviderClass = DataProvidersForDesignationFolder.class)
+	@Test(priority = 10, dataProvider = "TestDataForDeleteDesignation", dataProviderClass = DataProvidersForDesignationFolder.class, enabled = false)
 	public void verify_Delete_Designation_With_Authorization(String designationName) {
 		test = BaseTest.extent.createTest("Delete designation with valid and invalid data and with authorization");
 

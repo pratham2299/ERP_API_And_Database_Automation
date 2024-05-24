@@ -23,7 +23,7 @@ public class DepartmentFolderPayloads {
 		departmentObj.setDepartmentColor(designationColor);
 		departmentObj.setDepartmentColorCode(designationColorCode);
 		try {
-			return objectMapper.writeValueAsString(departmentObj);
+			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(departmentObj);
 		} catch (Exception e) {
 			throw new RuntimeException("Failed to convert Department object to JSON", e);
 		}
@@ -59,7 +59,7 @@ public class DepartmentFolderPayloads {
 		maxDepartmentIdObject.setDepartmentColorCode(newDepartmentColorCode);
 
 		// Serialize the updated list back to JSON
-		return objectMapper.writeValueAsString(departmentList);
+		return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(departmentList);
 	}
 
 	public static String giveDepartmentPayloadForGetAssignee(int roleLevel) {

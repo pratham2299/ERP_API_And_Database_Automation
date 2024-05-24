@@ -3,11 +3,22 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="in.task_erp_api.testcases.DepartmentFolderAPITestCases">
+        <methods>
+          <include name="verify_Get_Employees_By_Department_Name_With_Authorization"/>
+          <include name="extent_Report_Setup"/>
+          <include name="startBackendServer"/>
+          <include name="flush_Extent_Report"/>
+          <include name="test_Method_Exection_Result"/>
+        </methods>
+      </class> <!-- in.task_erp_api.testcases.DepartmentFolderAPITestCases -->
       <class name="in.task_erp_api.testcases.EmployeeFolderAPITestCases">
         <methods>
-          <include name="verify_Get_Task_Owners_With_Authorization"/>
-          <include name="verify_Update_Password_With_Authorization" invocation-numbers="0"/>
-          <include name="verify_Get_Encrypted_Email_Without_Authorization"/>
+          <include name="extent_Report_Setup"/>
+          <include name="startBackendServer"/>
+          <include name="verify_Update_Employee_With_Authorization" invocation-numbers="3 8 9 10 11"/>
+          <include name="flush_Extent_Report"/>
+          <include name="test_Method_Exection_Result"/>
         </methods>
       </class> <!-- in.task_erp_api.testcases.EmployeeFolderAPITestCases -->
     </classes>

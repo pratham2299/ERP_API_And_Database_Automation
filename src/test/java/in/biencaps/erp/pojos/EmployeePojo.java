@@ -2,6 +2,9 @@ package in.biencaps.erp.pojos;
 
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(JsonInclude.Include.NON_DEFAULT)
 public class EmployeePojo {
 	private int empId;
 	private String userId;
@@ -11,6 +14,7 @@ public class EmployeePojo {
 	private DepartmentPojo department;
 	private List<RolePojo> role;
 	private List<ReportingAuthorityPojo> reportingAuthorities;
+	private String empEmailOfficial;
 	private String empEmailPersonal;
 	private String empMobile1;
 	private String empMobile2; // Optional
@@ -19,6 +23,14 @@ public class EmployeePojo {
 	private String empDOB; // Optional
 	private String empBloodGroup; // Optional
 	private String empAddress; // Optional
+	private String loginId;
+	private String oldPassword;
+	private String newPassword;
+	private String confirmPassword;
+	private String key;
+	private String roleName;
+	private String date;
+	private String token;
 
 	public EmployeePojo() {
 	}
@@ -97,6 +109,14 @@ public class EmployeePojo {
 		this.empEmailPersonal = empEmailPersonal;
 	}
 
+	public String getEmpEmailOfficial() {
+		return empEmailOfficial;
+	}
+
+	public void setEmpEmailOfficial(String empEmailOfficial) {
+		this.empEmailOfficial = empEmailOfficial;
+	}
+
 	public String getEmpMobile1() {
 		return empMobile1;
 	}
@@ -151,5 +171,69 @@ public class EmployeePojo {
 
 	public void setEmpAddress(String empAddress) {
 		this.empAddress = empAddress;
+	}
+
+	public String getLoginId() {
+		return loginId;
+	}
+
+	public void setLoginId(String loginId) {
+		this.loginId = loginId;
+	}
+
+	public String getOldPassword() {
+		return oldPassword;
+	}
+
+	public void setOldPassword(String oldPassword) {
+		this.oldPassword = oldPassword;
+	}
+
+	public String getNewPassword() {
+		return newPassword;
+	}
+
+	public void setNewPassword(String newPassword) {
+		this.newPassword = newPassword;
+	}
+
+	public String getConfirmPassword() {
+		return confirmPassword;
+	}
+
+	public void setConfirmPassword(String confirmPassword) {
+		this.confirmPassword = confirmPassword;
+	}
+
+	public String getKey() {
+		return key;
+	}
+
+	public void setKey(String key) {
+		this.key = key;
+	}
+
+	public String getRoleName() {
+		return roleName;
+	}
+
+	public void setRoleName(String roleName) {
+		this.roleName = roleName;
+	}
+
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
+
+	public String getToken() {
+		return token;
+	}
+
+	public void setToken(String token) {
+		this.token = token;
 	}
 }

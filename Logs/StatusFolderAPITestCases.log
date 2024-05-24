@@ -1,0 +1,6 @@
+14:43:11.625 --> in.task_erp_api.testcases.StatusFolderAPITestCases - List of status Ids before add new status are => [1, 3, 2, 5, 6]
+14:43:11.648 --> in.task_erp_api.testcases.StatusFolderAPITestCases - List of status names before add new status are => [Not Started, In Discussion, In Progress, Submitted, Completed]
+14:43:11.663 --> in.task_erp_api.testcases.StatusFolderAPITestCases - List of status levels before add new status are => [0, 1, 2, 3, 5]
+14:43:11.691 --> in.task_erp_api.testcases.StatusFolderAPITestCases - List of status colors before add new status are => [Gray, Crystal Blue, Mustard, Smith Green, Lime Green]
+14:43:11.710 --> in.task_erp_api.testcases.StatusFolderAPITestCases - List of status colors before add new status are => [#C9C8C8, #A5DFFA, #FCF088, #CADF94,  #32CD32]
+

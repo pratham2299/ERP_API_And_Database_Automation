@@ -5,13 +5,14 @@ import java.util.function.Supplier;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.Gson;
 
 import in.biencaps.erp.pojos.*;
 
 public class DesignationFolderPayloads {
-	private static Gson gson = new Gson();
 	private static Random random = new Random();
+
+	// Create ObjectMapper instance
+	static ObjectMapper objectMapper = new ObjectMapper();
 
 	public static String addDesignationPayload(String designation, int departmentId) {
 		// Create the inner department entity
@@ -23,8 +24,7 @@ public class DesignationFolderPayloads {
 		designationObj.setDesignation(designation);
 		designationObj.setDepartment(departmentEntity);
 		try {
-			ObjectMapper objectMapper = new ObjectMapper();
-			return objectMapper.writeValueAsString(designationObj);
+			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(designationObj);
 		} catch (Exception e) {
 			throw new RuntimeException("Failed to convert Designation object to JSON", e);
 		}
@@ -32,8 +32,6 @@ public class DesignationFolderPayloads {
 
 	public static String updateDesignationWithMaxIdPayload(String jsonResponse, int newDesignationId,
 			String newDesignation, List<DepartmentPojo> departments) throws Throwable {
-		// Create ObjectMapper instance
-		ObjectMapper objectMapper = new ObjectMapper();
 
 		// Deserialize JSON array to List<Designation>
 		List<DesignationPojo> DesignationList = objectMapper.readValue(jsonResponse,
@@ -61,14 +59,17 @@ public class DesignationFolderPayloads {
 		maxDesignationIdObject.setDepartmentPojo(randomDepartment);
 
 		// Serialize the updated list back to JSON
-		return objectMapper.writeValueAsString(DesignationList);
+		return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(DesignationList);
 	}
 
-	public static String giveDesignationPayloadForGetAllDesignationsByDepartment(int fakeDepartmentId) {
-		HashMap<String, Integer> designationMap = new HashMap<>();
-		designationMap.put("departmentId", fakeDepartmentId);
+	public static String getAllDesignationsByDepartmentPayload(int fakeDepartmentId) {
+		DepartmentPojo departmentObj = new DepartmentPojo();
+		departmentObj.setDepartmentId(fakeDepartmentId);
 
-		String payload = gson.toJson(designationMap);
-		return payload;
+		try {
+			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(departmentObj);
+		} catch (Exception e) {
+			throw new RuntimeException("Failed to convert Department object to JSON", e);
+		}
 	}
 }

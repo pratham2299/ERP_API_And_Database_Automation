@@ -7,11 +7,9 @@ import java.util.regex.*;
 
 import org.apache.logging.log4j.*;
 
-import org.testng.ITestContext;
 import org.testng.annotations.*;
 
-import com.github.javafaker.Faker;
-
+import com.aventstack.extentreports.*;
 import in.task_erp_api.bodyValidations.*;
 import in.task_erp_api.endpoints.*;
 import in.task_erp_api.payloads.*;
@@ -19,119 +17,154 @@ import in.task_erp_api.responses.*;
 import in.task_erp_api.utilities.*;
 import io.restassured.response.*;
 
-public class EmployeeFolderAPITestCases {
+public class EmployeeFolderAPITestCases extends BaseTest {
 	public static final Logger log = LogManager.getLogger(EmployeeFolderAPITestCases.class);
 	public static List<String> userIds;
 	private static String maxValueOfUserId;
 	public List<Integer> empIds;
+	public List<Integer> empployeeIds;
+	public static String newUserId;
 
 	public static List<String> employeeFullNames;
 	public static List<Integer> employeeIds;
 
 	private Response response;
-	private Faker faker = new Faker();
 	private Random random = new Random();
 
-	private List<Map<String, ?>> employees;
 	private Map<String, String> empIdToNameMap = new HashMap<>();
-
-	public static String authTokenOfSuperAdmin;
+	private Map<String, String> empIdToStatusMap = new HashMap<>();
 
 	@Test(priority = 1)
 	public void verify_Add_Employee_Without_Authorization() {
-		String requestPayload = "{\r\n" + "    \"userId\": \"BIE009\",\r\n"
-				+ "    \"empFullName\": \"Vishal Lohbande\",\r\n" + "    \"empStatus\": \"ACTIVE\",\r\n"
-				+ "    \"designation\" : {\r\n" + "        \"designationId\" : 8\r\n" + "    },\r\n"
-				+ "    \"department\" : {\r\n" + "        \"departmentId\" : 2\r\n" + "    },\r\n"
-				+ "    \"role\" : [\r\n" + "        {\r\n" + "\r\n" + "            \"roleId\" : 4\r\n" + "        }\r\n"
-				+ "    ],\r\n" + "    \"reportingAuthorities\" : [\r\n" + "        {\r\n"
-				+ "            \"empId\" : 8\r\n" + "        },\r\n" + "        {\r\n"
-				+ "            \"empId\" : 14\r\n" + "        }\r\n" + "    ],\r\n"
-				+ "    \"empEmailPersonal\" : \"vishal@gmail.com\",\r\n" + "    \"empMobile1\" : \"9503896148\",\r\n"
-				+ "    \"empOfficeLocation\" : \"Pune\",\r\n" + "    \"empJoiningDate\" : \"2023/12/25\",\r\n"
-				+ "    \"empMobile2\" : \"\",\r\n" + "    \"empDOB\" : \"\",\r\n" + "    \"eempBloodGroup\" : \"\",\r\n"
-				+ "    \"empAddress\" : \"\"\r\n" + "}\r\n" + "";
+		test = BaseTest.extent.createTest("Add employee without authorization");
+
+		String requestPayload = EmployeeFolderPayloads.addEmployeePayload("John Doe", "INC020", "2024-05-24", "ACTIVE",
+				3, 3, 5, 1, "john.doe@gmail.com", "9876543210", "Pune");
 
 		Response response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.addEmployeeEndpoint);
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO, "API endpoint for add employee is => " + APIEndpoints.addEmployeeEndpoint);
+		test.log(Status.INFO, "Status code for add employee is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for add employee is => " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 2)
 	public void verify_Get_Single_Employee_Without_Authorization() {
-		String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForGetSingleEmployee("BIE018");
+		test = BaseTest.extent.createTest("Get single employee without authorization");
+
+		String requestPayload = EmployeeFolderPayloads.getSingleEmployeePayload(Constants.employeeUserId);
 
 		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
 				APIEndpoints.getSingleEmployeeEndpoint);
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO, "API endpoint for get single employee is => " + APIEndpoints.getSingleEmployeeEndpoint);
+		test.log(Status.INFO, "Status code for get single employee is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for add employee is => " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 3)
 	public void verify_Get_UserId_Without_Authorization() {
+		test = BaseTest.extent.createTest("Get user Id without authorization");
+
 		Response response = Responses.getRequestWithoutAuthorization(APIEndpoints.getUserIdEndpoint);
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO, "API endpoint for get user Id is => " + APIEndpoints.getUserIdEndpoint);
+		test.log(Status.INFO, "Status code for get user Id is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for get user Id is => " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 5)
-	public void verify_Get_Reporting_Authority_Without_Authorization() {
+	public void verify_Get_All_Reporting_Authorities_Without_Authorization() {
+		test = BaseTest.extent.createTest("Get reporting authority without authorization");
+
 		Response response = Responses.getRequestWithoutAuthorizationAndTwoQueryParameter(
 				APIEndpoints.getAllHigherAuthoritiesEndpoint, "role", 1, "department", "Testing");
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO,
+				"API endpoint for get all reporting authorities is => " + APIEndpoints.getAllHigherAuthoritiesEndpoint);
+		test.log(Status.INFO, "Status code for get all reporting authorities is => " + response.getStatusCode());
+		test.log(Status.INFO,
+				"Response for get all reporting authorities is => " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 6)
-	public void verify_Get_All_Assignee_Without_Authorization() {
-		String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForGetAssignee(3);
+	public void verify_Get_All_Assignees_Without_Authorization() {
+		test = BaseTest.extent.createTest("Get all assignee without authorization");
+
+		String requestPayload = EmployeeFolderPayloads.getAssigneePayload(3);
 
 		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
 				APIEndpoints.getAllAssigneesEndpoint);
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO, "API endpoint for get all assignees is => " + APIEndpoints.getAllAssigneesEndpoint);
+		test.log(Status.INFO, "Status code for get all assignees is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for get all assignees is => " + response.getBody().asPrettyString());
 	}
 
 	@Test(priority = 7)
-	public void verify_Get_Encrypted_Email_Without_Authorization() {
-		Response response = Responses.getRequestWithoutAuthorizationAndOneQueryParameter(
-				APIEndpoints.getEncryptedEmailEndpoint, "userId", "INC004");
+	public void verify_Get_All_Employees_Without_Authorization() {
+		test = BaseTest.extent.createTest("Get all employees without authorization");
 
-		BodyValidation.response401Validation(response);
-	}
-
-	@Test(priority = 8)
-	public void verify_Get_All_Employee_Without_Authorization() {
 		Response response = Responses.getRequestWithoutAuthorizationAndThreeQueryParameter(
 				APIEndpoints.getAllEmployeesEndpoint, "page", 0, "size", 20, "key", "");
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO, "API endpoint for get all employees is => " + APIEndpoints.getAllEmployeesEndpoint);
+		test.log(Status.INFO, "Status code for get all employees is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for get all employees is => " + response.getBody().asPrettyString());
 	}
 
-	@Test(priority = 9)
+	@Test(priority = 8)
 	public void verify_Get_All_Active_Users_Info_Without_Authorization() {
+		test = BaseTest.extent.createTest("Get all active users info without authorization");
+
 		Response response = Responses.getRequestWithoutAuthorization(APIEndpoints.getAllActiveUsersInfoEndpoint);
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO,
+				"API endpoint for get all active users info is => " + APIEndpoints.getAllActiveUsersInfoEndpoint);
+		test.log(Status.INFO, "Status code for get all active users info is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for get all active users info is => " + response.getBody().asPrettyString());
 	}
 
-	@Test(priority = 10)
-	public void verify_Get_All_Employee_Id_And_Names_Without_Authorization() {
+	@Test(priority = 9)
+	public void verify_Get_All_Employees_Ids_And_Names_Without_Authorization() {
+		test = BaseTest.extent.createTest("Get all employees Id and Names without authorization");
+
 		Response response = Responses.getRequestWithoutAuthorization(APIEndpoints.getAllEmployeesIdAndNameEndpoint);
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO, "API endpoint for get all employees Ids and names is => "
+				+ APIEndpoints.getAllEmployeesIdAndNameEndpoint);
+		test.log(Status.INFO, "Status code for get all employees Ids and names is => " + response.getStatusCode());
+		test.log(Status.INFO,
+				"Response for get all employees Ids and names is => " + response.getBody().asPrettyString());
 	}
 
-	@Test(priority = 11)
+	@Test(priority = 10)
 	public void verify_Get_Assigned_Task_Info_By_Role_Without_Authorization() {
+		test = BaseTest.extent.createTest("Get assigned task info by role without authorization");
+
 		Response response = Responses.getRequestWithoutAuthorizationPathParameterAndOneQueryParameter(
 				APIEndpoints.getAssignedTaskInfoByRoleEndpoint, "Team Lead", "date", "2024/02/15");
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO, "API endpoint for get assigned task info by role is => "
+				+ APIEndpoints.getAssignedTaskInfoByRoleEndpoint);
+		test.log(Status.INFO, "Status code for get assigned task info by role is => " + response.getStatusCode());
+		test.log(Status.INFO,
+				"Response for get assigned task info by role is => " + response.getBody().asPrettyString());
 	}
 
-	@Test(priority = 12)
+	@Test(priority = 11)
 	public void verify_Get_Search_Employee_In_Level_Without_Authorization() {
+		test = BaseTest.extent.createTest("Get search employee in level without authorization");
+
 		String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForSearchEmployeeInLevel("Prat", "2024-03-13",
 				"Team Lead");
 
@@ -139,80 +172,102 @@ public class EmployeeFolderAPITestCases {
 				APIEndpoints.getSearchEmployeeInLevelEndpoint);
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO,
+				"API endpoint for get search employee in level is => " + APIEndpoints.getSearchEmployeeInLevelEndpoint);
+		test.log(Status.INFO, "Status code for get search employee in level is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for get search employee in level is => " + response.getBody().asPrettyString());
 	}
 
-	@Test(priority = 13)
+	@Test(priority = 12)
 	public void verify_Add_Token_For_Web_Without_Authorization() {
+		test = BaseTest.extent.createTest("Add token for web without authorization");
+
 		String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForAddToken("hpyn gyje jpsp ipqr", "BIE018");
 
 		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
 				APIEndpoints.addTokenForWebEndpoint);
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO, "API endpoint for add token for web is => " + APIEndpoints.addTokenForWebEndpoint);
+		test.log(Status.INFO, "Status code for add token for web is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for add token for web is => " + response.getBody().asPrettyString());
 	}
 
-	@Test(priority = 14)
+	@Test(priority = 13)
 	public void verify_Add_Token_For_Mobile_Without_Authorization() {
+		test = BaseTest.extent.createTest("Add token for mobile without authorization");
+
 		String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForAddToken("hpyn gyje jpsp ipqr", "BIE018");
 
 		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
 				APIEndpoints.addTokenForMobileEndpoint);
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO, "API endpoint for add token for mobile is => " + APIEndpoints.addTokenForMobileEndpoint);
+		test.log(Status.INFO, "Status code for add token for mobile is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for add token for mobile is => " + response.getBody().asPrettyString());
 	}
 
-	@Test(priority = 15)
+	@Test(priority = 14)
 	public void verify_Update_Employee_Without_Authorization() {
-		String requestPayload = "{\r\n" + "    \"empId\" : 7,\r\n"
-				+ "    \"empFullName\" : \"Prathamesh Dhasade\", \r\n"
-				+ "    \"empMobile1\" : \"9834530434\",    			\r\n"
-				+ "    \"status\" : \"ACTIVE\",        		\r\n"
-				+ "    \"empMobile2\" : \"9850708611\",          				\r\n"
-				+ "    \"empBloodGroup\" : \"B+\",      \r\n" + "    \"empOfficeLocation\" : \"Narhe, Pune\",   \r\n"
-				+ "    \"empJoiningDate\" : \"2023/11/01\",      \r\n" + "    \"reportingAuthority\" : [\r\n"
-				+ "        {\r\n" + "            \"empId\" : 14\r\n" + "        },\r\n" + "        {\r\n"
-				+ "            \"empId\" : 8\r\n" + "        }\r\n" + "    ],                       \r\n"
-				+ "    \"role\" : [\r\n" + "        {\r\n" + "            \"roleId\" : 4\r\n" + "        }\r\n"
-				+ "    ],               \r\n" + "    \"designation\" : {\r\n" + "        \"designationId\" : 2\r\n"
-				+ "    },       \r\n" + "    \"department\" : { \r\n" + "        \"departmentId\" : 10\r\n"
-				+ "    },         \r\n" + "    \"empAddress\" : \"Bibwewadi, Pune\",       \r\n"
-				+ "    \"empDOB\" : \"1999/08/22\",        \r\n"
-				+ "    \"empEmailOfficial\" : \"prathamesh@biencaps.com\",     \r\n"
-				+ "    \"empEmailPersonal\" : \"prathameshdhasade99@gmail.com\"\r\n" + "}\r\n" + "";
+		test = BaseTest.extent.createTest("Update employee without authorization");
+
+		String requestPayload = EmployeeFolderPayloads.updateEmployeePayload(20, "John Doe", "2024-05-24", "ACTIVE", 3,
+				3, 5, "9876543210", "7894561230", "john@biencaps.com", "john.doe@gmail.com", "Narhe, Pune", "B+",
+				"2000-05-01", "Pune");
 
 		Response response = Responses.putRequestWithoutAuthorization(requestPayload,
 				APIEndpoints.updateEmployeeEndpoint);
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO, "API endpoint for update employee is => " + APIEndpoints.updateEmployeeEndpoint);
+		test.log(Status.INFO, "Status code for update employee is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for update employee is => " + response.getBody().asPrettyString());
 	}
 
-	@Test(priority = 16)
+	@Test(priority = 15)
 	public void verify_Update_Password_Without_Authorization() {
-		String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForUpdatePassword("BIE018", "Pass@123",
-				"Pass@1234", "Pass@1234");
+		test = BaseTest.extent.createTest("Update password without authorization");
+
+		String requestPayload = EmployeeFolderPayloads.updatePasswordPayload("BIE018", "Pass@123", "Pass@1234",
+				"Pass@1234");
 
 		Response response = Responses.putRequestWithoutAuthorization(requestPayload,
 				APIEndpoints.updatePasswordEndpoint);
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO, "API endpoint for update password is => " + APIEndpoints.updatePasswordEndpoint);
+		test.log(Status.INFO, "Status code for update password is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for update password is => " + response.getBody().asPrettyString());
 	}
 
-	@Test(priority = 17)
+	@Test(priority = 16)
 	public void verify_Get_Task_Owners_Without_Authorization() {
-		String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForGetTaskOwners(2);
+		test = BaseTest.extent.createTest("Get task owners without authorization");
+
+		String requestPayload = EmployeeFolderPayloads.getTaskOwnersPayload(2);
 
 		Response response = Responses.putRequestWithoutAuthorization(requestPayload,
 				APIEndpoints.getTaskOwnersEndpoint);
 
 		BodyValidation.response401Validation(response);
+		test.log(Status.INFO, "API endpoint for get task owners is => " + APIEndpoints.getTaskOwnersEndpoint);
+		test.log(Status.INFO, "Status code for get task owners is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for get task owners is => " + response.getBody().asPrettyString());
 	}
 
-	@Test(priority = 16, dataProvider = "TestDataForGetAllEmployees", dataProviderClass = DataProvidersForEmployeeFolder.class)
-	public void verify_Get_All_Employee_With_Authorization(String authTokenInput) {
-		response = Responses.getRequestWithAuthorizationAndThreeQueryParameter(authTokenInput,
+	@Test(priority = 17, dataProvider = "TestDataForGetAllEmployees", dataProviderClass = DataProvidersForEmployeeFolder.class)
+	public void verify_Get_All_Employee_With_Authorization(String authToken) {
+		test = BaseTest.extent.createTest("Get all employees with authorization");
+
+		response = Responses.getRequestWithAuthorizationAndThreeQueryParameter(authToken,
 				APIEndpoints.getAllEmployeesEndpoint, "page", 0, "size", 20, "key", "");
 
-		if (!authTokenInput.equalsIgnoreCase(LoginEmployeeAPITestCases.authToken)) {
+		test.log(Status.INFO, "API endpoint for get all employees is => " + APIEndpoints.getAllEmployeesEndpoint);
+		test.log(Status.INFO, "Status code for get all employees is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for get all employees is => " + response.getBody().asPrettyString());
+
+		if (!authToken.equalsIgnoreCase(LoginEmployeeAPITestCases.authToken)) {
 			BodyValidation.responseValidation(response, "Unauthorized", 401);
 		} else {
 			BodyValidation.responseValidation(response, 200);
@@ -223,83 +278,102 @@ public class EmployeeFolderAPITestCases {
 			maxValueOfUserId = response.jsonPath().getString("data.max { it.userId }.userId");
 			log.info("Max value of user Id is: " + maxValueOfUserId);
 
-			empIds = response.jsonPath().getList("data.empId");
-			log.info("List of employee Ids are: " + empIds);
+			// Parse the JSON response to get the employee data
+			List<Map<String, Object>> employees = response.jsonPath().getList("data");
 
 			employeeFullNames = response.jsonPath().getList("data.empFullName");
-			log.info("List of employee full names are: " + employeeFullNames + "\n");
 
-			// Extract the list of employees from the response
-			employees = response.jsonPath().getList("data");
+			employeeIds = response.jsonPath().getList("data.empId");
+
+			// Iterate through the employees and extract empId and empFullName
+			for (Map<String, ?> employee : employees) {
+				String empId = String.valueOf(employee.get("empId"));
+				String empFullName = String.valueOf(employee.get("empFullName"));
+
+				empIdToNameMap.put(empId, empFullName);
+			}
+
+			// Iterate through the employees and extract empId and empFullName
+			for (Map<String, ?> employee : employees) {
+				String empId = String.valueOf(employee.get("empId"));
+				String empStatus = String.valueOf(employee.get("empStatus"));
+
+				empIdToStatusMap.put(empId, empStatus);
+			}
 		}
 	}
 
-	@Test(priority = 18)
+	@Test(priority = 18, dependsOnMethods = "verify_Get_All_Employee_With_Authorization")
 	public void verify_Get_Single_Employee_With_Authorization() {
-		if (userIds != null) {
-			int randomIndexForUserId = random.nextInt(userIds.size());
-			String randomUserId = userIds.get(randomIndexForUserId);
-			log.info("Random user Id for get single employee is: " + randomUserId);
+		test = BaseTest.extent.createTest("Get single employee with authorization");
 
-			String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForGetSingleEmployee(randomUserId);
+		int randomIndexForUserId = random.nextInt(userIds.size());
+		String randomUserId = userIds.get(randomIndexForUserId);
+		log.info("Random user Id for get single employee is: " + randomUserId);
 
-			Response response = Responses.postRequestWithAuthorization(requestPayload,
-					LoginEmployeeAPITestCases.authToken, APIEndpoints.getSingleEmployeeEndpoint);
+		String requestPayload = EmployeeFolderPayloads.getSingleEmployeePayload(randomUserId);
 
-			BodyValidation.responseValidation(response, 200);
+		Response response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
+				APIEndpoints.getSingleEmployeeEndpoint);
+		test.log(Status.INFO, "API endpoint for get single employee is => " + APIEndpoints.getSingleEmployeeEndpoint);
+		test.log(Status.INFO, "Status code for get single employee is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for add employee is => " + response.getBody().asPrettyString());
 
-			String userIdFromResponse = response.jsonPath().getString("userId");
-			log.info("User Id from response for get single employee  is: " + userIdFromResponse + "\n");
+		BodyValidation.responseValidation(response, 200);
 
-			assertEquals(userIdFromResponse, randomUserId, "User Id from response does not match with random user Id");
-			assertTrue(userIds.contains(userIdFromResponse));
-		} else {
-			log.info("User Ids are null");
-		}
+		String userIdFromResponse = response.jsonPath().getString("userId");
+		log.info("User Id from response for get single employee  is: " + userIdFromResponse + "\n");
+
+		assertEquals(userIdFromResponse, randomUserId);
+		assertTrue(userIds.contains(userIdFromResponse));
 	}
 
-	@Test(priority = 19)
+	@Test(priority = 19, dependsOnMethods = "verify_Get_All_Employee_With_Authorization")
 	public void verify_Get_Single_Employee_By_Giving_Invalid_UserId() {
-		if (userIds != null) {
-			int numeric_part_of_user_id = faker.number().numberBetween(50, 100);
-			String fakeUserId = "INC0" + String.valueOf(numeric_part_of_user_id);
+		test = BaseTest.extent.createTest("Get single employee with authorization");
 
-			String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForGetSingleEmployee(fakeUserId);
+		int numeric_part_of_user_id = DataGeneratorForAPI.generateFakeNumberWithRange(50, 100);
+		String fakeUserId = "INC0" + String.valueOf(numeric_part_of_user_id);
 
-			Response response = Responses.postRequestWithAuthorization(requestPayload,
-					LoginEmployeeAPITestCases.authToken, APIEndpoints.getSingleEmployeeEndpoint);
+		String requestPayload = EmployeeFolderPayloads.getSingleEmployeePayload(fakeUserId);
 
-			BodyValidation.responseValidation(response, "Not Found", 404);
+		Response response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
+				APIEndpoints.getSingleEmployeeEndpoint);
+		test.log(Status.INFO, "API endpoint for get single employee is => " + APIEndpoints.getSingleEmployeeEndpoint);
+		test.log(Status.INFO, "Status code for get single employee is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for add employee is => " + response.getBody().asPrettyString());
 
-			assertFalse(userIds.contains(fakeUserId));
-		} else {
-			log.info("User Ids are null");
-		}
+		BodyValidation.responseValidation(response, "Not Found", 404);
+
+		assertFalse(userIds.contains(fakeUserId));
 	}
 
 	@Test(priority = 20)
 	public void verify_Get_Task_Owners_With_Authorization() {
-		if (RoleFolderAPITestCases.roleLevels != null) {
-			int randomIndexForRoleLevel = random.nextInt(RoleFolderAPITestCases.roleLevels.size());
-			int randomRoleLevel = RoleFolderAPITestCases.roleLevels.get(randomIndexForRoleLevel);
-			log.info("Random role level for get reporting authority is: " + randomRoleLevel + "\n");
+		test = BaseTest.extent.createTest("Get task owners with authorization");
 
-			String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForGetTaskOwners(randomRoleLevel);
+		int randomIndexForRoleLevel = random.nextInt(RoleFolderAPITestCases.roleLevels.size());
+		int randomRoleLevel = RoleFolderAPITestCases.roleLevels.get(randomIndexForRoleLevel);
+		log.info("Random role level for get reporting authority is: " + randomRoleLevel + "\n");
 
-			Response response = Responses.postRequestWithAuthorization(requestPayload,
-					LoginEmployeeAPITestCases.authToken, APIEndpoints.getTaskOwnersEndpoint);
+		String requestPayload = EmployeeFolderPayloads.getTaskOwnersPayload(randomRoleLevel);
 
-			BodyValidation.responseValidation(response, "OK", 200);
-		} else {
-			log.error("Role levels are null");
-		}
+		Response response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
+				APIEndpoints.getTaskOwnersEndpoint);
+		test.log(Status.INFO, "API endpoint for get task owners is => " + APIEndpoints.getTaskOwnersEndpoint);
+		test.log(Status.INFO, "Status code for get task owners is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for get task owners is => " + response.getBody().asPrettyString());
+
+		BodyValidation.responseValidation(response, 200);
 	}
 
-	@Test(dataProvider = "TestDataForAddEmployee", dataProviderClass = DataProvidersForEmployeeFolder.class, enabled = false)
-	public void verify_Add_Employee_With_Authorization(String userId, String employeeFullName, String employeeStatus,
-			int designationId, int departmentId, int roleId, String employeePersonalEmail, String employeeMobileNumber1,
-			String employeeJoiningDate, String employeeMobileNumber2, String employeeDOB, String employeeBloodGroup,
-			String employeeAddress) {
+	@Test(priority = 21, dataProvider = "TestDataForAddEmployee", dataProviderClass = DataProvidersForEmployeeFolder.class, enabled = false)
+	public void verify_Add_Employee_With_Authorization(String employeeFullName, String userId,
+			String employeeJoiningDate, String employeeStatus, int departmentId, int designationId, int roleId,
+			int reportingAuthorityEmpId, String employeePersonalEmail, String employeeMobileNumber1,
+			String employeeOfficeLocation) {
+		test = BaseTest.extent.createTest("Add employee with valid and invalid data and with authorization");
+
 		String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
 
 		// Create a Pattern object
@@ -310,30 +384,20 @@ public class EmployeeFolderAPITestCases {
 
 		if (DesignationFolderAPITestCases.designationIds != null && DepartmentFolderAPITestCases.departmentIds != null
 				&& RoleFolderAPITestCases.roleIds != null) {
-			String requestPayload = "{\r\n" + "    \"userId\": \"" + userId + "\",\r\n" + "    \"empFullName\": \""
-					+ employeeFullName + "\",\r\n" + "    \"empStatus\": \"" + employeeStatus + "\",\r\n"
-					+ "    \"designation\" : {\r\n" + "        \"designationId\" : " + designationId + "\r\n"
-					+ "    },\r\n" + "    \"department\" : {\r\n" + "        \"departmentId\" : " + departmentId
-					+ "\r\n" + "    },\r\n" + "    \"role\" : [\r\n" + "        {\r\n" + "\r\n"
-					+ "            \"roleId\" : " + roleId + "\r\n" + "        }\r\n" + "    ],\r\n"
-					+ "    \"reportingAuthorities\" : [\r\n" + "        {\r\n" + "            \"empId\" : 8\r\n"
-					+ "        },\r\n" + "        {\r\n" + "            \"empId\" : 14\r\n" + "        }\r\n"
-					+ "    ],\r\n" + "    \"empEmailPersonal\" : \"" + employeePersonalEmail + "\",\r\n"
-					+ "    \"empMobile1\" : \"" + employeeMobileNumber1 + "\",\r\n"
-					+ "    \"empOfficeLocation\" : \"Pune\",\r\n" + "    \"empJoiningDate\" : \"" + employeeJoiningDate
-					+ "\",\r\n" + "    \"empMobile2\" : \"" + employeeMobileNumber2 + "\",\r\n" + "    \"empDOB\" : \""
-					+ employeeDOB + "\",\r\n" + "    \"eempBloodGroup\" : \"" + employeeBloodGroup + "\",\r\n"
-					+ "    \"empAddress\" : \"" + employeeAddress + "\"\r\n" + "}\r\n" + "";
+			String requestPayload = EmployeeFolderPayloads.addEmployeePayload(employeeFullName, userId,
+					employeeJoiningDate, employeeStatus, departmentId, designationId, roleId, reportingAuthorityEmpId,
+					employeePersonalEmail, employeeMobileNumber1, employeeOfficeLocation);
 
 			Response response = Responses.postRequestWithAuthorization(requestPayload,
 					LoginEmployeeAPITestCases.authToken, APIEndpoints.addEmployeeEndpoint);
+			test.log(Status.INFO, "API endpoint for add employee is => " + APIEndpoints.addEmployeeEndpoint);
+			test.log(Status.INFO, "Status code for add employee is => " + response.getStatusCode());
+			test.log(Status.INFO, "Response for add employee is => " + response.getBody().asPrettyString());
 
 			if (userId.isBlank() || employeeFullName.isBlank() || employeeStatus.isBlank()
 					|| employeePersonalEmail.isBlank() || employeeMobileNumber1.isBlank()
-					|| employeeJoiningDate.isBlank() || employeeMobileNumber2.isBlank() || employeeDOB.isBlank()
-					|| employeeBloodGroup.isBlank() || employeeAddress.isBlank() || matcher.matches() == false
-					|| employeeMobileNumber1.length() < 10 || employeeMobileNumber1.length() > 10
-					|| employeeMobileNumber2.length() < 10 || employeeMobileNumber2.length() > 10) {
+					|| employeeJoiningDate.isBlank() || matcher.matches() == false
+					|| employeeMobileNumber1.length() < 10 || employeeMobileNumber1.length() > 10) {
 				BodyValidation.response400Validation(response);
 			} else if (DesignationFolderAPITestCases.designationIds.contains(designationId) == false) {
 				BodyValidation.responseValidation(response, "Not Found", 404);
@@ -353,85 +417,76 @@ public class EmployeeFolderAPITestCases {
 		}
 	}
 
-	@Test(priority = 20)
+	@Test(priority = 22, dependsOnMethods = "verify_Get_All_Employee_With_Authorization")
 	public void verify_Get_User_Id_With_Authorization() {
-		if (userIds != null) {
-			String numericPart = maxValueOfUserId.substring(3);
+		test = BaseTest.extent.createTest("Get user Id with authorization");
 
-			int numeric_part = Integer.parseInt(numericPart);
+		String numericPart = maxValueOfUserId.substring(3);
 
-			int new_numeric_part = numeric_part + 1;
-			String newNumericPart = String.valueOf(new_numeric_part);
+		int numeric_part = Integer.parseInt(numericPart);
 
-			String newUserId = "INC0" + newNumericPart;
-			log.info("New User Id for get user id is: " + newUserId + "\n");
+		int new_numeric_part = numeric_part + 1;
+		String newNumericPart = String.valueOf(new_numeric_part);
 
-			Response response = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
-					APIEndpoints.getUserIdEndpoint);
+		newUserId = "INC0" + newNumericPart;
+		log.info("New User Id for get user id is: " + newUserId + "\n");
 
-			int responseBodyLength = response.getBody().asPrettyString().length();
-			String contentLength = String.valueOf(responseBodyLength);
+		Response response = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
+				APIEndpoints.getUserIdEndpoint);
+		test.log(Status.INFO, "API endpoint for get user Id is => " + APIEndpoints.getUserIdEndpoint);
+		test.log(Status.INFO, "Status code for get user Id is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for get user Id is => " + response.getBody().asPrettyString());
 
-			assertEquals(response.getBody().asPrettyString(), newUserId, "Invalid response text");
+		String responseBody = response.getBody().asPrettyString();
 
-			BodyValidation.responseValidation(response, 200, contentLength);
-		} else {
-			log.info("User Ids are null");
-		}
+		int responseBodyLength = response.getBody().asPrettyString().length();
+		String contentLength = String.valueOf(responseBodyLength);
+
+		assertEquals(responseBody, newUserId);
+
+		BodyValidation.responseValidation(response, 200, contentLength);
 	}
 
-	@Test(priority = 21)
-	public void verify_Get_All_Employee_Id_And_Names_With_Authorization(ITestContext context) {
-		if (employees != null) {
-			Response response = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
-					APIEndpoints.getAllEmployeesIdAndNameEndpoint);
+	@Test(priority = 23)
+	public void verify_Get_All_Employee_Id_And_Names_With_Authorization() {
+		test = BaseTest.extent.createTest("Get all employees Id and names with authorization");
 
-			BodyValidation.responseValidation(response, 200);
-			employeeIds = response.jsonPath().getList("empId");
-			log.info("List of emp Ids are: " + employeeIds);
+		Response response = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
+				APIEndpoints.getAllEmployeesIdAndNameEndpoint);
+		test.log(Status.INFO, "API endpoint for get all employees Ids and names is => "
+				+ APIEndpoints.getAllEmployeesIdAndNameEndpoint);
+		test.log(Status.INFO, "Status code for get all employees Ids and names is => " + response.getStatusCode());
+		test.log(Status.INFO,
+				"Response for get all employees Ids and names is => " + response.getBody().asPrettyString());
 
-			employeeFullNames = response.jsonPath().getList("fullName");
-			log.info("List of employee full names are: " + employeeFullNames);
+		BodyValidation.responseValidation(response, 200);
+		List<Integer> employeeIds = response.jsonPath().getList("empId");
+		log.info("List of emp Ids are: " + employeeIds);
 
-			// Iterate through the employees and extract empId and empFullName
-			for (Map<String, ?> employee : employees) {
-				String empId = String.valueOf(employee.get("empId"));
-				String empFullName = String.valueOf(employee.get("empFullName"));
+		List<String> employeeFullNames = response.jsonPath().getList("fullName");
+		log.info("List of employee full names are: " + employeeFullNames);
 
-				empIdToNameMap.put(empId, empFullName);
-			}
-
+		for (int employeeId : employeeIds) {
 			for (Map.Entry<String, String> entry : empIdToNameMap.entrySet()) {
-				if (entry.getValue().equalsIgnoreCase("Prathamesh Dhasade")) {
-					log.info("Current logged in employee Id is: " + entry.getKey());
-					log.info("Current logged in employee Full Name is: " + entry.getValue());
-					context.setAttribute("currentEmployeeId", entry.getKey());
-					break;
+				if (entry.getKey().equalsIgnoreCase(String.valueOf(employeeId))) {
+					assertEquals(String.valueOf(employeeId), entry.getKey());
 				}
 			}
+		}
 
-			for (int employeeId : employeeIds) {
-				for (Map.Entry<String, String> entry : empIdToNameMap.entrySet()) {
-					if (entry.getKey().equalsIgnoreCase(String.valueOf(employeeId))) {
-						assertEquals(String.valueOf(employeeId), entry.getKey());
-					}
+		for (String employeeFullName : employeeFullNames) {
+			for (Map.Entry<String, String> entry : empIdToNameMap.entrySet()) {
+				if (entry.getValue().equalsIgnoreCase(String.valueOf(employeeFullName))) {
+					assertEquals(String.valueOf(employeeFullName), entry.getValue());
 				}
 			}
-
-			for (String employeeFullName : employeeFullNames) {
-				for (Map.Entry<String, String> entry : empIdToNameMap.entrySet()) {
-					if (entry.getValue().equalsIgnoreCase(String.valueOf(employeeFullName))) {
-						assertEquals(String.valueOf(employeeFullName), entry.getValue());
-					}
-				}
-			}
-		} else {
-			log.info("Employees are null");
 		}
 	}
 
 	@Test(priority = 24)
 	public void verify_Get_Reporting_Authority_With_Authorization() {
+		test = BaseTest.extent.createTest("Get reporting authority with authorization");
+
 		if (DepartmentFolderAPITestCases.departments != null && RoleFolderAPITestCases.roleLevels != null) {
 			int randomIndexForDepartment = random.nextInt(DepartmentFolderAPITestCases.departments.size());
 			String randomDepartment = DepartmentFolderAPITestCases.departments.get(randomIndexForDepartment);
@@ -439,11 +494,16 @@ public class EmployeeFolderAPITestCases {
 
 			int randomIndexForRoleLevel = random.nextInt(RoleFolderAPITestCases.roleLevels.size());
 			int randomRoleLevel = RoleFolderAPITestCases.roleLevels.get(randomIndexForRoleLevel);
-			log.info("Random department for get reporting authority is: " + randomRoleLevel + "\n");
+			log.info("Random role level for get reporting authority is: " + randomRoleLevel + "\n");
 
 			Response response = Responses.getRequestWithAuthorizationAndTwoQueryParameter(
 					LoginEmployeeAPITestCases.authToken, APIEndpoints.getAllHigherAuthoritiesEndpoint, "role",
 					randomRoleLevel, "department", randomDepartment);
+			test.log(Status.INFO, "API endpoint for get all reporting authorities is => "
+					+ APIEndpoints.getAllHigherAuthoritiesEndpoint);
+			test.log(Status.INFO, "Status code for get all reporting authorities is => " + response.getStatusCode());
+			test.log(Status.INFO,
+					"Response for get all reporting authorities is => " + response.getBody().asPrettyString());
 
 			BodyValidation.responseValidation(response, 200);
 
@@ -457,19 +517,25 @@ public class EmployeeFolderAPITestCases {
 
 	@Test(priority = 25)
 	public void verify_Get_Reporting_Authority_By_Giving_Invalid_Department() {
+		test = BaseTest.extent.createTest("Get reporting authority with authorization");
+
 		if (DepartmentFolderAPITestCases.departments != null && RoleFolderAPITestCases.roleLevels != null) {
 			int randomIndexForRoleLevel = random.nextInt(RoleFolderAPITestCases.roleLevels.size());
 			int randomRoleLevel = RoleFolderAPITestCases.roleLevels.get(randomIndexForRoleLevel);
 			log.info("Random role level for get reporting authority is: " + randomRoleLevel + "\n");
 
-			String fakeDepartment = faker.country().name();
+			String fakeDepartment = DataGeneratorForAPI.generateFakeDepartment();
 
 			Response response = Responses.getRequestWithAuthorizationAndTwoQueryParameter(
 					LoginEmployeeAPITestCases.authToken, APIEndpoints.getAllHigherAuthoritiesEndpoint, "role",
 					randomRoleLevel, "department", fakeDepartment);
+			test.log(Status.INFO, "API endpoint for get all reporting authorities is => "
+					+ APIEndpoints.getAllHigherAuthoritiesEndpoint);
+			test.log(Status.INFO, "Status code for get all reporting authorities is => " + response.getStatusCode());
+			test.log(Status.INFO,
+					"Response for get all reporting authorities is => " + response.getBody().asPrettyString());
 
-			assertEquals(DepartmentFolderAPITestCases.departments.contains(fakeDepartment), false,
-					"Department name is not contain in department name list");
+			assertFalse(DepartmentFolderAPITestCases.departments.contains(fakeDepartment));
 
 			BodyValidation.responseValidation(response, "Not Found", 404);
 		} else {
@@ -480,71 +546,88 @@ public class EmployeeFolderAPITestCases {
 
 	@Test(priority = 26)
 	public void verify_Get_All_Assignee_With_Authorization_By_Giving_Valid_Role_Level() {
-		if (RoleFolderAPITestCases.roleLevels != null) {
-			int randomIndexForRoleLevel = random.nextInt(RoleFolderAPITestCases.roleLevels.size());
-			int randomRoleLevel = RoleFolderAPITestCases.roleLevels.get(randomIndexForRoleLevel);
-			log.info("Random role level for get assignee  is: " + randomRoleLevel + "\n");
+		test = BaseTest.extent.createTest("Get all assignee with authorization");
 
-			String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForGetAssignee(randomRoleLevel);
+		int randomIndexForRoleLevel = random.nextInt(RoleFolderAPITestCases.roleLevels.size());
+		int randomRoleLevel = RoleFolderAPITestCases.roleLevels.get(randomIndexForRoleLevel);
+		log.info("Random role level for get assignee is: " + randomRoleLevel + "\n");
 
-			Response response = Responses.postRequestWithAuthorization(requestPayload,
-					LoginEmployeeAPITestCases.authToken, APIEndpoints.getAllAssigneesEndpoint);
+		String requestPayload = EmployeeFolderPayloads.getAssigneePayload(randomRoleLevel);
 
-			BodyValidation.responseValidation(response, 200);
+		Response response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
+				APIEndpoints.getAllAssigneesEndpoint);
+		test.log(Status.INFO, "API endpoint for get all assignees is => " + APIEndpoints.getAllAssigneesEndpoint);
+		test.log(Status.INFO, "Status code for get all assignees is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for get all assignees is => " + response.getBody().asPrettyString());
 
-			assertEquals(RoleFolderAPITestCases.roleLevels.contains(randomRoleLevel), true,
-					"Random role level does not contain in roleLevels list");
-		} else {
-			log.info("Role Ids are null");
-		}
+		BodyValidation.responseValidation(response, 200);
+
+		assertTrue(RoleFolderAPITestCases.roleLevels.contains(randomRoleLevel));
 	}
 
 	@Test(priority = 27, enabled = false)
 	public void verify_Get_All_Active_Users_Info_With_Authorization() {
+		test = BaseTest.extent.createTest("Get all active users info with authorization");
+
 		Response response = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.getAllActiveUsersInfoEndpoint);
+		test.log(Status.INFO,
+				"API endpoint for get all active users info is => " + APIEndpoints.getAllActiveUsersInfoEndpoint);
+		test.log(Status.INFO, "Status code for get all active users info is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for get all active users info is => " + response.getBody().asPrettyString());
 
 		BodyValidation.responseValidation(response, 200);
 
-		List<String> userIds = response.jsonPath().getList("userId");
-		log.info("List of user Id for get all active users info are: " + userIds);
+		List<String> employeeFullNames = new ArrayList<String>();
+		for (int i = 0; i < 20; i++) {
+			employeeFullNames.add(response.jsonPath().getString("" + i + ".empFullName"));
+		}
 
-		List<String> employeeFullNames = response.jsonPath().getList("empFullName");
-		log.info("List of employee full name for get all active users info is: " + employeeFullNames + "\n");
-	}
-
-	@Test(priority = 28, dataProvider = "TestDataForGetAssignedTaskInfoByRole", dataProviderClass = DataProvidersForEmployeeFolder.class)
-	public void verify_Get_Assigned_Task_Info_By_Role_With_Authorization(String roleNameInput, String dateFormatInput) {
-		if (RoleFolderAPITestCases.roles != null) {
-			Response response = Responses.getRequestWithAuthorizationPathParameterAndOneQueryParameter(
-					LoginEmployeeAPITestCases.authToken, APIEndpoints.getAssignedTaskInfoByRoleEndpoint, roleNameInput,
-					"date", dateFormatInput);
-
-			if (response.getBody().asPrettyString().equalsIgnoreCase("[]")) {
-				BodyValidation.responseValidation(response, 200);
-			} else if (response.getStatusCode() == 400) {
-				BodyValidation.response400Validation(response);
-			} else if (RoleFolderAPITestCases.roles.contains(roleNameInput) == false) {
-				BodyValidation.responseValidation(response, "Not Found", 404);
-			} else {
-				BodyValidation.responseValidation(response, 200);
-
-				List<String> employeeNames = response.jsonPath().getList("employeeName");
-				log.info("List of employee names from response are: " + employeeNames + "\n");
-
-				assertTrue(RoleFolderAPITestCases.roles.contains(roleNameInput));
+		for (String employeeFullName : employeeFullNames) {
+			for (Map.Entry<String, String> entry : empIdToStatusMap.entrySet()) {
+				if (entry.getValue().equalsIgnoreCase(String.valueOf("ACTIVE"))) {
+					assertEquals(String.valueOf(employeeFullName), entry.getKey());
+				}
 			}
-		} else {
-			log.info("Roles are null");
 		}
 	}
 
-	@Test(priority = 29, dataProvider = "TestDataForUpdateEmployee", dataProviderClass = DataProvidersForEmployeeFolder.class, enabled = false)
+	@Test(priority = 28, dataProvider = "TestDataForGetAssignedTaskInfoByRole", dataProviderClass = DataProvidersForEmployeeFolder.class)
+	public void verify_Get_Assigned_Task_Info_By_Role_With_Authorization(String roleName, String date) {
+		test = BaseTest.extent.createTest("Get assigned task info by role with authorization");
+
+		Response response = Responses.getRequestWithAuthorizationPathParameterAndOneQueryParameter(
+				LoginEmployeeAPITestCases.authToken, APIEndpoints.getAssignedTaskInfoByRoleEndpoint, roleName, "date",
+				date);
+		test.log(Status.INFO, "API endpoint for get assigned task info by role is => "
+				+ APIEndpoints.getAssignedTaskInfoByRoleEndpoint);
+		test.log(Status.INFO, "Path parameter for get assigned task info by role is => " + roleName);
+		test.log(Status.INFO, "Query parameter for get assigned task info by role is => " + date);
+		test.log(Status.INFO, "Status code for get assigned task info by role is => " + response.getStatusCode());
+		test.log(Status.INFO,
+				"Response for get assigned task info by role is => " + response.getBody().asPrettyString());
+
+		if (response.getBody().asPrettyString().equalsIgnoreCase("[]")) {
+			BodyValidation.responseValidation(response, 200);
+		} else if (response.getStatusCode() == 400) {
+			BodyValidation.response400Validation(response);
+		} else if (!RoleFolderAPITestCases.roles.contains(roleName)) {
+			BodyValidation.responseValidation(response, "Not Found", 404);
+		} else {
+			BodyValidation.responseValidation(response, 200);
+
+			assertTrue(RoleFolderAPITestCases.roles.contains(roleName));
+		}
+	}
+
+	@Test(priority = 29, dataProvider = "TestDataForUpdateEmployee", dataProviderClass = DataProvidersForEmployeeFolder.class)
 	public void verify_Update_Employee_With_Authorization(int employeeId, String employeeFullName,
-			String employeeMobileNumber1, String employeeStatus, String employeeMobileNumber2,
-			String employeeBloodGroup, String employeeOfficeLocation, String employeeJoiningDate, int roleId,
-			int designationId, int departmentId, String employeeAddress, String employeeDOB,
-			String employeeEmailOfficial, String employeePersonalEmail) {
+			String employeeJoiningDate, String employeeStatus, int departmentId, int designationId, int roleId,
+			String employeeMobileNumber1, String employeeMobileNumber2, String employeeEmailOfficial,
+			String employeePersonalEmail, String employeeOfficeLocation, String employeeBloodGroup, String employeeDOB,
+			String employeeAddress) {
+		test = BaseTest.extent.createTest("Update employee with valid and invalid data with authorization");
+
 		String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
 
 		// Create a Pattern object
@@ -557,15 +640,19 @@ public class EmployeeFolderAPITestCases {
 		if (DesignationFolderAPITestCases.designationIds != null || DepartmentFolderAPITestCases.departmentIds != null
 				|| RoleFolderAPITestCases.roleIds != null) {
 
-			String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForUpdateEmployee(employeeId,
-					employeeFullName, employeeMobileNumber1, employeeStatus, employeeMobileNumber2, employeeBloodGroup,
-					employeeOfficeLocation, employeeJoiningDate, roleId, designationId, departmentId, employeeAddress,
-					employeeDOB, employeeEmailOfficial, employeePersonalEmail);
+			String requestPayload = EmployeeFolderPayloads.updateEmployeePayload(employeeId, employeeFullName,
+					employeeJoiningDate, employeeStatus, departmentId, designationId, roleId, employeeMobileNumber1,
+					employeeMobileNumber2, employeeEmailOfficial, employeePersonalEmail, employeeOfficeLocation,
+					employeeBloodGroup, employeeDOB, employeeAddress);
 
 			Response response = Responses.putRequestWithAuthorization(requestPayload,
 					LoginEmployeeAPITestCases.authToken, APIEndpoints.updateEmployeeEndpoint);
 
 			String responseBody = response.getBody().asPrettyString();
+			test.log(Status.INFO, "API endpoint for update employee is => " + APIEndpoints.updateEmployeeEndpoint);
+			test.log(Status.INFO, "Request payload for update employee is => " + requestPayload);
+			test.log(Status.INFO, "Status code for update employee is => " + response.getStatusCode());
+			test.log(Status.INFO, "Response for update employee is => " + response.getBody().asPrettyString());
 
 			if (employeeFullName.isBlank()) {
 				BodyValidation.response400Validation(response);
@@ -584,7 +671,7 @@ public class EmployeeFolderAPITestCases {
 			} else if (employeeMobileNumber1.isBlank() || employeeMobileNumber1.length() < 10
 					|| employeeMobileNumber1.length() > 10 || employeeMobileNumber2.length() < 10
 					|| employeeMobileNumber2.length() > 10) {
-				BodyValidation.response400Validation(response);
+				BodyValidation.responseValidation(response, "Unprocessable Entity", 422);
 			} else if (!DesignationFolderAPITestCases.designationIds.contains(designationId)) {
 				BodyValidation.responseValidation(response, "Not Found", 404);
 			} else if (!DepartmentFolderAPITestCases.departmentIds.contains(departmentId)) {
@@ -606,44 +693,52 @@ public class EmployeeFolderAPITestCases {
 	@Test(priority = 30, dataProvider = "TestDataForUpdatePassword", dataProviderClass = DataProvidersForEmployeeFolder.class)
 	public void verify_Update_Password_With_Authorization(String userId, String oldPassword, String newPassword,
 			String confirmPassword) {
+		test = BaseTest.extent.createTest("Update password with valid and invalid data and with authorization");
+
 		String userPassword = LoginEmployeeAPITestCases.password;
 
-		String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForUpdatePassword(userId, oldPassword,
-				newPassword, confirmPassword);
+		String requestPayload = EmployeeFolderPayloads.updatePasswordPayload(userId, oldPassword, newPassword,
+				confirmPassword);
+
 		log.info("User password is: " + userPassword);
 		log.info("Old password is: " + oldPassword);
 		log.info("New password is: " + newPassword + "\n");
 
-		if (userIds != null) {
-			Response response = Responses.putRequestWithAuthorization(requestPayload,
-					LoginEmployeeAPITestCases.authToken, APIEndpoints.updatePasswordEndpoint);
+		Response response = Responses.putRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
+				APIEndpoints.updatePasswordEndpoint);
 
-			if (userId.isBlank() || oldPassword.isBlank() || newPassword.isBlank() || confirmPassword.isBlank()) {
-				BodyValidation.response400Validation(response);
-			} else if (confirmPassword.equalsIgnoreCase(newPassword) == false
-					|| userPassword.equalsIgnoreCase(oldPassword) == false) {
-				BodyValidation.responseValidation(response, "Unauthorized", 401);
-			} else if (userIds.contains(userId) == false) {
-				BodyValidation.responseValidation(response, "Not Found", 404);
-			} else {
-				BodyValidation.responseValidation(response, "OK", 200);
+		String responseBody = response.getBody().asPrettyString();
+		test.log(Status.INFO, "API endpoint for update password is => " + APIEndpoints.updatePasswordEndpoint);
+		test.log(Status.INFO, "Request payload for update password is => " + requestPayload);
+		test.log(Status.INFO, "Status code for update password is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for update password is => " + responseBody);
 
-				userPassword = newPassword;
-				log.info("Updated user password is: " + userPassword + "\n");
-			}
+		if (userId.isBlank() || oldPassword.isBlank() || newPassword.isBlank() || confirmPassword.isBlank()) {
+			BodyValidation.response400Validation(response);
+		} else if (!confirmPassword.equalsIgnoreCase(newPassword) || !userPassword.equalsIgnoreCase(oldPassword)) {
+			BodyValidation.responseValidation(response, "Unauthorized", 401);
+		} else if (!userIds.contains(userId)) {
+			BodyValidation.responseValidation(response, "Not Found", 404);
 		} else {
-			log.info("User Ids are null\n");
+			BodyValidation.responseValidation(response, "OK", 200);
+
+			userPassword = newPassword;
+			log.info("Updated user password is: " + userPassword + "\n");
 		}
 	}
 
 	@Test(priority = 31, dataProvider = "TestDataForGetEncryptedEmail", dataProviderClass = DataProvidersForEmployeeFolder.class)
-	public void verify_Get_Encrypted_Email_With_Authorization(String userIdInput) {
-		log.info("User Id for get encrypted email using data provider is: " + userIdInput + "\n");
+	public void verify_Get_Encrypted_Email_With_Authorization(String userId) {
+		test = BaseTest.extent.createTest("Get encrypted email with authorization");
 
 		Response response = Responses.getRequestWithAuthorizationAndOneQueryParameter(
-				LoginEmployeeAPITestCases.authToken, APIEndpoints.getEncryptedEmailEndpoint, "userId", userIdInput);
+				LoginEmployeeAPITestCases.authToken, APIEndpoints.getEncryptedEmailEndpoint, "userId", userId);
+		test.log(Status.INFO, "API endpoint for get encrypted email is => " + APIEndpoints.getEncryptedEmailEndpoint);
+		test.log(Status.INFO, "Query parameter for get encrypted email is => " + userId);
+		test.log(Status.INFO, "Status code for get encrypted email is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for get encrypted email is => " + response.getBody().asPrettyString());
 
-		if (userIds.contains(userIdInput) == false) {
+		if (!userIds.contains(userId)) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
 		} else {
 			BodyValidation.responseValidation(response, 200);
@@ -651,19 +746,24 @@ public class EmployeeFolderAPITestCases {
 	}
 
 	@Test(priority = 32, dataProvider = "TestDataForSearchEmployeeInLevel", dataProviderClass = DataProvidersForEmployeeFolder.class)
-	public void verify_Get_Search_Employee_In_Level_With_Authorization(String keyInput, String roleInput,
-			String dateInput) {
-		String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForSearchEmployeeInLevel(keyInput, roleInput,
-				dateInput);
+	public void verify_Get_Search_Employee_In_Level_With_Authorization(String key, String role, String date) {
+		test = BaseTest.extent.createTest("Get search employee in level with authorization");
+
+		String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForSearchEmployeeInLevel(key, role, date);
 
 		Response response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.getSearchEmployeeInLevelEndpoint);
+		test.log(Status.INFO,
+				"API endpoint for get search employee in level is => " + APIEndpoints.getSearchEmployeeInLevelEndpoint);
+		test.log(Status.INFO, "Request payload for get search employee in level is => " + requestPayload);
+		test.log(Status.INFO, "Status code for get search employee in level is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for get search employee in level is => " + response.getBody().asPrettyString());
 
-		if (dateInput.isBlank()) {
+		if (date.isBlank()) {
 			BodyValidation.response400Validation(response);
-		} else if (response.getStatusCode() == 400 && dateInput.isBlank() == false) {
+		} else if (response.getStatusCode() == 400 && date.isBlank() == false) {
 			BodyValidation.response400Validation(response);
-		} else if (!RoleFolderAPITestCases.roles.contains(roleInput) || roleInput.isBlank()) {
+		} else if (!RoleFolderAPITestCases.roles.contains(role) || role.isBlank()) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
 		} else {
 			BodyValidation.responseValidation(response, 200);
@@ -671,11 +771,17 @@ public class EmployeeFolderAPITestCases {
 	}
 
 	@Test(priority = 33, dataProvider = "TestDataForAddForgotPassword", dataProviderClass = DataProvidersForEmployeeFolder.class, enabled = false)
-	public void verify_Add_Forgot_Password_With_Authorization(String userIdInput) {
-		Response response = Responses.postRequestWithAuthorizationAndOneQueryParameter(
-				LoginEmployeeAPITestCases.authToken, APIEndpoints.addForgotPasswordEndpoint, "userId", userIdInput);
+	public void verify_Add_Forgot_Password_With_Authorization(String userId) {
+		test = BaseTest.extent.createTest("Add forgot password with valid and invalid data and with authorization");
 
-		if (userIds.contains(userIdInput) == false) {
+		Response response = Responses.postRequestWithAuthorizationAndOneQueryParameter(
+				LoginEmployeeAPITestCases.authToken, APIEndpoints.addForgotPasswordEndpoint, "userId", userId);
+		test.log(Status.INFO, "API endpoint for add forgot password is => " + APIEndpoints.addForgotPasswordEndpoint);
+		test.log(Status.INFO, "Query parameter for add forgot password is => " + userId);
+		test.log(Status.INFO, "Status code for add forgot password is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for add forgot password is => " + response.getBody().asPrettyString());
+
+		if (!userIds.contains(userId)) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
 		} else {
 			BodyValidation.responseValidation(response, 200);
@@ -683,17 +789,23 @@ public class EmployeeFolderAPITestCases {
 	}
 
 	@Test(priority = 34, dataProvider = "TestDataForAddToken", dataProviderClass = DataProvidersForEmployeeFolder.class)
-	public void verify_Add_Token_For_Web_With_Authorization(String tokenInput, String userIdInput) {
-		String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForAddToken(tokenInput, userIdInput);
+	public void verify_Add_Token_For_Web_With_Authorization(String token, String userId) {
+		test = BaseTest.extent.createTest("Add token for web with valid and invalid data and with authorization");
+
+		String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForAddToken(token, userId);
 
 		Response response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.addTokenForWebEndpoint);
+		test.log(Status.INFO, "API endpoint for add token for web is => " + APIEndpoints.addTokenForWebEndpoint);
+		test.log(Status.INFO, "Request payload for add token for web is => " + requestPayload);
+		test.log(Status.INFO, "Status code for add token for web is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for add token for web is => " + response.getBody().asPrettyString());
 
 		String responseBody = response.getBody().asPrettyString();
 
-		if (tokenInput.isBlank()) {
+		if (token.isBlank()) {
 			BodyValidation.response400Validation(response);
-		} else if (userIdInput.isBlank() || !userIds.contains(userIdInput)) {
+		} else if (userId.isBlank() || !userIds.contains(userId)) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
 		} else {
 			assertEquals(responseBody, "token updated");
@@ -703,17 +815,23 @@ public class EmployeeFolderAPITestCases {
 	}
 
 	@Test(priority = 35, dataProvider = "TestDataForAddToken", dataProviderClass = DataProvidersForEmployeeFolder.class)
-	public void verify_Add_Token_For_Mobile_With_Authorization(String tokenInput, String userIdInput) {
-		String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForAddToken(tokenInput, userIdInput);
+	public void verify_Add_Token_For_Mobile_With_Authorization(String token, String userId) {
+		test = BaseTest.extent.createTest("Add token for mobile with valid and invalid data and with authorization");
+
+		String requestPayload = EmployeeFolderPayloads.giveEmployeePayloadForAddToken(token, userId);
 
 		Response response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.addTokenForMobileEndpoint);
+		test.log(Status.INFO, "API endpoint for add token for mobile is => " + APIEndpoints.addTokenForMobileEndpoint);
+		test.log(Status.INFO, "Request payload for add token for mobile is => " + requestPayload);
+		test.log(Status.INFO, "Status code for add token for mobile is => " + response.getStatusCode());
+		test.log(Status.INFO, "Response for add token for mobile is => " + response.getBody().asPrettyString());
 
 		String responseBody = response.getBody().asPrettyString();
 
-		if (tokenInput.isBlank()) {
+		if (token.isBlank()) {
 			BodyValidation.response400Validation(response);
-		} else if (userIds.contains(userIdInput) == false || userIdInput.isBlank()) {
+		} else if (!userIds.contains(userId) || userId.isBlank()) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
 		} else {
 			assertEquals(responseBody, "token updated");

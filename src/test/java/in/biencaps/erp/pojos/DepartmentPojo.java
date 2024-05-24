@@ -1,5 +1,8 @@
 package in.biencaps.erp.pojos;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(JsonInclude.Include.NON_DEFAULT)
 public class DepartmentPojo {
 	private int departmentId;
 
@@ -14,15 +17,6 @@ public class DepartmentPojo {
 	// Default constructor
 	public DepartmentPojo() {
 	}
-
-//	// Parameterized constructor
-//	public DepartmentPojo(String departmentName, int departmentLevel, String departmentColor,
-//			String departmentColorCode) {
-//		this.departmentName = departmentName;
-//		this.departmentLevel = departmentLevel;
-//		this.departmentColor = departmentColor;
-//		this.departmentColorCode = departmentColorCode;
-//	}
 
 	public int getDepartmentId() {
 		return departmentId;

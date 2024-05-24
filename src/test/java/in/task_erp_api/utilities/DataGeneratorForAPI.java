@@ -9,7 +9,11 @@ import com.github.javafaker.Faker;
 public class DataGeneratorForAPI {
 	private static Faker faker = new Faker();
 	private static Random random = new Random();
-	
+
+	public static String generateFakeFullName() {
+		return faker.name().fullName();
+	}
+
 	public static String generateFakeTaskTitle() {
 		return faker.book().title();
 	}
@@ -25,7 +29,7 @@ public class DataGeneratorForAPI {
 	public static String generateFakeDepartment() {
 		return faker.company().industry();
 	}
-	
+
 	public static String generateFakeDesignation() {
 		return faker.company().profession();
 	}
@@ -51,6 +55,19 @@ public class DataGeneratorForAPI {
 
 		// Concatenate the starting digit and remaining digits
 		return startDigit + remainingDigits;
+	}
+
+	public static String generateRandomInvalidDigitMobileNumber(int stringMinLength, int stringMaxLength) {
+		int minLength = stringMinLength;
+		int maxLength = stringMaxLength; // You can adjust this as per your requirement
+		int length = minLength + new Random().nextInt(maxLength - minLength);
+		String chars = "0123456789";
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0; i < length; i++) {
+			int index = new Random().nextInt(chars.length());
+			sb.append(chars.charAt(index));
+		}
+		return sb.toString();
 	}
 
 	public static String generateRandomFutureDate() {
