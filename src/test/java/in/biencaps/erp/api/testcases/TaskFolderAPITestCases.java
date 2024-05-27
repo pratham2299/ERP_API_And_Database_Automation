@@ -19,7 +19,7 @@ import java.util.*;
 
 import io.restassured.response.Response;
 
-public class TaskFolderAPITestCases {
+public class TaskFolderAPITestCases extends BaseTest {
 	public static final Logger log = LogManager.getLogger(TaskFolderAPITestCases.class);
 
 	public static List<Integer> taskIds;
@@ -31,108 +31,164 @@ public class TaskFolderAPITestCases {
 	public Response response;
 
 	@Test(priority = 1)
-	public void verifyAddTaskWithoutAuthorization() {
-		String requestPayload = TaskFolderPayloads.giveTaskPayloadForAddTask("Task 1", 26, "Do it urgent", "2024/02/16",
+	public void verify_Add_Task_Without_Authorization() {
+		test = BaseTest.extent.createTest("Add task without authorization");
+
+		String requestPayload = TaskFolderPayloads.giveTaskPayloadForAddTask("Task 1", 26, "Do it urgent", "2024/05/27",
 				4, 3, 1, 26, 1);
 
-		response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.addTaskEndpoint);
+		Response response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.addTaskEndpoint);
 
 		BodyValidation.response401Validation(response);
+
+		BaseTest.test_Method_Logs("add task", APIEndpoints.addTaskEndpoint, response);
 	}
 
 	@Test(priority = 2)
-	public void verifyGetAllTasksFordayWithoutAuthorization() {
-		String requestPayload = TaskFolderPayloads.giveTaskPayloadForGetAllTasksForDay(26, "2024/02/16");
-		response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.getAllTasksForDayEndpoint);
+	public void verify_Get_All_Tasks_For_Day_Without_Authorization() {
+		test = BaseTest.extent.createTest("Get all tasks for day without authorization");
+
+		String requestPayload = TaskFolderPayloads.giveTaskPayloadForGetAllTasksForDay(26, "2024/05/27");
+		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
+				APIEndpoints.getAllTasksForDayEndpoint);
 
 		BodyValidation.response401Validation(response);
+
+		BaseTest.test_Method_Logs("get all tasks", APIEndpoints.getAllTasksForDayEndpoint, response);
 	}
 
 	@Test(priority = 3)
-	public void verifySearchTaskForMonthWithoutAuthorization() {
+	public void verify_Search_Task_For_Month_Without_Authorization() {
+		test = BaseTest.extent.createTest("Get search task for month without authorization");
+
 		String requestPayload = TaskFolderPayloads.giveTaskPayloadForSearchTaskForMonth("low", 26, 2024, 2);
-		response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.searchTaskEndpoint);
+		Response response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.searchTaskEndpoint);
 
 		BodyValidation.response401Validation(response);
+
+		BaseTest.test_Method_Logs("get search task for month", APIEndpoints.searchTaskEndpoint, response);
 	}
 
 	@Test(priority = 4)
-	public void verifySearchTaskForWeekWithoutAuthorization() {
+	public void verify_Search_Task_For_Week_Without_Authorization() {
+		test = BaseTest.extent.createTest("Get search task for week without authorization");
+
 		String requestPayload = TaskFolderPayloads.giveTaskPayloadForSearchTaskForWeek("low", 26, 2024, 2, 1);
 		response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.searchTaskEndpoint);
 
 		BodyValidation.response401Validation(response);
+
+		BaseTest.test_Method_Logs("get search task for week", APIEndpoints.searchTaskEndpoint, response);
 	}
 
 	@Test(priority = 5)
-	public void verifySearchTaskForDayWithoutAuthorization() {
+	public void verify_Search_Task_For_Day_Without_Authorization() {
+		test = BaseTest.extent.createTest("Get search task for day without authorization");
+
 		String requestPayload = TaskFolderPayloads.giveTaskPayloadForSearchTaskForDay("low", 26, "2024-02-16");
-		response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.searchTaskEndpoint);
+		Response response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.searchTaskEndpoint);
 
 		BodyValidation.response401Validation(response);
+
+		BaseTest.test_Method_Logs("get search task for day", APIEndpoints.searchTaskEndpoint, response);
 	}
 
 	@Test(priority = 6)
-	public void verifyGetSingleTaskWithoutAuthorization() {
-		response = Responses.getRequestWithoutAuthorizationAndPathParameter(APIEndpoints.getSingleTaskEndpoint, 675);
+	public void verify_Get_Single_Task_Without_Authorization() {
+		test = BaseTest.extent.createTest("Get single task without authorization");
+
+		Response response = Responses.getRequestWithoutAuthorizationAndPathParameter(APIEndpoints.getSingleTaskEndpoint,
+				675);
 
 		BodyValidation.response401Validation(response);
+
+		BaseTest.test_Method_Logs("get single task", APIEndpoints.getSingleTaskEndpoint, response);
 	}
 
 	@Test(priority = 7)
-	public void verifyGetAllTasksForMonthWithoutAuthorization() {
+	public void verify_Get_All_Tasks_For_Month_Without_Authorization() {
+		test = BaseTest.extent.createTest("Get all tasks for month without authorization");
+
 		String requestPayload = TaskFolderPayloads.giveTaskPayloadForGetAllTasksForMonth(2024, 2, 26);
-		response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.getAllTasksForMonthEndpoint);
+		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
+				APIEndpoints.getAllTasksForMonthEndpoint);
 
 		BodyValidation.response401Validation(response);
+
+		BaseTest.test_Method_Logs("get all tasks for month", APIEndpoints.getAllTasksForMonthEndpoint, response);
 	}
 
 	@Test(priority = 8)
-	public void verifyGetAllTasksForWeekWithoutAuthorization() {
+	public void verify_Get_All_Tasks_For_Week_Without_Authorization() {
+		test = BaseTest.extent.createTest("Get all tasks for week without authorization");
+
 		String requestPayload = TaskFolderPayloads.giveTaskPayloadForGetAllTasksForWeek(2024, 2, 1, 26);
-		response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.getAllTasksForWeekEndpoint);
+		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
+				APIEndpoints.getAllTasksForWeekEndpoint);
 
 		BodyValidation.response401Validation(response);
+
+		BaseTest.test_Method_Logs("get all tasks for week", APIEndpoints.getAllTasksForWeekEndpoint, response);
 	}
 
 	@Test(priority = 9)
-	public void verifyGetTaskInfoForEmployeeByRoleWithoutAuthorization() {
-		response = Responses.getRequestWithoutAuthorizationPathParameterAndOneQueryParameter(
+	public void verify_Get_Task_Info_For_Employee_By_Role_Without_Authorization() {
+		test = BaseTest.extent.createTest("Get task info for employee by role without authorization");
+
+		Response response = Responses.getRequestWithoutAuthorizationPathParameterAndOneQueryParameter(
 				APIEndpoints.getAssignedTaskInfoByRoleEndpoint, "Team Lead", "date", "2024/02/16");
 
 		BodyValidation.response401Validation(response);
+
+		BaseTest.test_Method_Logs("get task info for employee by role", APIEndpoints.getAssignedTaskInfoByRoleEndpoint,
+				response);
 	}
 
 	@Test(priority = 10)
-	public void verifyGetAllTasksForDayByDueDateWithoutAuthorization() {
+	public void verify_Get_All_Tasks_For_Day_By_Due_Date_Without_Authorization() {
+		test = BaseTest.extent.createTest("Get all tasks for day by due date without authorization");
+
 		String requestPayload = TaskFolderPayloads.giveTaskPayloadForGetAllTasksForDay(26, "2024/02/16");
-		response = Responses.postRequestWithoutAuthorization(requestPayload,
+		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
 				APIEndpoints.getAllTasksForDayByDueDateEndpoint);
 
 		BodyValidation.response401Validation(response);
+
+		BaseTest.test_Method_Logs("get all tasks for day by due date", APIEndpoints.getAllTasksForDayByDueDateEndpoint,
+				response);
 	}
 
 	@Test(priority = 11)
-	public void verifyGetAllTasksForDayByPriorityWithoutAuthorization() {
+	public void verify_Get_All_Tasks_For_Day_By_Priority_Without_Authorization() {
+		test = BaseTest.extent.createTest("Get all tasks for day by priority without authorization");
+
 		String requestPayload = TaskFolderPayloads.giveTaskPayloadForGetAllTasksForDay(26, "2024/02/16");
-		response = Responses.postRequestWithoutAuthorization(requestPayload,
+		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
 				APIEndpoints.getAllTasksForDayByPriorityEndpoint);
 
 		BodyValidation.response401Validation(response);
+
+		BaseTest.test_Method_Logs("get all tasks for day by priority", APIEndpoints.getAllTasksForDayByPriorityEndpoint,
+				response);
 	}
 
 	@Test(priority = 12)
-	public void verifyGetAllTasksForDayByStatusWithoutAuthorization() {
+	public void verify_Get_All_Tasks_For_Day_By_Status_Without_Authorization() {
+		test = BaseTest.extent.createTest("Get all tasks for day by status without authorization");
+
 		String requestPayload = TaskFolderPayloads.giveTaskPayloadForGetAllTasksForDay(26, "2024/02/16");
-		response = Responses.postRequestWithoutAuthorization(requestPayload,
+		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
 				APIEndpoints.getAllTasksForDayByStatusEndpoint);
 
 		BodyValidation.response401Validation(response);
+
+		BaseTest.test_Method_Logs("get all tasks for day by status", APIEndpoints.getAllTasksForDayByStatusEndpoint,
+				response);
 	}
 
 	@Test(priority = 13)
-	public void verifyGetTaskInfoForMonthWithoutAuthorization() {
-		response = given().queryParam("year", 2024).queryParam("month", 2).when()
+	public void verify_Get_Task_Info_For_Month_Without_Authorization() {
+		Response response = given().queryParam("year", 2024).queryParam("month", 2).when()
 				.get("/task/employee/BIE018/get/by/month");
 
 		BodyValidation.response401Validation(response);
@@ -143,7 +199,8 @@ public class TaskFolderAPITestCases {
 		List<Integer> taskIds = DataGeneratorForAPI.generateRandomArrayValues(Arrays.asList(1850, 1860, 1870));
 
 		String requestPayload = TaskFolderPayloads.giveTaskPayloadForDuplicateTask(taskIds, 26, "2024/02/16");
-		response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.duplicateTaskEndpoint);
+		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
+				APIEndpoints.duplicateTaskEndpoint);
 
 		BodyValidation.response401Validation(response);
 	}
@@ -154,7 +211,7 @@ public class TaskFolderAPITestCases {
 
 		String requestPayload = TaskFolderPayloads.giveTaskPayloadForUpdateTask(1, 26, 1, 4, 3, 4, 7,
 				"https://www.gilab.com", "Comment", tagIds, "2024-02-28", "2024-02-29");
-		response = Responses.putRequestWithoutAuthorization(requestPayload, APIEndpoints.updateTaskEndpoint);
+		Response response = Responses.putRequestWithoutAuthorization(requestPayload, APIEndpoints.updateTaskEndpoint);
 
 		BodyValidation.response401Validation(response);
 	}
@@ -167,7 +224,7 @@ public class TaskFolderAPITestCases {
 
 		String requestPayload = TaskFolderPayloads.giveTaskPayloadForUpdateMultipleTasks(taskIds, 26, 1, 4, 3, 4, 7,
 				"https://www.gilab.com", "Comment", tagIds, "2024-02-28", "2024-02-29");
-		response = Responses.putRequestWithoutAuthorization(requestPayload, APIEndpoints.updateTaskEndpoint);
+		Response response = Responses.putRequestWithoutAuthorization(requestPayload, APIEndpoints.updateTaskEndpoint);
 
 		BodyValidation.response401Validation(response);
 	}
@@ -175,7 +232,7 @@ public class TaskFolderAPITestCases {
 	@Test(priority = 17)
 	public void verifyDeleteTaskWithoutAuthorization() {
 		String requestPayload = TaskFolderPayloads.giveTaskPayloadForDeleteTask(699, 26);
-		response = Responses.putRequestWithoutAuthorization(requestPayload, APIEndpoints.deleteTaskEndpoint);
+		Response response = Responses.putRequestWithoutAuthorization(requestPayload, APIEndpoints.deleteTaskEndpoint);
 
 		BodyValidation.response401Validation(response);
 	}
@@ -191,9 +248,9 @@ public class TaskFolderAPITestCases {
 		response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.addTaskEndpoint);
 
-		if (taskTitleInput.equalsIgnoreCase("")) {
+		if (taskTitleInput.isBlank()) {
 			BodyValidation.response400Validation(response);
-		} else if (response.getStatusCode() == 400 || taskScheduleDateInput.equalsIgnoreCase("")) {
+		} else if (response.getStatusCode() == 400 || taskScheduleDateInput.isBlank()) {
 			BodyValidation.response400Validation(response);
 		} else if (PriorityFolderAPITestCases.priorityIds.contains(taskPriorityInput) == false) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
@@ -299,9 +356,9 @@ public class TaskFolderAPITestCases {
 
 		if (response.getBody().asPrettyString().equalsIgnoreCase("[]")) {
 			BodyValidation.responseValidation(response, 200);
-		} else if (searchParameterInput.equalsIgnoreCase("")) {
+		} else if (searchParameterInput.isBlank()) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
-		} else if (dateInput.equalsIgnoreCase("")) {
+		} else if (dateInput.isBlank()) {
 			BodyValidation.response400Validation(response);
 		} else {
 			BodyValidation.responseValidation(response, 200);
@@ -426,7 +483,7 @@ public class TaskFolderAPITestCases {
 
 		if (response.getBody().asPrettyString().equalsIgnoreCase("[]")) {
 			BodyValidation.responseValidation(response, 200);
-		} else if (dateInput.equalsIgnoreCase("")) {
+		} else if (dateInput.isBlank()) {
 			BodyValidation.response400Validation(response);
 		} else if (EmployeeFolderAPITestCases.employeeIds.contains(employeeIdInput) == false) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
@@ -490,9 +547,9 @@ public class TaskFolderAPITestCases {
 						BodyValidation.responseValidation(response, "Not Found", 404);
 					}
 				}
-			} else if (response.getStatusCode() == 400 || taskScheduleDateInput.equalsIgnoreCase("")) {
+			} else if (response.getStatusCode() == 400 || taskScheduleDateInput.isBlank()) {
 				BodyValidation.response400Validation(response);
-			} else if (response.getStatusCode() == 400 || taskDueDateInput.equalsIgnoreCase("")) {
+			} else if (response.getStatusCode() == 400 || taskDueDateInput.isBlank()) {
 				BodyValidation.response400Validation(response);
 			}
 //			else if (response.getStatusCode() == 200 && VerificationStatusFolderAPITestCases.verificationStatusIds
@@ -554,9 +611,9 @@ public class TaskFolderAPITestCases {
 						BodyValidation.responseValidation(response, "Not Found", 404);
 					}
 				}
-			} else if (response.getStatusCode() == 400 || taskScheduleDateInput.equalsIgnoreCase("")) {
+			} else if (response.getStatusCode() == 400 || taskScheduleDateInput.isBlank()) {
 				BodyValidation.response400Validation(response);
-			} else if (response.getStatusCode() == 400 || taskDueDateInput.equalsIgnoreCase("")) {
+			} else if (response.getStatusCode() == 400 || taskDueDateInput.isBlank()) {
 				BodyValidation.response400Validation(response);
 			}
 //			else if (response.getStatusCode() == 200 && VerificationStatusFolderAPITestCases.verificationStatusIds
@@ -593,7 +650,7 @@ public class TaskFolderAPITestCases {
 
 			if (response.getBody().asPrettyString().equalsIgnoreCase("[]")) {
 				BodyValidation.responseValidation(response, 200);
-			} else if (taskScheduleDate.equalsIgnoreCase("")) {
+			} else if (taskScheduleDate.isBlank()) {
 				BodyValidation.response400Validation(response);
 			} else if (response.getStatusCode() == 404) {
 				for (int taskId : taskIdsInput) {
@@ -601,7 +658,7 @@ public class TaskFolderAPITestCases {
 						BodyValidation.responseValidation(response, "Not Found", 404);
 					}
 				}
-			} else if (response.getStatusCode() == 400 && !taskScheduleDate.equalsIgnoreCase("")) {
+			} else if (response.getStatusCode() == 400 && !taskScheduleDate.isBlank()) {
 				BodyValidation.response400Validation(response);
 			} else if (!EmployeeFolderAPITestCases.employeeIds.contains(employeeIdInput)) {
 				BodyValidation.responseValidation(response, "Not Found", 404);
@@ -653,9 +710,9 @@ public class TaskFolderAPITestCases {
 		response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.addTaskEndpoint);
 
-		if (taskTitleInput.equalsIgnoreCase("")) {
+		if (taskTitleInput.isBlank()) {
 			BodyValidation.response400Validation(response);
-		} else if (response.getStatusCode() == 400 || taskScheduleDateInput.equalsIgnoreCase("")) {
+		} else if (response.getStatusCode() == 400 || taskScheduleDateInput.isBlank()) {
 			BodyValidation.response400Validation(response);
 		} else if (PriorityFolderAPITestCases.priorityIds.contains(taskPriorityInput) == false) {
 			BodyValidation.responseValidation(response, "Not Found", 404);

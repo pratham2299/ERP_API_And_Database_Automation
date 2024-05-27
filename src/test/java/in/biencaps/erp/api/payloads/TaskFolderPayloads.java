@@ -2,26 +2,33 @@ package in.biencaps.erp.api.payloads;
 
 import java.util.*;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
+
+import in.biencaps.erp.api.pojos.*;
 
 public class TaskFolderPayloads {
 	private static Gson gson = new Gson();
+	static ObjectMapper objectMapper = new ObjectMapper();
 
 	public static String giveTaskPayloadForAddTask(String taskTitle, int employeeId, String taskComment,
 			String taskScheduleDate, int taskPriority, int taskStatus, int taskProject, int taskOwner, int taskTag) {
-		HashMap<String, Object> taskMap = new HashMap<>();
-		taskMap.put("taskTitle", Arrays.asList(taskTitle));
-		taskMap.put("employee", Arrays.asList(employeeId));
-		taskMap.put("taskComment", taskComment);
-		taskMap.put("taskScheduleDate", taskScheduleDate);
-		taskMap.put("taskPriority", taskPriority);
-		taskMap.put("taskStatus", taskStatus);
-		taskMap.put("taskProject", taskProject);
-		taskMap.put("taskOwner", taskOwner);
-		taskMap.put("taskTags", Arrays.asList(taskTag));
+		TaskPojo taskObj = new TaskPojo();
+		taskObj.setTaskTitle(taskTitle);
+		taskObj.setEmployee(Arrays.asList(employeeId));
+		taskObj.setTaskStatus(taskStatus);
+		taskObj.setTaskPriority(taskPriority);
+		taskObj.setTaskProject(taskProject);
+		taskObj.setTaskScheduleDate(taskScheduleDate);
+		taskObj.setTaskDueDate(taskScheduleDate);
+		taskObj.setTaskTags(Arrays.asList(taskTag));
+		taskObj.setTaskComment(taskComment);
 
-		String payload = gson.toJson(taskMap);
-		return payload;
+		try {
+			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(taskObj);
+		} catch (Exception e) {
+			throw new RuntimeException("Failed to convert Task object to JSON", e);
+		}
 	}
 
 	public static String giveTaskPayloadForSearchTaskForMonth(String key, int employeeId, int year, int month) {
