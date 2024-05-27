@@ -8,13 +8,14 @@
     <classes>
       <class name="in.biencaps.erp.api.testcases.ProjectFolderAPITestCases">
         <methods>
-          <include name="verify_Add_Project_With_Authorization" invocation-numbers="3 5 8 10"/>
-          <include name="verify_Update_Project_With_Authorization" invocation-numbers="0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15"/>
+          <include name="verify_Add_Project_With_Authorization" invocation-numbers="1 3 6 8 9 10 11"/>
+          <include name="verify_Update_Project_With_Authorization" invocation-numbers="0 1 2 4 7 14"/>
           <include name="extent_Report_Setup"/>
           <include name="startBackendServer"/>
           <include name="verify_Delete_Project_With_Authorization" invocation-numbers="2 3"/>
           <include name="flush_Extent_Report"/>
           <include name="test_Method_Exection_Result"/>
+          <include name="verify_Get_All_Tasks_For_Project_With_Authorization" invocation-numbers="0"/>
         </methods>
       </class> <!-- in.biencaps.erp.api.testcases.ProjectFolderAPITestCases -->
     </classes>

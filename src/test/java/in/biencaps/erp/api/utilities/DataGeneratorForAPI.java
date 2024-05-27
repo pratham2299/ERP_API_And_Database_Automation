@@ -199,7 +199,7 @@ public class DataGeneratorForAPI {
 		return fakeProjectStartDate;
 	}
 
-	public static String generateRandomInvalidProjectStartDate() {
+	public static String generateRandomInvalidProjectEndDate() {
 		LocalDate currentDate = LocalDate.now();
 
 		int randomDays = random.nextInt(30) + 1;

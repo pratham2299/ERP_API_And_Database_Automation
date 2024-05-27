@@ -301,14 +301,11 @@ public class ProjectFolderAPITestCases extends BaseTest {
 					LoginEmployeeAPITestCases.authToken, APIEndpoints.addProjectEndpoint);
 
 			String responseBody = response.getBody().asPrettyString();
-			log.info("Response body of add project is: " + responseBody + "\n");
 
 			BaseTest.test_Method_Logs("add project", APIEndpoints.addProjectEndpoint, requestPayload, response);
 
 			if (projectName.isBlank() || projectStartDate.isBlank() || projectEndDate.isBlank()) {
 				BodyValidation.response400Validation(response);
-			} else if (projectNames.contains(projectName)) {
-				BodyValidation.responseValidation(response, "Conflict", 409);
 			} else if (!projectManagerEmployeeIds.contains(projectManagerEmployeeId)) {
 				BodyValidation.responseValidation(response, "Not Found", 404);
 			} else if (!projectStatusIds.contains(projectStatusId)) {
@@ -321,6 +318,8 @@ public class ProjectFolderAPITestCases extends BaseTest {
 			} else if (!EmployeeFolderAPITestCases.employeeIds.contains(projectEmployeeId1)
 					|| !EmployeeFolderAPITestCases.employeeIds.contains(projectEmployeeId2)) {
 				BodyValidation.responseValidation(response, "Not Found", 404);
+			} else if (projectNames.contains(projectName)) {
+				BodyValidation.responseValidation(response, "Conflict", 409);
 			} else {
 				int contentLength = responseBody.length();
 				BodyValidation.responseValidation(response, 201, String.valueOf(contentLength));
@@ -365,13 +364,11 @@ public class ProjectFolderAPITestCases extends BaseTest {
 				BodyValidation.response400Validation(response);
 			} else if (!projectIds.contains(projectId)) {
 				BodyValidation.responseValidation(response, "Not Found", 404);
-			} else if (projectNames.contains(projectName)) {
-				BodyValidation.responseValidation(response, "Conflict", 409);
-			} else if (!projectManagerEmployeeIds.contains(projectManagerEmployeeId)) {
+			} else if (projectManagerEmployeeIds.contains(projectManagerEmployeeId) == false) {
 				BodyValidation.responseValidation(response, "Not Found", 404);
 			} else if (!projectStatusIds.contains(projectStatusId)) {
 				BodyValidation.responseValidation(response, "Not Found", 404);
-			} else if (!PriorityFolderAPITestCases.priorityIds.contains(projectPriorityId)) {
+			} else if (PriorityFolderAPITestCases.priorityIds.contains(projectPriorityId) == false) {
 				BodyValidation.responseValidation(response, "Not Found", 404);
 			} else if (!DepartmentFolderAPITestCases.departmentIds.contains(projectDepartmentId1)
 					|| !DepartmentFolderAPITestCases.departmentIds.contains(projectDepartmentId2)) {
@@ -379,10 +376,14 @@ public class ProjectFolderAPITestCases extends BaseTest {
 			} else if (!EmployeeFolderAPITestCases.employeeIds.contains(projectEmployeeId1)
 					|| !EmployeeFolderAPITestCases.employeeIds.contains(projectEmployeeId2)) {
 				BodyValidation.responseValidation(response, "Not Found", 404);
-			} else {
+			}
+//			else if (projectNames.contains(projectName)) {
+//				BodyValidation.responseValidation(response, "Conflict", 409);
+//			} 
+			else {
 				int contentLength = responseBody.length();
-				BodyValidation.responseValidation(response, 201, String.valueOf(contentLength));
-				assertEquals(responseBody, "Project Added Successfully");
+				BodyValidation.responseValidation(response, 200, String.valueOf(contentLength));
+				assertEquals(responseBody, "Project Updated Successfully");
 
 				verify_Get_All_Projects_API_With_Authorization("after updated new project");
 

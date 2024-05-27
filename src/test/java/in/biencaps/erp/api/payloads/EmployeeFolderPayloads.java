@@ -19,34 +19,25 @@ public class EmployeeFolderPayloads {
 		employeeObj.setEmpStatus(employeeStatus);
 
 		// Department
-		DepartmentPojo departmentObj = new DepartmentPojo();
+		EmployeePojo.Department departmentObj = new EmployeePojo.Department();
 		departmentObj.setDepartmentId(departmentId);
 		employeeObj.setDepartment(departmentObj);
 
 		// Designation
-		DesignationPojo designationObj = new DesignationPojo();
+		EmployeePojo.Designation designationObj = new EmployeePojo.Designation();
 		designationObj.setDesignationId(designationId);
 		employeeObj.setDesignation(designationObj);
 
 		// Role
-		RolePojo roleObj = new RolePojo();
+		EmployeePojo.Role roleObj = new EmployeePojo.Role();
 		roleObj.setRoleId(roleId);
 		employeeObj.setRole(Arrays.asList(roleObj));
 
 		// Reporting Authorities
-		// Create a list for reporting authorities
-		List<ReportingAuthorityPojo> reportingAuthorities = new ArrayList<>();
-
-		// Randomly decide the number of reporting authorities to add (1 or 2 in this
-		// example)
-		Random random = new Random();
-		int numberOfAuthorities = random.nextInt(3) + 1; // will be either 1 or 2
-
-		for (int i = 0; i < numberOfAuthorities; i++) {
-			ReportingAuthorityPojo authority = new ReportingAuthorityPojo();
-			authority.setEmpId(random.nextInt(reportingAuthorityEmpId) + 1); // random empId between 1 and 100
-			reportingAuthorities.add(authority);
-		}
+		List<EmployeePojo.ReportingAuthority> reportingAuthorities = new ArrayList<>();
+		EmployeePojo.ReportingAuthority reportingAuthorityObj = new EmployeePojo.ReportingAuthority();
+		reportingAuthorityObj.setEmpId(reportingAuthorityEmpId);
+		reportingAuthorities.add(reportingAuthorityObj);
 
 		employeeObj.setReportingAuthorities(reportingAuthorities);
 		employeeObj.setEmpEmailPersonal(employeePersonalEmail);
@@ -71,24 +62,24 @@ public class EmployeeFolderPayloads {
 		employeeObj.setEmpStatus(employeeStatus);
 
 		// Department
-		DepartmentPojo departmentObj = new DepartmentPojo();
+		EmployeePojo.Department departmentObj = new EmployeePojo.Department();
 		departmentObj.setDepartmentId(departmentId);
 		employeeObj.setDepartment(departmentObj);
 
 		// Designation
-		DesignationPojo designationObj = new DesignationPojo();
+		EmployeePojo.Designation designationObj = new EmployeePojo.Designation();
 		designationObj.setDesignationId(designationId);
 		employeeObj.setDesignation(designationObj);
 
 		// Role
-		RolePojo roleObj = new RolePojo();
+		EmployeePojo.Role roleObj = new EmployeePojo.Role();
 		roleObj.setRoleId(roleId);
 		employeeObj.setRole(Arrays.asList(roleObj));
 
 		employeeObj.setEmpMobile1(employeeMobileNumber1);
 		employeeObj.setEmpMobile2(employeeMobileNumber2);
 		employeeObj.setEmpEmailOfficial(employeeEmailOfficial);
-		;
+
 		employeeObj.setEmpEmailPersonal(employeePersonalEmail);
 		employeeObj.setEmpOfficeLocation(employeeOfficeLocation);
 		employeeObj.setEmpBloodGroup(employeeBloodGroup);

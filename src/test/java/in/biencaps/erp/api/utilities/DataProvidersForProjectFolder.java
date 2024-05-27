@@ -12,16 +12,14 @@ public class DataProvidersForProjectFolder {
 
 	@DataProvider(name = "TestDataForAddProject")
 	public Object[][] testDataForAddProject() {
-		String fakeProjectName = DataGeneratorForAPI.generateFakeProjet();
-
 		int randomIndexForProjectName = random.nextInt(ProjectFolderAPITestCases.projectNames.size());
 		String randomProjectName = ProjectFolderAPITestCases.projectNames.get(randomIndexForProjectName);
 
 		String validProjectStartDate = DataGeneratorForAPI.generateRandomValidProjectStartDate();
 		String validProjectEndDate = DataGeneratorForAPI.generateRandomProjectEndDate();
 
-		String invalidProjectStartDate = DataGeneratorForAPI.generateRandomInvalidProjectStartDate();
-		String invalidProjectEndDate1 = validProjectStartDate;
+		String invalidProjectEndDate = DataGeneratorForAPI.generateRandomInvalidProjectEndDate();
+		String invalidProjectStartDate1 = DataGeneratorForAPI.getCurrentDate("yyyy-MM-dd");
 		String invalidProjectEndDate2 = DataGeneratorForAPI.getCurrentDate("yyyy-MM-dd");
 
 		int randomIndexForProjectManagerEmployeeId = random
@@ -57,51 +55,65 @@ public class DataProvidersForProjectFolder {
 		int invalidProjectEmployee = DataGeneratorForAPI.generateFakeNumberWithRange(50, 100);
 
 		return new Object[][] {
-				{ fakeProjectName, validProjectStartDate, validProjectEndDate, randomProjectManagerEmployeeId, 1,
-						randomProjectPriorityId, randomProjectDepartmentId1, randomProjectDepartmentId2,
-						randomProjectEmployeeId1, randomProjectEmployeeId2 },
+				// Entering empty string for only projectName field
 				{ "", validProjectStartDate, validProjectEndDate, randomProjectManagerEmployeeId, 1,
 						randomProjectPriorityId, randomProjectDepartmentId1, randomProjectDepartmentId2,
 						randomProjectEmployeeId1, randomProjectEmployeeId2 },
+				// Entering empty string for only projectStartDate field
+				{ DataGeneratorForAPI.generateFakeProjet(), "", validProjectEndDate, randomProjectManagerEmployeeId, 1,
+						randomProjectPriorityId, randomProjectDepartmentId1, randomProjectDepartmentId1,
+						randomProjectEmployeeId2, randomProjectEmployeeId2 },
+				// Entering projectStartDate as current date and projectEndDate as past date for
+				// only projectStartDate and projectEndDate field
+				{ DataGeneratorForAPI.generateFakeProjet(), invalidProjectStartDate1, invalidProjectEndDate,
+						randomProjectManagerEmployeeId, 1, randomProjectPriorityId, randomProjectDepartmentId1,
+						randomProjectDepartmentId2, randomProjectEmployeeId1, randomProjectEmployeeId2 },
+				// Entering empty string for only projectEndDate field
+				{ DataGeneratorForAPI.generateFakeProjet(), validProjectStartDate, "", randomProjectManagerEmployeeId,
+						1, randomProjectPriorityId, randomProjectDepartmentId1, randomProjectDepartmentId2,
+						randomProjectEmployeeId1, randomProjectEmployeeId2 },
+				// Entering projectEndDate as current date and projectStartDate as past date for
+				// only projectStartDate and projectEndDate field
+				{ DataGeneratorForAPI.generateFakeProjet(), validProjectStartDate, invalidProjectEndDate2,
+						randomProjectManagerEmployeeId, 1, randomProjectPriorityId, randomProjectDepartmentId1,
+						randomProjectDepartmentId2, randomProjectEmployeeId1, randomProjectEmployeeId2 },
+				// Entering invalid projectManager employee Id for only projectManager field
+				{ DataGeneratorForAPI.generateFakeProjet(), validProjectStartDate, validProjectEndDate,
+						invalidProjectManager, 1, randomProjectPriorityId, randomProjectDepartmentId1,
+						randomProjectDepartmentId2, randomProjectEmployeeId1, randomProjectEmployeeId2 },
+				// Entering invalid projectStatus Id for only projectStatusId field
+				{ DataGeneratorForAPI.generateFakeProjet(), validProjectStartDate, validProjectEndDate,
+						randomProjectManagerEmployeeId, invalidProjectStatus, randomProjectPriorityId,
+						randomProjectDepartmentId1, randomProjectDepartmentId2, randomProjectEmployeeId1,
+						randomProjectEmployeeId2 },
+				// Entering invalid projectPriority Id for only projectPriorityId field
+				{ DataGeneratorForAPI.generateFakeProjet(), validProjectStartDate, validProjectEndDate,
+						randomProjectManagerEmployeeId, 1, invalidProjectPriority, randomProjectDepartmentId1,
+						randomProjectDepartmentId2, randomProjectEmployeeId1, randomProjectEmployeeId2 },
+				// Entering invalid projectDepartment Id for only projectDepartmentId1 field
+				{ DataGeneratorForAPI.generateFakeProjet(), validProjectStartDate, validProjectEndDate,
+						randomProjectManagerEmployeeId, 1, randomProjectPriorityId, invalidProjectDepartment,
+						randomProjectDepartmentId2, randomProjectEmployeeId1, randomProjectEmployeeId2 },
+				// Entering invalid projectDepartment Id for only projectDepartmentId2 field
+				{ DataGeneratorForAPI.generateFakeProjet(), validProjectStartDate, validProjectEndDate,
+						randomProjectManagerEmployeeId, 1, randomProjectPriorityId, randomProjectDepartmentId1,
+						invalidProjectDepartment, randomProjectEmployeeId1, randomProjectEmployeeId2 },
+				// Entering invalid projectEmployee Id for only projectEmployeeId1 field
+				{ DataGeneratorForAPI.generateFakeProjet(), validProjectStartDate, validProjectEndDate,
+						randomProjectManagerEmployeeId, 1, randomProjectPriorityId, randomProjectDepartmentId1,
+						randomProjectDepartmentId2, invalidProjectEmployee, randomProjectEmployeeId2 },
+				// Entering invalid projectEmployee Id for only projectEmployeeId2 field
+				{ DataGeneratorForAPI.generateFakeProjet(), validProjectStartDate, validProjectEndDate,
+						randomProjectManagerEmployeeId, 1, randomProjectPriorityId, randomProjectDepartmentId1,
+						randomProjectDepartmentId2, randomProjectEmployeeId1, invalidProjectEmployee },
+				// Entering valid data for all field
+				{ DataGeneratorForAPI.generateFakeProjet(), validProjectStartDate, validProjectEndDate,
+						randomProjectManagerEmployeeId, 1, randomProjectPriorityId, randomProjectDepartmentId1,
+						randomProjectDepartmentId2, randomProjectEmployeeId1, randomProjectEmployeeId2 },
+				// Entering already exist projectName for projectName field
 				{ randomProjectName, validProjectStartDate, validProjectEndDate, randomProjectManagerEmployeeId, 1,
 						randomProjectPriorityId, randomProjectDepartmentId1, randomProjectDepartmentId2,
-						randomProjectEmployeeId1, randomProjectEmployeeId2 },
-				{ fakeProjectName, "", validProjectEndDate, randomProjectManagerEmployeeId, 1, randomProjectPriorityId,
-						randomProjectDepartmentId1, randomProjectDepartmentId1, randomProjectEmployeeId2,
-						randomProjectEmployeeId2 },
-				{ fakeProjectName, invalidProjectStartDate, validProjectEndDate, randomProjectManagerEmployeeId, 1,
-						randomProjectPriorityId, randomProjectDepartmentId1, randomProjectDepartmentId2,
-						randomProjectEmployeeId1, randomProjectEmployeeId2 },
-				{ fakeProjectName, validProjectStartDate, "", randomProjectManagerEmployeeId, 1,
-						randomProjectPriorityId, randomProjectDepartmentId1, randomProjectDepartmentId2,
-						randomProjectEmployeeId1, randomProjectEmployeeId2 },
-				{ fakeProjectName, validProjectStartDate, invalidProjectEndDate1, randomProjectManagerEmployeeId, 1,
-						randomProjectPriorityId, randomProjectDepartmentId1, randomProjectDepartmentId2,
-						randomProjectEmployeeId1, randomProjectEmployeeId2 },
-				{ fakeProjectName, validProjectStartDate, invalidProjectEndDate2, randomProjectManagerEmployeeId, 1,
-						randomProjectPriorityId, randomProjectDepartmentId1, randomProjectDepartmentId2,
-						randomProjectEmployeeId1, randomProjectEmployeeId2 },
-				{ fakeProjectName, validProjectStartDate, validProjectEndDate, invalidProjectManager, 1,
-						randomProjectPriorityId, randomProjectDepartmentId1, randomProjectDepartmentId2,
-						randomProjectEmployeeId1, randomProjectEmployeeId2 },
-				{ fakeProjectName, validProjectStartDate, validProjectEndDate, randomProjectManagerEmployeeId,
-						invalidProjectStatus, randomProjectPriorityId, randomProjectDepartmentId1,
-						randomProjectDepartmentId2, randomProjectEmployeeId1, randomProjectEmployeeId2 },
-				{ fakeProjectName, validProjectStartDate, validProjectEndDate, randomProjectManagerEmployeeId, 1,
-						invalidProjectPriority, randomProjectDepartmentId1, randomProjectDepartmentId2,
-						randomProjectEmployeeId1, randomProjectEmployeeId2 },
-				{ fakeProjectName, validProjectStartDate, validProjectEndDate, randomProjectManagerEmployeeId, 1,
-						randomProjectPriorityId, invalidProjectDepartment, randomProjectDepartmentId2,
-						randomProjectEmployeeId1, randomProjectEmployeeId2 },
-				{ fakeProjectName, validProjectStartDate, validProjectEndDate, randomProjectManagerEmployeeId, 1,
-						randomProjectPriorityId, randomProjectDepartmentId1, invalidProjectDepartment,
-						randomProjectEmployeeId1, randomProjectEmployeeId2 },
-				{ fakeProjectName, validProjectStartDate, validProjectEndDate, randomProjectManagerEmployeeId, 1,
-						randomProjectPriorityId, randomProjectDepartmentId1, randomProjectDepartmentId2,
-						invalidProjectEmployee, randomProjectEmployeeId2 },
-				{ fakeProjectName, validProjectStartDate, validProjectEndDate, randomProjectManagerEmployeeId, 1,
-						randomProjectPriorityId, randomProjectDepartmentId1, randomProjectDepartmentId2,
-						randomProjectEmployeeId1, invalidProjectEmployee } };
+						randomProjectEmployeeId1, randomProjectEmployeeId2 } };
 	}
 
 	@DataProvider(name = "TestDataForUpdateProject")
@@ -109,16 +121,14 @@ public class DataProvidersForProjectFolder {
 		int invalidProjectId = DataGeneratorForAPI.generateFakeNumberWithRange(
 				ProjectFolderAPITestCases.newCreatedProjectId + 10, ProjectFolderAPITestCases.newCreatedProjectId + 50);
 
-		String fakeProjectName = DataGeneratorForAPI.generateFakeProjet();
-
 		int randomIndexForProjectName = random.nextInt(ProjectFolderAPITestCases.projectNames.size());
 		String randomProjectName = ProjectFolderAPITestCases.projectNames.get(randomIndexForProjectName);
 
 		String validProjectStartDate = DataGeneratorForAPI.generateRandomValidProjectStartDate();
 		String validProjectEndDate = DataGeneratorForAPI.generateRandomProjectEndDate();
 
-		String invalidProjectStartDate = DataGeneratorForAPI.generateRandomInvalidProjectStartDate();
-		String invalidProjectEndDate1 = validProjectStartDate;
+		String invalidProjectEndDate = DataGeneratorForAPI.generateRandomInvalidProjectEndDate();
+		String invalidProjectStartDate1 = DataGeneratorForAPI.getCurrentDate("yyyy-MM-dd");
 		String invalidProjectEndDate2 = DataGeneratorForAPI.getCurrentDate("yyyy-MM-dd");
 
 		int randomIndexForProjectManagerEmployeeId = random
@@ -126,8 +136,14 @@ public class DataProvidersForProjectFolder {
 		int randomProjectManagerEmployeeId = ProjectFolderAPITestCases.projectManagerEmployeeIds
 				.get(randomIndexForProjectManagerEmployeeId);
 
+		int invalidProjectManager = DataGeneratorForAPI.generateFakeNumberWithRange(50, 100);
+
+		int invalidProjectStatus = DataGeneratorForAPI.generateFakeNumberWithRange(50, 100);
+
 		int randomIndexForProjectPriorityId = random.nextInt(PriorityFolderAPITestCases.priorityIds.size());
 		int randomProjectPriorityId = PriorityFolderAPITestCases.priorityIds.get(randomIndexForProjectPriorityId);
+
+		int invalidProjectPriority = DataGeneratorForAPI.generateFakeNumberWithRange(50, 100);
 
 		int randomIndexForProjectDepartmentId1 = random.nextInt(DepartmentFolderAPITestCases.departmentIds.size());
 		int randomProjectDepartmentId1 = DepartmentFolderAPITestCases.departmentIds
@@ -148,66 +164,82 @@ public class DataProvidersForProjectFolder {
 		int invalidProjectEmployee = DataGeneratorForAPI.generateFakeNumberWithRange(50, 100);
 
 		return new Object[][] {
-				{ ProjectFolderAPITestCases.newCreatedProjectId, fakeProjectName, validProjectStartDate,
+				// Entering invalid projectId for only projectId field
+				{ invalidProjectId, DataGeneratorForAPI.generateFakeProjet(), validProjectStartDate,
 						validProjectEndDate, randomProjectManagerEmployeeId, 1, randomProjectPriorityId,
 						randomProjectDepartmentId1, randomProjectDepartmentId2, randomProjectEmployeeId1,
 						randomProjectEmployeeId2 },
-				{ invalidProjectId, fakeProjectName, validProjectStartDate, validProjectEndDate,
-						randomProjectManagerEmployeeId, 1, randomProjectPriorityId, randomProjectDepartmentId1,
-						randomProjectDepartmentId2, randomProjectEmployeeId1, randomProjectEmployeeId2 },
+				// Entering empty string for only projectName field
 				{ ProjectFolderAPITestCases.newCreatedProjectId, "", validProjectStartDate, validProjectEndDate,
 						randomProjectManagerEmployeeId, 1, randomProjectPriorityId, randomProjectDepartmentId1,
 						randomProjectDepartmentId2, randomProjectEmployeeId1, randomProjectEmployeeId2 },
+				// Entering empty string for only projectStartDate field
+				{ ProjectFolderAPITestCases.newCreatedProjectId, DataGeneratorForAPI.generateFakeProjet(), "",
+						validProjectEndDate, randomProjectManagerEmployeeId, 1, randomProjectPriorityId,
+						randomProjectDepartmentId1, randomProjectDepartmentId2, randomProjectEmployeeId1,
+						randomProjectEmployeeId2 },
+				// Entering projectStartDate as current date and projectEndDate as past date for
+				// only projectStartDate and projectEndDate field
+				{ ProjectFolderAPITestCases.newCreatedProjectId, DataGeneratorForAPI.generateFakeProjet(),
+						invalidProjectStartDate1, invalidProjectEndDate, randomProjectManagerEmployeeId, 1,
+						randomProjectPriorityId, randomProjectDepartmentId1, randomProjectDepartmentId2,
+						randomProjectEmployeeId1, randomProjectEmployeeId2 },
+				// Entering empty string for only projectEndDate field
+				{ ProjectFolderAPITestCases.newCreatedProjectId, DataGeneratorForAPI.generateFakeProjet(),
+						validProjectStartDate, "", randomProjectManagerEmployeeId, 1, randomProjectPriorityId,
+						randomProjectDepartmentId1, randomProjectDepartmentId2, randomProjectEmployeeId1,
+						randomProjectEmployeeId2 },
+				// Entering projectEndDate as current date and projectStartDate as past date for
+				// only projectStartDate and projectEndDate field
+				{ ProjectFolderAPITestCases.newCreatedProjectId, DataGeneratorForAPI.generateFakeProjet(),
+						validProjectStartDate, invalidProjectEndDate2, randomProjectManagerEmployeeId, 1,
+						randomProjectPriorityId, randomProjectDepartmentId1, randomProjectDepartmentId2,
+						randomProjectEmployeeId1, randomProjectEmployeeId2 },
+				// Entering invalid projectManager employee Id for only projectManager field
+				{ ProjectFolderAPITestCases.newCreatedProjectId, DataGeneratorForAPI.generateFakeProjet(),
+						validProjectStartDate, validProjectEndDate, invalidProjectManager, 1, randomProjectPriorityId,
+						randomProjectDepartmentId1, randomProjectDepartmentId2, randomProjectEmployeeId1,
+						randomProjectEmployeeId2 },
+				// Entering invalid projectStatus Id for only projectStatusId field
+				{ ProjectFolderAPITestCases.newCreatedProjectId, DataGeneratorForAPI.generateFakeProjet(),
+						validProjectStartDate, validProjectEndDate, randomProjectManagerEmployeeId,
+						invalidProjectStatus, randomProjectPriorityId, randomProjectDepartmentId1,
+						randomProjectDepartmentId2, randomProjectEmployeeId1, randomProjectEmployeeId2 },
+				// Entering invalid projectPriority Id for only projectPriorityId field
+				{ ProjectFolderAPITestCases.newCreatedProjectId, DataGeneratorForAPI.generateFakeProjet(),
+						validProjectStartDate, validProjectEndDate, randomProjectManagerEmployeeId, 1,
+						invalidProjectPriority, randomProjectDepartmentId1, randomProjectDepartmentId2,
+						randomProjectEmployeeId1, randomProjectEmployeeId2 },
+				// Entering invalid projectDepartment Id for only projectDepartmentId1 field
+				{ ProjectFolderAPITestCases.newCreatedProjectId, DataGeneratorForAPI.generateFakeProjet(),
+						validProjectStartDate, validProjectEndDate, randomProjectManagerEmployeeId, 1,
+						randomProjectPriorityId, invalidProjectDepartment, randomProjectDepartmentId2,
+						randomProjectEmployeeId1, randomProjectEmployeeId2 },
+				// Entering invalid projectDepartment Id for only projectDepartmentId2 field
+				{ ProjectFolderAPITestCases.newCreatedProjectId, DataGeneratorForAPI.generateFakeProjet(),
+						validProjectStartDate, validProjectEndDate, randomProjectManagerEmployeeId, 1,
+						randomProjectPriorityId, randomProjectDepartmentId1, invalidProjectDepartment,
+						randomProjectEmployeeId1, randomProjectEmployeeId2 },
+				// Entering invalid projectEmployee Id for only projectEmployeeId1 field
+				{ ProjectFolderAPITestCases.newCreatedProjectId, DataGeneratorForAPI.generateFakeProjet(),
+						validProjectStartDate, validProjectEndDate, randomProjectManagerEmployeeId, 1,
+						randomProjectPriorityId, randomProjectDepartmentId1, randomProjectDepartmentId2,
+						invalidProjectEmployee, randomProjectEmployeeId2 },
+				// Entering invalid projectEmployee Id for only projectEmployeeId2 field
+				{ ProjectFolderAPITestCases.newCreatedProjectId, DataGeneratorForAPI.generateFakeProjet(),
+						validProjectStartDate, validProjectEndDate, randomProjectManagerEmployeeId, 1,
+						randomProjectPriorityId, randomProjectDepartmentId1, randomProjectDepartmentId1,
+						randomProjectEmployeeId1, invalidProjectEmployee },
+				// Entering valid data for all field
+				{ ProjectFolderAPITestCases.newCreatedProjectId, DataGeneratorForAPI.generateFakeProjet(),
+						validProjectStartDate, validProjectEndDate, randomProjectManagerEmployeeId, 1,
+						randomProjectPriorityId, randomProjectDepartmentId1, randomProjectDepartmentId2,
+						randomProjectEmployeeId1, randomProjectEmployeeId2 },
+				// Entering already exist projectName for projectName field
 				{ ProjectFolderAPITestCases.newCreatedProjectId, randomProjectName, validProjectStartDate,
 						validProjectEndDate, randomProjectManagerEmployeeId, 1, randomProjectPriorityId,
 						randomProjectDepartmentId1, randomProjectDepartmentId2, randomProjectEmployeeId1,
-						randomProjectEmployeeId2 },
-				{ ProjectFolderAPITestCases.newCreatedProjectId, fakeProjectName, "", validProjectEndDate,
-						randomProjectManagerEmployeeId, 1, randomProjectPriorityId, randomProjectDepartmentId1,
-						randomProjectDepartmentId2, randomProjectEmployeeId1, randomProjectEmployeeId2 },
-				{ ProjectFolderAPITestCases.newCreatedProjectId, fakeProjectName, invalidProjectStartDate,
-						validProjectEndDate, randomProjectManagerEmployeeId, 1, randomProjectPriorityId,
-						randomProjectDepartmentId1, randomProjectDepartmentId2, randomProjectEmployeeId1,
-						randomProjectEmployeeId2 },
-				{ ProjectFolderAPITestCases.newCreatedProjectId, fakeProjectName, validProjectStartDate, "",
-						randomProjectManagerEmployeeId, 1, randomProjectPriorityId, randomProjectDepartmentId1,
-						randomProjectDepartmentId2, randomProjectEmployeeId1, randomProjectEmployeeId2 },
-				{ ProjectFolderAPITestCases.newCreatedProjectId, fakeProjectName, validProjectStartDate,
-						invalidProjectEndDate1, randomProjectManagerEmployeeId, 1, randomProjectPriorityId,
-						randomProjectDepartmentId1, randomProjectDepartmentId2, randomProjectEmployeeId1,
-						randomProjectEmployeeId2 },
-				{ ProjectFolderAPITestCases.newCreatedProjectId, fakeProjectName, validProjectStartDate,
-						invalidProjectEndDate2, randomProjectManagerEmployeeId, 1, randomProjectPriorityId,
-						randomProjectDepartmentId1, randomProjectDepartmentId2, randomProjectEmployeeId1,
-						randomProjectEmployeeId2 },
-				{ ProjectFolderAPITestCases.newCreatedProjectId, fakeProjectName, validProjectStartDate,
-						validProjectEndDate, faker.number().numberBetween(50, 100), 1, randomProjectPriorityId,
-						randomProjectDepartmentId1, randomProjectDepartmentId2, randomProjectEmployeeId1,
-						randomProjectEmployeeId2 },
-				{ ProjectFolderAPITestCases.newCreatedProjectId, fakeProjectName, validProjectStartDate,
-						validProjectEndDate, randomProjectManagerEmployeeId, faker.number().numberBetween(10, 20),
-						randomProjectPriorityId, randomProjectDepartmentId1, randomProjectDepartmentId2,
-						randomProjectEmployeeId1, randomProjectEmployeeId2 },
-				{ ProjectFolderAPITestCases.newCreatedProjectId, fakeProjectName, validProjectStartDate,
-						validProjectEndDate, randomProjectManagerEmployeeId, 1, faker.number().numberBetween(50, 100),
-						randomProjectDepartmentId1, randomProjectDepartmentId2, randomProjectEmployeeId1,
-						randomProjectEmployeeId2 },
-				{ ProjectFolderAPITestCases.newCreatedProjectId, fakeProjectName, validProjectStartDate,
-						validProjectEndDate, randomProjectManagerEmployeeId, 1, randomProjectPriorityId,
-						invalidProjectDepartment, randomProjectDepartmentId2, randomProjectEmployeeId1,
-						randomProjectEmployeeId2 },
-				{ ProjectFolderAPITestCases.newCreatedProjectId, fakeProjectName, validProjectStartDate,
-						validProjectEndDate, randomProjectManagerEmployeeId, 1, randomProjectPriorityId,
-						randomProjectDepartmentId1, invalidProjectDepartment, randomProjectEmployeeId1,
-						randomProjectEmployeeId2 },
-				{ ProjectFolderAPITestCases.newCreatedProjectId, fakeProjectName, validProjectStartDate,
-						validProjectEndDate, randomProjectManagerEmployeeId, 1, randomProjectPriorityId,
-						randomProjectDepartmentId1, randomProjectDepartmentId2, invalidProjectEmployee,
-						randomProjectEmployeeId2 },
-				{ ProjectFolderAPITestCases.newCreatedProjectId, fakeProjectName, validProjectStartDate,
-						validProjectEndDate, randomProjectManagerEmployeeId, 1, randomProjectPriorityId,
-						randomProjectDepartmentId1, randomProjectDepartmentId1, randomProjectEmployeeId1,
-						invalidProjectEmployee } };
+						randomProjectEmployeeId2 } };
 	}
 
 	@DataProvider(name = "TestDataForGetAllProjectsByDepartment")

@@ -10,19 +10,19 @@ public class EmployeePojo {
 	private String userId;
 	private String empFullName;
 	private String empStatus;
-	private DesignationPojo designation;
-	private DepartmentPojo department;
-	private List<RolePojo> role;
-	private List<ReportingAuthorityPojo> reportingAuthorities;
+	private Designation designation;
+	private Department department;
+	private List<Role> role;
+	private List<ReportingAuthority> reportingAuthorities;
 	private String empEmailOfficial;
 	private String empEmailPersonal;
 	private String empMobile1;
-	private String empMobile2; // Optional
 	private String empOfficeLocation;
 	private String empJoiningDate;
-	private String empDOB; // Optional
-	private String empBloodGroup; // Optional
-	private String empAddress; // Optional
+	private String empMobile2; // optional
+	private String empDOB; // optional
+	private String empBloodGroup; // optional
+	private String empAddress; // optional
 	private String loginId;
 	private String oldPassword;
 	private String newPassword;
@@ -35,22 +35,22 @@ public class EmployeePojo {
 	public EmployeePojo() {
 	}
 
-	// Getters and Setters
-	public int getEmpId() {
-		return empId;
-	}
-
-	public void setEmpId(int empId) {
-		this.empId = empId;
-	}
-
 	// Getters and setters
+
 	public String getUserId() {
 		return userId;
 	}
 
 	public void setUserId(String userId) {
 		this.userId = userId;
+	}
+
+	public int getEmpId() {
+		return empId;
+	}
+
+	public void setEmpId(int empId) {
+		this.empId = empId;
 	}
 
 	public String getEmpFullName() {
@@ -69,44 +69,36 @@ public class EmployeePojo {
 		this.empStatus = empStatus;
 	}
 
-	public DesignationPojo getDesignation() {
+	public Designation getDesignation() {
 		return designation;
 	}
 
-	public void setDesignation(DesignationPojo designation) {
+	public void setDesignation(Designation designation) {
 		this.designation = designation;
 	}
 
-	public DepartmentPojo getDepartment() {
+	public Department getDepartment() {
 		return department;
 	}
 
-	public void setDepartment(DepartmentPojo department) {
+	public void setDepartment(Department department) {
 		this.department = department;
 	}
 
-	public List<RolePojo> getRole() {
+	public List<Role> getRole() {
 		return role;
 	}
 
-	public void setRole(List<RolePojo> role) {
+	public void setRole(List<Role> role) {
 		this.role = role;
 	}
 
-	public List<ReportingAuthorityPojo> getReportingAuthorities() {
+	public List<ReportingAuthority> getReportingAuthorities() {
 		return reportingAuthorities;
 	}
 
-	public void setReportingAuthorities(List<ReportingAuthorityPojo> reportingAuthorities) {
+	public void setReportingAuthorities(List<ReportingAuthority> reportingAuthorities) {
 		this.reportingAuthorities = reportingAuthorities;
-	}
-
-	public String getEmpEmailPersonal() {
-		return empEmailPersonal;
-	}
-
-	public void setEmpEmailPersonal(String empEmailPersonal) {
-		this.empEmailPersonal = empEmailPersonal;
 	}
 
 	public String getEmpEmailOfficial() {
@@ -117,20 +109,20 @@ public class EmployeePojo {
 		this.empEmailOfficial = empEmailOfficial;
 	}
 
+	public String getEmpEmailPersonal() {
+		return empEmailPersonal;
+	}
+
+	public void setEmpEmailPersonal(String empEmailPersonal) {
+		this.empEmailPersonal = empEmailPersonal;
+	}
+
 	public String getEmpMobile1() {
 		return empMobile1;
 	}
 
 	public void setEmpMobile1(String empMobile1) {
 		this.empMobile1 = empMobile1;
-	}
-
-	public String getEmpMobile2() {
-		return empMobile2;
-	}
-
-	public void setEmpMobile2(String empMobile2) {
-		this.empMobile2 = empMobile2;
 	}
 
 	public String getEmpOfficeLocation() {
@@ -147,6 +139,14 @@ public class EmployeePojo {
 
 	public void setEmpJoiningDate(String empJoiningDate) {
 		this.empJoiningDate = empJoiningDate;
+	}
+
+	public String getEmpMobile2() {
+		return empMobile2;
+	}
+
+	public void setEmpMobile2(String empMobile2) {
+		this.empMobile2 = empMobile2;
 	}
 
 	public String getEmpDOB() {
@@ -235,5 +235,58 @@ public class EmployeePojo {
 
 	public void setToken(String token) {
 		this.token = token;
+	}
+
+	// Inner classes for nested objects
+	public static class Designation {
+		private int designationId;
+
+		// Getters and setters
+		public int getDesignationId() {
+			return designationId;
+		}
+
+		public void setDesignationId(int designationId) {
+			this.designationId = designationId;
+		}
+	}
+
+	public static class Department {
+		private int departmentId;
+
+		// Getters and setters
+		public int getDepartmentId() {
+			return departmentId;
+		}
+
+		public void setDepartmentId(int departmentId) {
+			this.departmentId = departmentId;
+		}
+	}
+
+	public static class Role {
+		private int roleId;
+
+		// Getters and setters
+		public int getRoleId() {
+			return roleId;
+		}
+
+		public void setRoleId(int roleId) {
+			this.roleId = roleId;
+		}
+	}
+
+	public static class ReportingAuthority {
+		private int empId;
+
+		// Getters and setters
+		public int getEmpId() {
+			return empId;
+		}
+
+		public void setEmpId(int empId) {
+			this.empId = empId;
+		}
 	}
 }

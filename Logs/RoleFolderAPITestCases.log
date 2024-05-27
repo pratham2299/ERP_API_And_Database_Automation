@@ -1,4 +1,12 @@
-14:57:37.305 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - List of role Ids before add new role are: [1, 2, 3, 4, 5]
-14:57:37.316 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - List of roles before add new role are: [Super Admin, Admin, Team Lead, Lead, Developer]
-14:57:37.325 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - List of role Levels before add new role are: [1, 2, 3, 4, 5]
+15:45:25.196 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - List of role Ids before add new role are: [1, 2, 3, 4, 5]
+15:45:25.203 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - List of roles before add new role are: [Super Admin, Admin, Team Lead, Lead, Developer]
+15:45:25.214 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - List of role Levels before add new role are: [1, 2, 3, 4, 5]
+
+16:02:34.228 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - List of role Ids before add new role are: [1, 2, 3, 4, 5]
+16:02:34.245 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - List of roles before add new role are: [Super Admin, Admin, Team Lead, Lead, Developer]
+16:02:34.265 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - List of role Levels before add new role are: [1, 2, 3, 4, 5]
+
+16:07:14.794 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - List of role Ids before add new role are: [1, 2, 3, 4, 5]
+16:07:14.803 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - List of roles before add new role are: [Super Admin, Admin, Team Lead, Lead, Developer]
+16:07:14.814 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - List of role Levels before add new role are: [1, 2, 3, 4, 5]
 
