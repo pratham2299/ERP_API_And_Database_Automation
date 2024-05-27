@@ -58,3 +58,83 @@
 
 16:07:27.528 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - Random role level for get all higher authority is => 4
 
+16:34:08.481 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - List of department Ids before add new department are =>[1, 2, 3, 4, 5, 6, 7, 8]
+16:34:08.490 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - List of department names before add new department are =>[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Graphics]
+16:34:08.499 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - List of department levels before add new department are =>[0, 1, 2, 3, 4, 5, 6, 7]
+16:34:08.508 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - List of department colors before add new department are =>[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, melon]
+16:34:08.516 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - List of department color codes before add new department are =>[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA]
+
+16:34:09.584 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - Max value of user Id is => INC020
+16:34:09.586 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - New User Id for get user id is => INC021
+
+16:34:10.584 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - Random department name for get all employees by department is  => Management
+
+16:34:12.113 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - Random designation name for get all employees by designation is => Admin
+
+16:34:12.905 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - Random role Id for get all assignee is => 2
+
+16:34:13.907 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - Random role level for get all higher authority is => 3
+16:34:13.907 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - New created department name for get all higher authority is => Management
+
+16:34:15.044 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - Random role level for get all higher authority is => 4
+
+16:45:40.221 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - List of department Ids before add new department are =>[1, 2, 3, 4, 5, 6, 7, 8]
+16:45:40.231 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - List of department names before add new department are =>[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Graphics]
+16:45:40.238 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - List of department levels before add new department are =>[0, 1, 2, 3, 4, 5, 6, 7]
+16:45:40.249 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - List of department colors before add new department are =>[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, melon]
+16:45:40.259 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - List of department color codes before add new department are =>[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA]
+
+16:45:41.612 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - Max value of user Id is => INC020
+16:45:41.612 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - New User Id for get user id is => INC021
+
+16:45:43.228 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - Random department name for get all employees by department is  => UI/UX
+
+16:45:44.250 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - Random designation name for get all employees by designation is => CTO
+
+16:45:45.980 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - Random role Id for get all assignee is => 4
+
+16:45:47.520 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - Random role level for get all higher authority is => 4
+16:45:47.520 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - New created department name for get all higher authority is => Mobile
+
+16:45:48.844 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - Random role level for get all higher authority is => 3
+
+16:50:46.795 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - List of department Ids before add new department are =>[1, 2, 3, 4, 5, 6, 7, 8]
+16:50:46.811 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - List of department names before add new department are =>[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Graphics]
+16:50:46.827 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - List of department levels before add new department are =>[0, 1, 2, 3, 4, 5, 6, 7]
+16:50:46.844 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - List of department colors before add new department are =>[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, melon]
+16:50:46.859 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - List of department color codes before add new department are =>[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA]
+
+16:50:48.147 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - Max value of user Id is => INC020
+16:50:48.148 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - New User Id for get user id is => INC021
+
+16:50:49.202 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - Random department name for get all employees by department is  => Frontend
+
+16:50:50.885 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - Random designation name for get all employees by designation is => Team Lead
+
+16:50:52.316 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - Random role Id for get all assignee is => 3
+
+16:50:53.287 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - Random role level for get all higher authority is => 1
+16:50:53.287 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - New created department name for get all higher authority is => Frontend
+
+16:50:54.310 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - Random role level for get all higher authority is => 4
+
+16:55:21.993 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - List of department Ids before add new department are =>[1, 2, 3, 4, 5, 6, 7, 8]
+16:55:22.011 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - List of department names before add new department are =>[Frontend, Backend, QA, Management, UI/UX, Mobile, Video, Graphics]
+16:55:22.027 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - List of department levels before add new department are =>[0, 1, 2, 3, 4, 5, 6, 7]
+16:55:22.043 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - List of department colors before add new department are =>[turquoise, royal blue, rust, teal, bright pink, magenta, cherry, melon]
+16:55:22.056 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - List of department color codes before add new department are =>[#BBE4E7, #A6B1D0, #F3CEA9, #A1D0CE, #FFBDD1, #FF9DCF, #F4A3B3, #FDBEBA]
+
+16:55:23.072 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - Max value of user Id is => INC020
+16:55:23.072 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - New User Id for get user id is => INC021
+
+16:55:23.885 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - Random department name for get all employees by department is  => UI/UX
+
+16:55:25.101 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - Random designation name for get all employees by designation is => Intern
+
+16:55:26.496 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - Random role Id for get all assignee is => 5
+
+16:55:27.335 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - Random role level for get all higher authority is => 1
+16:55:27.335 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - New created department name for get all higher authority is => Video
+
+16:55:28.121 --> in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases - Random role level for get all higher authority is => 1
+

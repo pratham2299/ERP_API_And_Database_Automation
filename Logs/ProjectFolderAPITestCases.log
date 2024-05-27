@@ -992,3 +992,681 @@
     "path": "/erp/project/delete"
 }
 
+16:34:48.172 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project Ids are: [19, 22, 5, 4, 1, 2]
+16:34:48.207 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project names are: [Test Project, Core2Web, Coffee Shop App, Incubators, E commerce, Enterprise Resource Planning]
+
+16:34:52.555 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project manager employee Ids are: [7, 6, 1, 9]
+16:34:53.196 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project status Ids are: [1, 2, 3]
+16:34:59.262 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project Ids are: [209, 19, 22, 5, 4, 1, 2]
+16:34:59.289 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project names are: [Sonsing, Test Project, Core2Web, Coffee Shop App, Incubators, E commerce, Enterprise Resource Planning]
+
+16:34:59.322 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project Id is: 209
+16:34:59.361 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project name after added new project is => Sonsing
+16:34:59.390 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after added new project is => 2024-05-27
+16:34:59.436 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after added new project is => 2024-05-14
+16:34:59.473 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project manager employee Id after added new project is => 6
+16:34:59.499 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project status Id after added new project is => 1
+16:34:59.532 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project priority Id after added new project is => 2
+16:34:59.562 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 1 after added new project is => 8
+16:34:59.598 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 2 after added new project is => 2
+16:34:59.638 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 1 after added new project is => 10
+16:34:59.676 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 2 after added new project is => 1
+16:35:05.332 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project Ids are: [210, 209, 19, 22, 5, 4, 1, 2]
+16:35:05.357 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project names are: [Tres-Zap, Sonsing, Test Project, Core2Web, Coffee Shop App, Incubators, E commerce, Enterprise Resource Planning]
+
+16:35:05.381 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project Id is: 210
+16:35:05.411 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project name after added new project is => Tres-Zap
+16:35:05.443 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after added new project is => 2024-05-29
+16:35:05.474 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after added new project is => 2024-05-27
+16:35:05.501 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project manager employee Id after added new project is => 6
+16:35:05.530 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project status Id after added new project is => 1
+16:35:05.559 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project priority Id after added new project is => 2
+16:35:05.591 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 1 after added new project is => 8
+16:35:05.618 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 2 after added new project is => 2
+16:35:05.645 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 1 after added new project is => 10
+16:35:05.678 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 2 after added new project is => 1
+16:35:15.261 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project Ids are: [210, 216, 209, 19, 22, 5, 4, 1, 2]
+16:35:15.286 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project names are: [Tres-Zap, Asoka, Sonsing, Test Project, Core2Web, Coffee Shop App, Incubators, E commerce, Enterprise Resource Planning]
+
+16:35:15.313 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project Id is: 216
+16:35:15.347 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project name after added new project is => Asoka
+16:35:15.378 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after added new project is => 2024-05-29
+16:35:15.417 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after added new project is => 2025-05-27
+16:35:15.446 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project manager employee Id after added new project is => 6
+16:35:15.476 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project status Id after added new project is => 1
+16:35:15.506 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project priority Id after added new project is => 2
+16:35:15.541 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 1 after added new project is => 8
+16:35:15.574 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 2 after added new project is => 2
+16:35:15.604 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 1 after added new project is => 10
+16:35:15.632 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 2 after added new project is => 1
+16:35:19.996 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of update project is: {
+    "timestamp": "2024-05-27T11:05:21.613+00:00",
+    "status": 500,
+    "error": "Internal Server Error",
+    "message": "Cannot invoke \"biencaps.erp.entity.ProjectEntity.getProjectManager()\" because \"project1\" is null",
+    "path": "/erp/project/update"
+}
+
+16:35:21.226 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of update project is: {
+    "timestamp": "2024-05-27T11:05:22.913+00:00",
+    "status": 422,
+    "error": "Unprocessable Entity",
+    "message": "Project Title cannot be null",
+    "path": "/erp/project/update"
+}
+
+16:35:22.264 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of update project is: {
+    "timestamp": "2024-05-27T11:05:24.026+00:00",
+    "status": 422,
+    "error": "Unprocessable Entity",
+    "message": "Start date cannot be null",
+    "path": "/erp/project/update"
+}
+
+16:35:23.274 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of update project is: Project Updated Successfully
+
+16:35:26.209 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project Ids are: [210, 209, 216, 19, 22, 5, 4, 1, 2]
+16:35:26.234 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project names are: [Tres-Zap, Sonsing, Konklux, Test Project, Core2Web, Coffee Shop App, Incubators, E commerce, Enterprise Resource Planning]
+
+16:35:26.260 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project Id is: 216
+16:35:26.287 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project name after updated new project is => Konklux
+16:35:26.328 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after updated new project is => 2024-05-27
+16:35:26.362 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after updated new project is => 2024-05-01
+16:35:26.395 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project manager employee Id after updated new project is => 7
+16:35:26.426 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project status Id after updated new project is => 1
+16:35:26.458 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project priority Id after updated new project is => 3
+16:35:26.508 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 1 after updated new project is => 4
+16:35:26.536 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 2 after updated new project is => 6
+16:35:26.568 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 1 after updated new project is => 3
+16:35:26.600 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 2 after updated new project is => 3
+16:35:27.575 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of update project is: {
+    "timestamp": "2024-05-27T11:05:29.220+00:00",
+    "status": 422,
+    "error": "Unprocessable Entity",
+    "message": "End date cannot be null",
+    "path": "/erp/project/update"
+}
+
+16:35:28.536 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of update project is: Project Updated Successfully
+
+16:35:30.923 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project Ids are: [216, 210, 209, 19, 22, 5, 4, 1, 2]
+16:35:30.947 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project names are: [Vagram, Tres-Zap, Sonsing, Test Project, Core2Web, Coffee Shop App, Incubators, E commerce, Enterprise Resource Planning]
+
+16:35:30.974 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project Id is: 216
+16:35:31.007 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project name after updated new project is => Vagram
+16:35:31.032 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after updated new project is => 2024-06-01
+16:35:31.054 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after updated new project is => 2024-05-27
+16:35:31.078 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project manager employee Id after updated new project is => 7
+16:35:31.107 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project status Id after updated new project is => 1
+16:35:31.139 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project priority Id after updated new project is => 3
+16:35:31.166 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 1 after updated new project is => 4
+16:35:31.194 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 2 after updated new project is => 6
+16:35:31.230 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 1 after updated new project is => 3
+16:35:31.257 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 2 after updated new project is => 3
+16:35:32.284 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of update project is: {
+    "timestamp": "2024-05-27T11:05:33.904+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "message": "Employee not Found",
+    "path": "/erp/project/update"
+}
+
+16:35:33.514 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of update project is: Project Updated Successfully
+
+16:35:34.538 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of update project is: {
+    "timestamp": "2024-05-27T11:05:36.200+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "message": "Project Priority not Found",
+    "path": "/erp/project/update"
+}
+
+16:35:35.254 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of update project is: {
+    "timestamp": "2024-05-27T11:05:37.007+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "message": "Department Not Found",
+    "path": "/erp/project/update"
+}
+
+16:35:36.176 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of update project is: {
+    "timestamp": "2024-05-27T11:05:37.734+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "message": "Department Not Found",
+    "path": "/erp/project/update"
+}
+
+16:35:36.996 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of update project is: {
+    "timestamp": "2024-05-27T11:05:38.664+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "message": "Employee Not Found",
+    "path": "/erp/project/update"
+}
+
+16:35:37.891 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of update project is: {
+    "timestamp": "2024-05-27T11:05:39.652+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "message": "Employee Not Found",
+    "path": "/erp/project/update"
+}
+
+16:35:38.745 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of update project is: Project Updated Successfully
+
+16:35:40.596 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project Ids are: [216, 210, 209, 19, 22, 5, 4, 1, 2]
+16:35:40.621 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project names are: [Fix San, Tres-Zap, Sonsing, Test Project, Core2Web, Coffee Shop App, Incubators, E commerce, Enterprise Resource Planning]
+
+16:35:40.646 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project Id is: 216
+16:35:40.677 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project name after updated new project is => Fix San
+16:35:40.704 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after updated new project is => 2024-06-01
+16:35:40.731 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after updated new project is => 2024-08-27
+16:35:40.760 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project manager employee Id after updated new project is => 7
+16:35:40.792 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project status Id after updated new project is => 1
+16:35:40.825 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project priority Id after updated new project is => 3
+16:35:40.854 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 1 after updated new project is => 4
+16:35:40.886 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 2 after updated new project is => 6
+16:35:40.912 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 1 after updated new project is => 3
+16:35:40.940 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 2 after updated new project is => 3
+16:35:41.909 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of update project is: {
+    "timestamp": "2024-05-27T11:05:43.456+00:00",
+    "status": 500,
+    "error": "Internal Server Error",
+    "message": "could not execute statement [Duplicate entry 'Coffee Shop App' for key 'project.project_name_UNIQUE'] [update project set project_end_date=?,project_link1=?,project_link2=?,project_manager=?,project_name=?,project_priority=?,project_start_date=?,project_status=? where project_id=?]; SQL [update project set project_end_date=?,project_link1=?,project_link2=?,project_manager=?,project_name=?,project_priority=?,project_start_date=?,project_status=? where project_id=?]; constraint [project.project_name_UNIQUE]",
+    "path": "/erp/project/update"
+}
+
+16:35:43.139 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Request payload for delete project is: {
+  "projectId" : 216,
+  "password" : "Pass@123"
+}
+16:35:43.139 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of delete project is: Project deleted successfully
+
+16:35:45.020 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project Ids are: [210, 209, 19, 22, 5, 4, 1, 2]
+16:35:45.050 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project names are: [Tres-Zap, Sonsing, Test Project, Core2Web, Coffee Shop App, Incubators, E commerce, Enterprise Resource Planning]
+
+16:35:46.109 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Request payload for delete project is: {
+  "projectId" : 253,
+  "password" : "Pass@123"
+}
+16:35:46.110 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of delete project is: {
+    "timestamp": "2024-05-27T11:05:47.782+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "message": "Project Not Found",
+    "path": "/erp/project/delete"
+}
+
+16:35:47.236 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Request payload for delete project is: {
+  "projectId" : 216,
+  "password" : "aqtjvlw3asp320"
+}
+16:35:47.236 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of delete project is: {
+    "timestamp": "2024-05-27T11:05:48.793+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "message": "Project Not Found",
+    "path": "/erp/project/delete"
+}
+
+16:35:48.977 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Request payload for delete project is: {
+  "projectId" : 253,
+  "password" : "aqtjvlw3asp320"
+}
+16:35:48.977 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of delete project is: {
+    "timestamp": "2024-05-27T11:05:50.663+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "message": "Project Not Found",
+    "path": "/erp/project/delete"
+}
+
+16:35:49.914 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Request payload for delete project is: {
+  "projectId" : 210,
+  "password" : "Pass@123"
+}
+16:35:49.914 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of delete project is: Project deleted successfully
+
+16:35:51.974 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project Ids are: [209, 19, 22, 5, 4, 1, 2]
+16:35:52.001 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project names are: [Sonsing, Test Project, Core2Web, Coffee Shop App, Incubators, E commerce, Enterprise Resource Planning]
+
+16:46:24.086 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project Ids are: [209, 19, 22, 5, 4, 1, 2]
+16:46:24.102 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project names are: [Sonsing, Test Project, Core2Web, Coffee Shop App, Incubators, E commerce, Enterprise Resource Planning]
+
+16:46:29.204 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project manager employee Ids are: [7, 6, 1, 9]
+16:46:29.689 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project status Ids are: [1, 2, 3]
+16:46:36.793 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project Ids are: [209, 218, 19, 22, 5, 4, 1, 2]
+16:46:36.803 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project names are: [Sonsing, Bigtax, Test Project, Core2Web, Coffee Shop App, Incubators, E commerce, Enterprise Resource Planning]
+
+16:46:36.819 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project Id is: 218
+16:46:36.835 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project name after added new project is => Bigtax
+16:46:36.851 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after added new project is => 2024-05-27
+16:46:36.869 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after added new project is => 2024-05-11
+16:46:36.883 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project manager employee Id after added new project is => 7
+16:46:36.898 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project status Id after added new project is => 1
+16:46:36.911 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project priority Id after added new project is => 3
+16:46:36.926 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 1 after added new project is => 7
+16:46:36.940 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 2 after added new project is => 7
+16:46:36.956 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 1 after added new project is => 7
+16:46:36.973 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 2 after added new project is => 8
+16:46:41.800 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project Ids are: [219, 209, 218, 19, 22, 5, 4, 1, 2]
+16:46:41.814 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project names are: [Tresom, Sonsing, Bigtax, Test Project, Core2Web, Coffee Shop App, Incubators, E commerce, Enterprise Resource Planning]
+
+16:46:41.825 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project Id is: 219
+16:46:41.837 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project name after added new project is => Tresom
+16:46:41.858 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after added new project is => 2024-06-10
+16:46:41.874 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after added new project is => 2024-05-27
+16:46:41.890 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project manager employee Id after added new project is => 7
+16:46:41.902 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project status Id after added new project is => 1
+16:46:41.914 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project priority Id after added new project is => 3
+16:46:41.927 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 1 after added new project is => 7
+16:46:41.945 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 2 after added new project is => 7
+16:46:41.958 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 1 after added new project is => 7
+16:46:41.971 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 2 after added new project is => 8
+16:46:53.465 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project Ids are: [219, 220, 225, 209, 218, 19, 22, 5, 4, 1, 2]
+16:46:53.476 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project names are: [Tresom, Tempsoft, Flowdesk, Sonsing, Bigtax, Test Project, Core2Web, Coffee Shop App, Incubators, E commerce, Enterprise Resource Planning]
+
+16:46:53.491 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project Id is: 225
+16:46:53.503 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project name after added new project is => Flowdesk
+16:46:53.514 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after added new project is => 2024-06-10
+16:46:53.531 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after added new project is => 2024-11-27
+16:46:53.545 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project manager employee Id after added new project is => 7
+16:46:53.566 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project status Id after added new project is => 1
+16:46:53.603 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project priority Id after added new project is => 3
+16:46:53.621 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 1 after added new project is => 7
+16:46:53.636 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 2 after added new project is => 7
+16:46:53.649 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 1 after added new project is => 7
+16:46:53.666 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 2 after added new project is => 8
+16:46:57.961 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of update project is: {
+    "timestamp": "2024-05-27T11:16:59.465+00:00",
+    "status": 500,
+    "error": "Internal Server Error",
+    "message": "Cannot invoke \"biencaps.erp.entity.ProjectEntity.getProjectManager()\" because \"project1\" is null",
+    "path": "/erp/project/update"
+}
+
+16:46:59.190 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of update project is: {
+    "timestamp": "2024-05-27T11:17:00.612+00:00",
+    "status": 422,
+    "error": "Unprocessable Entity",
+    "message": "Project Title cannot be null",
+    "path": "/erp/project/update"
+}
+
+16:47:01.238 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of update project is: {
+    "timestamp": "2024-05-27T11:17:02.892+00:00",
+    "status": 422,
+    "error": "Unprocessable Entity",
+    "message": "Start date cannot be null",
+    "path": "/erp/project/update"
+}
+
+16:47:02.358 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of update project is: Project Updated Successfully
+
+16:47:04.855 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project Ids are: [219, 220, 209, 218, 225, 19, 22, 5, 4, 1, 2]
+16:47:04.883 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project names are: [Tresom, Tempsoft, Sonsing, Bigtax, Konklux, Test Project, Core2Web, Coffee Shop App, Incubators, E commerce, Enterprise Resource Planning]
+
+16:47:04.908 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project Id is: 225
+16:47:04.936 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project name after updated new project is => Konklux
+16:47:04.966 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after updated new project is => 2024-05-27
+16:47:05.011 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after updated new project is => 2024-05-02
+16:47:05.043 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project manager employee Id after updated new project is => 7
+16:47:05.101 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project status Id after updated new project is => 1
+16:47:05.130 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project priority Id after updated new project is => 2
+16:47:05.161 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 1 after updated new project is => 5
+16:47:05.195 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 2 after updated new project is => 1
+16:47:05.231 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 1 after updated new project is => 6
+16:47:05.272 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 2 after updated new project is => 6
+16:47:06.354 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of update project is: {
+    "timestamp": "2024-05-27T11:17:08.098+00:00",
+    "status": 422,
+    "error": "Unprocessable Entity",
+    "message": "End date cannot be null",
+    "path": "/erp/project/update"
+}
+
+16:47:07.607 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of update project is: Project Updated Successfully
+
+16:47:10.583 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project Ids are: [219, 220, 225, 209, 218, 19, 22, 5, 4, 1, 2]
+16:47:10.607 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project names are: [Tresom, Tempsoft, Subin, Sonsing, Bigtax, Test Project, Core2Web, Coffee Shop App, Incubators, E commerce, Enterprise Resource Planning]
+
+16:47:10.632 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project Id is: 225
+16:47:10.656 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project name after updated new project is => Subin
+16:47:10.681 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after updated new project is => 2024-06-06
+16:47:10.706 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after updated new project is => 2024-05-27
+16:47:10.736 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project manager employee Id after updated new project is => 7
+16:47:10.764 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project status Id after updated new project is => 1
+16:47:10.793 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project priority Id after updated new project is => 2
+16:47:10.822 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 1 after updated new project is => 5
+16:47:10.849 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 2 after updated new project is => 1
+16:47:10.879 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 1 after updated new project is => 6
+16:47:10.907 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 2 after updated new project is => 6
+16:47:12.297 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of update project is: {
+    "timestamp": "2024-05-27T11:17:13.779+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "message": "Employee not Found",
+    "path": "/erp/project/update"
+}
+
+16:47:13.424 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of update project is: {
+    "timestamp": "2024-05-27T11:17:15.182+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "message": "Project Status not Found",
+    "path": "/erp/project/update"
+}
+
+16:47:14.549 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of update project is: {
+    "timestamp": "2024-05-27T11:17:16.108+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "message": "Project Priority not Found",
+    "path": "/erp/project/update"
+}
+
+16:47:15.779 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of update project is: {
+    "timestamp": "2024-05-27T11:17:17.237+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "message": "Department Not Found",
+    "path": "/erp/project/update"
+}
+
+16:47:16.441 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of update project is: {
+    "timestamp": "2024-05-27T11:17:18.202+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "message": "Department Not Found",
+    "path": "/erp/project/update"
+}
+
+16:47:17.107 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of update project is: {
+    "timestamp": "2024-05-27T11:17:18.842+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "message": "Employee Not Found",
+    "path": "/erp/project/update"
+}
+
+16:47:18.237 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of update project is: {
+    "timestamp": "2024-05-27T11:17:19.860+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "message": "Employee Not Found",
+    "path": "/erp/project/update"
+}
+
+16:47:19.501 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of update project is: Project Updated Successfully
+
+16:47:21.827 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project Ids are: [219, 220, 225, 209, 218, 19, 22, 5, 4, 1, 2]
+16:47:21.841 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project names are: [Tresom, Tempsoft, Vagram, Sonsing, Bigtax, Test Project, Core2Web, Coffee Shop App, Incubators, E commerce, Enterprise Resource Planning]
+
+16:47:21.858 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project Id is: 225
+16:47:21.874 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project name after updated new project is => Vagram
+16:47:21.889 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after updated new project is => 2024-06-06
+16:47:21.899 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after updated new project is => 2024-11-27
+16:47:21.910 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project manager employee Id after updated new project is => 7
+16:47:21.921 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project status Id after updated new project is => 1
+16:47:21.934 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project priority Id after updated new project is => 2
+16:47:21.951 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 1 after updated new project is => 5
+16:47:21.963 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 2 after updated new project is => 1
+16:47:21.978 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 1 after updated new project is => 6
+16:47:21.997 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 2 after updated new project is => 6
+16:47:23.150 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of update project is: {
+    "timestamp": "2024-05-27T11:17:24.815+00:00",
+    "status": 500,
+    "error": "Internal Server Error",
+    "message": "could not execute statement [Duplicate entry 'Core2Web' for key 'project.project_name_UNIQUE'] [update project set project_end_date=?,project_link1=?,project_link2=?,project_manager=?,project_name=?,project_priority=?,project_start_date=?,project_status=? where project_id=?]; SQL [update project set project_end_date=?,project_link1=?,project_link2=?,project_manager=?,project_name=?,project_priority=?,project_start_date=?,project_status=? where project_id=?]; constraint [project.project_name_UNIQUE]",
+    "path": "/erp/project/update"
+}
+
+16:47:23.960 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Request payload for delete project is: {
+  "projectId" : 225,
+  "password" : "Pass@123"
+}
+16:47:23.961 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of delete project is: Project deleted successfully
+
+16:47:26.524 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project Ids are: [219, 220, 209, 218, 19, 22, 5, 4, 1, 2]
+16:47:26.537 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project names are: [Tresom, Tempsoft, Sonsing, Bigtax, Test Project, Core2Web, Coffee Shop App, Incubators, E commerce, Enterprise Resource Planning]
+
+16:47:28.066 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Request payload for delete project is: {
+  "projectId" : 248,
+  "password" : "Pass@123"
+}
+16:47:28.067 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of delete project is: {
+    "timestamp": "2024-05-27T11:17:29.762+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "message": "Project Not Found",
+    "path": "/erp/project/delete"
+}
+
+16:47:29.091 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Request payload for delete project is: {
+  "projectId" : 225,
+  "password" : "xvjri5fi"
+}
+16:47:29.092 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of delete project is: {
+    "timestamp": "2024-05-27T11:17:30.819+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "message": "Project Not Found",
+    "path": "/erp/project/delete"
+}
+
+16:47:30.320 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Request payload for delete project is: {
+  "projectId" : 248,
+  "password" : "xvjri5fi"
+}
+16:47:30.321 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of delete project is: {
+    "timestamp": "2024-05-27T11:17:31.832+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "message": "Project Not Found",
+    "path": "/erp/project/delete"
+}
+
+16:47:31.197 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Request payload for delete project is: {
+  "projectId" : 218,
+  "password" : "Pass@123"
+}
+16:47:31.197 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of delete project is: Project deleted successfully
+
+16:47:33.006 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project Ids are: [219, 220, 209, 19, 22, 5, 4, 1, 2]
+16:47:33.018 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project names are: [Tresom, Tempsoft, Sonsing, Test Project, Core2Web, Coffee Shop App, Incubators, E commerce, Enterprise Resource Planning]
+
+16:51:32.432 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project Ids are: [19, 22, 5, 4, 1, 2]
+16:51:32.459 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project names are: [Test Project, Core2Web, Coffee Shop App, Incubators, E commerce, Enterprise Resource Planning]
+
+16:51:37.440 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project manager employee Ids are: [7, 6, 1, 9]
+16:51:38.035 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project status Ids are: [1, 2, 3]
+16:51:45.844 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project Ids are: [227, 19, 22, 5, 4, 1, 2]
+16:51:45.868 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project names are: [Vagram, Test Project, Core2Web, Coffee Shop App, Incubators, E commerce, Enterprise Resource Planning]
+
+16:51:45.898 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project Id is: 227
+16:51:45.931 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project name after added new project is => Vagram
+16:51:45.961 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after added new project is => 2024-05-27
+16:51:45.996 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after added new project is => 2024-05-11
+16:51:46.026 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project manager employee Id after added new project is => 1
+16:51:46.058 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project status Id after added new project is => 1
+16:51:46.084 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project priority Id after added new project is => 4
+16:51:46.117 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 1 after added new project is => 3
+16:51:46.157 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 2 after added new project is => 3
+16:51:46.188 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 1 after added new project is => 2
+16:51:46.217 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 2 after added new project is => 37
+16:51:50.312 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project Ids are: [228, 227, 19, 22, 5, 4, 1, 2]
+16:51:50.333 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project names are: [Daltfresh, Vagram, Test Project, Core2Web, Coffee Shop App, Incubators, E commerce, Enterprise Resource Planning]
+
+16:51:50.358 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project Id is: 228
+16:51:50.391 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project name after added new project is => Daltfresh
+16:51:50.418 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after added new project is => 2024-06-07
+16:51:50.446 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after added new project is => 2024-05-27
+16:51:50.473 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project manager employee Id after added new project is => 1
+16:51:50.507 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project status Id after added new project is => 1
+16:51:50.534 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project priority Id after added new project is => 4
+16:51:50.566 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 1 after added new project is => 3
+16:51:50.593 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 2 after added new project is => 3
+16:51:50.621 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 1 after added new project is => 2
+16:51:50.647 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 2 after added new project is => 37
+16:52:07.565 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Request payload for delete project is: {
+  "projectId" : 273,
+  "password" : "Pass@123"
+}
+16:52:07.565 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of delete project is: {
+    "timestamp": "2024-05-27T11:22:09.192+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "message": "Project Not Found",
+    "path": "/erp/project/delete"
+}
+
+16:52:08.954 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Request payload for delete project is: {
+  "projectId" : 228,
+  "password" : "e1wx5ox64n"
+}
+16:52:08.954 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of delete project is: {
+    "timestamp": "2024-05-27T11:22:10.709+00:00",
+    "status": 422,
+    "error": "Unprocessable Entity",
+    "message": "Password is incorrect",
+    "path": "/erp/project/delete"
+}
+
+16:52:10.180 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Request payload for delete project is: {
+  "projectId" : 273,
+  "password" : "e1wx5ox64n"
+}
+16:52:10.181 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of delete project is: {
+    "timestamp": "2024-05-27T11:22:11.825+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "message": "Project Not Found",
+    "path": "/erp/project/delete"
+}
+
+16:52:11.718 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Request payload for delete project is: {
+  "projectId" : 4,
+  "password" : "Pass@123"
+}
+16:52:11.718 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of delete project is: {
+    "timestamp": "2024-05-27T11:22:13.236+00:00",
+    "status": 403,
+    "error": "Forbidden",
+    "message": "Failed to delete project",
+    "path": "/erp/project/delete"
+}
+
+16:52:12.946 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Request payload for delete project is: {
+  "projectId" : 228,
+  "password" : "Pass@123"
+}
+16:52:12.946 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of delete project is: Project deleted successfully
+
+16:52:15.342 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project Ids are: [229, 227, 19, 22, 5, 4, 1, 2]
+16:52:15.356 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project names are: [Otcom, Vagram, Test Project, Core2Web, Coffee Shop App, Incubators, E commerce, Enterprise Resource Planning]
+
+16:56:02.240 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project Ids are: [19, 22, 5, 4, 1, 2]
+16:56:02.263 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project names are: [Test Project, Core2Web, Coffee Shop App, Incubators, E commerce, Enterprise Resource Planning]
+
+16:56:07.122 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project manager employee Ids are: [7, 6, 1, 9]
+16:56:07.645 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project status Ids are: [1, 2, 3]
+16:56:14.944 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project Ids are: [236, 19, 22, 5, 4, 1, 2]
+16:56:14.957 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project names are: [Alphazap, Test Project, Core2Web, Coffee Shop App, Incubators, E commerce, Enterprise Resource Planning]
+
+16:56:14.980 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project Id is: 236
+16:56:14.998 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project name after added new project is => Alphazap
+16:56:15.031 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after added new project is => 2024-05-27
+16:56:15.047 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after added new project is => 2024-05-09
+16:56:15.062 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project manager employee Id after added new project is => 1
+16:56:15.075 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project status Id after added new project is => 1
+16:56:15.090 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project priority Id after added new project is => 4
+16:56:15.110 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 1 after added new project is => 5
+16:56:15.128 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 2 after added new project is => 6
+16:56:15.148 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 1 after added new project is => 11
+16:56:15.167 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 2 after added new project is => 35
+16:56:19.035 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project Ids are: [237, 236, 19, 22, 5, 4, 1, 2]
+16:56:19.047 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project names are: [Bitchip, Alphazap, Test Project, Core2Web, Coffee Shop App, Incubators, E commerce, Enterprise Resource Planning]
+
+16:56:19.060 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project Id is: 237
+16:56:19.075 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project name after added new project is => Bitchip
+16:56:19.094 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after added new project is => 2024-06-08
+16:56:19.111 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after added new project is => 2024-05-27
+16:56:19.128 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project manager employee Id after added new project is => 1
+16:56:19.143 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project status Id after added new project is => 1
+16:56:19.158 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project priority Id after added new project is => 4
+16:56:19.172 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 1 after added new project is => 5
+16:56:19.192 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 2 after added new project is => 6
+16:56:19.206 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 1 after added new project is => 11
+16:56:19.218 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 2 after added new project is => 35
+16:56:30.216 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project Ids are: [237, 238, 243, 236, 19, 22, 5, 4, 1, 2]
+16:56:30.229 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project names are: [Bitchip, Hatity, Aerified, Alphazap, Test Project, Core2Web, Coffee Shop App, Incubators, E commerce, Enterprise Resource Planning]
+
+16:56:30.244 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project Id is: 243
+16:56:30.263 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project name after added new project is => Aerified
+16:56:30.281 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after added new project is => 2024-06-08
+16:56:30.296 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project start date after added new project is => 2024-08-27
+16:56:30.317 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project manager employee Id after added new project is => 1
+16:56:30.333 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project status Id after added new project is => 1
+16:56:30.354 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project priority Id after added new project is => 4
+16:56:30.373 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 1 after added new project is => 5
+16:56:30.386 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project department Id 2 after added new project is => 6
+16:56:30.398 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 1 after added new project is => 11
+16:56:30.409 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - New created project employee Id 2 after added new project is => 35
+16:56:34.273 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Request payload for delete project is: {
+  "projectId" : 287,
+  "password" : "Pass@123"
+}
+16:56:34.274 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of delete project is: {
+    "timestamp": "2024-05-27T11:26:35.772+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "message": "Project Not Found",
+    "path": "/erp/project/delete"
+}
+
+16:56:35.241 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Request payload for delete project is: {
+  "projectId" : 243,
+  "password" : "j1br1xytbz"
+}
+16:56:35.241 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of delete project is: {
+    "timestamp": "2024-05-27T11:26:36.995+00:00",
+    "status": 422,
+    "error": "Unprocessable Entity",
+    "message": "Password is incorrect",
+    "path": "/erp/project/delete"
+}
+
+16:56:36.116 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Request payload for delete project is: {
+  "projectId" : 287,
+  "password" : "j1br1xytbz"
+}
+16:56:36.116 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of delete project is: {
+    "timestamp": "2024-05-27T11:26:37.769+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "message": "Project Not Found",
+    "path": "/erp/project/delete"
+}
+
+16:56:37.242 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Request payload for delete project is: {
+  "projectId" : 22,
+  "password" : "Pass@123"
+}
+16:56:37.242 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of delete project is: {
+    "timestamp": "2024-05-27T11:26:38.833+00:00",
+    "status": 403,
+    "error": "Forbidden",
+    "message": "Failed to delete project",
+    "path": "/erp/project/delete"
+}
+
+16:56:38.778 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Request payload for delete project is: {
+  "projectId" : 243,
+  "password" : "Pass@123"
+}
+16:56:38.778 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - Response body of delete project is: Project deleted successfully
+
+16:56:40.939 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project Ids are: [237, 238, 236, 19, 22, 5, 4, 1, 2]
+16:56:40.950 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project names are: [Bitchip, Hatity, Alphazap, Test Project, Core2Web, Coffee Shop App, Incubators, E commerce, Enterprise Resource Planning]
+

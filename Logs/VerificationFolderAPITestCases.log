@@ -16,3 +16,27 @@
 16:07:31.635 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors before add new verification status are => [Royal Purple, Ultraviolet, azure, Sky]
 16:07:31.642 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes before add new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF]
 
+16:34:18.375 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids before add new verification status are => [null, null, null, null]
+16:34:18.395 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names before add new verification status are => [null, null, null, null]
+16:34:18.409 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels before add new verification status are => [0, 1, 3, 3]
+16:34:18.417 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors before add new verification status are => [Royal Purple, Ultraviolet, azure, Sky]
+16:34:18.427 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes before add new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF]
+
+16:45:52.897 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids before add new verification status are => [null, null, null, null]
+16:45:52.919 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names before add new verification status are => [null, null, null, null]
+16:45:52.927 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels before add new verification status are => [0, 1, 3, 3]
+16:45:52.936 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors before add new verification status are => [Royal Purple, Ultraviolet, azure, Sky]
+16:45:52.946 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes before add new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF]
+
+16:50:58.321 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids before add new verification status are => [null, null, null, null]
+16:50:58.349 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names before add new verification status are => [null, null, null, null]
+16:50:58.363 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels before add new verification status are => [0, 1, 3, 3]
+16:50:58.379 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors before add new verification status are => [Royal Purple, Ultraviolet, azure, Sky]
+16:50:58.395 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes before add new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF]
+
+16:55:31.627 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids before add new verification status are => [null, null, null, null]
+16:55:31.654 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names before add new verification status are => [null, null, null, null]
+16:55:31.671 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels before add new verification status are => [0, 1, 3, 3]
+16:55:31.688 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors before add new verification status are => [Royal Purple, Ultraviolet, azure, Sky]
+16:55:31.702 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes before add new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF]
+

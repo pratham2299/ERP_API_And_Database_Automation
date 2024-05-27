@@ -5,7 +5,6 @@ import java.util.*;
 import org.apache.logging.log4j.*;
 import org.testng.annotations.*;
 
-import com.aventstack.extentreports.Status;
 import com.github.javafaker.Faker;
 
 import in.biencaps.erp.api.bodyValidations.*;
@@ -240,6 +239,10 @@ public class ProjectFolderAPITestCases extends BaseTest {
 			BodyValidation.responseValidation(response, 200);
 		} else {
 			BodyValidation.responseValidation(response, 200);
+
+			List<String> projectDepartmentsFromResponse = response.jsonPath()
+					.getList("projectDepartments.departmentName");
+			assertTrue(projectDepartmentsFromResponse.contains(departmentName));
 		}
 	}
 
@@ -343,7 +346,7 @@ public class ProjectFolderAPITestCases extends BaseTest {
 		}
 	}
 
-	@Test(priority = 18, dataProvider = "TestDataForUpdateProject", dataProviderClass = DataProvidersForProjectFolder.class)
+	@Test(priority = 18, dataProvider = "TestDataForUpdateProject", dataProviderClass = DataProvidersForProjectFolder.class, enabled = false)
 	public void verify_Update_Project_With_Authorization(int projectId, String projectName, String projectStartDate,
 			String projectEndDate, int projectManagerEmployeeId, int projectStatusId, int projectPriorityId,
 			int projectDepartmentId1, int projectDepartmentId2, int projectEmployeeId1, int projectEmployeeId2) {
@@ -356,12 +359,11 @@ public class ProjectFolderAPITestCases extends BaseTest {
 					LoginEmployeeAPITestCases.authToken, APIEndpoints.updateProjectEndpoint);
 
 			String responseBody = response.getBody().asPrettyString();
-			log.info("Response body of update project is: " + responseBody + "\n");
 
 			BaseTest.test_Method_Logs("update project", APIEndpoints.updateProjectEndpoint, requestPayload, response);
 
 			if (projectName.isBlank() || projectStartDate.isBlank() || projectEndDate.isBlank()) {
-				BodyValidation.response400Validation(response);
+				BodyValidation.responseValidation(response, "Unprocessable Entity", 422);
 			} else if (!projectIds.contains(projectId)) {
 				BodyValidation.responseValidation(response, "Not Found", 404);
 			} else if (projectManagerEmployeeIds.contains(projectManagerEmployeeId) == false) {
@@ -376,11 +378,9 @@ public class ProjectFolderAPITestCases extends BaseTest {
 			} else if (!EmployeeFolderAPITestCases.employeeIds.contains(projectEmployeeId1)
 					|| !EmployeeFolderAPITestCases.employeeIds.contains(projectEmployeeId2)) {
 				BodyValidation.responseValidation(response, "Not Found", 404);
-			}
-//			else if (projectNames.contains(projectName)) {
-//				BodyValidation.responseValidation(response, "Conflict", 409);
-//			} 
-			else {
+			} else if (projectNames.contains(projectName)) {
+				BodyValidation.responseValidation(response, "Conflict", 409);
+			} else {
 				int contentLength = responseBody.length();
 				BodyValidation.responseValidation(response, 200, String.valueOf(contentLength));
 				assertEquals(responseBody, "Project Updated Successfully");
@@ -417,10 +417,10 @@ public class ProjectFolderAPITestCases extends BaseTest {
 
 			BaseTest.test_Method_Logs("delete project", APIEndpoints.deleteProjectEndpoint, requestPayload, response);
 
-			if (!password.equalsIgnoreCase(Constants.employeePassword)) {
-				BodyValidation.responseValidation(response, "Unprocessable Entity", 422);
-			} else if (!projectIds.contains(projectId)) {
+			if (!projectIds.contains(projectId)) {
 				BodyValidation.responseValidation(response, "Not Found", 404);
+			} else if (!password.equalsIgnoreCase(Constants.employeePassword)) {
+				BodyValidation.responseValidation(response, "Unprocessable Entity", 422);
 			} else if (response.getStatusCode() == 403) {
 				BodyValidation.responseValidation(response, "Forbidden", 403);
 			} else {

@@ -301,8 +301,8 @@ public class DataProvidersForProjectFolder {
 		String validPassword = Constants.employeePassword;
 		String invalidPassword = DataGeneratorForAPI.generateFakePassword();
 
-		return new Object[][] { { validProjectId, validPassword }, { invalidProjectId, validPassword },
-				{ validProjectId, invalidPassword }, { invalidProjectId, invalidPassword },
-				{ randomProjectId, validPassword } };
+		return new Object[][] { { invalidProjectId, validPassword }, { validProjectId, invalidPassword },
+				{ invalidProjectId, invalidPassword }, { randomProjectId, validPassword },
+				{ validProjectId, validPassword } };
 	}
 }

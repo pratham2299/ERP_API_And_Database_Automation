@@ -85,14 +85,15 @@ public class ProjectFolderPayloads {
 		projectObj.setProjectStartDate(projectStartDate);
 		projectObj.setProjectEndDate(projectEndDate);
 
-		// Project manager object creation
+		// Project manager
 		projectObj.setProjectManager(projectManagerEmployeeId);
 
-		// Project priority object creation
+		projectObj.setProjectStatus(projectStatusId);
+
+		// Project priority
 		projectObj.setProjectPriority(projectPriorityId);
 
-		// Project departments object creation
-
+		// Project departments
 		projectObj.setProjectDepartments(Arrays.asList(projectDepartment1, projectDepartment2));
 
 		projectObj.setProjectEmployees(Arrays.asList(projectEmployee1, projectEmployee2));

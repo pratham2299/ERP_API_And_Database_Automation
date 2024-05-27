@@ -7,13 +7,14 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 
 public class UpdateProjectPojo {
 	private int projectId;
-	private String projectName; // optional
-	private String projectStartDate; // optional
-	private String projectEndDate; // optional
-	private Integer projectManager; // optional
-	private List<Integer> projectDepartments; // optional
-	private List<Integer> projectEmployees; // optional
-	private Integer projectPriority; // optional
+	private String projectName;
+	private String projectStartDate;
+	private String projectEndDate;
+	private Integer projectManager;
+	private Integer projectStatus;
+	private List<Integer> projectDepartments;
+	private List<Integer> projectEmployees;
+	private Integer projectPriority;
 
 	// Getters and setters
 	public int getProjectId() {
@@ -54,6 +55,14 @@ public class UpdateProjectPojo {
 
 	public void setProjectManager(Integer projectManager) {
 		this.projectManager = projectManager;
+	}
+
+	public Integer getProjectStatus() {
+		return projectStatus;
+	}
+
+	public void setProjectStatus(Integer projectStatus) {
+		this.projectStatus = projectStatus;
 	}
 
 	public List<Integer> getProjectDepartments() {
