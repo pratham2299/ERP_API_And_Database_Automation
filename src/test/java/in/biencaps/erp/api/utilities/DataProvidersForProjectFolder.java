@@ -2,13 +2,11 @@ package in.biencaps.erp.api.utilities;
 
 import java.util.*;
 import org.testng.annotations.*;
-import com.github.javafaker.*;
 
 import in.biencaps.erp.api.testcases.*;
 
 public class DataProvidersForProjectFolder {
 	private static Random random = new Random();
-	private static Faker faker = new Faker();
 
 	@DataProvider(name = "TestDataForAddProject")
 	public Object[][] testDataForAddProject() {
@@ -282,8 +280,6 @@ public class DataProvidersForProjectFolder {
 
 		int invalidProjectId = DataGeneratorForAPI.generateFakeNumberWithRange(
 				ProjectFolderAPITestCases.newCreatedProjectId + 10, ProjectFolderAPITestCases.newCreatedProjectId + 50);
-
-		String validKey = "";
 
 		return new Object[][] { { randomProjectId, }, { invalidProjectId } };
 	}

@@ -476,8 +476,7 @@ public class TaskFolderAPITestCases {
 				BodyValidation.responseValidation(response, "Not Found", 404);
 			} else if (EmployeeFolderAPITestCases.employeeIds.contains(employeeIdInput) == false) {
 				BodyValidation.responseValidation(response, "Not Found", 404);
-			} else if (!VerificationStatusFolderAPITestCases.verificationStatusIds
-					.contains(taskVerificationStatusInput)) {
+			} else if (!VerificationFolderAPITestCases.verificationIds.contains(taskVerificationStatusInput)) {
 				BodyValidation.responseValidation(response, "Not Found", 404);
 			} else if (!PriorityFolderAPITestCases.priorityIds.contains(taskPriorityInput)) {
 				BodyValidation.responseValidation(response, "Not Found", 404);
@@ -541,8 +540,7 @@ public class TaskFolderAPITestCases {
 				}
 			} else if (EmployeeFolderAPITestCases.employeeIds.contains(employeeIdInput) == false) {
 				BodyValidation.responseValidation(response, "Not Found", 404);
-			} else if (!VerificationStatusFolderAPITestCases.verificationStatusIds
-					.contains(taskVerificationStatusInput)) {
+			} else if (!VerificationFolderAPITestCases.verificationIds.contains(taskVerificationStatusInput)) {
 				BodyValidation.responseValidation(response, "Not Found", 404);
 			} else if (!PriorityFolderAPITestCases.priorityIds.contains(taskPriorityInput)) {
 				BodyValidation.responseValidation(response, "Not Found", 404);
