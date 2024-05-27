@@ -10,6 +10,11 @@
 			<PatternLayout
 				pattern="%d{HH:mm:ss.SSS} --> %logger{36} - %msg%n" />
 		</File>
+		<File name="SuiteListener"
+			fileName="Logs/SuiteListener.log">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} --> %logger{36} - %msg%n" />
+		</File>
 		<File name="DesignationFolderAPITestCases"
 			fileName="Logs/DesignationFolderAPITestCases.log">
 			<PatternLayout
@@ -55,8 +60,8 @@
 			<PatternLayout
 				pattern="%d{HH:mm:ss.SSS} --> %logger{36} - %msg%n" />
 		</File>
-		<File name="VerificationStatusFolderAPITestCases"
-			fileName="Logs/VerificationStatusFolderAPITestCases.log">
+		<File name="VerificationFolderAPITestCases"
+			fileName="Logs/VerificationFolderAPITestCases.log">
 			<PatternLayout
 				pattern="%d{HH:mm:ss.SSS} --> %logger{36} - %msg%n" />
 		</File>
@@ -82,92 +87,98 @@
 		</File>
 	</Appenders>
 	<Loggers>
-		<Logger name="in.task_erp_api.testcases.LoginEmployeeAPITestCases"
+		<Logger name="in.biencaps.erp.api.testcases.LoginEmployeeAPITestCases"
 			level="all"
 			additivity="false">
 			<AppenderRef ref="LoginEmployeeAPITestCases" />
 			<AppenderRef ref="Console" />
 		</Logger>
-		<Logger name="in.task_erp_api.testcases.StatusFolderAPITestCases"
+		<Logger name="in.biencaps.erp.api.utilities.SuiteListener"
+			level="all"
+			additivity="false">
+			<AppenderRef ref="SuiteListener" />
+			<AppenderRef ref="Console" />
+		</Logger>
+		<Logger name="in.biencaps.erp.api.testcases.StatusFolderAPITestCases"
 			level="all"
 			additivity="false">
 			<AppenderRef ref="StatusFolderAPITestCases" />
 			<AppenderRef ref="Console" />
 		</Logger>
-		<Logger name="in.task_erp_api.testcases.PriorityFolderAPITestCases"
+		<Logger name="in.biencaps.erp.api.testcases.PriorityFolderAPITestCases"
 			level="all"
 			additivity="false">
 			<AppenderRef ref="PriorityFolderAPITestCases" />
 			<AppenderRef ref="Console" />
 		</Logger>
-		<Logger name="in.task_erp_api.testcases.DesignationFolderAPITestCases"
+		<Logger name="in.biencaps.erp.api.testcases.DesignationFolderAPITestCases"
 			level="all"
 			additivity="false">
 			<AppenderRef ref="DesignationFolderAPITestCases" />
 			<AppenderRef ref="Console" />
 		</Logger>
-		<Logger name="in.task_erp_api.testcases.DepartmentFolderAPITestCases"
+		<Logger name="in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases"
 			level="all"
 			additivity="false">
 			<AppenderRef ref="DepartmentFolderAPITestCases" />
 			<AppenderRef ref="Console" />
 		</Logger>
-		<Logger name="in.task_erp_api.testcases.RoleFolderAPITestCases"
+		<Logger name="in.biencaps.erp.api.testcases.RoleFolderAPITestCases"
 			level="all"
 			additivity="false">
 			<AppenderRef ref="RoleFolderAPITestCases" />
 			<AppenderRef ref="Console" />
 		</Logger>
-		<Logger name="in.task_erp_api.testcases.ProjectFolderAPITestCases"
+		<Logger name="in.biencaps.erp.api.testcases.ProjectFolderAPITestCases"
 			level="all"
 			additivity="false">
 			<AppenderRef ref="ProjectFolderAPITestCases" />
 			<AppenderRef ref="Console" />
 		</Logger>
-		<Logger name="in.task_erp_api.testcases.EmployeeFolderAPITestCases"
+		<Logger name="in.biencaps.erp.api.testcases.EmployeeFolderAPITestCases"
 			level="all"
 			additivity="false">
 			<AppenderRef ref="EmployeeFolderAPITestCases" />
 			<AppenderRef ref="Console" />
 		</Logger>
-		<Logger name="in.task_erp_api.testcases.LogsFolderAPITestCases"
+		<Logger name="in.biencaps.erp.api.testcases.LogsFolderAPITestCases"
 			level="all"
 			additivity="false">
 			<AppenderRef ref="LogsFolderAPITestCases" />
 			<AppenderRef ref="Console" />
 		</Logger>
-		<Logger name="in.task_erp_api.testcases.RegularTaskFolderAPITestCases"
+		<Logger name="in.biencaps.erp.api.testcases.RegularTaskFolderAPITestCases"
 			level="all"
 			additivity="false">
 			<AppenderRef ref="RegularTaskFolderAPITestCases" />
 			<AppenderRef ref="Console" />
 		</Logger>
 		<Logger
-			name="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases"
+			name="in.biencaps.erp.api.testcases.VerificationFolderAPITestCases"
 			level="all"
 			additivity="false">
-			<AppenderRef ref="VerificationStatusFolderAPITestCases" />
+			<AppenderRef ref="VerificationFolderAPITestCases" />
 			<AppenderRef ref="Console" />
 		</Logger>
-		<Logger name="in.task_erp_api.testcases.TaskFolderAPITestCases"
+		<Logger name="in.biencaps.erp.api.testcases.TaskFolderAPITestCases"
 			level="all"
 			additivity="false">
 			<AppenderRef ref="TaskFolderAPITestCases" />
 			<AppenderRef ref="Console" />
 		</Logger>
-		<Logger name="in.task_erp_api.testcases.RequestFolderAPITestCases"
+		<Logger name="in.biencaps.erp.api.testcases.RequestFolderAPITestCases"
 			level="all"
 			additivity="false">
 			<AppenderRef ref="RequestFolderAPITestCases" />
 			<AppenderRef ref="Console" />
 		</Logger>
-		<Logger name="in.task_erp_api.testcases.NotificationFolderAPITestCases"
+		<Logger name="in.biencaps.erp.api.testcases.NotificationFolderAPITestCases"
 			level="all"
 			additivity="false">
 			<AppenderRef ref="NotificationFolderAPITestCases" />
 			<AppenderRef ref="Console" />
 		</Logger>
-		<Logger name="in.task_erp_api.testcases.MilestoneFolderAPITestCases"
+		<Logger name="in.biencaps.erp.api.testcases.MilestoneFolderAPITestCases"
 			level="all"
 			additivity="false">
 			<AppenderRef ref="MilestoneFolderAPITestCases" />

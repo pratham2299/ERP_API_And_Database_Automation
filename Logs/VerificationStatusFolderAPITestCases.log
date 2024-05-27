@@ -1,6 +1,0 @@
-14:43:32.359 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status Ids before add new verification status are => [3, 1, 9, 21]
-14:43:32.371 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status names before add new verification status are => [Not Verified, Verified, Reject, Revert]
-14:43:32.385 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status levels before add new verification status are => [0, 1, 3, 3]
-14:43:32.395 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status colors before add new verification status are => [Royal Purple, Ultraviolet, azure, Sky]
-14:43:32.407 --> in.task_erp_api.testcases.VerificationStatusFolderAPITestCases - List of verification status color codes before add new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF]
-

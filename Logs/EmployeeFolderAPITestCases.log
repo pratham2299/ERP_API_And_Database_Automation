@@ -1,52 +1,18 @@
-14:43:40.994 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - List of user Ids are: [INC001, INC003, INC004, INC005, INC006, INC007, INC008, INC009, INC010, INC011, INC012, INC014, INC015, INC016, INC017, INC018, INC019, INC020]
-14:43:41.032 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - Max value of user Id is: INC020
-14:43:41.116 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - Random user Id for get single employee is: INC009
-14:43:41.876 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - User Id from response for get single employee  is: INC009
+14:57:58.563 --> in.biencaps.erp.api.testcases.EmployeeFolderAPITestCases - List of user Ids are: [INC001, INC003, INC004, INC005, INC006, INC007, INC008, INC009, INC010, INC011, INC012, INC014, INC015, INC016, INC017, INC018, INC019, INC020]
+14:57:58.581 --> in.biencaps.erp.api.testcases.EmployeeFolderAPITestCases - Max value of user Id is: INC020
+14:57:58.630 --> in.biencaps.erp.api.testcases.EmployeeFolderAPITestCases - Random user Id for get single employee is: INC003
+14:57:59.394 --> in.biencaps.erp.api.testcases.EmployeeFolderAPITestCases - User Id from response for get single employee  is: INC003
 
-14:43:42.361 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - Random role level for get reporting authority is: 1
+14:57:59.773 --> in.biencaps.erp.api.testcases.EmployeeFolderAPITestCases - Random role level for get reporting authority is: 1
 
-14:43:43.055 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - New User Id for get user id is: INC021
+14:58:00.744 --> in.biencaps.erp.api.testcases.EmployeeFolderAPITestCases - New User Id for get user id is: INC021
 
-14:43:44.441 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - List of emp Ids are: [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 34, 35, 36, 37]
-14:43:44.452 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - List of employee full names are: [Sachin Patil, Subodh Yelgandharwar, Shivkumar Tengse, Prathamesh Dhasade, Pramod Bansode, Shashikant Bagal, Govind Dindewad, Akshay Jagtap, Pankaj Kharde, Vishal Lohbande, Prajwal Kadam, Rahul Dabhade, Om Dhumal, Rahul Hatkar, Test Team Lead, John Carter, Steve Smith, David Mille]
-14:43:44.455 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - Random department for get reporting authority is: UI/UX
-14:43:44.455 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - Random role level for get reporting authority is: 4
+14:58:03.211 --> in.biencaps.erp.api.testcases.EmployeeFolderAPITestCases - List of emp Ids are: [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 34, 35, 36, 37]
+14:58:03.221 --> in.biencaps.erp.api.testcases.EmployeeFolderAPITestCases - List of employee full names are: [Sachin Patil, Subodh Yelgandharwar, Shivkumar Tengse, Prathamesh Dhasade, Pramod Bansode, Shashikant Bagal, Govind Dindewad, Akshay Jagtap, Pankaj Kharde, Vishal Lohbande, Prajwal Kadam, Rahul Dabhade, Om Dhumal, Rahul Hatkar, Test Team Lead, John Carter, Steve Smith, David Mille]
+14:58:03.225 --> in.biencaps.erp.api.testcases.EmployeeFolderAPITestCases - Random department for get reporting authority is: Graphics
+14:58:03.226 --> in.biencaps.erp.api.testcases.EmployeeFolderAPITestCases - Random role level for get reporting authority is: 4
 
-14:43:45.095 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - Random role level for get reporting authority is: 1
+14:58:04.341 --> in.biencaps.erp.api.testcases.EmployeeFolderAPITestCases - Random role level for get reporting authority is: 3
 
-14:43:45.775 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - Random role level for get assignee is: 4
-
-14:44:02.554 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - User password is: Pass@123
-14:44:02.554 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - Old password is: Pass@123
-14:44:02.554 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - New password is: Pass@123
-
-14:44:03.527 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - Updated user password is: Pass@123
-
-14:44:03.530 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - User password is: Pass@123
-14:44:03.530 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - Old password is: Pass@123
-14:44:03.530 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - New password is: zggizlv
-
-14:44:03.978 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - User password is: Pass@123
-14:44:03.979 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - Old password is: Pass@123
-14:44:03.979 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - New password is: zggizlv
-
-14:44:04.484 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - User password is: Pass@123
-14:44:04.484 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - Old password is: 
-14:44:04.484 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - New password is: zggizlv
-
-14:44:04.988 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - User password is: Pass@123
-14:44:04.988 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - Old password is: Pratham@123
-14:44:04.989 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - New password is: zggizlv
-
-14:44:05.474 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - User password is: Pass@123
-14:44:05.474 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - Old password is: Pass@123
-14:44:05.474 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - New password is: 
-
-14:44:05.930 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - User password is: Pass@123
-14:44:05.931 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - Old password is: Pass@123
-14:44:05.931 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - New password is: zggizlv
-
-14:44:06.419 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - User password is: Pass@123
-14:44:06.420 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - Old password is: Pass@123
-14:44:06.420 --> in.task_erp_api.testcases.EmployeeFolderAPITestCases - New password is: zggizlv
+14:58:05.191 --> in.biencaps.erp.api.testcases.EmployeeFolderAPITestCases - Random role level for get assignee is: 1
 

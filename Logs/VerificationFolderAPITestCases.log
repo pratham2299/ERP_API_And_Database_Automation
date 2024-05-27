@@ -1,0 +1,6 @@
+14:57:51.854 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids before add new verification status are => [null, null, null, null]
+14:57:51.866 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names before add new verification status are => [null, null, null, null]
+14:57:51.875 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels before add new verification status are => [0, 1, 3, 3]
+14:57:51.881 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors before add new verification status are => [Royal Purple, Ultraviolet, azure, Sky]
+14:57:51.890 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes before add new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF]
+

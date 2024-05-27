@@ -1,6 +1,6 @@
-14:43:08.595 --> in.task_erp_api.testcases.PriorityFolderAPITestCases - List of priority Ids before add new priority are => [1, 2, 3, 4]
-14:43:08.617 --> in.task_erp_api.testcases.PriorityFolderAPITestCases - List of priority names before add new priority are => [Low, Medium, High, Highest]
-14:43:08.630 --> in.task_erp_api.testcases.PriorityFolderAPITestCases - List of priority levels before add new priority are => [0, 1, 2, 3]
-14:43:08.647 --> in.task_erp_api.testcases.PriorityFolderAPITestCases - List of priority colors before add new priority are => [Sand, Pumpkin, Red Orange, Maroon]
-14:43:08.659 --> in.task_erp_api.testcases.PriorityFolderAPITestCases - List of priority color codes before add new priority are => [#EDDFCB, #FBD9AA, #FBB7AA, #EB878B]
+14:57:30.175 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority Ids before add new priority are => [1, 2, 3, 4]
+14:57:30.184 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority names before add new priority are => [Low, Medium, High, Highest]
+14:57:30.197 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority levels before add new priority are => [0, 1, 2, 3]
+14:57:30.208 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority colors before add new priority are => [Sand, Pumpkin, Red Orange, Maroon]
+14:57:30.216 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority color codes before add new priority are => [#EDDFCB, #FBD9AA, #FBB7AA, #EB878B]
 
