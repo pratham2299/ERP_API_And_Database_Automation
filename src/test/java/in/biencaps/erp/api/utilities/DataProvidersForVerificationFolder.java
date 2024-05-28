@@ -10,10 +10,9 @@ public class DataProvidersForVerificationFolder {
 
 	@DataProvider(name = "TestDataForAddVerification")
 	public Object[][] testDataForAddVerification() {
-		String fakeVerification = DataGeneratorForAPI.generateFakeStatus();
-		int fakeVerificationLevel = DataGeneratorForAPI.generateFakeNumberWithRange(10, 20);
-		String fakeVerificationColor = DataGeneratorForAPI.generateFakeColor();
-		String fakeVerificationColorCode = DataGeneratorForAPI.generateFakeColorCode();
+		int validVerificationLevel = DataGeneratorForAPI.generateFakeNumberWithRange(10, 15);
+		String validVerificationColor = DataGeneratorForAPI.generateFakeColor();
+		String validVerificationColorCode = DataGeneratorForAPI.generateFakeColorCode();
 
 		int randomIndexForVerificationName = random.nextInt(VerificationFolderAPITestCases.verifications.size());
 		String randomVerificationName = VerificationFolderAPITestCases.verifications
@@ -33,22 +32,25 @@ public class DataProvidersForVerificationFolder {
 				.get(randomIndexForVerificationColorCode);
 
 		return new Object[][] {
-				{ fakeVerification, fakeVerificationLevel, fakeVerificationColor, fakeVerificationColorCode },
-				{ fakeVerification, randomVerificationLevel, fakeVerificationColor, fakeVerificationColorCode },
-				{ fakeVerification, fakeVerificationLevel, "", fakeVerificationColorCode },
-				{ fakeVerification, fakeVerificationLevel, randomVerificationColor, fakeVerificationColorCode },
-				{ fakeVerification, fakeVerificationLevel, fakeVerificationColor, "" },
-				{ fakeVerification, fakeVerificationLevel, fakeVerificationColor, randomVerificationColorCode },
-				{ "", fakeVerificationLevel, fakeVerificationColor, fakeVerificationColorCode },
-				{ randomVerificationName, fakeVerificationLevel, fakeVerificationColor, fakeVerificationColorCode } };
+				{ DataGeneratorForAPI.generateFakeStatus(), validVerificationLevel, validVerificationColor,
+						validVerificationColorCode },
+				{ "", validVerificationLevel, validVerificationColor, validVerificationColorCode },
+				{ randomVerificationName, validVerificationLevel, validVerificationColor, validVerificationColorCode },
+				{ DataGeneratorForAPI.generateFakeStatus(), randomVerificationLevel, validVerificationColor,
+						validVerificationColorCode },
+				{ DataGeneratorForAPI.generateFakeStatus(), validVerificationLevel, "", validVerificationColorCode },
+				{ DataGeneratorForAPI.generateFakeStatus(), validVerificationLevel, randomVerificationColor,
+						validVerificationColorCode },
+				{ DataGeneratorForAPI.generateFakeStatus(), validVerificationLevel, validVerificationColor, "" },
+				{ DataGeneratorForAPI.generateFakeStatus(), validVerificationLevel, validVerificationColor,
+						randomVerificationColorCode } };
 	}
 
 	@DataProvider(name = "TestDataForUpdateVerification")
 	public Object[][] testDataForUpdateVerification() {
-		String fakeVerification = DataGeneratorForAPI.generateFakeStatus();
-		int fakeVerificationLevel = DataGeneratorForAPI.generateFakeNumberWithRange(10, 20);
-		String fakeVerificationColor = DataGeneratorForAPI.generateFakeColor();
-		String fakeVerificationColorCode = DataGeneratorForAPI.generateFakeColorCode();
+		int validVerificationLevel = DataGeneratorForAPI.generateFakeNumberWithRange(16, 20);
+		String validVerificationColor = DataGeneratorForAPI.generateFakeColor();
+		String validVerificationColorCode = DataGeneratorForAPI.generateFakeColorCode();
 
 		int invalidVerificationId = DataGeneratorForAPI.generateFakeNumberWithRange(
 				VerificationFolderAPITestCases.newCreatedVerificationId + 10,
@@ -72,24 +74,24 @@ public class DataProvidersForVerificationFolder {
 				.get(randomIndexForVerificationColorCode);
 
 		return new Object[][] {
-				{ VerificationFolderAPITestCases.newCreatedVerificationId, fakeVerification, fakeVerificationLevel,
-						fakeVerificationColor, fakeVerificationColorCode },
-				{ VerificationFolderAPITestCases.newCreatedVerificationId, fakeVerification, randomVerificationLevel,
-						fakeVerificationColor, fakeVerificationColorCode },
-				{ VerificationFolderAPITestCases.newCreatedVerificationId, "", fakeVerificationLevel,
-						fakeVerificationColor, fakeVerificationColorCode },
+				{ VerificationFolderAPITestCases.newCreatedVerificationId, DataGeneratorForAPI.generateFakeStatus(),
+						validVerificationLevel, validVerificationColor, validVerificationColorCode },
+				{ invalidVerificationId, DataGeneratorForAPI.generateFakeStatus(), validVerificationLevel,
+						validVerificationColor, validVerificationColorCode },
+				{ VerificationFolderAPITestCases.newCreatedVerificationId, DataGeneratorForAPI.generateFakeStatus(),
+						randomVerificationLevel, validVerificationColor, validVerificationColorCode },
+				{ VerificationFolderAPITestCases.newCreatedVerificationId, "", validVerificationLevel,
+						validVerificationColor, validVerificationColorCode },
 				{ VerificationFolderAPITestCases.newCreatedVerificationId, randomVerificationName,
-						fakeVerificationLevel, fakeVerificationColor, fakeVerificationColorCode },
-				{ VerificationFolderAPITestCases.newCreatedVerificationId, fakeVerification, fakeVerificationLevel, "",
-						fakeVerificationColorCode },
-				{ VerificationFolderAPITestCases.newCreatedVerificationId, fakeVerification, fakeVerificationLevel,
-						randomVerificationColor, fakeVerificationColorCode },
-				{ VerificationFolderAPITestCases.newCreatedVerificationId, fakeVerification, fakeVerificationLevel,
-						fakeVerificationColor, "" },
-				{ VerificationFolderAPITestCases.newCreatedVerificationId, fakeVerification, fakeVerificationLevel,
-						fakeVerificationColor, randomVerificationColorCode },
-				{ invalidVerificationId, fakeVerification, fakeVerificationLevel, fakeVerificationColor,
-						fakeVerificationColorCode } };
+						validVerificationLevel, validVerificationColor, validVerificationColorCode },
+				{ VerificationFolderAPITestCases.newCreatedVerificationId, DataGeneratorForAPI.generateFakeStatus(),
+						validVerificationLevel, "", validVerificationColorCode },
+				{ VerificationFolderAPITestCases.newCreatedVerificationId, DataGeneratorForAPI.generateFakeStatus(),
+						validVerificationLevel, randomVerificationColor, validVerificationColorCode },
+				{ VerificationFolderAPITestCases.newCreatedVerificationId, DataGeneratorForAPI.generateFakeStatus(),
+						validVerificationLevel, validVerificationColor, "" },
+				{ VerificationFolderAPITestCases.newCreatedVerificationId, DataGeneratorForAPI.generateFakeStatus(),
+						validVerificationLevel, validVerificationColor, randomVerificationColorCode } };
 	}
 
 	@DataProvider(name = "TestDataForDeleteVerification")

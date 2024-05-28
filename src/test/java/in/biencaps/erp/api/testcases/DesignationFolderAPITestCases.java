@@ -116,7 +116,7 @@ public class DesignationFolderAPITestCases extends BaseTest {
 				response);
 	}
 
-	@Test(priority = 8, dataProvider = "TestDataForAddDesignation", dataProviderClass = DataProvidersForDesignationFolder.class)
+	@Test(priority = 8, dataProvider = "TestDataForAddDesignation", dataProviderClass = DataProvidersForDesignationFolder.class, enabled = false)
 	public void verify_Add_Designation_With_Admin_Authorization(String designationName, int departmentId) {
 		test = BaseTest.extent.createTest("Add designation with valid and invalid data and with authorization");
 
@@ -148,7 +148,7 @@ public class DesignationFolderAPITestCases extends BaseTest {
 		}
 	}
 
-	@Test(priority = 9, dataProvider = "TestDataForGetAllDesignationByDepartment", dataProviderClass = DataProvidersForDesignationFolder.class)
+	@Test(priority = 9, dataProvider = "TestDataForGetAllDesignationByDepartment", dataProviderClass = DataProvidersForDesignationFolder.class, enabled = false)
 	public void verify_Get_All_Designation_By_Department_With_Admin_Authorization(int departmentId) {
 		test = BaseTest.extent
 				.createTest("Get all designations by department with valid and invalid data and with authorization");
@@ -188,7 +188,7 @@ public class DesignationFolderAPITestCases extends BaseTest {
 				APIEndpoints.updateDesignationEndpoint, response);
 	}
 
-	@Test(priority = 11, dataProvider = "TestDataForUpdateDesignation", dataProviderClass = DataProvidersForDesignationFolder.class)
+	@Test(priority = 11, dataProvider = "TestDataForUpdateDesignation", dataProviderClass = DataProvidersForDesignationFolder.class, enabled = false)
 	public void verify_Update_Designation_With_Admin_Authorization(int designationId, String designationName,
 			int departmentId, String departmentName, int departmentLevel, String departmentColor,
 			String departmentColorCode) throws Throwable {

@@ -10,10 +10,7 @@ public class DataProvidersForDepartmentFolder {
 
 	@DataProvider(name = "TestDataForAddDepartment")
 	public Object[][] testDataForAddDesignation() {
-		String fakeDepartment = DataGeneratorForAPI.generateFakeDepartment();
-		int fakeDepartmentLevel = DataGeneratorForAPI.generateFakeNumberWithRange(10, 20);
-		String fakeDepartmentColor = DataGeneratorForAPI.generateFakeColor();
-		String fakeDepartmentColorCode = DataGeneratorForAPI.generateFakeColorCode();
+		int validDepartmentLevel = DataGeneratorForAPI.generateFakeNumberWithRange(10, 15);
 
 		int randomIndexForDepartmentName = random.nextInt(DepartmentFolderAPITestCases.departments.size());
 		String randomDepartmentName = DepartmentFolderAPITestCases.departments.get(randomIndexForDepartmentName);
@@ -29,22 +26,36 @@ public class DataProvidersForDepartmentFolder {
 		String randomDepartmentColorCode = DepartmentFolderAPITestCases.departmentColorCodes
 				.get(randomIndexForDepartmentColorCode);
 
-		return new Object[][] { { fakeDepartment, fakeDepartmentLevel, fakeDepartmentColor, fakeDepartmentColorCode },
-				{ fakeDepartment, randomDepartmentLevel, fakeDepartmentColor, fakeDepartmentColorCode },
-				{ fakeDepartment, fakeDepartmentLevel, "", fakeDepartmentColorCode },
-				{ fakeDepartment, fakeDepartmentLevel, randomDepartmentColor, fakeDepartmentColorCode },
-				{ fakeDepartment, fakeDepartmentLevel, fakeDepartmentColor, "" },
-				{ fakeDepartment, fakeDepartmentLevel, fakeDepartmentColor, randomDepartmentColorCode },
-				{ "", fakeDepartmentLevel, fakeDepartmentColor, fakeDepartmentColorCode },
-				{ randomDepartmentName, fakeDepartmentLevel, fakeDepartmentColor, fakeDepartmentColorCode } };
+		return new Object[][] {
+				// Entering valid data for all fields
+				{ DataGeneratorForAPI.generateFakeDepartment(), validDepartmentLevel,
+						DataGeneratorForAPI.generateFakeColor(), DataGeneratorForAPI.generateFakeColorCode() },
+				// Entering empty string for only departmentName field
+				{ "", validDepartmentLevel, DataGeneratorForAPI.generateFakeColor(),
+						DataGeneratorForAPI.generateFakeColorCode() },
+				// Entering already exist departmentName for only departmentName field
+				{ randomDepartmentName, validDepartmentLevel, DataGeneratorForAPI.generateFakeColor(),
+						DataGeneratorForAPI.generateFakeColorCode() },
+				// Entering already exist departmentLevel for only departmentLevel field
+				{ DataGeneratorForAPI.generateFakeDepartment(), randomDepartmentLevel,
+						DataGeneratorForAPI.generateFakeColor(), DataGeneratorForAPI.generateFakeColorCode() },
+				// Entering empty string for only departmentColor field
+				{ DataGeneratorForAPI.generateFakeDepartment(), validDepartmentLevel, "",
+						DataGeneratorForAPI.generateFakeColorCode() },
+				// Entering already exist departmentColor for only departmentColor field
+				{ DataGeneratorForAPI.generateFakeDepartment(), validDepartmentLevel, randomDepartmentColor,
+						DataGeneratorForAPI.generateFakeColorCode() },
+				// Entering empty string for only departmentColorCode field
+				{ DataGeneratorForAPI.generateFakeDepartment(), validDepartmentLevel,
+						DataGeneratorForAPI.generateFakeColor(), "" },
+				// Entering already exist departmentColorCode for only departmentColorCode field
+				{ DataGeneratorForAPI.generateFakeDepartment(), validDepartmentLevel,
+						DataGeneratorForAPI.generateFakeColor(), randomDepartmentColorCode } };
 	}
 
 	@DataProvider(name = "TestDataForUpdateDepartment")
 	public Object[][] testDataForUpdateDepartment() {
-		String fakeDepartment = DataGeneratorForAPI.generateFakeDepartment();
-		int fakeDepartmentLevel = DataGeneratorForAPI.generateFakeNumberWithRange(10, 20);
-		String fakeDepartmentColor = DataGeneratorForAPI.generateFakeColor();
-		String fakeDepartmentColorCode = DataGeneratorForAPI.generateFakeColorCode();
+		int validDepartmentLevel = DataGeneratorForAPI.generateFakeNumberWithRange(16, 20);
 		int invalidDepartmentId = DataGeneratorForAPI.generateFakeNumberWithRange(
 				DepartmentFolderAPITestCases.newCreatedDepartmentId + 10,
 				DepartmentFolderAPITestCases.newCreatedDepartmentId + 50);
@@ -64,24 +75,35 @@ public class DataProvidersForDepartmentFolder {
 				.get(randomIndexForDepartmentColorCode);
 
 		return new Object[][] {
-				{ DepartmentFolderAPITestCases.newCreatedDepartmentId, fakeDepartment, fakeDepartmentLevel,
-						fakeDepartmentColor, fakeDepartmentColorCode },
-				{ DepartmentFolderAPITestCases.newCreatedDepartmentId, fakeDepartment, randomDepartmentLevel,
-						fakeDepartmentColor, fakeDepartmentColorCode },
-				{ DepartmentFolderAPITestCases.newCreatedDepartmentId, "", fakeDepartmentLevel, fakeDepartmentColor,
-						fakeDepartmentColorCode },
-				{ DepartmentFolderAPITestCases.newCreatedDepartmentId, randomDepartmentName, fakeDepartmentLevel,
-						fakeDepartmentColor, fakeDepartmentColorCode },
-				{ DepartmentFolderAPITestCases.newCreatedDepartmentId, fakeDepartment, fakeDepartmentLevel, "",
-						fakeDepartmentColorCode },
-				{ DepartmentFolderAPITestCases.newCreatedDepartmentId, fakeDepartment, fakeDepartmentLevel,
-						randomDepartmentColor, fakeDepartmentColorCode },
-				{ DepartmentFolderAPITestCases.newCreatedDepartmentId, fakeDepartment, fakeDepartmentLevel,
-						fakeDepartmentColor, "" },
-				{ DepartmentFolderAPITestCases.newCreatedDepartmentId, fakeDepartment, fakeDepartmentLevel,
-						fakeDepartmentColor, randomDepartmentColorCode },
-				{ invalidDepartmentId, fakeDepartment, fakeDepartmentLevel, fakeDepartmentColor,
-						fakeDepartmentColorCode } };
+				// Entering valid data for all fields
+				{ DepartmentFolderAPITestCases.newCreatedDepartmentId, DataGeneratorForAPI.generateFakeDepartment(),
+						validDepartmentLevel, DataGeneratorForAPI.generateFakeColor(),
+						DataGeneratorForAPI.generateFakeColorCode() },
+				// Entering invalid departmentId for only departmentId field
+				{ invalidDepartmentId, DataGeneratorForAPI.generateFakeDepartment(), validDepartmentLevel,
+						DataGeneratorForAPI.generateFakeColor(), DataGeneratorForAPI.generateFakeColorCode() },
+				// Entering empty string for only departmentName field
+				{ DepartmentFolderAPITestCases.newCreatedDepartmentId, "", validDepartmentLevel,
+						DataGeneratorForAPI.generateFakeColor(), DataGeneratorForAPI.generateFakeColorCode() },
+				// Entering already exist departmentName for only departmentName field
+				{ DepartmentFolderAPITestCases.newCreatedDepartmentId, randomDepartmentName, validDepartmentLevel,
+						DataGeneratorForAPI.generateFakeColor(), DataGeneratorForAPI.generateFakeColorCode() },
+				// Entering already exist departmentLevel for only departmentLevel field
+				{ DepartmentFolderAPITestCases.newCreatedDepartmentId, DataGeneratorForAPI.generateFakeDepartment(),
+						randomDepartmentLevel, DataGeneratorForAPI.generateFakeColor(),
+						DataGeneratorForAPI.generateFakeColorCode() },
+				// Entering empty string for only departmentColor field
+				{ DepartmentFolderAPITestCases.newCreatedDepartmentId, DataGeneratorForAPI.generateFakeDepartment(),
+						validDepartmentLevel, "", DataGeneratorForAPI.generateFakeColorCode() },
+				// Entering already exist departmentColor for only departmentColor field
+				{ DepartmentFolderAPITestCases.newCreatedDepartmentId, DataGeneratorForAPI.generateFakeDepartment(),
+						validDepartmentLevel, randomDepartmentColor, DataGeneratorForAPI.generateFakeColorCode() },
+				// Entering empty string for only departmentColorCode field
+				{ DepartmentFolderAPITestCases.newCreatedDepartmentId, DataGeneratorForAPI.generateFakeDepartment(),
+						validDepartmentLevel, DataGeneratorForAPI.generateFakeColor(), "" },
+				// Entering already exist departmentColorCode for only departmentColorCode field
+				{ DepartmentFolderAPITestCases.newCreatedDepartmentId, DataGeneratorForAPI.generateFakeDepartment(),
+						validDepartmentLevel, DataGeneratorForAPI.generateFakeColor(), randomDepartmentColorCode } };
 	}
 
 	@DataProvider(name = "TestDataForDeleteDepartment")
@@ -93,7 +115,12 @@ public class DataProvidersForDepartmentFolder {
 		int randomIndexForDepartmentId = random.nextInt(DepartmentFolderAPITestCases.departmentIds.size());
 		int randomDepartmentId = DepartmentFolderAPITestCases.departmentIds.get(randomIndexForDepartmentId);
 
-		return new Object[][] { { invalidDepartmentId }, { randomDepartmentId },
+		return new Object[][] {
+				// Entering invalid departmentId for only departmentId field
+				{ invalidDepartmentId },
+				// Entering already mapped departmentId for only departmentId field
+				{ randomDepartmentId },
+				// Entering valid data for departmentId field
 				{ DepartmentFolderAPITestCases.newCreatedDepartmentId } };
 	}
 }

@@ -1,0 +1,26 @@
+16:44:32.164 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - List of role Ids before add new role are: [1, 2, 3, 4, 5]
+16:44:32.179 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - List of roles before add new role are: [Super Admin, Admin, Team Lead, Lead, Developer]
+16:44:32.197 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - List of role Levels before add new role are: [1, 2, 3, 4, 5]
+
+16:44:33.614 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - List of role Ids after added new role are: [1, 2, 3, 4, 5, 16]
+16:44:33.636 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - List of roles after added new role are: [Super Admin, Admin, Team Lead, Lead, Developer, Nairobi]
+16:44:33.659 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - List of role Levels after added new role are: [1, 2, 3, 4, 5, 11]
+
+16:44:33.819 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - New created role Id after added new role is: 16
+16:44:33.891 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - New created role after added new role is: ROLE_NAIROBI
+16:44:33.937 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - New created role name after added new role is: Nairobi
+16:44:34.001 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - New created role level after added new role is: 11
+
+16:44:37.967 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - List of role Ids after updated new role are: [1, 2, 3, 4, 5, 16, 17]
+16:44:37.981 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - List of roles after updated new role are: [Super Admin, Admin, Team Lead, Lead, Developer, Santo Domingo, Yerevan]
+16:44:37.997 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - List of role Levels after updated new role are: [1, 2, 3, 4, 5, 17, 4]
+
+16:44:38.021 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - New created role Id after updated new role is: 17
+16:44:38.056 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - New created role after updated new role is: ROLE_YEREVAN
+16:44:38.084 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - New created role name after updated new role is: Yerevan
+16:44:38.109 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - New created role level after updated new role is: 4
+
+16:44:43.494 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - List of role Ids after deleted new role are: [1, 2, 3, 4, 5, 16]
+16:44:43.505 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - List of roles after deleted new role are: [Super Admin, Admin, Team Lead, Lead, Developer, Team Lead]
+16:44:43.521 --> in.biencaps.erp.api.testcases.RoleFolderAPITestCases - List of role Levels after deleted new role are: [1, 2, 3, 4, 5, 11]
+

@@ -89,7 +89,7 @@ public class VerificationFolderAPITestCases extends BaseTest {
 		verify_Get_All_Verifications_API_With_Authorization("before add new verification status");
 	}
 
-	@Test(priority = 6, dataProvider = "TestDataForAddVerification", dataProviderClass = DataProvidersForVerificationFolder.class, enabled = false)
+	@Test(priority = 6, dataProvider = "TestDataForAddVerification", dataProviderClass = DataProvidersForVerificationFolder.class)
 	public void verify_Add_Verification_With_Authorization(String Verification, int verificationLevel,
 			String verificationColor, String verificationColorCode) {
 		test = BaseTest.extent.createTest("Add verification status with valid and invalid data and with authorization");
@@ -109,7 +109,7 @@ public class VerificationFolderAPITestCases extends BaseTest {
 				|| verificationColorCodes.contains(verificationColorCode)) {
 			BodyValidation.responseValidation(response, "Conflict", 409);
 		} else {
-			BodyValidation.responseValidation(response, 200);
+			BodyValidation.responseValidation(response, 201);
 
 			verify_Get_All_Verifications_API_With_Authorization("after added new verification status");
 
@@ -123,7 +123,7 @@ public class VerificationFolderAPITestCases extends BaseTest {
 		}
 	}
 
-	@Test(priority = 7, dataProvider = "TestDataForUpdateVerification", dataProviderClass = DataProvidersForVerificationFolder.class, enabled = false)
+	@Test(priority = 7, dataProvider = "TestDataForUpdateVerification", dataProviderClass = DataProvidersForVerificationFolder.class)
 	public void verify_Update_Verification_With_Authorization(int VerificationId, String Verification,
 			int verificationLevel, String verificationColor, String verificationColorCode) throws Throwable {
 		test = BaseTest.extent
@@ -138,6 +138,8 @@ public class VerificationFolderAPITestCases extends BaseTest {
 
 		Response response = Responses.putRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.updateVerificationEndpoint);
+
+		String responseBody = response.getBody().asPrettyString();
 		BaseTest.test_Method_Logs("update verification", APIEndpoints.updateVerificationEndpoint, requestPayload,
 				response);
 
@@ -150,7 +152,9 @@ public class VerificationFolderAPITestCases extends BaseTest {
 				|| verificationColorCodes.contains(verificationColorCode)) {
 			BodyValidation.responseValidation(response, "Conflict", 409);
 		} else {
-			BodyValidation.responseValidation(response, 200);
+			int contentLength = responseBody.length();
+			BodyValidation.responseValidation(response, 200, String.valueOf(contentLength));
+			assertEquals(responseBody, "Verification Status Updated Successfully");
 
 			verify_Get_All_Verifications_API_With_Authorization("after updated new verification status");
 
@@ -164,7 +168,7 @@ public class VerificationFolderAPITestCases extends BaseTest {
 		}
 	}
 
-	@Test(priority = 8, dataProvider = "TestDataForDeleteVerification", dataProviderClass = DataProvidersForVerificationFolder.class, enabled = false)
+	@Test(priority = 8, dataProvider = "TestDataForDeleteVerification", dataProviderClass = DataProvidersForVerificationFolder.class)
 	public void verify_Delete_Single_Verification_With_Authorization(int verificationId) {
 		test = BaseTest.extent
 				.createTest("Delete verification status with valid and invalid data and with authorization");
@@ -172,40 +176,43 @@ public class VerificationFolderAPITestCases extends BaseTest {
 		Response response = Responses.deleteRequestWithAuthorizationAndQueryParameter("id", verificationId,
 				LoginEmployeeAPITestCases.authToken, APIEndpoints.deleteVerificationEndpoint);
 
+		String responseBody = response.getBody().asPrettyString();
 		BaseTest.test_Method_Logs_With_Query_Parameter("delete verification", APIEndpoints.deleteVerificationEndpoint,
 				verificationId, response);
 
-		if (response.getBody().asPrettyString().equals("[]")) {
+		if (responseBody.equals("[]")) {
 			BodyValidation.response204Validation(response);
 		} else if (verificationIds.contains(verificationId) == false) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
 		} else if (response.getStatusCode() == 403) {
 			BodyValidation.responseValidation(response, "Forbidden", 403);
 		} else {
-			BodyValidation.responseValidation(response, 200);
+			int contentLength = responseBody.length();
+			BodyValidation.responseValidation(response, 200, String.valueOf(contentLength));
+			assertEquals(responseBody, "Verification Status Deleted Successfully");
 
 			verify_Get_All_Verifications_API_With_Authorization("after deleted new verification status");
 		}
 	}
 
 	public void verifynewCreatedVerificationDetails(String message) {
-		newCreatedVerificationId = response.jsonPath().getInt("max { it.VerificationId }.VerificationId");
+		newCreatedVerificationId = response.jsonPath().getInt("max { it.verificationStatusId }.verificationStatusId");
 		log.info("New created verification status Id " + message + " is => " + newCreatedVerificationId);
 
 		newCreatedVerification = response.jsonPath()
-				.getString("find { it.VerificationId == " + newCreatedVerificationId + " }.Verification");
+				.getString("find { it.verificationStatusId == " + newCreatedVerificationId + " }.verificationStatus");
 		log.info("New created verification status " + message + " is => " + newCreatedVerification);
 
 		newCreatedVerificationLevel = response.jsonPath()
-				.getInt("find { it.VerificationId == " + newCreatedVerificationId + " }.verificationLevel");
+				.getInt("find { it.verificationStatusId == " + newCreatedVerificationId + " }.verificationLevel");
 		log.info("New created verification status level " + message + " is => " + newCreatedVerificationLevel);
 
 		newCreatedVerificationColor = response.jsonPath()
-				.getString("find { it.VerificationId == " + newCreatedVerificationId + " }.verificationColor");
+				.getString("find { it.verificationStatusId == " + newCreatedVerificationId + " }.verificationColor");
 		log.info("New created verification status color " + message + " is => " + newCreatedVerificationColor);
 
 		newCreatedVerificationColorCode = response.jsonPath()
-				.getString("find { it.VerificationId == " + newCreatedVerificationId + " }.verificationColorCode");
+				.getString("find { it.verificationStatusId == " + newCreatedVerificationId + " }.verificationColorCode");
 		log.info("New created verification status color code " + message + " is => " + newCreatedVerificationColorCode
 				+ "\n");
 	}
@@ -220,10 +227,10 @@ public class VerificationFolderAPITestCases extends BaseTest {
 
 		BaseTest.test_Method_Logs("get all verifications", APIEndpoints.getAllVerificationsEndpoint, response);
 
-		verificationIds = response.jsonPath().getList("VerificationId");
+		verificationIds = response.jsonPath().getList("verificationStatusId");
 		log.info("List of verification status Ids " + message + " are => " + verificationIds);
 
-		verifications = response.jsonPath().getList("Verification");
+		verifications = response.jsonPath().getList("verificationStatus");
 		log.info("List of verification status names " + message + " are => " + verifications);
 
 		verificationLevels = response.jsonPath().getList("verificationLevel");

@@ -169,7 +169,7 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 		verify_Get_All_Departments_API_With_Authorization("before add new department");
 	}
 
-	@Test(priority = 11, dataProvider = "TestDataForAddDepartment", dataProviderClass = DataProvidersForDepartmentFolder.class, enabled = false)
+	@Test(priority = 11, dataProvider = "TestDataForAddDepartment", dataProviderClass = DataProvidersForDepartmentFolder.class)
 	public void verify_Add_Department_With_Authorization(String departmentName, int departmentLevel,
 			String departmentColor, String departmentColorCode) {
 		test = BaseTest.extent.createTest("Add department with valid and invalid data and with authorization");
@@ -179,10 +179,8 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 
 		Response response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.addDepartmentEndpoint);
-		test.log(Status.INFO, "API endpoint for add department is => " + APIEndpoints.addDepartmentEndpoint);
-		test.log(Status.INFO, "Request payload for add department is => " + requestPayload);
-		test.log(Status.INFO, "Status code for add department is => " + response.getStatusCode());
-		test.log(Status.INFO, "Response for add department is => " + response.getBody().asPrettyString());
+
+		BaseTest.test_Method_Logs("add department", APIEndpoints.addDepartmentEndpoint, requestPayload, response);
 
 		if (departmentName.isBlank() || departmentColor.isBlank() || departmentColorCode.isBlank()) {
 			BodyValidation.response400Validation(response);
@@ -190,7 +188,7 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 				|| departmentColors.contains(departmentColor) || departmentColorCodes.contains(departmentColorCode)) {
 			BodyValidation.responseValidation(response, "Conflict", 409);
 		} else {
-			BodyValidation.responseValidation(response, 200);
+			BodyValidation.responseValidation(response, 201);
 
 			verify_Get_All_Departments_API_With_Authorization("after added new department");
 
@@ -203,7 +201,7 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 		}
 	}
 
-	@Test(priority = 12, dataProvider = "TestDataForUpdateDepartment", dataProviderClass = DataProvidersForDepartmentFolder.class, enabled = false)
+	@Test(priority = 12, dataProvider = "TestDataForUpdateDepartment", dataProviderClass = DataProvidersForDepartmentFolder.class)
 	public void verifyUpdateDepartmentWithAuthorization(int departmentId, String departmentName, int departmentLevel,
 			String departmentColor, String departmentColorCode) throws Throwable {
 		test = BaseTest.extent.createTest("Update department with valid and invalid data and with authorization");
@@ -219,10 +217,8 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 				APIEndpoints.updateDepartmentEndpoint);
 
 		String responseBody = response.getBody().asPrettyString();
-		test.log(Status.INFO, "API endpoint for update department is => " + APIEndpoints.updateDepartmentEndpoint);
-		test.log(Status.INFO, "Request payload for update department is => " + requestPayload);
-		test.log(Status.INFO, "Status code for update department is => " + response.getStatusCode());
-		test.log(Status.INFO, "Response for update department is => " + response.getBody().asPrettyString());
+
+		BaseTest.test_Method_Logs("update department", APIEndpoints.updateDepartmentEndpoint, requestPayload, response);
 
 		if (departmentName.isBlank() || departmentColor.isBlank() || departmentColorCode.isBlank()) {
 			BodyValidation.response400Validation(response);
@@ -234,7 +230,7 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 		} else {
 			int contentLength = responseBody.length();
 			BodyValidation.responseValidation(response, 200, String.valueOf(contentLength));
-			assertEquals(responseBody, "Updated Successfully");
+			assertEquals(responseBody, "Department Updated Successfully");
 
 			verify_Get_All_Departments_API_With_Authorization("after updated new department");
 
@@ -247,7 +243,7 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 		}
 	}
 
-	@Test(priority = 13, dataProvider = "TestDataForDeleteDepartment", dataProviderClass = DataProvidersForDepartmentFolder.class, enabled = false)
+	@Test(priority = 13, dataProvider = "TestDataForDeleteDepartment", dataProviderClass = DataProvidersForDepartmentFolder.class)
 	public void verifyDeleteSingleDepartmentWithAuthorization(int departmentId) {
 		test = BaseTest.extent.createTest("Delete department with valid and invalid data and with authorization");
 
@@ -255,10 +251,9 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 				LoginEmployeeAPITestCases.authToken, APIEndpoints.deleteDepartmentEndpoint);
 
 		String responseBody = response.getBody().asPrettyString();
-		test.log(Status.INFO, "API endpoint for delete department is => " + APIEndpoints.deleteDepartmentEndpoint);
-		test.log(Status.INFO, "Request payload for delete department is => " + departmentId);
-		test.log(Status.INFO, "Status code for delete department is => " + response.getStatusCode());
-		test.log(Status.INFO, "Response for delete department is => " + response.getBody().asPrettyString());
+
+		BaseTest.test_Method_Logs_With_Query_Parameter("delete department", APIEndpoints.deleteDepartmentEndpoint,
+				departmentId, response);
 
 		if (responseBody.equals("[]")) {
 			BodyValidation.response204Validation(response);

@@ -1,0 +1,262 @@
+16:17:08.031 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids before add new verification status are => [null, null, null, null, null]
+16:17:08.066 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names before add new verification status are => [null, null, null, null, null]
+16:17:08.083 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels before add new verification status are => [0, 1, 3, 3, 10]
+16:17:08.100 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors before add new verification status are => [Royal Purple, Ultraviolet, azure, Sky, azure]
+16:17:08.121 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes before add new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF, #FF0000]
+
+16:17:43.234 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids before add new verification status are => [null, null, null, null, null]
+16:17:43.263 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names before add new verification status are => [null, null, null, null, null]
+16:17:43.282 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels before add new verification status are => [0, 1, 3, 3, 10]
+16:17:43.300 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors before add new verification status are => [Royal Purple, Ultraviolet, azure, Sky, azure]
+16:17:43.318 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes before add new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF, #FF0000]
+
+16:20:42.828 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids before add new verification status are => [3, 1, 9, 21]
+16:20:42.860 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names before add new verification status are => [Not Verified, Verified, Reject, Revert]
+16:20:42.878 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels before add new verification status are => [0, 1, 3, 3]
+16:20:42.895 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors before add new verification status are => [Royal Purple, Ultraviolet, azure, Sky]
+16:20:42.916 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes before add new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF]
+
+16:20:44.700 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids after added new verification status are => [3, 1, 9, 21, 46]
+16:20:44.714 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names after added new verification status are => [Not Verified, Verified, Reject, Revert, Oliver]
+16:20:44.733 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels after added new verification status are => [0, 1, 3, 3, 10]
+16:20:44.746 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors after added new verification status are => [Royal Purple, Ultraviolet, azure, Sky, tan]
+16:20:44.765 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes after added new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF, #AB206E]
+
+16:23:57.300 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids before add new verification status are => [3, 1, 9, 21]
+16:23:57.318 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names before add new verification status are => [Not Verified, Verified, Reject, Revert]
+16:23:57.332 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels before add new verification status are => [0, 1, 3, 3]
+16:23:57.347 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors before add new verification status are => [Royal Purple, Ultraviolet, azure, Sky]
+16:23:57.370 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes before add new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF]
+
+16:23:59.232 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids after added new verification status are => [3, 1, 9, 21, 49]
+16:23:59.246 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names after added new verification status are => [Not Verified, Verified, Reject, Revert, Simba]
+16:23:59.263 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels after added new verification status are => [0, 1, 3, 3, 11]
+16:23:59.280 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors after added new verification status are => [Royal Purple, Ultraviolet, azure, Sky, orchid]
+16:23:59.302 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes after added new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF, #0C7B0F]
+
+16:24:21.852 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids after deleted new verification status are => [3, 1, 9, 21, 49]
+16:24:21.861 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names after deleted new verification status are => [Not Verified, Verified, Reject, Revert, Simba]
+16:24:21.874 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels after deleted new verification status are => [0, 1, 3, 3, 11]
+16:24:21.882 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors after deleted new verification status are => [Royal Purple, Ultraviolet, azure, Sky, orchid]
+16:24:21.894 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes after deleted new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF, #0C7B0F]
+
+16:25:58.744 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids before add new verification status are => [3, 1, 9, 21]
+16:25:58.760 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names before add new verification status are => [Not Verified, Verified, Reject, Revert]
+16:25:58.770 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels before add new verification status are => [0, 1, 3, 3]
+16:25:58.797 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors before add new verification status are => [Royal Purple, Ultraviolet, azure, Sky]
+16:25:58.817 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes before add new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF]
+
+16:26:00.510 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids after added new verification status are => [3, 1, 9, 21, 54]
+16:26:00.525 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names after added new verification status are => [Not Verified, Verified, Reject, Revert, Chloe]
+16:26:00.537 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels after added new verification status are => [0, 1, 3, 3, 14]
+16:26:00.553 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors after added new verification status are => [Royal Purple, Ultraviolet, azure, Sky, plum]
+16:26:00.582 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes after added new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF, #18543E]
+
+16:26:00.714 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status Id after added new verification status is => 3
+16:26:00.779 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status after added new verification status is => null
+16:26:09.695 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids after updated new verification status are => [1, 9, 21, 54, 3]
+16:26:09.704 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names after updated new verification status are => [Verified, Reject, Revert, Chloe, Missy]
+16:26:09.713 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels after updated new verification status are => [1, 3, 3, 14, 16]
+16:26:09.720 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors after updated new verification status are => [Ultraviolet, azure, Sky, plum, lavender]
+16:26:09.734 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes after updated new verification status are => [#CDB7F3, #A1C5FE, #BCD6FF, #18543E, #F52922]
+
+16:26:09.754 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status Id after updated new verification status is => 1
+16:26:09.780 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status after updated new verification status is => null
+16:26:22.897 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids after deleted new verification status are => [1, 9, 21, 54, 3]
+16:26:22.909 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names after deleted new verification status are => [Verified, Reject, Revert, Chloe, Missy]
+16:26:22.920 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels after deleted new verification status are => [1, 3, 3, 14, 16]
+16:26:22.932 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors after deleted new verification status are => [Ultraviolet, azure, Sky, plum, lavender]
+16:26:22.944 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes after deleted new verification status are => [#CDB7F3, #A1C5FE, #BCD6FF, #18543E, #F52922]
+
+16:26:24.229 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids after deleted new verification status are => [1, 9, 21, 54, 3]
+16:26:24.243 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names after deleted new verification status are => [Verified, Reject, Revert, Chloe, Missy]
+16:26:24.251 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels after deleted new verification status are => [1, 3, 3, 14, 16]
+16:26:24.277 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors after deleted new verification status are => [Ultraviolet, azure, Sky, plum, lavender]
+16:26:24.293 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes after deleted new verification status are => [#CDB7F3, #A1C5FE, #BCD6FF, #18543E, #F52922]
+
+16:27:37.995 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids before add new verification status are => [1, 9, 21, 3]
+16:27:38.016 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names before add new verification status are => [Verified, Reject, Revert, Missy]
+16:27:38.030 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels before add new verification status are => [1, 3, 3, 16]
+16:27:38.041 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors before add new verification status are => [Ultraviolet, azure, Sky, lavender]
+16:27:38.055 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes before add new verification status are => [#CDB7F3, #A1C5FE, #BCD6FF, #F52922]
+
+16:27:39.614 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids after added new verification status are => [1, 9, 21, 59, 3]
+16:27:39.626 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names after added new verification status are => [Verified, Reject, Revert, Sooty, Missy]
+16:27:39.646 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels after added new verification status are => [1, 3, 3, 14, 16]
+16:27:39.658 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors after added new verification status are => [Ultraviolet, azure, Sky, magenta, lavender]
+16:27:39.674 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes after added new verification status are => [#CDB7F3, #A1C5FE, #BCD6FF, #BCC2B6, #F52922]
+
+16:27:39.754 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status Id after added new verification status is => 59
+16:27:39.797 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status after added new verification status is => Sooty
+16:27:39.821 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status level after added new verification status is => 14
+16:27:39.849 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status color after added new verification status is => magenta
+16:27:39.869 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status color code after added new verification status is => #BCC2B6
+
+16:27:47.731 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids after updated new verification status are => [1, 9, 21, 3, 59]
+16:27:47.750 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names after updated new verification status are => [Verified, Reject, Revert, Missy, Max]
+16:27:47.768 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels after updated new verification status are => [1, 3, 3, 16, 17]
+16:27:47.782 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors after updated new verification status are => [Ultraviolet, azure, Sky, lavender, blue]
+16:27:47.797 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes after updated new verification status are => [#CDB7F3, #A1C5FE, #BCD6FF, #F52922, #62E689]
+
+16:27:47.828 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status Id after updated new verification status is => 59
+16:27:47.866 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status after updated new verification status is => Max
+16:27:47.886 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status level after updated new verification status is => 17
+16:27:47.908 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status color after updated new verification status is => blue
+16:27:47.931 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status color code after updated new verification status is => #62E689
+
+16:28:00.796 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids after deleted new verification status are => [1, 9, 21, 3]
+16:28:00.809 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names after deleted new verification status are => [Verified, Reject, Revert, Missy]
+16:28:00.826 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels after deleted new verification status are => [1, 3, 3, 16]
+16:28:00.840 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors after deleted new verification status are => [Ultraviolet, azure, Sky, lavender]
+16:28:00.852 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes after deleted new verification status are => [#CDB7F3, #A1C5FE, #BCD6FF, #F52922]
+
+16:28:02.837 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids after deleted new verification status are => [1, 9, 21, 3]
+16:28:02.888 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names after deleted new verification status are => [Verified, Reject, Revert, Missy]
+16:28:02.919 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels after deleted new verification status are => [1, 3, 3, 16]
+16:28:02.936 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors after deleted new verification status are => [Ultraviolet, azure, Sky, lavender]
+16:28:02.950 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes after deleted new verification status are => [#CDB7F3, #A1C5FE, #BCD6FF, #F52922]
+
+16:31:00.900 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids before add new verification status are => [3, 1, 9, 21]
+16:31:00.923 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names before add new verification status are => [Not Verified, Verified, Reject, Revert]
+16:31:00.951 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels before add new verification status are => [0, 1, 3, 3]
+16:31:00.974 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors before add new verification status are => [Royal Purple, Ultraviolet, azure, Sky]
+16:31:01.001 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes before add new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF]
+
+16:31:02.443 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids after added new verification status are => [3, 1, 9, 21, 64]
+16:31:02.454 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names after added new verification status are => [Not Verified, Verified, Reject, Revert, Alfie]
+16:31:02.477 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels after added new verification status are => [0, 1, 3, 3, 14]
+16:31:02.488 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors after added new verification status are => [Royal Purple, Ultraviolet, azure, Sky, blue]
+16:31:02.513 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes after added new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF, #71084E]
+
+16:31:02.636 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status Id after added new verification status is => 64
+16:31:02.684 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status after added new verification status is => Alfie
+16:31:02.714 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status level after added new verification status is => 14
+16:31:02.744 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status color after added new verification status is => blue
+16:31:02.769 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status color code after added new verification status is => #71084E
+
+16:31:22.249 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids after deleted new verification status are => [3, 1, 9, 21]
+16:31:22.259 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names after deleted new verification status are => [Not Verified, Verified, Reject, Revert]
+16:31:22.273 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels after deleted new verification status are => [0, 1, 3, 3]
+16:31:22.285 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors after deleted new verification status are => [Royal Purple, Ultraviolet, azure, Sky]
+16:31:22.299 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes after deleted new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF]
+
+16:31:23.565 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids after deleted new verification status are => [3, 1, 9, 21]
+16:31:23.573 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names after deleted new verification status are => [Not Verified, Verified, Reject, Revert]
+16:31:23.583 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels after deleted new verification status are => [0, 1, 3, 3]
+16:31:23.594 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors after deleted new verification status are => [Royal Purple, Ultraviolet, azure, Sky]
+16:31:23.604 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes after deleted new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF]
+
+16:34:10.519 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids before add new verification status are => [3, 1, 9, 21]
+16:34:10.542 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names before add new verification status are => [Not Verified, Verified, Reject, Revert]
+16:34:10.560 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels before add new verification status are => [0, 1, 3, 3]
+16:34:10.579 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors before add new verification status are => [Royal Purple, Ultraviolet, azure, Sky]
+16:34:10.597 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes before add new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF]
+
+16:34:12.088 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids after added new verification status are => [3, 1, 9, 21, 69]
+16:34:12.102 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names after added new verification status are => [Not Verified, Verified, Reject, Revert, Oliver]
+16:34:12.125 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels after added new verification status are => [0, 1, 3, 3, 13]
+16:34:12.143 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors after added new verification status are => [Royal Purple, Ultraviolet, azure, Sky, violet]
+16:34:12.160 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes after added new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF, #C9023C]
+
+16:34:12.256 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status Id after added new verification status is => 69
+16:34:12.303 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status after added new verification status is => Oliver
+16:34:12.329 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status level after added new verification status is => 13
+16:34:12.359 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status color after added new verification status is => violet
+16:34:12.380 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status color code after added new verification status is => #C9023C
+
+16:34:20.603 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids after updated new verification status are => [3, 1, 9, 21, 71, 72, 73, 69]
+16:34:20.617 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names after updated new verification status are => [Not Verified, Verified, Reject, Revert, Lily, Daisy, Coco, Sooty]
+16:34:20.634 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels after updated new verification status are => [0, 1, 3, 3, 3, 13, 13, 17]
+16:34:20.648 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors after updated new verification status are => [Royal Purple, Ultraviolet, azure, Sky, violet, Royal Purple, violet, magenta]
+16:34:20.661 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes after updated new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF, #C9023C, #C9023C, #A1C5FE, #5F58AB]
+
+16:34:20.684 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status Id after updated new verification status is => 73
+16:34:20.703 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status after updated new verification status is => Coco
+16:34:20.732 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status level after updated new verification status is => 13
+16:34:20.756 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status color after updated new verification status is => violet
+16:34:20.786 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status color code after updated new verification status is => #A1C5FE
+
+16:34:33.494 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids after deleted new verification status are => [3, 1, 9, 21, 71, 72, 69]
+16:34:33.513 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names after deleted new verification status are => [Not Verified, Verified, Reject, Revert, Lily, Daisy, Sooty]
+16:34:33.525 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels after deleted new verification status are => [0, 1, 3, 3, 3, 13, 17]
+16:34:33.534 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors after deleted new verification status are => [Royal Purple, Ultraviolet, azure, Sky, violet, Royal Purple, magenta]
+16:34:33.547 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes after deleted new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF, #C9023C, #C9023C, #5F58AB]
+
+16:34:35.237 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids after deleted new verification status are => [3, 1, 9, 21, 71, 72, 69]
+16:34:35.251 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names after deleted new verification status are => [Not Verified, Verified, Reject, Revert, Lily, Daisy, Sooty]
+16:34:35.263 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels after deleted new verification status are => [0, 1, 3, 3, 3, 13, 17]
+16:34:35.277 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors after deleted new verification status are => [Royal Purple, Ultraviolet, azure, Sky, violet, Royal Purple, magenta]
+16:34:35.291 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes after deleted new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF, #C9023C, #C9023C, #5F58AB]
+
+16:36:40.850 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids before add new verification status are => [3, 1, 9, 21, 71, 72, 69]
+16:36:40.878 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names before add new verification status are => [Not Verified, Verified, Reject, Revert, Lily, Daisy, Sooty]
+16:36:40.902 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels before add new verification status are => [0, 1, 3, 3, 3, 13, 17]
+16:36:40.927 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors before add new verification status are => [Royal Purple, Ultraviolet, azure, Sky, violet, Royal Purple, magenta]
+16:36:40.957 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes before add new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF, #C9023C, #C9023C, #5F58AB]
+
+16:36:42.779 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids after added new verification status are => [3, 1, 9, 21, 71, 74, 72, 69]
+16:36:42.794 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names after added new verification status are => [Not Verified, Verified, Reject, Revert, Lily, Jasper, Daisy, Sooty]
+16:36:42.813 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels after added new verification status are => [0, 1, 3, 3, 3, 10, 13, 17]
+16:36:42.828 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors after added new verification status are => [Royal Purple, Ultraviolet, azure, Sky, violet, salmon, Royal Purple, magenta]
+16:36:42.852 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes after added new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF, #C9023C, #765D9F, #C9023C, #5F58AB]
+
+16:36:42.961 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status Id after added new verification status is => 74
+16:36:43.009 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status after added new verification status is => Jasper
+16:36:43.037 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status level after added new verification status is => 10
+16:36:43.064 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status color after added new verification status is => salmon
+16:36:43.094 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status color code after added new verification status is => #765D9F
+
+16:37:06.373 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids after deleted new verification status are => [3, 76, 1, 9, 21, 77, 78]
+16:37:06.388 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names after deleted new verification status are => [Not Verified, Molly, Verified, Reject, Revert, Tiger, Poppy]
+16:37:06.408 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels after deleted new verification status are => [0, 0, 1, 3, 3, 10, 10]
+16:37:06.420 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors after deleted new verification status are => [Royal Purple, salmon, Ultraviolet, azure, Sky, azure, salmon]
+16:37:06.446 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes after deleted new verification status are => [#C2A4F8, #765D9F, #CDB7F3, #A1C5FE, #BCD6FF, #765D9F, #C2A4F8]
+
+16:37:07.866 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids after deleted new verification status are => [3, 76, 1, 9, 21, 77, 78]
+16:37:07.880 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names after deleted new verification status are => [Not Verified, Molly, Verified, Reject, Revert, Tiger, Poppy]
+16:37:07.895 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels after deleted new verification status are => [0, 0, 1, 3, 3, 10, 10]
+16:37:07.909 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors after deleted new verification status are => [Royal Purple, salmon, Ultraviolet, azure, Sky, azure, salmon]
+16:37:07.923 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes after deleted new verification status are => [#C2A4F8, #765D9F, #CDB7F3, #A1C5FE, #BCD6FF, #765D9F, #C2A4F8]
+
+16:39:00.865 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids before add new verification status are => [3, 1, 9, 21]
+16:39:00.882 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names before add new verification status are => [Not Verified, Verified, Reject, Revert]
+16:39:00.897 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels before add new verification status are => [0, 1, 3, 3]
+16:39:00.913 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors before add new verification status are => [Royal Purple, Ultraviolet, azure, Sky]
+16:39:00.930 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes before add new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF]
+
+16:39:02.776 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids after added new verification status are => [3, 1, 9, 21, 79]
+16:39:02.786 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names after added new verification status are => [Not Verified, Verified, Reject, Revert, Hungary]
+16:39:02.802 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels after added new verification status are => [0, 1, 3, 3, 14]
+16:39:02.819 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors after added new verification status are => [Royal Purple, Ultraviolet, azure, Sky, sky blue]
+16:39:02.835 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes after added new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF, #22EF37]
+
+16:39:02.936 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status Id after added new verification status is => 79
+16:39:02.997 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status after added new verification status is => Hungary
+16:39:03.038 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status level after added new verification status is => 14
+16:39:03.069 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status color after added new verification status is => sky blue
+16:39:03.099 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status color code after added new verification status is => #22EF37
+
+16:39:12.553 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids after updated new verification status are => [3, 1, 9, 21, 81, 82, 83, 79]
+16:39:12.565 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names after updated new verification status are => [Not Verified, Verified, Reject, Revert, Belgium, Belize, Equatorial Guinea, Timor-Leste]
+16:39:12.580 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels after updated new verification status are => [0, 1, 3, 3, 3, 14, 14, 17]
+16:39:12.592 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors after updated new verification status are => [Royal Purple, Ultraviolet, azure, Sky, sky blue, azure, sky blue, green]
+16:39:12.602 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes after updated new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF, #22EF37, #22EF37, #C2A4F8, #222978]
+
+16:39:12.620 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status Id after updated new verification status is => 83
+16:39:12.641 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status after updated new verification status is => Equatorial Guinea
+16:39:12.663 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status level after updated new verification status is => 14
+16:39:12.685 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status color after updated new verification status is => sky blue
+16:39:12.717 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - New created verification status color code after updated new verification status is => #C2A4F8
+
+16:39:26.854 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids after deleted new verification status are => [3, 1, 9, 21, 81, 82, 79]
+16:39:26.864 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names after deleted new verification status are => [Not Verified, Verified, Reject, Revert, Belgium, Belize, Timor-Leste]
+16:39:26.873 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels after deleted new verification status are => [0, 1, 3, 3, 3, 14, 17]
+16:39:26.885 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors after deleted new verification status are => [Royal Purple, Ultraviolet, azure, Sky, sky blue, azure, green]
+16:39:26.897 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes after deleted new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF, #22EF37, #22EF37, #222978]
+
+16:39:28.248 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status Ids after deleted new verification status are => [3, 1, 9, 21, 81, 82, 79]
+16:39:28.264 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status names after deleted new verification status are => [Not Verified, Verified, Reject, Revert, Belgium, Belize, Timor-Leste]
+16:39:28.275 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status levels after deleted new verification status are => [0, 1, 3, 3, 3, 14, 17]
+16:39:28.292 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status colors after deleted new verification status are => [Royal Purple, Ultraviolet, azure, Sky, sky blue, azure, green]
+16:39:28.307 --> in.biencaps.erp.api.testcases.VerificationFolderAPITestCases - List of verification status color codes after deleted new verification status are => [#C2A4F8, #CDB7F3, #A1C5FE, #BCD6FF, #22EF37, #22EF37, #222978]
+

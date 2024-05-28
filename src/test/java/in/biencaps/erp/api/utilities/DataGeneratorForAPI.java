@@ -35,7 +35,7 @@ public class DataGeneratorForAPI {
 	}
 
 	public static String generateFakeStatus() {
-		return faker.cat().name();
+		return faker.country().name();
 	}
 
 	public static String generateFakeDepartment() {
