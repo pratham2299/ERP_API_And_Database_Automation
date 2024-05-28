@@ -8,17 +8,9 @@
 	<test thread-count="10" name="Test">
 		<classes>
 			<class name="in.biencaps.erp.api.testcases.LoginEmployeeAPITestCases" />
-			<class name="in.biencaps.erp.api.testcases.PriorityFolderAPITestCases" />
+
 			<class name="in.biencaps.erp.api.testcases.StatusFolderAPITestCases" />
-			<class
-				name="in.biencaps.erp.api.testcases.DesignationFolderAPITestCases" />
-			<class name="in.biencaps.erp.api.testcases.RoleFolderAPITestCases" />
-			<class
-				name="in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases" />
-			<class
-				name="in.biencaps.erp.api.testcases.VerificationFolderAPITestCases" />
-			<class name="in.biencaps.erp.api.testcases.EmployeeFolderAPITestCases" />
-			<class name="in.biencaps.erp.api.testcases.ProjectFolderAPITestCases" />
+	
 		</classes>
 	</test> <!--
 	Test -->

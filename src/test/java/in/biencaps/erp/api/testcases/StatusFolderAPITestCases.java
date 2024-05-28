@@ -94,19 +94,20 @@ public class StatusFolderAPITestCases extends BaseTest {
 	public void verify_Add_Status_With_Employee_Authorization() {
 		test = BaseTest.extent.createTest("Add status with employee authorization");
 
-		LoginEmployeeAPITestCases.verify_Login_Employee_By_Giving_Valid_Data(Constants.employeeUserId,
-				Constants.employeePassword);
+		String authToken = LoginEmployeeAPITestCases
+				.verify_Login_Employee_By_Giving_Valid_Data(Constants.employeeUserId, Constants.employeePassword);
 
 		String requestPayload = StatusFolderPayloads.addStatusPayload("Cancel", 10, "Red", "#FF0000");
 
-		Response response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.addStatusEndpoint);
+		Response response = Responses.postRequestWithAuthorization(requestPayload, authToken,
+				APIEndpoints.addStatusEndpoint);
 
 		BodyValidation.response401Validation(response);
 
 		BaseTest.test_Method_Logs("add status with employee authorization", APIEndpoints.addStatusEndpoint, response);
 	}
 
-	@Test(priority = 6, dataProvider = "TestDataForAddStatus", dataProviderClass = DataProvidersForStatusFolder.class, enabled = false)
+	@Test(priority = 7, dataProvider = "TestDataForAddStatus", dataProviderClass = DataProvidersForStatusFolder.class)
 	public void verify_Add_Status_With_Admin_Authorization(String statusName, int statusLevel, String statusColor,
 			String statusColorCode) throws JsonProcessingException {
 		String requestPayload = StatusFolderPayloads.addStatusPayload(statusName, statusLevel, statusColor,
@@ -131,16 +132,33 @@ public class StatusFolderAPITestCases extends BaseTest {
 			verify_New_Created_Status_Details("after added new status");
 
 			assertEquals(newCreatedStatus, statusName);
-
 			assertEquals(newCreatedStatusLevel, statusLevel);
-
 			assertEquals(newCreatedStatusColor, statusColor);
-
 			assertEquals(newCreatedStatusColorCode, statusColorCode);
 		}
 	}
 
-	@Test(priority = 7, dataProvider = "TestDataForUpdateStatus", dataProviderClass = DataProvidersForStatusFolder.class, enabled = false)
+	@Test(priority = 8)
+	public void verify_Update_Status_With_Employee_Authorization() throws Throwable {
+		test = BaseTest.extent.createTest("Update status with employee authorization");
+
+		String authToken = LoginEmployeeAPITestCases
+				.verify_Login_Employee_By_Giving_Valid_Data(Constants.employeeUserId, Constants.employeePassword);
+
+		Response getStatusResponse = Responses.getRequestWithAuthorization(authToken,
+				APIEndpoints.getAllStatusesEndpoint);
+
+		String requestPayload = StatusFolderPayloads.updateStatusWithMaxIdPayload(
+				getStatusResponse.getBody().asPrettyString(), 9, "Canceled", 10, "Blue", "#0000FF");
+
+		Response response = Responses.putRequestWithAuthorization(requestPayload, authToken,
+				APIEndpoints.updateStatusEndpoint);
+
+		BaseTest.test_Method_Logs("update status with employee authorization", APIEndpoints.updateStatusEndpoint,
+				response);
+	}
+
+	@Test(priority = 9, dataProvider = "TestDataForUpdateStatus", dataProviderClass = DataProvidersForStatusFolder.class)
 	public void verify_Update_Status_With_Admin_Authorization(int statusId, String statusName, int statusLevel,
 			String statusColor, String statusColorCode) throws Throwable {
 		test = BaseTest.extent.createTest("Update status with valid and invalid data and with authorization");
@@ -174,17 +192,31 @@ public class StatusFolderAPITestCases extends BaseTest {
 			verify_Get_All_Statuses_API_With_Authorization("after updated new status");
 
 			verify_New_Created_Status_Details("after updated new status");
+			
 			assertEquals(newCreatedStatus, statusName);
-
 			assertEquals(newCreatedStatusLevel, statusLevel);
-
 			assertEquals(newCreatedStatusColor, statusColor);
-
 			assertEquals(newCreatedStatusColorCode, statusColorCode);
 		}
 	}
 
-	@Test(priority = 8, dataProvider = "TestDataForDeleteStatus", dataProviderClass = DataProvidersForStatusFolder.class, enabled = false)
+	@Test(priority = 10)
+	public void verify_Delete_Status_With_Employee_Authorization() {
+		test = BaseTest.extent.createTest("Delete status with employee authorization");
+
+		String authToken = LoginEmployeeAPITestCases
+				.verify_Login_Employee_By_Giving_Valid_Data(Constants.employeeUserId, Constants.employeePassword);
+
+		Response response = Responses.deleteRequestWithAuthorizationAndQueryParameter("statusName", "Canceled",
+				authToken, APIEndpoints.deleteStatusEndpoint);
+
+		BodyValidation.response401Validation(response);
+
+		BaseTest.test_Method_Logs("delete status with employee authorization", APIEndpoints.deleteStatusEndpoint,
+				response);
+	}
+
+	@Test(priority = 11, dataProvider = "TestDataForDeleteStatus", dataProviderClass = DataProvidersForStatusFolder.class)
 	public void verify_Delete_Single_Status_With_Admin_Authorization(String statusName) {
 		test = BaseTest.extent.createTest("Delete status with valid and invalid data and with authorization");
 

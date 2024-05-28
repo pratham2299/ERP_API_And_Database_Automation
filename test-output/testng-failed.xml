@@ -6,25 +6,15 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases">
+      <class name="in.biencaps.erp.api.testcases.StatusFolderAPITestCases">
         <methods>
-          <include name="verify_Get_Employees_By_Department_Name_With_Authorization"/>
           <include name="extent_Report_Setup"/>
           <include name="startBackendServer"/>
+          <include name="verify_Update_Status_With_Admin_Authorization" invocation-numbers="2 3 5 6 7 8"/>
           <include name="flush_Extent_Report"/>
           <include name="test_Method_Exection_Result"/>
         </methods>
-      </class> <!-- in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases -->
-      <class name="in.biencaps.erp.api.testcases.ProjectFolderAPITestCases">
-        <methods>
-          <include name="verify_Add_Project_With_Authorization" invocation-numbers="1 3 6 8 9 10 11"/>
-          <include name="extent_Report_Setup"/>
-          <include name="startBackendServer"/>
-          <include name="verify_Delete_Project_With_Authorization" invocation-numbers="2"/>
-          <include name="flush_Extent_Report"/>
-          <include name="test_Method_Exection_Result"/>
-        </methods>
-      </class> <!-- in.biencaps.erp.api.testcases.ProjectFolderAPITestCases -->
+      </class> <!-- in.biencaps.erp.api.testcases.StatusFolderAPITestCases -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
