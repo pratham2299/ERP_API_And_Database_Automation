@@ -8,7 +8,7 @@
 	<test thread-count="10" name="Test">
 		<classes>
 			<class name="in.biencaps.erp.api.testcases.LoginEmployeeAPITestCases" />
-
+			<class name="in.biencaps.erp.api.testcases.PriorityFolderAPITestCases" />
 			<class name="in.biencaps.erp.api.testcases.StatusFolderAPITestCases" />
 	
 		</classes>

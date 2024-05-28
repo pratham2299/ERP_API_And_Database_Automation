@@ -34,7 +34,7 @@ public class PriorityFolderAPITestCases extends BaseTest {
 	public void verify_Add_Priority_Without_Authorization() {
 		test = BaseTest.extent.createTest("Add priority without authorization");
 
-		String requestPayload = PriorityFolderPayloads.addPriorityPayload("Priority", 10, "Yellow", "#123");
+		String requestPayload = PriorityFolderPayloads.addPriorityPayload("Priority", 10, "Red", "#FF0000");
 
 		Response response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.addPriorityEndpoint);
 
@@ -62,7 +62,7 @@ public class PriorityFolderAPITestCases extends BaseTest {
 				APIEndpoints.getAllPrioritiesEndpoint);
 
 		String requestPayload = PriorityFolderPayloads.updatePriorityWithMaxIdPayload(
-				getPriorityResponse.getBody().asPrettyString(), 4, "Priority", 10, "Yellow", "#123");
+				getPriorityResponse.getBody().asPrettyString(), 4, "Priority", 10, "Blue", "#0000FF");
 
 		Response response = Responses.putRequestWithoutAuthorization(requestPayload,
 				APIEndpoints.updatePriorityEndpoint);
@@ -89,9 +89,27 @@ public class PriorityFolderAPITestCases extends BaseTest {
 		verify_Get_All_Priorities_API_With_Authorization("before add new priority");
 	}
 
-	@Test(priority = 6, dataProvider = "TestDataForAddPriority", dataProviderClass = DataProvidersForPriorityFolder.class, enabled = false)
-	public void verify_Add_Priority_With_Authorization(String priorityName, int priorityLevel, String priorityColor,
-			String priorityColorCode) {
+	@Test(priority = 6)
+	public void verify_Add_Priority_With_Employee_Authorization() {
+		test = BaseTest.extent.createTest("Add priority with employee authorization");
+
+		String authToken = LoginEmployeeAPITestCases
+				.verify_Login_Employee_By_Giving_Valid_Data(Constants.employeeUserId, Constants.employeePassword);
+
+		String requestPayload = PriorityFolderPayloads.addPriorityPayload("Priority", 10, "Red", "#FF0000");
+
+		Response response = Responses.postRequestWithAuthorization(requestPayload, authToken,
+				APIEndpoints.addPriorityEndpoint);
+
+		BodyValidation.response401Validation(response);
+
+		BaseTest.test_Method_Logs("add priority with employee authorization", APIEndpoints.addPriorityEndpoint,
+				response);
+	}
+
+	@Test(priority = 7, dataProvider = "TestDataForAddPriority", dataProviderClass = DataProvidersForPriorityFolder.class)
+	public void verify_Add_Priority_With_Admin_Authorization(String priorityName, int priorityLevel,
+			String priorityColor, String priorityColorCode) {
 		test = BaseTest.extent.createTest("Add priority with valid and invalid data and with authorization");
 
 		String requestPayload = PriorityFolderPayloads.addPriorityPayload(priorityName, priorityLevel, priorityColor,
@@ -124,8 +142,28 @@ public class PriorityFolderAPITestCases extends BaseTest {
 		}
 	}
 
-	@Test(priority = 7, dataProvider = "TestDataForUpdatePriority", dataProviderClass = DataProvidersForPriorityFolder.class, enabled = false)
-	public void verify_Update_Priority_With_Authorization(int priorityId, String priorityName, int priorityLevel,
+	@Test(priority = 8)
+	public void verify_Update_Priority_With_Employee_Authorization() throws Throwable {
+		test = BaseTest.extent.createTest("Update priority with employee authorization");
+
+		String authToken = LoginEmployeeAPITestCases
+				.verify_Login_Employee_By_Giving_Valid_Data(Constants.employeeUserId, Constants.employeePassword);
+
+		Response getPriorityResponse = Responses.getRequestWithAuthorization(authToken,
+				APIEndpoints.getAllPrioritiesEndpoint);
+
+		String requestPayload = PriorityFolderPayloads.updatePriorityWithMaxIdPayload(
+				getPriorityResponse.getBody().asPrettyString(), 4, "Priority", 10, "Blue", "#0000FF");
+
+		Response response = Responses.putRequestWithAuthorization(requestPayload, authToken,
+				APIEndpoints.updatePriorityEndpoint);
+
+		BaseTest.test_Method_Logs("update priority with employee authorization", APIEndpoints.updatePriorityEndpoint,
+				response);
+	}
+
+	@Test(priority = 9, dataProvider = "TestDataForUpdatePriority", dataProviderClass = DataProvidersForPriorityFolder.class)
+	public void verify_Update_Priority_With_Admin_Authorization(int priorityId, String priorityName, int priorityLevel,
 			String priorityColor, String priorityColorCode) throws Throwable {
 		test = BaseTest.extent.createTest("Update priority with valid and invalid data and with authorization");
 
@@ -168,8 +206,24 @@ public class PriorityFolderAPITestCases extends BaseTest {
 		}
 	}
 
-	@Test(priority = 8, dataProvider = "TestDataForDeletePriority", dataProviderClass = DataProvidersForPriorityFolder.class, enabled = false)
-	public void verify_Delete_Single_Priority_With_Authorization(String priorityName) {
+	@Test(priority = 10)
+	public void verify_Delete_Priority_With_Employee_Authorization() {
+		test = BaseTest.extent.createTest("Delete priority with employee authorization");
+
+		String authToken = LoginEmployeeAPITestCases
+				.verify_Login_Employee_By_Giving_Valid_Data(Constants.employeeUserId, Constants.employeePassword);
+
+		Response response = Responses.deleteRequestWithAuthorizationAndQueryParameter("priorityName", "Priority",
+				authToken, APIEndpoints.deletePriorityEndpoint);
+
+		BodyValidation.response401Validation(response);
+
+		BaseTest.test_Method_Logs("delete priority with employee authorization", APIEndpoints.deletePriorityEndpoint,
+				response);
+	}
+
+	@Test(priority = 11, dataProvider = "TestDataForDeletePriority", dataProviderClass = DataProvidersForPriorityFolder.class)
+	public void verify_Delete_Single_Priority_With_Admin_Authorization(String priorityName) {
 		test = BaseTest.extent.createTest("Delete priority with valid and invalid data and with authorization");
 
 		Response response = Responses.deleteRequestWithAuthorizationAndQueryParameter("priorityName", priorityName,

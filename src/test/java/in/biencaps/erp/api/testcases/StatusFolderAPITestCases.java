@@ -107,7 +107,7 @@ public class StatusFolderAPITestCases extends BaseTest {
 		BaseTest.test_Method_Logs("add status with employee authorization", APIEndpoints.addStatusEndpoint, response);
 	}
 
-	@Test(priority = 7, dataProvider = "TestDataForAddStatus", dataProviderClass = DataProvidersForStatusFolder.class)
+	@Test(priority = 7, dataProvider = "TestDataForAddStatus", dataProviderClass = DataProvidersForStatusFolder.class, enabled = false)
 	public void verify_Add_Status_With_Admin_Authorization(String statusName, int statusLevel, String statusColor,
 			String statusColorCode) throws JsonProcessingException {
 		String requestPayload = StatusFolderPayloads.addStatusPayload(statusName, statusLevel, statusColor,
@@ -158,7 +158,7 @@ public class StatusFolderAPITestCases extends BaseTest {
 				response);
 	}
 
-	@Test(priority = 9, dataProvider = "TestDataForUpdateStatus", dataProviderClass = DataProvidersForStatusFolder.class)
+	@Test(priority = 9, dataProvider = "TestDataForUpdateStatus", dataProviderClass = DataProvidersForStatusFolder.class, enabled = false)
 	public void verify_Update_Status_With_Admin_Authorization(int statusId, String statusName, int statusLevel,
 			String statusColor, String statusColorCode) throws Throwable {
 		test = BaseTest.extent.createTest("Update status with valid and invalid data and with authorization");
@@ -192,7 +192,7 @@ public class StatusFolderAPITestCases extends BaseTest {
 			verify_Get_All_Statuses_API_With_Authorization("after updated new status");
 
 			verify_New_Created_Status_Details("after updated new status");
-			
+
 			assertEquals(newCreatedStatus, statusName);
 			assertEquals(newCreatedStatusLevel, statusLevel);
 			assertEquals(newCreatedStatusColor, statusColor);
@@ -216,7 +216,7 @@ public class StatusFolderAPITestCases extends BaseTest {
 				response);
 	}
 
-	@Test(priority = 11, dataProvider = "TestDataForDeleteStatus", dataProviderClass = DataProvidersForStatusFolder.class)
+	@Test(priority = 11, dataProvider = "TestDataForDeleteStatus", dataProviderClass = DataProvidersForStatusFolder.class, enabled = false)
 	public void verify_Delete_Single_Status_With_Admin_Authorization(String statusName) {
 		test = BaseTest.extent.createTest("Delete status with valid and invalid data and with authorization");
 

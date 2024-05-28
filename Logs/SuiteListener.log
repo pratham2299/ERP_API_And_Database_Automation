@@ -510,3 +510,243 @@
 
 10:34:35.338 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Delete_Single_Status_With_Admin_Authorization
 
+10:51:40.037 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Login_Employee
+
+10:51:43.093 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Login_Employee
+
+10:51:43.106 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Login_Employee
+
+10:51:44.302 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Login_Employee
+
+10:51:44.306 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Login_Employee
+
+10:51:44.847 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Login_Employee
+
+10:51:44.850 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Login_Employee
+
+10:51:45.971 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Login_Employee
+
+10:51:45.984 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Add_Priority_Without_Authorization
+
+10:51:46.551 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Add_Priority_Without_Authorization
+
+10:51:46.555 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Get_All_Priority_Without_Authorization
+
+10:51:47.084 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Get_All_Priority_Without_Authorization
+
+10:51:47.088 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Update_Priority_Without_Authorization
+
+10:51:48.132 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Update_Priority_Without_Authorization
+
+10:51:48.135 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Delete_Single_Priority_Without_Authorization
+
+10:51:48.642 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Delete_Single_Priority_Without_Authorization
+
+10:51:48.645 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Get_All_Priorities_With_Authorization
+
+10:51:49.211 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Get_All_Priorities_With_Authorization
+
+10:51:49.215 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Add_Priority_With_Employee_Authorization
+
+10:51:50.924 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Add_Priority_With_Employee_Authorization
+
+10:51:50.928 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Update_Priority_With_Employee_Authorization
+
+10:51:53.246 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Update_Priority_With_Employee_Authorization
+
+10:51:53.249 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Delete_Priority_With_Employee_Authorization
+
+10:51:55.041 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Delete_Priority_With_Employee_Authorization
+
+10:51:55.045 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Add_Status_Without_Authorization
+
+10:51:55.533 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Add_Status_Without_Authorization
+
+10:51:55.535 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Get_All_Status_Without_Authorization
+
+10:51:56.028 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Get_All_Status_Without_Authorization
+
+10:51:56.030 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Update_Status_Without_Authorization
+
+10:51:56.942 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Update_Status_Without_Authorization
+
+10:51:56.945 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Delete_Status_Without_Authorization
+
+10:51:57.423 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Delete_Status_Without_Authorization
+
+10:51:57.426 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Get_All_Status_With_Authorization
+
+10:51:57.960 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Get_All_Status_With_Authorization
+
+10:51:57.963 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Add_Status_With_Employee_Authorization
+
+10:51:59.862 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Add_Status_With_Employee_Authorization
+
+10:51:59.865 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Update_Status_With_Employee_Authorization
+
+10:52:03.539 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Update_Status_With_Employee_Authorization
+
+10:52:03.542 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Delete_Status_With_Employee_Authorization
+
+10:52:05.286 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Delete_Status_With_Employee_Authorization
+
+10:52:35.864 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Login_Employee
+
+10:52:38.521 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Login_Employee
+
+10:52:38.534 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Login_Employee
+
+10:52:39.654 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Login_Employee
+
+10:52:39.657 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Login_Employee
+
+10:52:40.149 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Login_Employee
+
+10:52:40.152 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Login_Employee
+
+10:52:41.228 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Login_Employee
+
+10:52:41.236 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Add_Priority_Without_Authorization
+
+10:52:41.774 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Add_Priority_Without_Authorization
+
+10:52:41.777 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Get_All_Priority_Without_Authorization
+
+10:52:42.304 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Get_All_Priority_Without_Authorization
+
+10:52:42.309 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Update_Priority_Without_Authorization
+
+10:52:43.324 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Update_Priority_Without_Authorization
+
+10:52:43.327 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Delete_Single_Priority_Without_Authorization
+
+10:52:43.794 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Delete_Single_Priority_Without_Authorization
+
+10:52:43.797 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Get_All_Priorities_With_Authorization
+
+10:52:44.303 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Get_All_Priorities_With_Authorization
+
+10:52:44.308 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Add_Priority_With_Employee_Authorization
+
+10:52:46.283 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Add_Priority_With_Employee_Authorization
+
+10:52:46.371 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Add_Priority_With_Admin_Authorization
+
+10:52:48.089 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Add_Priority_With_Admin_Authorization
+
+10:52:48.093 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Add_Priority_With_Admin_Authorization
+
+10:52:49.076 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Add_Priority_With_Admin_Authorization
+
+10:52:49.078 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Add_Priority_With_Admin_Authorization
+
+10:52:50.317 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Add_Priority_With_Admin_Authorization
+
+10:52:50.320 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Add_Priority_With_Admin_Authorization
+
+10:52:51.228 --> in.biencaps.erp.api.utilities.SuiteListener - Test Failed: verify_Add_Priority_With_Admin_Authorization
+
+10:52:51.232 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Add_Priority_With_Admin_Authorization
+
+10:52:52.089 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Add_Priority_With_Admin_Authorization
+
+10:52:52.092 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Add_Priority_With_Admin_Authorization
+
+10:52:52.956 --> in.biencaps.erp.api.utilities.SuiteListener - Test Failed: verify_Add_Priority_With_Admin_Authorization
+
+10:52:52.960 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Add_Priority_With_Admin_Authorization
+
+10:52:53.874 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Add_Priority_With_Admin_Authorization
+
+10:52:53.876 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Add_Priority_With_Admin_Authorization
+
+10:52:54.829 --> in.biencaps.erp.api.utilities.SuiteListener - Test Failed: verify_Add_Priority_With_Admin_Authorization
+
+10:52:54.833 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Update_Priority_With_Employee_Authorization
+
+10:52:57.231 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Update_Priority_With_Employee_Authorization
+
+10:52:57.234 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Update_Priority_With_Admin_Authorization
+
+10:52:59.511 --> in.biencaps.erp.api.utilities.SuiteListener - Test Failed: verify_Update_Priority_With_Admin_Authorization
+
+10:52:59.515 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Update_Priority_With_Admin_Authorization
+
+10:53:00.999 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Update_Priority_With_Admin_Authorization
+
+10:53:01.001 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Update_Priority_With_Admin_Authorization
+
+10:53:02.520 --> in.biencaps.erp.api.utilities.SuiteListener - Test Failed: verify_Update_Priority_With_Admin_Authorization
+
+10:53:02.524 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Update_Priority_With_Admin_Authorization
+
+10:53:04.003 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Update_Priority_With_Admin_Authorization
+
+10:53:04.005 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Update_Priority_With_Admin_Authorization
+
+10:53:05.336 --> in.biencaps.erp.api.utilities.SuiteListener - Test Failed: verify_Update_Priority_With_Admin_Authorization
+
+10:53:05.339 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Update_Priority_With_Admin_Authorization
+
+10:53:06.759 --> in.biencaps.erp.api.utilities.SuiteListener - Test Failed: verify_Update_Priority_With_Admin_Authorization
+
+10:53:06.763 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Update_Priority_With_Admin_Authorization
+
+10:53:08.067 --> in.biencaps.erp.api.utilities.SuiteListener - Test Failed: verify_Update_Priority_With_Admin_Authorization
+
+10:53:08.069 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Update_Priority_With_Admin_Authorization
+
+10:53:09.424 --> in.biencaps.erp.api.utilities.SuiteListener - Test Failed: verify_Update_Priority_With_Admin_Authorization
+
+10:53:09.427 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Update_Priority_With_Admin_Authorization
+
+10:53:10.730 --> in.biencaps.erp.api.utilities.SuiteListener - Test Failed: verify_Update_Priority_With_Admin_Authorization
+
+10:53:10.733 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Delete_Priority_With_Employee_Authorization
+
+10:53:12.535 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Delete_Priority_With_Employee_Authorization
+
+10:53:12.538 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Delete_Single_Priority_With_Admin_Authorization
+
+10:53:13.445 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Delete_Single_Priority_With_Admin_Authorization
+
+10:53:13.447 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Delete_Single_Priority_With_Admin_Authorization
+
+10:53:14.914 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Delete_Single_Priority_With_Admin_Authorization
+
+10:53:14.917 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Delete_Single_Priority_With_Admin_Authorization
+
+10:53:15.737 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Delete_Single_Priority_With_Admin_Authorization
+
+10:53:15.741 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Add_Status_Without_Authorization
+
+10:53:16.245 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Add_Status_Without_Authorization
+
+10:53:16.247 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Get_All_Status_Without_Authorization
+
+10:53:16.708 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Get_All_Status_Without_Authorization
+
+10:53:16.710 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Update_Status_Without_Authorization
+
+10:53:17.658 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Update_Status_Without_Authorization
+
+10:53:17.660 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Delete_Status_Without_Authorization
+
+10:53:18.156 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Delete_Status_Without_Authorization
+
+10:53:18.158 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Get_All_Status_With_Authorization
+
+10:53:18.646 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Get_All_Status_With_Authorization
+
+10:53:18.650 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Add_Status_With_Employee_Authorization
+
+10:53:20.651 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Add_Status_With_Employee_Authorization
+
+10:53:20.653 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Update_Status_With_Employee_Authorization
+
+10:53:23.042 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Update_Status_With_Employee_Authorization
+
+10:53:23.045 --> in.biencaps.erp.api.utilities.SuiteListener - Test Started: verify_Delete_Status_With_Employee_Authorization
+
+10:53:24.749 --> in.biencaps.erp.api.utilities.SuiteListener - Test Passed: verify_Delete_Status_With_Employee_Authorization
+
