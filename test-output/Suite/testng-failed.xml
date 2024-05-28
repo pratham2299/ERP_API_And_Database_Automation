@@ -6,16 +6,16 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="in.biencaps.erp.api.testcases.PriorityFolderAPITestCases">
+      <class name="in.biencaps.erp.api.testcases.DesignationFolderAPITestCases">
         <methods>
-          <include name="verify_Update_Priority_With_Admin_Authorization" invocation-numbers="0 2 4 5 6 7 8"/>
           <include name="extent_Report_Setup"/>
           <include name="startBackendServer"/>
+          <include name="verify_Update_Designation_With_Admin_Authorization" invocation-numbers="1 2"/>
+          <include name="verify_Add_Designation_With_Admin_Authorization" invocation-numbers="1 2 3"/>
           <include name="flush_Extent_Report"/>
           <include name="test_Method_Exection_Result"/>
-          <include name="verify_Add_Priority_With_Admin_Authorization" invocation-numbers="3 5 7"/>
         </methods>
-      </class> <!-- in.biencaps.erp.api.testcases.PriorityFolderAPITestCases -->
+      </class> <!-- in.biencaps.erp.api.testcases.DesignationFolderAPITestCases -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

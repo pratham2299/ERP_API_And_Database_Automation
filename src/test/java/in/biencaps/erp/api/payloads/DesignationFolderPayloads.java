@@ -1,7 +1,7 @@
 package in.biencaps.erp.api.payloads;
 
 import java.util.*;
-import java.util.function.Supplier;
+import java.util.function.*;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -9,8 +9,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import in.biencaps.erp.api.pojos.*;
 
 public class DesignationFolderPayloads {
-	private static Random random = new Random();
-
 	// Create ObjectMapper instance
 	static ObjectMapper objectMapper = new ObjectMapper();
 
@@ -30,36 +28,42 @@ public class DesignationFolderPayloads {
 		}
 	}
 
-	public static String updateDesignationWithMaxIdPayload(String jsonResponse, int newDesignationId,
-			String newDesignation, List<DepartmentPojo> departments) throws Throwable {
+	public static String updateDesignationWithMaxIdPayload(String jsonResponse, final int newDesignationId,
+			final String newDesignation, final int newDepartmentId, final String newDepartmentName,
+			final int newDepartmentLevel, final String newDepartmentColor, final String newDepartmentColorCode)
+			throws Throwable {
 
 		// Deserialize JSON array to List<Designation>
-		List<DesignationPojo> DesignationList = objectMapper.readValue(jsonResponse,
+		List<DesignationPojo> designationList = objectMapper.readValue(jsonResponse,
 				new TypeReference<List<DesignationPojo>>() {
 				});
 
-		// Find the object with the maximum DesignationId
-		DesignationPojo maxDesignationIdObject = DesignationList.stream().max(new Comparator<DesignationPojo>() {
+		// Find the designation with the maximum designationId
+		Optional<DesignationPojo> maxDesignation = designationList.stream().max(new Comparator<DesignationPojo>() {
 			@Override
-			public int compare(DesignationPojo s1, DesignationPojo s2) {
-				return Integer.compare(s1.getDesignationId(), s2.getDesignationId());
-			}
-		}).orElseThrow(new Supplier<Throwable>() {
-			@Override
-			public Throwable get() {
-				return new RuntimeException("No Designation found");
+			public int compare(DesignationPojo d1, DesignationPojo d2) {
+				return Integer.compare(d1.getDesignationId(), d2.getDesignationId());
 			}
 		});
 
-		// Update the fields of the object with the maximum DesignationId
-		maxDesignationIdObject.setDesignationId(newDesignationId);
-		maxDesignationIdObject.setDesignation(newDesignation);
-
-		DepartmentPojo randomDepartment = departments.get(random.nextInt(departments.size()));
-		maxDesignationIdObject.setDepartmentPojo(randomDepartment);
+		// Update the values of the max designation if present
+		maxDesignation.ifPresent(new Consumer<DesignationPojo>() {
+			@Override
+			public void accept(DesignationPojo designationList) {
+				designationList.setDesignationId(newDesignationId);
+				designationList.setDesignation(newDesignation);
+				DesignationPojo.Department updatedDepartment = new DesignationPojo.Department();
+				updatedDepartment.setDepartmentId(newDepartmentId);
+				updatedDepartment.setDepartmentName(newDepartmentName);
+				updatedDepartment.setDepartmentLevel(newDepartmentLevel);
+				updatedDepartment.setDepartmentColor(newDepartmentColor);
+				updatedDepartment.setDepartmentColorCode(newDepartmentColorCode);
+				designationList.setDepartment(updatedDepartment);
+			}
+		});
 
 		// Serialize the updated list back to JSON
-		return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(DesignationList);
+		return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(designationList);
 	}
 
 	public static String getAllDesignationsByDepartmentPayload(int fakeDepartmentId) {

@@ -10,7 +10,9 @@
 			<class name="in.biencaps.erp.api.testcases.LoginEmployeeAPITestCases" />
 			<class name="in.biencaps.erp.api.testcases.PriorityFolderAPITestCases" />
 			<class name="in.biencaps.erp.api.testcases.StatusFolderAPITestCases" />
-	
+			<class
+				name="in.biencaps.erp.api.testcases.DesignationFolderAPITestCases" />
+		
 		</classes>
 	</test> <!--
 	Test -->

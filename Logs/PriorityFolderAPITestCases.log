@@ -1,42 +1,12 @@
-10:51:49.147 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority Ids before add new priority are => [1, 2, 3, 4]
-10:51:49.166 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority names before add new priority are => [Low, Medium, High, Highest]
-10:51:49.181 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority levels before add new priority are => [0, 1, 2, 3]
-10:51:49.196 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority colors before add new priority are => [Sand, Pumpkin, Red Orange, Maroon]
-10:51:49.210 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority color codes before add new priority are => [#EDDFCB, #FBD9AA, #FBB7AA, #EB878B]
+14:02:55.048 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority Ids before add new priority are => [1, 2, 3, 4]
+14:02:55.063 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority names before add new priority are => [Low, Medium, High, Highest]
+14:02:55.079 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority levels before add new priority are => [0, 1, 2, 3]
+14:02:55.096 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority colors before add new priority are => [Sand, Pumpkin, Red Orange, Maroon]
+14:02:55.110 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority color codes before add new priority are => [#EDDFCB, #FBD9AA, #FBB7AA, #EB878B]
 
-10:52:44.247 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority Ids before add new priority are => [1, 2, 3, 4]
-10:52:44.264 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority names before add new priority are => [Low, Medium, High, Highest]
-10:52:44.274 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority levels before add new priority are => [0, 1, 2, 3]
-10:52:44.288 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority colors before add new priority are => [Sand, Pumpkin, Red Orange, Maroon]
-10:52:44.303 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority color codes before add new priority are => [#EDDFCB, #FBD9AA, #FBB7AA, #EB878B]
-
-10:52:47.838 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority Ids after added new priority are => [1, 2, 3, 4, 24]
-10:52:47.850 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority names after added new priority are => [Low, Medium, High, Highest, hornet]
-10:52:47.861 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority levels after added new priority are => [0, 1, 2, 3, 17]
-10:52:47.875 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority colors after added new priority are => [Sand, Pumpkin, Red Orange, Maroon, blue]
-10:52:47.886 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority color codes after added new priority are => [#EDDFCB, #FBD9AA, #FBB7AA, #EB878B, #E46115]
-
-10:52:47.969 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - New created priority Id after added new priority is => 24
-10:52:48.021 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - New created priority after added new priority is => hornet
-10:52:48.045 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - New created priority level after added new priority is => 17
-10:52:48.065 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - New created priority color after added new priority is => blue
-10:52:48.084 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - New created priority color code after added new priority is => #E46115
-
-10:52:59.381 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority Ids after updated new priority are => [1, 2, 3, 26, 4, 24, 27, 28]
-10:52:59.389 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority names after updated new priority are => [Low, Medium, High, ox, Highest, dinosaur, wallaby, minnow]
-10:52:59.397 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority levels after updated new priority are => [0, 1, 2, 2, 3, 12, 17, 17]
-10:52:59.406 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority colors after updated new priority are => [Sand, Pumpkin, Red Orange, blue, Maroon, white, Pumpkin, blue]
-10:52:59.417 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority color codes after updated new priority are => [#EDDFCB, #FBD9AA, #FBB7AA, #E46115, #EB878B, #B0034E, #E46115, #EDDFCB]
-
-10:52:59.429 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - New created priority Id after updated new priority is => 28
-10:52:59.447 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - New created priority after updated new priority is => minnow
-10:52:59.463 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - New created priority level after updated new priority is => 17
-10:52:59.480 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - New created priority color after updated new priority is => blue
-10:52:59.499 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - New created priority color code after updated new priority is => #EDDFCB
-
-10:53:14.863 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority Ids after deleted new priority are => [1, 2, 3, 26, 4, 24, 27]
-10:53:14.873 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority names after deleted new priority are => [Low, Medium, High, ox, Highest, frog, wallaby]
-10:53:14.883 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority levels after deleted new priority are => [0, 1, 2, 2, 3, 12, 17]
-10:53:14.893 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority colors after deleted new priority are => [Sand, Pumpkin, Red Orange, blue, Maroon, white, Pumpkin]
-10:53:14.914 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority color codes after deleted new priority are => [#EDDFCB, #FBD9AA, #FBB7AA, #E46115, #EB878B, #EDDFCB, #E46115]
+14:05:51.065 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority Ids before add new priority are => [1, 2, 3, 4]
+14:05:51.100 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority names before add new priority are => [Low, Medium, High, Highest]
+14:05:51.138 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority levels before add new priority are => [0, 1, 2, 3]
+14:05:51.176 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority colors before add new priority are => [Sand, Pumpkin, Red Orange, Maroon]
+14:05:51.202 --> in.biencaps.erp.api.testcases.PriorityFolderAPITestCases - List of priority color codes before add new priority are => [#EDDFCB, #FBD9AA, #FBB7AA, #EB878B]
 

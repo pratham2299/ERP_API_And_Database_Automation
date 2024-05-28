@@ -6,13 +6,9 @@ import org.apache.logging.log4j.*;
 import static org.testng.Assert.*;
 import org.testng.annotations.*;
 
-import com.aventstack.extentreports.Status;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import in.biencaps.erp.api.bodyValidations.*;
 import in.biencaps.erp.api.endpoints.*;
 import in.biencaps.erp.api.payloads.*;
-import in.biencaps.erp.api.pojos.*;
 import in.biencaps.erp.api.responses.*;
 import in.biencaps.erp.api.utilities.*;
 import io.restassured.response.Response;
@@ -26,7 +22,6 @@ public class DesignationFolderAPITestCases extends BaseTest {
 	public static List<Integer> designationIds;
 
 	private Response response;
-	private Random random = new Random();
 
 	@Test(priority = 1)
 	public void verify_Add_Designation_Without_Authorization() {
@@ -38,8 +33,8 @@ public class DesignationFolderAPITestCases extends BaseTest {
 				APIEndpoints.addDesignationEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "Status code for add designation is => " + response.getStatusCode());
-		test.log(Status.INFO, "Response for add designation is => " + response.getBody().asPrettyString());
+
+		BaseTest.test_Method_Logs("add designation", APIEndpoints.addDesignationEndpoint, response);
 	}
 
 	@Test(priority = 2)
@@ -49,12 +44,12 @@ public class DesignationFolderAPITestCases extends BaseTest {
 		String requestPayload = DesignationFolderPayloads.getAllDesignationsByDepartmentPayload(10);
 
 		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
-				APIEndpoints.getAllDesignationsEndpoint);
+				APIEndpoints.getAllEmployeesByDesignationNameEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "Status code for get all designations by department is => " + response.getStatusCode());
-		test.log(Status.INFO,
-				"Response for get all designations by department is => " + response.getBody().asPrettyString());
+
+		BaseTest.test_Method_Logs("get all designations by department",
+				APIEndpoints.getAllEmployeesByDesignationNameEndpoint, response);
 	}
 
 	@Test(priority = 3)
@@ -64,8 +59,8 @@ public class DesignationFolderAPITestCases extends BaseTest {
 		Response response = Responses.getRequestWithoutAuthorization(APIEndpoints.getAllDesignationsEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "Status code for get all designations is => " + response.getStatusCode());
-		test.log(Status.INFO, "Response for get all designations is => " + response.getBody().asPrettyString());
+
+		BaseTest.test_Method_Logs("get all designations", APIEndpoints.getAllDesignationsEndpoint, response);
 	}
 
 	@Test(priority = 4)
@@ -75,25 +70,15 @@ public class DesignationFolderAPITestCases extends BaseTest {
 		Response getDesignationResponse = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.getAllDesignationsEndpoint);
 
-		// Creating object instance
-		ObjectMapper objectMapper = new ObjectMapper();
-
-		// Getting get all departments API response
-		Response getDepartmentResponse = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
-				APIEndpoints.getAllDepartmentsEndpoint);
-
-		// reading value for use in update designation
-		List<DepartmentPojo> departments = objectMapper.readValue(getDepartmentResponse.getBody().asPrettyString(),
-				objectMapper.getTypeFactory().constructCollectionType(List.class, DepartmentPojo.class));
-
 		String requestPayload = DesignationFolderPayloads.updateDesignationWithMaxIdPayload(
-				getDesignationResponse.getBody().asPrettyString(), 7, "Designation", departments);
+				getDesignationResponse.getBody().asPrettyString(), 10, "Designation", 3, "QA", 2, "Blue", "#0000FF");
 
-		response = Responses.putRequestWithoutAuthorization(requestPayload, APIEndpoints.updateDesignationEndpoint);
+		Response response = Responses.putRequestWithoutAuthorization(requestPayload,
+				APIEndpoints.updateDesignationEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "Status code for update designation is => " + response.getStatusCode());
-		test.log(Status.INFO, "Response for update designation is => " + response.getBody().asPrettyString());
+
+		BaseTest.test_Method_Logs("update designation", APIEndpoints.updateDesignationEndpoint, response);
 	}
 
 	@Test(priority = 5)
@@ -104,8 +89,8 @@ public class DesignationFolderAPITestCases extends BaseTest {
 				APIEndpoints.deleteDesignationEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "Status code for delete designation is => " + response.getStatusCode());
-		test.log(Status.INFO, "Response for delete designation is => " + response.getBody().asPrettyString());
+
+		BaseTest.test_Method_Logs("delete designation", APIEndpoints.deleteDesignationEndpoint, response);
 	}
 
 	@Test(priority = 6)
@@ -113,16 +98,44 @@ public class DesignationFolderAPITestCases extends BaseTest {
 		verify_Get_All_Designation_API_With_Authorization("before add new designation");
 	}
 
-	@Test(priority = 7, dataProvider = "TestDataForAddDesignation", dataProviderClass = DataProvidersForDesignationFolder.class, enabled = false)
-	public void verify_Add_Designation_With_Authorization(String designationName, int departmentId) {
+	@Test(priority = 7)
+	public void verify_Add_Designation_With_Employee_Authorization() {
+		test = BaseTest.extent.createTest("Add designation with employee authorization");
+
+		String authToken = LoginEmployeeAPITestCases
+				.verify_Login_Employee_By_Giving_Valid_Data(Constants.employeeUserId, Constants.employeePassword);
+
+		String requestPayload = DesignationFolderPayloads.addDesignationPayload("Designation", 3);
+
+		Response response = Responses.postRequestWithAuthorization(requestPayload, authToken,
+				APIEndpoints.addDesignationEndpoint);
+
+		BodyValidation.response401Validation(response);
+
+		BaseTest.test_Method_Logs("add designation with employee authorization", APIEndpoints.addDesignationEndpoint,
+				response);
+	}
+
+	@Test(priority = 8, dataProvider = "TestDataForAddDesignation", dataProviderClass = DataProvidersForDesignationFolder.class)
+	public void verify_Add_Designation_With_Admin_Authorization(String designationName, int departmentId) {
+		test = BaseTest.extent.createTest("Add designation with valid and invalid data and with authorization");
+
 		String requestPayload = DesignationFolderPayloads.addDesignationPayload(designationName, departmentId);
 
 		Response response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.addDesignationEndpoint);
 
+		BaseTest.test_Method_Logs("add designation with admin authorization", APIEndpoints.addDesignationEndpoint,
+				requestPayload, response);
+
+		Response getAllDepartmentsResponse = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
+				APIEndpoints.getAllDepartmentsEndpoint);
+
+		List<Integer> departmentIds = getAllDepartmentsResponse.jsonPath().getList("departmentId");
+
 		if (designationName.isBlank()) {
 			BodyValidation.response400Validation(response);
-		} else if (!DepartmentFolderAPITestCases.departmentIds.contains(departmentId)) {
+		} else if (!departmentIds.contains(departmentId)) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
 		} else if (designations.contains(designationName)) {
 			BodyValidation.responseValidation(response, "Conflict", 409);
@@ -135,20 +148,18 @@ public class DesignationFolderAPITestCases extends BaseTest {
 		}
 	}
 
-	@Test(priority = 8)
-	public void verify_Get_All_Designation_By_Department_With_Authorization() {
-		// Getting get all departments API response
-		Response getDepartmentResponse = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
-				APIEndpoints.getAllDepartmentsEndpoint);
+	@Test(priority = 9, dataProvider = "TestDataForGetAllDesignationByDepartment", dataProviderClass = DataProvidersForDesignationFolder.class)
+	public void verify_Get_All_Designation_By_Department_With_Admin_Authorization(int departmentId) {
+		test = BaseTest.extent
+				.createTest("Get all designations by department with valid and invalid data and with authorization");
 
-		List<Integer> departmentIds = getDepartmentResponse.jsonPath().getList("departmentId");
-		int randomIndexForDepartmentId = random.nextInt(departmentIds.size());
-		int fakeDepartmentId = departmentIds.get(randomIndexForDepartmentId);
-
-		String requestPayload = DesignationFolderPayloads.getAllDesignationsByDepartmentPayload(fakeDepartmentId);
+		String requestPayload = DesignationFolderPayloads.getAllDesignationsByDepartmentPayload(departmentId);
 
 		Response response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.getAllDesignationByDepartmentEndpoint);
+
+		BaseTest.test_Method_Logs("get all designations by department with admin authorization",
+				APIEndpoints.addDesignationEndpoint, requestPayload, response);
 
 		if (response.getStatusCode() == 404) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
@@ -157,35 +168,50 @@ public class DesignationFolderAPITestCases extends BaseTest {
 		}
 	}
 
-	@Test(priority = 9, dataProvider = "TestDataForUpdateDesignation", dataProviderClass = DataProvidersForDesignationFolder.class, enabled = false)
-	public void verify_Update_Designation_With_Authorization(int designationId, String designationName)
-			throws Throwable {
+	@Test(priority = 10)
+	public void verify_Update_Designation_With_Employee_Authorization() throws Throwable {
+		test = BaseTest.extent.createTest("Update designation with employee authorization");
+
+		String authToken = LoginEmployeeAPITestCases
+				.verify_Login_Employee_By_Giving_Valid_Data(Constants.employeeUserId, Constants.employeePassword);
+
+		Response getDesignationResponse = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
+				APIEndpoints.getAllDesignationsEndpoint);
+
+		String requestPayload = DesignationFolderPayloads.updateDesignationWithMaxIdPayload(
+				getDesignationResponse.getBody().asPrettyString(), 10, "Designation", 3, "QA", 2, "Blue", "#0000FF");
+
+		Response response = Responses.putRequestWithAuthorization(requestPayload, authToken,
+				APIEndpoints.updateDesignationEndpoint);
+
+		BaseTest.test_Method_Logs("update designation with employee authorization",
+				APIEndpoints.updateDesignationEndpoint, response);
+	}
+
+	@Test(priority = 11, dataProvider = "TestDataForUpdateDesignation", dataProviderClass = DataProvidersForDesignationFolder.class)
+	public void verify_Update_Designation_With_Admin_Authorization(int designationId, String designationName,
+			int departmentId, String departmentName, int departmentLevel, String departmentColor,
+			String departmentColorCode) throws Throwable {
 		test = BaseTest.extent.createTest("Update designation with valid and invalid data and with authorization");
 
 		Response getDesignationResponse = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.getAllDesignationsEndpoint);
 
-		// Creating object instance
-		ObjectMapper objectMapper = new ObjectMapper();
-
-		// Getting get all departments API response
-		Response getDepartmentResponse = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
-				APIEndpoints.getAllDepartmentsEndpoint);
-
-		// reading value for use in update designation
-		List<DepartmentPojo> departments = objectMapper.readValue(getDepartmentResponse.getBody().asPrettyString(),
-				objectMapper.getTypeFactory().constructCollectionType(List.class, DepartmentPojo.class));
-
 		String requestPayload = DesignationFolderPayloads.updateDesignationWithMaxIdPayload(
-				getDesignationResponse.getBody().asPrettyString(), designationId, designationName, departments);
+				getDesignationResponse.getBody().asPrettyString(), designationId, designationName, departmentId,
+				departmentName, departmentLevel, departmentColor, departmentColorCode);
 
 		Response response = Responses.putRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.updateDesignationEndpoint);
 
 		String responseBody = response.getBody().asPrettyString();
-		test.log(Status.INFO, "Request paylaod for update designation is => " + designationName);
-		test.log(Status.INFO, "Response body for update designation is => " + response.getBody().asPrettyString());
-		test.log(Status.INFO, "Status code for update designation is => " + response.getStatusCode());
+		BaseTest.test_Method_Logs("update designation with admin authorization", APIEndpoints.updateDesignationEndpoint,
+				requestPayload, response);
+
+		Response getAllDepartmentsResponse = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
+				APIEndpoints.getAllDepartmentsEndpoint);
+
+		List<Integer> departmentIds = getAllDepartmentsResponse.jsonPath().getList("departmentId");
 
 		if (designationName.isBlank()) {
 			BodyValidation.response400Validation(response);
@@ -193,10 +219,12 @@ public class DesignationFolderAPITestCases extends BaseTest {
 			BodyValidation.responseValidation(response, "Not Found", 404);
 		} else if (designations.contains(designationName)) {
 			BodyValidation.responseValidation(response, "Conflict", 409);
+		} else if (!departmentIds.contains(departmentId)) {
+			BodyValidation.responseValidation(response, "Not Found", 404);
 		} else {
 			int contentLength = responseBody.length();
 			BodyValidation.responseValidation(response, 200, String.valueOf(contentLength));
-			assertEquals(responseBody, "Updated Successfully");
+			assertEquals(responseBody, "Designation Updated Successfully");
 
 			verify_Get_All_Designation_API_With_Authorization("after updated new designation");
 
@@ -204,17 +232,33 @@ public class DesignationFolderAPITestCases extends BaseTest {
 		}
 	}
 
-	@Test(priority = 10, dataProvider = "TestDataForDeleteDesignation", dataProviderClass = DataProvidersForDesignationFolder.class, enabled = false)
-	public void verify_Delete_Designation_With_Authorization(String designationName) {
+	@Test(priority = 12)
+	public void verify_Delete_Designation_With_Employee_Authorization() {
+		test = BaseTest.extent.createTest("Delete designation with employee authorization");
+
+		String authToken = LoginEmployeeAPITestCases
+				.verify_Login_Employee_By_Giving_Valid_Data(Constants.employeeUserId, Constants.employeePassword);
+
+		Response response = Responses.deleteRequestWithAuthorizationAndQueryParameter("designation", "Designation",
+				authToken, APIEndpoints.deleteDesignationEndpoint);
+
+		BodyValidation.response401Validation(response);
+
+		BaseTest.test_Method_Logs("delete designation with employee authorization",
+				APIEndpoints.deleteDesignationEndpoint, response);
+	}
+
+	@Test(priority = 13, dataProvider = "TestDataForDeleteDesignation", dataProviderClass = DataProvidersForDesignationFolder.class)
+	public void verify_Delete_Designation_With_Admin_Authorization(String designationName) {
 		test = BaseTest.extent.createTest("Delete designation with valid and invalid data and with authorization");
 
 		Response response = Responses.deleteRequestWithAuthorizationAndQueryParameter("designation", designationName,
 				LoginEmployeeAPITestCases.authToken, APIEndpoints.deleteDesignationEndpoint);
 
 		String responseBody = response.getBody().asPrettyString();
-		test.log(Status.INFO, "Request paylaod for delete designation is => " + designationName);
-		test.log(Status.INFO, "Response body for delete designation is => " + response.getBody().asPrettyString());
-		test.log(Status.INFO, "Status code for delete designation is => " + response.getStatusCode());
+
+		BaseTest.test_Method_Logs_With_Query_Parameter("delete designation with admin authorization",
+				APIEndpoints.deleteDesignationEndpoint, designationName, response);
 
 		if (responseBody.equals("[]")) {
 			BodyValidation.response204Validation(response);
@@ -238,8 +282,8 @@ public class DesignationFolderAPITestCases extends BaseTest {
 				APIEndpoints.getAllDesignationsEndpoint);
 
 		BodyValidation.responseValidation(response, 200);
-		test.log(Status.INFO, "Status code for get all designations is => " + response.getStatusCode());
-		test.log(Status.INFO, "Response for get all designations is => " + response.getBody().asPrettyString());
+
+		BaseTest.test_Method_Logs("get all designation", APIEndpoints.getAllDesignationsEndpoint, response);
 
 		designationIds = response.jsonPath().getList("designationId");
 		log.info("List of designation Ids " + message + " are => " + designationIds);

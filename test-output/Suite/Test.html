@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>30/10/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>43/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue May 28 10:52:35 IST 2024</td>
+<td>Started on:</td><td>Tue May 28 14:05:40 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>49 seconds (49175 ms)</td>
+<tr><td>Total time:</td><td>62 seconds (62939 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,802 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Add_Priority_With_Admin_Authorization()'><b>verify_Add_Priority_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases<br>Parameters: wallaby, 17, Pumpkin, #E46115</td>
-<td><div><pre>java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;422&gt; but was &lt;201&gt;.
-
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at in.biencaps.erp.api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
-	at in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Add_Priority_With_Admin_Authorization(PriorityFolderAPITestCases.java:127)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace512478459", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace512478459'><pre>java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;422&gt; but was &lt;201&gt;.
-
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor29.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at in.biencaps.erp.api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
-	at in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Add_Priority_With_Admin_Authorization(PriorityFolderAPITestCases.java:127)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@1af687fe</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Admin_Authorization()'><b>verify_Update_Priority_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases<br>Parameters: 24, crab, 12, white, </td>
-<td><div><pre>java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;400&gt; but was &lt;200&gt;.
-
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at in.biencaps.erp.api.bodyValidations.BodyValidation.response400Validation(BodyValidation.java:38)
-	at in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Admin_Authorization(PriorityFolderAPITestCases.java:184)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1807899330", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1807899330'><pre>java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;400&gt; but was &lt;200&gt;.
-
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor29.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at in.biencaps.erp.api.bodyValidations.BodyValidation.response400Validation(BodyValidation.java:38)
-	at in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Admin_Authorization(PriorityFolderAPITestCases.java:184)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>1</td>
-<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@1af687fe</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Admin_Authorization()'><b>verify_Update_Priority_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases<br>Parameters: 24, , 12, white, #B0034E</td>
-<td><div><pre>java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;400&gt; but was &lt;200&gt;.
-
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at in.biencaps.erp.api.bodyValidations.BodyValidation.response400Validation(BodyValidation.java:38)
-	at in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Admin_Authorization(PriorityFolderAPITestCases.java:184)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace766796213", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace766796213'><pre>java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;400&gt; but was &lt;200&gt;.
-
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor29.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at in.biencaps.erp.api.bodyValidations.BodyValidation.response400Validation(BodyValidation.java:38)
-	at in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Admin_Authorization(PriorityFolderAPITestCases.java:184)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>1</td>
-<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@1af687fe</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Add_Priority_With_Admin_Authorization()'><b>verify_Add_Priority_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases<br>Parameters: ox, 2, blue, #E46115</td>
-<td><div><pre>java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;422&gt; but was &lt;201&gt;.
-
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at in.biencaps.erp.api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
-	at in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Add_Priority_With_Admin_Authorization(PriorityFolderAPITestCases.java:127)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace246535285", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace246535285'><pre>java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;422&gt; but was &lt;201&gt;.
-
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor29.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at in.biencaps.erp.api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
-	at in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Add_Priority_With_Admin_Authorization(PriorityFolderAPITestCases.java:127)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@1af687fe</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Admin_Authorization()'><b>verify_Update_Priority_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases<br>Parameters: 24, dinosaur, 12, white, #B0034E</td>
-<td><div><pre>java.lang.AssertionError: expected [dinosaur] but found [minnow]
-	at in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Admin_Authorization(PriorityFolderAPITestCases.java:199)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1563000141", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1563000141'><pre>java.lang.AssertionError: expected [dinosaur] but found [minnow]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Admin_Authorization(PriorityFolderAPITestCases.java:199)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>2</td>
-<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@1af687fe</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Admin_Authorization()'><b>verify_Update_Priority_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases<br>Parameters: 24, goose, 12, , #B0034E</td>
-<td><div><pre>java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;400&gt; but was &lt;200&gt;.
-
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at in.biencaps.erp.api.bodyValidations.BodyValidation.response400Validation(BodyValidation.java:38)
-	at in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Admin_Authorization(PriorityFolderAPITestCases.java:184)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1237024911", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1237024911'><pre>java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;400&gt; but was &lt;200&gt;.
-
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor29.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at in.biencaps.erp.api.bodyValidations.BodyValidation.response400Validation(BodyValidation.java:38)
-	at in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Admin_Authorization(PriorityFolderAPITestCases.java:184)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>1</td>
-<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@1af687fe</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Admin_Authorization()'><b>verify_Update_Priority_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases<br>Parameters: 24, mule, 12, Pumpkin, #B0034E</td>
-<td><div><pre>java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;409&gt; but was &lt;200&gt;.
-
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at in.biencaps.erp.api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
-	at in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Admin_Authorization(PriorityFolderAPITestCases.java:189)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1746080167", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1746080167'><pre>java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;409&gt; but was &lt;200&gt;.
-
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor29.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at in.biencaps.erp.api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
-	at in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Admin_Authorization(PriorityFolderAPITestCases.java:189)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>1</td>
-<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@1af687fe</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Add_Priority_With_Admin_Authorization()'><b>verify_Add_Priority_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases<br>Parameters: minnow, 17, blue, #EDDFCB</td>
-<td><div><pre>java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;422&gt; but was &lt;201&gt;.
-
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at in.biencaps.erp.api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
-	at in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Add_Priority_With_Admin_Authorization(PriorityFolderAPITestCases.java:127)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1977941564", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1977941564'><pre>java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;422&gt; but was &lt;201&gt;.
-
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor29.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at in.biencaps.erp.api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
-	at in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Add_Priority_With_Admin_Authorization(PriorityFolderAPITestCases.java:127)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@1af687fe</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Admin_Authorization()'><b>verify_Update_Priority_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases<br>Parameters: 24, monkey, 2, white, #B0034E</td>
-<td><div><pre>java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;409&gt; but was &lt;200&gt;.
-
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at in.biencaps.erp.api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
-	at in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Admin_Authorization(PriorityFolderAPITestCases.java:189)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1072267396", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1072267396'><pre>java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;409&gt; but was &lt;200&gt;.
-
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor29.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at in.biencaps.erp.api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
-	at in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Admin_Authorization(PriorityFolderAPITestCases.java:189)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>1</td>
-<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@1af687fe</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Admin_Authorization()'><b>verify_Update_Priority_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases<br>Parameters: 24, frog, 12, white, #EDDFCB</td>
-<td><div><pre>java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;409&gt; but was &lt;200&gt;.
-
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at in.biencaps.erp.api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
-	at in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Admin_Authorization(PriorityFolderAPITestCases.java:189)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1799040052", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1799040052'><pre>java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;409&gt; but was &lt;200&gt;.
-
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor29.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at in.biencaps.erp.api.bodyValidations.BodyValidation.responseValidation(BodyValidation.java:56)
-	at in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Admin_Authorization(PriorityFolderAPITestCases.java:189)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>1</td>
-<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@1af687fe</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -872,155 +76,220 @@ Expected status code &lt;409&gt; but was &lt;200&gt;.
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='in.biencaps.erp.api.testcases.StatusFolderAPITestCases.verify_Update_Status_Without_Authorization()'><b>verify_Update_Status_Without_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.StatusFolderAPITestCases</td>
-<td></td>
-<td>0</td>
-<td>in.biencaps.erp.api.testcases.StatusFolderAPITestCases@14dda234</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.StatusFolderAPITestCases.verify_Add_Status_Without_Authorization()'><b>verify_Add_Status_Without_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.StatusFolderAPITestCases</td>
-<td></td>
-<td>0</td>
-<td>in.biencaps.erp.api.testcases.StatusFolderAPITestCases@14dda234</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Delete_Single_Priority_With_Admin_Authorization()'><b>verify_Delete_Single_Priority_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases<br>Parameters: minnow</td>
-<td></td>
-<td>0</td>
-<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@1af687fe</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Employee_Authorization()'><b>verify_Update_Priority_With_Employee_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases</td>
+<td title='in.biencaps.erp.api.testcases.DesignationFolderAPITestCases.verify_Update_Designation_With_Admin_Authorization()'><b>verify_Update_Designation_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.DesignationFolderAPITestCases<br>Parameters: 69, astronomer, 61, Mobile, 5, rust, #F3CEA9</td>
 <td></td>
 <td>2</td>
-<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@1af687fe</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Delete_Priority_With_Employee_Authorization()'><b>verify_Delete_Priority_With_Employee_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases</td>
-<td></td>
-<td>1</td>
-<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@1af687fe</td></tr>
+<td>in.biencaps.erp.api.testcases.DesignationFolderAPITestCases@c5ee75e</td></tr>
 <tr>
 <td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Add_Priority_Without_Authorization()'><b>verify_Add_Priority_Without_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases</td>
 <td></td>
 <td>0</td>
-<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@1af687fe</td></tr>
+<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@6c25e6c4</td></tr>
 <tr>
-<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Get_All_Priorities_With_Authorization()'><b>verify_Get_All_Priorities_With_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases</td>
-<td></td>
-<td>0</td>
-<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@1af687fe</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Add_Priority_With_Admin_Authorization()'><b>verify_Add_Priority_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases<br>Parameters: High, 17, blue, #E46115</td>
+<td title='in.biencaps.erp.api.testcases.DesignationFolderAPITestCases.verify_Delete_Designation_With_Admin_Authorization()'><b>verify_Delete_Designation_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.DesignationFolderAPITestCases<br>Parameters: Admin</td>
 <td></td>
 <td>1</td>
-<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@1af687fe</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Delete_Single_Priority_With_Admin_Authorization()'><b>verify_Delete_Single_Priority_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases<br>Parameters: wildebeest</td>
-<td></td>
-<td>0</td>
-<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@1af687fe</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.LoginEmployeeAPITestCases.verify_Login_Employee()'><b>verify_Login_Employee</b><br>Test class: in.biencaps.erp.api.testcases.LoginEmployeeAPITestCases<br>Parameters: INC004, Pass@123</td>
-<td></td>
-<td>1</td>
-<td>in.biencaps.erp.api.testcases.LoginEmployeeAPITestCases@736d6a5c</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Delete_Single_Priority_Without_Authorization()'><b>verify_Delete_Single_Priority_Without_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases</td>
-<td></td>
-<td>0</td>
-<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@1af687fe</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Add_Priority_With_Admin_Authorization()'><b>verify_Add_Priority_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases<br>Parameters: rabbit, 17, , #E46115</td>
-<td></td>
-<td>0</td>
-<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@1af687fe</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Add_Priority_With_Admin_Authorization()'><b>verify_Add_Priority_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases<br>Parameters: kangaroo, 17, blue, </td>
-<td></td>
-<td>0</td>
-<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@1af687fe</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.LoginEmployeeAPITestCases.verify_Login_Employee()'><b>verify_Login_Employee</b><br>Test class: in.biencaps.erp.api.testcases.LoginEmployeeAPITestCases<br>Parameters: INC004, jm8qzhqluc2</td>
-<td></td>
-<td>1</td>
-<td>in.biencaps.erp.api.testcases.LoginEmployeeAPITestCases@736d6a5c</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Admin_Authorization()'><b>verify_Update_Priority_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases<br>Parameters: 44, impala, 12, white, #B0034E</td>
-<td></td>
-<td>1</td>
-<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@1af687fe</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.LoginEmployeeAPITestCases.verify_Login_Employee()'><b>verify_Login_Employee</b><br>Test class: in.biencaps.erp.api.testcases.LoginEmployeeAPITestCases<br>Parameters: INC0103, jm8qzhqluc2</td>
-<td></td>
-<td>2</td>
-<td>in.biencaps.erp.api.testcases.LoginEmployeeAPITestCases@736d6a5c</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Add_Priority_With_Admin_Authorization()'><b>verify_Add_Priority_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases<br>Parameters: hornet, 17, blue, #E46115</td>
-<td></td>
-<td>1</td>
-<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@1af687fe</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.StatusFolderAPITestCases.verify_Get_All_Status_Without_Authorization()'><b>verify_Get_All_Status_Without_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.StatusFolderAPITestCases</td>
-<td></td>
-<td>0</td>
-<td>in.biencaps.erp.api.testcases.StatusFolderAPITestCases@14dda234</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Admin_Authorization()'><b>verify_Update_Priority_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases<br>Parameters: 24, Low, 12, white, #B0034E</td>
-<td></td>
-<td>1</td>
-<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@1af687fe</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.StatusFolderAPITestCases.verify_Delete_Status_With_Employee_Authorization()'><b>verify_Delete_Status_With_Employee_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.StatusFolderAPITestCases</td>
-<td></td>
-<td>1</td>
-<td>in.biencaps.erp.api.testcases.StatusFolderAPITestCases@14dda234</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Get_All_Priority_Without_Authorization()'><b>verify_Get_All_Priority_Without_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases</td>
-<td></td>
-<td>0</td>
-<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@1af687fe</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Add_Priority_With_Employee_Authorization()'><b>verify_Add_Priority_With_Employee_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases</td>
-<td></td>
-<td>1</td>
-<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@1af687fe</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.StatusFolderAPITestCases.verify_Add_Status_With_Employee_Authorization()'><b>verify_Add_Status_With_Employee_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.StatusFolderAPITestCases</td>
-<td></td>
-<td>2</td>
-<td>in.biencaps.erp.api.testcases.StatusFolderAPITestCases@14dda234</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_Without_Authorization()'><b>verify_Update_Priority_Without_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases</td>
-<td></td>
-<td>1</td>
-<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@1af687fe</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Add_Priority_With_Admin_Authorization()'><b>verify_Add_Priority_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases<br>Parameters: , 17, blue, #E46115</td>
-<td></td>
-<td>0</td>
-<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@1af687fe</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.StatusFolderAPITestCases.verify_Update_Status_With_Employee_Authorization()'><b>verify_Update_Status_With_Employee_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.StatusFolderAPITestCases</td>
-<td></td>
-<td>2</td>
-<td>in.biencaps.erp.api.testcases.StatusFolderAPITestCases@14dda234</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Delete_Single_Priority_With_Admin_Authorization()'><b>verify_Delete_Single_Priority_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases<br>Parameters: minnow</td>
-<td></td>
-<td>1</td>
-<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@1af687fe</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.LoginEmployeeAPITestCases.verify_Login_Employee()'><b>verify_Login_Employee</b><br>Test class: in.biencaps.erp.api.testcases.LoginEmployeeAPITestCases<br>Parameters: INC0103, jm8qzhqluc2</td>
-<td></td>
-<td>0</td>
-<td>in.biencaps.erp.api.testcases.LoginEmployeeAPITestCases@736d6a5c</td></tr>
-<tr>
-<td title='in.biencaps.erp.api.testcases.StatusFolderAPITestCases.verify_Delete_Status_Without_Authorization()'><b>verify_Delete_Status_Without_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.StatusFolderAPITestCases</td>
-<td></td>
-<td>0</td>
-<td>in.biencaps.erp.api.testcases.StatusFolderAPITestCases@14dda234</td></tr>
+<td>in.biencaps.erp.api.testcases.DesignationFolderAPITestCases@c5ee75e</td></tr>
 <tr>
 <td title='in.biencaps.erp.api.testcases.StatusFolderAPITestCases.verify_Get_All_Status_With_Authorization()'><b>verify_Get_All_Status_With_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.StatusFolderAPITestCases</td>
 <td></td>
 <td>0</td>
-<td>in.biencaps.erp.api.testcases.StatusFolderAPITestCases@14dda234</td></tr>
+<td>in.biencaps.erp.api.testcases.StatusFolderAPITestCases@85e6769</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.StatusFolderAPITestCases.verify_Add_Status_Without_Authorization()'><b>verify_Add_Status_Without_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.StatusFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.biencaps.erp.api.testcases.StatusFolderAPITestCases@85e6769</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.LoginEmployeeAPITestCases.verify_Login_Employee()'><b>verify_Login_Employee</b><br>Test class: in.biencaps.erp.api.testcases.LoginEmployeeAPITestCases<br>Parameters: INC0140, vawes395ah8lf57</td>
+<td></td>
+<td>0</td>
+<td>in.biencaps.erp.api.testcases.LoginEmployeeAPITestCases@424fd310</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.LoginEmployeeAPITestCases.verify_Login_Employee()'><b>verify_Login_Employee</b><br>Test class: in.biencaps.erp.api.testcases.LoginEmployeeAPITestCases<br>Parameters: INC004, Pass@123</td>
+<td></td>
+<td>1</td>
+<td>in.biencaps.erp.api.testcases.LoginEmployeeAPITestCases@424fd310</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.DesignationFolderAPITestCases.verify_Update_Designation_Without_Authorization()'><b>verify_Update_Designation_Without_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.DesignationFolderAPITestCases</td>
+<td></td>
+<td>1</td>
+<td>in.biencaps.erp.api.testcases.DesignationFolderAPITestCases@c5ee75e</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.DesignationFolderAPITestCases.verify_Add_Designation_With_Employee_Authorization()'><b>verify_Add_Designation_With_Employee_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.DesignationFolderAPITestCases</td>
+<td></td>
+<td>2</td>
+<td>in.biencaps.erp.api.testcases.DesignationFolderAPITestCases@c5ee75e</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.StatusFolderAPITestCases.verify_Update_Status_Without_Authorization()'><b>verify_Update_Status_Without_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.StatusFolderAPITestCases</td>
+<td></td>
+<td>1</td>
+<td>in.biencaps.erp.api.testcases.StatusFolderAPITestCases@85e6769</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_Without_Authorization()'><b>verify_Update_Priority_Without_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases</td>
+<td></td>
+<td>1</td>
+<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@6c25e6c4</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.DesignationFolderAPITestCases.verify_Delete_Designation_Without_Authorization()'><b>verify_Delete_Designation_Without_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.DesignationFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.biencaps.erp.api.testcases.DesignationFolderAPITestCases@c5ee75e</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.DesignationFolderAPITestCases.verify_Add_Designation_Without_Authorization()'><b>verify_Add_Designation_Without_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.DesignationFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.biencaps.erp.api.testcases.DesignationFolderAPITestCases@c5ee75e</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.StatusFolderAPITestCases.verify_Get_All_Status_Without_Authorization()'><b>verify_Get_All_Status_Without_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.StatusFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.biencaps.erp.api.testcases.StatusFolderAPITestCases@85e6769</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.DesignationFolderAPITestCases.verify_Update_Designation_With_Employee_Authorization()'><b>verify_Update_Designation_With_Employee_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.DesignationFolderAPITestCases</td>
+<td></td>
+<td>2</td>
+<td>in.biencaps.erp.api.testcases.DesignationFolderAPITestCases@c5ee75e</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Update_Priority_With_Employee_Authorization()'><b>verify_Update_Priority_With_Employee_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases</td>
+<td></td>
+<td>2</td>
+<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@6c25e6c4</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.StatusFolderAPITestCases.verify_Add_Status_With_Employee_Authorization()'><b>verify_Add_Status_With_Employee_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.StatusFolderAPITestCases</td>
+<td></td>
+<td>1</td>
+<td>in.biencaps.erp.api.testcases.StatusFolderAPITestCases@85e6769</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.DesignationFolderAPITestCases.verify_Delete_Designation_With_Admin_Authorization()'><b>verify_Delete_Designation_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.DesignationFolderAPITestCases<br>Parameters: electrician</td>
+<td></td>
+<td>0</td>
+<td>in.biencaps.erp.api.testcases.DesignationFolderAPITestCases@c5ee75e</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.DesignationFolderAPITestCases.verify_Update_Designation_With_Admin_Authorization()'><b>verify_Update_Designation_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.DesignationFolderAPITestCases<br>Parameters: 69, , 6, Mobile, 5, rust, #F3CEA9</td>
+<td></td>
+<td>2</td>
+<td>in.biencaps.erp.api.testcases.DesignationFolderAPITestCases@c5ee75e</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.DesignationFolderAPITestCases.verify_Update_Designation_With_Admin_Authorization()'><b>verify_Update_Designation_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.DesignationFolderAPITestCases<br>Parameters: 69, Intern, 6, Mobile, 5, rust, #F3CEA9</td>
+<td></td>
+<td>2</td>
+<td>in.biencaps.erp.api.testcases.DesignationFolderAPITestCases@c5ee75e</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.DesignationFolderAPITestCases.verify_Add_Designation_With_Admin_Authorization()'><b>verify_Add_Designation_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.DesignationFolderAPITestCases<br>Parameters: window cleaner, 2</td>
+<td></td>
+<td>2</td>
+<td>in.biencaps.erp.api.testcases.DesignationFolderAPITestCases@c5ee75e</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.LoginEmployeeAPITestCases.verify_Login_Employee()'><b>verify_Login_Employee</b><br>Test class: in.biencaps.erp.api.testcases.LoginEmployeeAPITestCases<br>Parameters: INC004, vawes395ah8lf57</td>
+<td></td>
+<td>1</td>
+<td>in.biencaps.erp.api.testcases.LoginEmployeeAPITestCases@424fd310</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Get_All_Priorities_With_Authorization()'><b>verify_Get_All_Priorities_With_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@6c25e6c4</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Add_Priority_With_Employee_Authorization()'><b>verify_Add_Priority_With_Employee_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases</td>
+<td></td>
+<td>2</td>
+<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@6c25e6c4</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.DesignationFolderAPITestCases.verify_Get_All_Designation_Without_Authorization()'><b>verify_Get_All_Designation_Without_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.DesignationFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.biencaps.erp.api.testcases.DesignationFolderAPITestCases@c5ee75e</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.DesignationFolderAPITestCases.verify_Get_All_Designation_By_Department_With_Admin_Authorization()'><b>verify_Get_All_Designation_By_Department_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.DesignationFolderAPITestCases<br>Parameters: 52</td>
+<td></td>
+<td>0</td>
+<td>in.biencaps.erp.api.testcases.DesignationFolderAPITestCases@c5ee75e</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.DesignationFolderAPITestCases.verify_Update_Designation_With_Admin_Authorization()'><b>verify_Update_Designation_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.DesignationFolderAPITestCases<br>Parameters: 110, firefighter, 6, Mobile, 5, rust, #F3CEA9</td>
+<td></td>
+<td>2</td>
+<td>in.biencaps.erp.api.testcases.DesignationFolderAPITestCases@c5ee75e</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Get_All_Priority_Without_Authorization()'><b>verify_Get_All_Priority_Without_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@6c25e6c4</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.DesignationFolderAPITestCases.verify_Get_All_Designation_With_Authorization()'><b>verify_Get_All_Designation_With_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.DesignationFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.biencaps.erp.api.testcases.DesignationFolderAPITestCases@c5ee75e</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.DesignationFolderAPITestCases.verify_Get_All_Designation_By_Department_With_Admin_Authorization()'><b>verify_Get_All_Designation_By_Department_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.DesignationFolderAPITestCases<br>Parameters: 2</td>
+<td></td>
+<td>0</td>
+<td>in.biencaps.erp.api.testcases.DesignationFolderAPITestCases@c5ee75e</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.DesignationFolderAPITestCases.verify_Add_Designation_With_Admin_Authorization()'><b>verify_Add_Designation_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.DesignationFolderAPITestCases<br>Parameters: , 2</td>
+<td></td>
+<td>1</td>
+<td>in.biencaps.erp.api.testcases.DesignationFolderAPITestCases@c5ee75e</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.StatusFolderAPITestCases.verify_Update_Status_With_Employee_Authorization()'><b>verify_Update_Status_With_Employee_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.StatusFolderAPITestCases</td>
+<td></td>
+<td>2</td>
+<td>in.biencaps.erp.api.testcases.StatusFolderAPITestCases@85e6769</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.DesignationFolderAPITestCases.verify_Add_Designation_With_Admin_Authorization()'><b>verify_Add_Designation_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.DesignationFolderAPITestCases<br>Parameters: Admin, 2</td>
+<td></td>
+<td>1</td>
+<td>in.biencaps.erp.api.testcases.DesignationFolderAPITestCases@c5ee75e</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.StatusFolderAPITestCases.verify_Delete_Status_Without_Authorization()'><b>verify_Delete_Status_Without_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.StatusFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.biencaps.erp.api.testcases.StatusFolderAPITestCases@85e6769</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Delete_Single_Priority_Without_Authorization()'><b>verify_Delete_Single_Priority_Without_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@6c25e6c4</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.LoginEmployeeAPITestCases.verify_Login_Employee()'><b>verify_Login_Employee</b><br>Test class: in.biencaps.erp.api.testcases.LoginEmployeeAPITestCases<br>Parameters: INC0140, vawes395ah8lf57</td>
+<td></td>
+<td>3</td>
+<td>in.biencaps.erp.api.testcases.LoginEmployeeAPITestCases@424fd310</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.StatusFolderAPITestCases.verify_Delete_Status_With_Employee_Authorization()'><b>verify_Delete_Status_With_Employee_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.StatusFolderAPITestCases</td>
+<td></td>
+<td>2</td>
+<td>in.biencaps.erp.api.testcases.StatusFolderAPITestCases@85e6769</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.DesignationFolderAPITestCases.verify_Delete_Designation_With_Employee_Authorization()'><b>verify_Delete_Designation_With_Employee_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.DesignationFolderAPITestCases</td>
+<td></td>
+<td>1</td>
+<td>in.biencaps.erp.api.testcases.DesignationFolderAPITestCases@c5ee75e</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.DesignationFolderAPITestCases.verify_Delete_Designation_With_Admin_Authorization()'><b>verify_Delete_Designation_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.DesignationFolderAPITestCases<br>Parameters: doctor</td>
+<td></td>
+<td>1</td>
+<td>in.biencaps.erp.api.testcases.DesignationFolderAPITestCases@c5ee75e</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.DesignationFolderAPITestCases.verify_Add_Designation_With_Admin_Authorization()'><b>verify_Add_Designation_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.DesignationFolderAPITestCases<br>Parameters: Admin, 34</td>
+<td></td>
+<td>1</td>
+<td>in.biencaps.erp.api.testcases.DesignationFolderAPITestCases@c5ee75e</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.PriorityFolderAPITestCases.verify_Delete_Priority_With_Employee_Authorization()'><b>verify_Delete_Priority_With_Employee_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.PriorityFolderAPITestCases</td>
+<td></td>
+<td>2</td>
+<td>in.biencaps.erp.api.testcases.PriorityFolderAPITestCases@6c25e6c4</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.DesignationFolderAPITestCases.verify_Update_Designation_With_Admin_Authorization()'><b>verify_Update_Designation_With_Admin_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.DesignationFolderAPITestCases<br>Parameters: 69, doctor, 6, Mobile, 5, rust, #F3CEA9</td>
+<td></td>
+<td>2</td>
+<td>in.biencaps.erp.api.testcases.DesignationFolderAPITestCases@c5ee75e</td></tr>
+<tr>
+<td title='in.biencaps.erp.api.testcases.DesignationFolderAPITestCases.verify_Get_All_Designation_By_Department_Without_Authorization()'><b>verify_Get_All_Designation_By_Department_Without_Authorization</b><br>Test class: in.biencaps.erp.api.testcases.DesignationFolderAPITestCases</td>
+<td></td>
+<td>0</td>
+<td>in.biencaps.erp.api.testcases.DesignationFolderAPITestCases@c5ee75e</td></tr>
 </table><p>
 </body>
 </html>

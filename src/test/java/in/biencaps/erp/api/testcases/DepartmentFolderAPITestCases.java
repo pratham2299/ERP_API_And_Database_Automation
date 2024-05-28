@@ -533,8 +533,8 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 				APIEndpoints.getAllDepartmentsEndpoint);
 
 		BodyValidation.responseValidation(response, 200);
-		test.log(Status.INFO, "Status code for get all departments is => " + response.getStatusCode());
-		test.log(Status.INFO, "Response for get all departments is => " + response.getBody().asPrettyString());
+
+		BaseTest.test_Method_Logs("get all departments", APIEndpoints.getAllDepartmentsEndpoint, response);
 
 		departmentIds = response.jsonPath().getList("departmentId");
 		log.info("List of department Ids " + message + " are =>" + departmentIds);

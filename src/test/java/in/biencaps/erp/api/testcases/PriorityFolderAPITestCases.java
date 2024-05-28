@@ -118,7 +118,8 @@ public class PriorityFolderAPITestCases extends BaseTest {
 		Response response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.addPriorityEndpoint);
 
-		BaseTest.test_Method_Logs("add priority", APIEndpoints.addPriorityEndpoint, requestPayload, response);
+		BaseTest.test_Method_Logs("add priority with admin authorization", APIEndpoints.addPriorityEndpoint,
+				requestPayload, response);
 
 		if (priorityName.isBlank() || priorityColor.isBlank() || priorityColorCode.isBlank()) {
 			BodyValidation.response400Validation(response);
@@ -178,7 +179,8 @@ public class PriorityFolderAPITestCases extends BaseTest {
 				APIEndpoints.updatePriorityEndpoint);
 
 		String responseBody = response.getBody().asPrettyString();
-		BaseTest.test_Method_Logs("update priority", APIEndpoints.updatePriorityEndpoint, requestPayload, response);
+		BaseTest.test_Method_Logs("update priority with admin authorization", APIEndpoints.updatePriorityEndpoint,
+				requestPayload, response);
 
 		if (priorityName.isBlank() || priorityColor.isBlank() || priorityColorCode.isBlank()) {
 			BodyValidation.response400Validation(response);
@@ -230,8 +232,8 @@ public class PriorityFolderAPITestCases extends BaseTest {
 				LoginEmployeeAPITestCases.authToken, APIEndpoints.deletePriorityEndpoint);
 
 		String responseBody = response.getBody().asPrettyString();
-		BaseTest.test_Method_Logs_With_Query_Parameter("delete priority", APIEndpoints.deletePriorityEndpoint,
-				priorityName, response);
+		BaseTest.test_Method_Logs_With_Query_Parameter("delete priority with admin authorization",
+				APIEndpoints.deletePriorityEndpoint, priorityName, response);
 
 		if (response.getBody().asPrettyString().equals("[]")) {
 			BodyValidation.response204Validation(response);

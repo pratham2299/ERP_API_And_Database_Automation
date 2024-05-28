@@ -1,102 +1,12 @@
-10:24:40.341 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status Ids before add new status are => [1, 3, 2, 5, 6]
-10:24:40.371 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status names before add new status are => [Not Started, In Discussion, In Progress, Submitted, Completed]
-10:24:40.395 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status levels before add new status are => [0, 1, 2, 3, 5]
-10:24:40.420 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors before add new status are => [Gray, Crystal Blue, Mustard, Smith Green, Lime Green]
-10:24:40.448 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors before add new status are => [#C9C8C8, #A5DFFA, #FCF088, #CADF94,  #32CD32]
+14:03:05.587 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status Ids before add new status are => [1, 3, 2, 5, 6]
+14:03:05.609 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status names before add new status are => [Not Started, In Discussion, In Progress, Submitted, Completed]
+14:03:05.629 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status levels before add new status are => [0, 1, 2, 3, 5]
+14:03:05.649 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors before add new status are => [Gray, Crystal Blue, Mustard, Smith Green, Lime Green]
+14:03:05.672 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors before add new status are => [#C9C8C8, #A5DFFA, #FCF088, #CADF94,  #32CD32]
 
-10:25:11.774 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status Ids after deleted new status are => [1, 3, 169, 2, 5, 6]
-10:25:11.784 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status names after deleted new status are => [Not Started, In Discussion, Coco, In Progress, Submitted, Completed]
-10:25:11.799 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status levels after deleted new status are => [0, 1, 1, 2, 3, 5]
-10:25:11.816 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors after deleted new status are => [Gray, Crystal Blue, gold, Mustard, Smith Green, Lime Green]
-10:25:11.828 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors after deleted new status are => [#C9C8C8, #A5DFFA, #C978BD, #FCF088, #CADF94,  #32CD32]
-
-10:28:16.963 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status Ids before add new status are => [1, 3, 2, 5, 6]
-10:28:16.981 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status names before add new status are => [Not Started, In Discussion, In Progress, Submitted, Completed]
-10:28:16.994 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status levels before add new status are => [0, 1, 2, 3, 5]
-10:28:17.009 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors before add new status are => [Gray, Crystal Blue, Mustard, Smith Green, Lime Green]
-10:28:17.021 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors before add new status are => [#C9C8C8, #A5DFFA, #FCF088, #CADF94,  #32CD32]
-
-10:28:44.300 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status Ids after deleted new status are => [1, 3, 2, 5, 6, 174]
-10:28:44.309 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status names after deleted new status are => [Not Started, In Discussion, In Progress, Submitted, Completed, Lucy]
-10:28:44.316 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status levels after deleted new status are => [0, 1, 2, 3, 5, 5]
-10:28:44.327 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors after deleted new status are => [Gray, Crystal Blue, Mustard, Smith Green, Lime Green, silver]
-10:28:44.334 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors after deleted new status are => [#C9C8C8, #A5DFFA, #FCF088, #CADF94,  #32CD32, #A514F2]
-
-10:31:27.628 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status Ids before add new status are => [1, 3, 2, 5, 6]
-10:31:27.648 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status names before add new status are => [Not Started, In Discussion, In Progress, Submitted, Completed]
-10:31:27.665 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status levels before add new status are => [0, 1, 2, 3, 5]
-10:31:27.677 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors before add new status are => [Gray, Crystal Blue, Mustard, Smith Green, Lime Green]
-10:31:27.693 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors before add new status are => [#C9C8C8, #A5DFFA, #FCF088, #CADF94,  #32CD32]
-
-10:31:31.498 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status Ids after added new status are => [1, 3, 2, 5, 6, 179]
-10:31:31.511 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status names after added new status are => [Not Started, In Discussion, In Progress, Submitted, Completed, Angel]
-10:31:31.523 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status levels after added new status are => [0, 1, 2, 3, 5, 12]
-10:31:31.535 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors after added new status are => [Gray, Crystal Blue, Mustard, Smith Green, Lime Green, fuchsia]
-10:31:31.546 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors after added new status are => [#C9C8C8, #A5DFFA, #FCF088, #CADF94,  #32CD32, #F5CD9A]
-
-10:31:31.644 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - New created status Id after added new status is => 179
-10:31:31.691 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - New created status after added new status is => Angel
-10:31:31.717 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - New created status level after added new status is => 12
-10:31:31.739 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - New created status color after added new status is => fuchsia
-10:31:31.760 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - New created status color code after added new status is => #F5CD9A
-
-10:31:58.218 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status Ids after deleted new status are => [1, 3, 2, 5, 6, 179]
-10:31:58.225 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status names after deleted new status are => [Not Started, In Discussion, In Progress, Submitted, Completed, Coco]
-10:31:58.236 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status levels after deleted new status are => [0, 1, 2, 3, 5, 12]
-10:31:58.245 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors after deleted new status are => [Gray, Crystal Blue, Mustard, Smith Green, Lime Green, plum]
-10:31:58.256 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors after deleted new status are => [#C9C8C8, #A5DFFA, #FCF088, #CADF94,  #32CD32, ]
-
-10:34:04.637 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status Ids before add new status are => [1, 3, 2, 5, 6]
-10:34:04.659 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status names before add new status are => [Not Started, In Discussion, In Progress, Submitted, Completed]
-10:34:04.670 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status levels before add new status are => [0, 1, 2, 3, 5]
-10:34:04.683 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors before add new status are => [Gray, Crystal Blue, Mustard, Smith Green, Lime Green]
-10:34:04.698 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors before add new status are => [#C9C8C8, #A5DFFA, #FCF088, #CADF94,  #32CD32]
-
-10:34:08.734 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status Ids after added new status are => [1, 3, 2, 5, 6, 184]
-10:34:08.747 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status names after added new status are => [Not Started, In Discussion, In Progress, Submitted, Completed, Tiger]
-10:34:08.763 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status levels after added new status are => [0, 1, 2, 3, 5, 19]
-10:34:08.775 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors after added new status are => [Gray, Crystal Blue, Mustard, Smith Green, Lime Green, black]
-10:34:08.786 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors after added new status are => [#C9C8C8, #A5DFFA, #FCF088, #CADF94,  #32CD32, #7E71F7]
-
-10:34:08.869 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - New created status Id after added new status is => 184
-10:34:08.900 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - New created status after added new status is => Tiger
-10:34:08.918 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - New created status level after added new status is => 19
-10:34:08.939 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - New created status color after added new status is => black
-10:34:08.957 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - New created status color code after added new status is => #7E71F7
-
-10:34:18.763 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status Ids after updated new status are => [1, 3, 2, 5, 6, 184]
-10:34:18.779 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status names after updated new status are => [Not Started, In Discussion, In Progress, Submitted, Completed, Max]
-10:34:18.787 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status levels after updated new status are => [0, 1, 2, 3, 5, 15]
-10:34:18.798 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors after updated new status are => [Gray, Crystal Blue, Mustard, Smith Green, Lime Green, orange]
-10:34:18.807 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors after updated new status are => [#C9C8C8, #A5DFFA, #FCF088, #CADF94,  #32CD32, #DC7D76]
-
-10:34:18.827 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - New created status Id after updated new status is => 184
-10:34:18.840 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - New created status after updated new status is => Max
-10:34:18.854 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - New created status level after updated new status is => 15
-10:34:18.870 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - New created status color after updated new status is => orange
-10:34:18.889 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - New created status color code after updated new status is => #DC7D76
-
-10:34:33.945 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status Ids after deleted new status are => [1, 3, 2, 5, 6]
-10:34:33.954 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status names after deleted new status are => [Not Started, In Discussion, In Progress, Submitted, Completed]
-10:34:33.966 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status levels after deleted new status are => [0, 1, 2, 3, 5]
-10:34:33.974 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors after deleted new status are => [Gray, Crystal Blue, Mustard, Smith Green, Lime Green]
-10:34:33.985 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors after deleted new status are => [#C9C8C8, #A5DFFA, #FCF088, #CADF94,  #32CD32]
-
-10:34:35.299 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status Ids after deleted new status are => [1, 3, 2, 5, 6]
-10:34:35.311 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status names after deleted new status are => [Not Started, In Discussion, In Progress, Submitted, Completed]
-10:34:35.320 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status levels after deleted new status are => [0, 1, 2, 3, 5]
-10:34:35.329 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors after deleted new status are => [Gray, Crystal Blue, Mustard, Smith Green, Lime Green]
-10:34:35.337 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors after deleted new status are => [#C9C8C8, #A5DFFA, #FCF088, #CADF94,  #32CD32]
-
-10:51:57.924 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status Ids before add new status are => [1, 3, 2, 5, 6]
-10:51:57.931 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status names before add new status are => [Not Started, In Discussion, In Progress, Submitted, Completed]
-10:51:57.941 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status levels before add new status are => [0, 1, 2, 3, 5]
-10:51:57.951 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors before add new status are => [Gray, Crystal Blue, Mustard, Smith Green, Lime Green]
-10:51:57.959 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors before add new status are => [#C9C8C8, #A5DFFA, #FCF088, #CADF94,  #32CD32]
-
-10:53:18.614 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status Ids before add new status are => [1, 3, 2, 5, 6]
-10:53:18.621 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status names before add new status are => [Not Started, In Discussion, In Progress, Submitted, Completed]
-10:53:18.629 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status levels before add new status are => [0, 1, 2, 3, 5]
-10:53:18.638 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors before add new status are => [Gray, Crystal Blue, Mustard, Smith Green, Lime Green]
-10:53:18.646 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors before add new status are => [#C9C8C8, #A5DFFA, #FCF088, #CADF94,  #32CD32]
+14:06:01.001 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status Ids before add new status are => [1, 3, 2, 5, 6]
+14:06:01.015 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status names before add new status are => [Not Started, In Discussion, In Progress, Submitted, Completed]
+14:06:01.029 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status levels before add new status are => [0, 1, 2, 3, 5]
+14:06:01.043 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors before add new status are => [Gray, Crystal Blue, Mustard, Smith Green, Lime Green]
+14:06:01.059 --> in.biencaps.erp.api.testcases.StatusFolderAPITestCases - List of status colors before add new status are => [#C9C8C8, #A5DFFA, #FCF088, #CADF94,  #32CD32]
 

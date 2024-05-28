@@ -27,8 +27,6 @@ public class DataProvidersForProjectFolder {
 
 		int invalidProjectManager = DataGeneratorForAPI.generateFakeNumberWithRange(50, 100);
 
-		int invalidProjectStatus = DataGeneratorForAPI.generateFakeNumberWithRange(50, 100);
-
 		int randomIndexForProjectPriorityId = random.nextInt(PriorityFolderAPITestCases.priorityIds.size());
 		int randomProjectPriorityId = PriorityFolderAPITestCases.priorityIds.get(randomIndexForProjectPriorityId);
 
@@ -79,11 +77,6 @@ public class DataProvidersForProjectFolder {
 				{ DataGeneratorForAPI.generateFakeProjet(), validProjectStartDate, validProjectEndDate,
 						invalidProjectManager, 1, randomProjectPriorityId, randomProjectDepartmentId1,
 						randomProjectDepartmentId2, randomProjectEmployeeId1, randomProjectEmployeeId2 },
-				// Entering invalid projectStatus Id for only projectStatusId field
-				{ DataGeneratorForAPI.generateFakeProjet(), validProjectStartDate, validProjectEndDate,
-						randomProjectManagerEmployeeId, invalidProjectStatus, randomProjectPriorityId,
-						randomProjectDepartmentId1, randomProjectDepartmentId2, randomProjectEmployeeId1,
-						randomProjectEmployeeId2 },
 				// Entering invalid projectPriority Id for only projectPriorityId field
 				{ DataGeneratorForAPI.generateFakeProjet(), validProjectStartDate, validProjectEndDate,
 						randomProjectManagerEmployeeId, 1, invalidProjectPriority, randomProjectDepartmentId1,
@@ -135,8 +128,6 @@ public class DataProvidersForProjectFolder {
 				.get(randomIndexForProjectManagerEmployeeId);
 
 		int invalidProjectManager = DataGeneratorForAPI.generateFakeNumberWithRange(50, 100);
-
-		int invalidProjectStatus = DataGeneratorForAPI.generateFakeNumberWithRange(50, 100);
 
 		int randomIndexForProjectPriorityId = random.nextInt(PriorityFolderAPITestCases.priorityIds.size());
 		int randomProjectPriorityId = PriorityFolderAPITestCases.priorityIds.get(randomIndexForProjectPriorityId);
@@ -198,11 +189,6 @@ public class DataProvidersForProjectFolder {
 						validProjectStartDate, validProjectEndDate, invalidProjectManager, 1, randomProjectPriorityId,
 						randomProjectDepartmentId1, randomProjectDepartmentId2, randomProjectEmployeeId1,
 						randomProjectEmployeeId2 },
-				// Entering invalid projectStatus Id for only projectStatusId field
-				{ ProjectFolderAPITestCases.newCreatedProjectId, DataGeneratorForAPI.generateFakeProjet(),
-						validProjectStartDate, validProjectEndDate, randomProjectManagerEmployeeId,
-						invalidProjectStatus, randomProjectPriorityId, randomProjectDepartmentId1,
-						randomProjectDepartmentId2, randomProjectEmployeeId1, randomProjectEmployeeId2 },
 				// Entering invalid projectPriority Id for only projectPriorityId field
 				{ ProjectFolderAPITestCases.newCreatedProjectId, DataGeneratorForAPI.generateFakeProjet(),
 						validProjectStartDate, validProjectEndDate, randomProjectManagerEmployeeId, 1,

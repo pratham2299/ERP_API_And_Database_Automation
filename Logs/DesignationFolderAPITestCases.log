@@ -1,0 +1,54 @@
+14:03:15.428 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - List of designation Ids before add new designation are => [1, 2, 3, 4, 5, 6, 33, 36, 38, 48, 65]
+14:03:15.445 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - List of designation names before add new designation are => [COO, Developer, Tester, CEO, Admin, CTO, Designer, Editor, Team Lead, Intern, pilot]
+
+14:03:15.548 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - New created Designation Id before add new designation is => 65
+14:03:15.596 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - New created Designation before add new designation is => pilot
+
+14:03:22.137 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - List of designation Ids after added new designation are => [1, 2, 3, 4, 5, 6, 33, 36, 38, 48, 65, 67]
+14:03:22.149 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - List of designation names after added new designation are => [COO, Developer, Tester, CEO, Admin, CTO, Designer, Editor, Team Lead, Intern, pilot, engineer]
+
+14:03:22.171 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - New created Designation Id after added new designation is => 67
+14:03:22.197 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - New created Designation after added new designation is => engineer
+
+14:03:34.442 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - List of designation Ids after updated new designation are => [1, 2, 3, 4, 5, 6, 33, 36, 38, 48, 65, 67]
+14:03:34.452 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - List of designation names after updated new designation are => [COO, Developer, Tester, CEO, Admin, CTO, Designer, Editor, Team Lead, Intern, pilot, doctor]
+
+14:03:34.475 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - New created Designation Id after updated new designation is => 67
+14:03:34.497 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - New created Designation after updated new designation is => doctor
+
+14:03:45.682 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - List of designation Ids after deleted new designation are => [1, 2, 3, 4, 5, 6, 33, 36, 38, 48, 65]
+14:03:45.693 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - List of designation names after deleted new designation are => [COO, Developer, Tester, CEO, Admin, CTO, Designer, Editor, Team Lead, Intern, pilot]
+
+14:03:45.712 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - New created Designation Id after deleted new designation is => 65
+14:03:45.733 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - New created Designation after deleted new designation is => pilot
+
+14:06:11.790 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - List of designation Ids before add new designation are => [1, 2, 3, 4, 5, 6, 33, 36, 38, 48]
+14:06:11.803 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - List of designation names before add new designation are => [COO, Developer, Tester, CEO, Admin, CTO, Designer, Editor, Team Lead, Intern]
+
+14:06:11.937 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - New created Designation Id before add new designation is => 48
+14:06:11.981 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - New created Designation before add new designation is => Intern
+
+14:06:19.015 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - List of designation Ids after added new designation are => [1, 2, 3, 4, 5, 6, 33, 36, 38, 48, 69]
+14:06:19.026 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - List of designation names after added new designation are => [COO, Developer, Tester, CEO, Admin, CTO, Designer, Editor, Team Lead, Intern, window cleaner]
+
+14:06:19.053 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - New created Designation Id after added new designation is => 69
+14:06:19.076 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - New created Designation after added new designation is => window cleaner
+
+14:06:30.435 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - List of designation Ids after updated new designation are => [1, 2, 3, 4, 5, 6, 33, 36, 38, 48, 69]
+14:06:30.449 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - List of designation names after updated new designation are => [COO, Developer, Tester, CEO, Admin, CTO, Designer, Editor, Team Lead, Intern, doctor]
+
+14:06:30.466 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - New created Designation Id after updated new designation is => 69
+14:06:30.488 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - New created Designation after updated new designation is => doctor
+
+14:06:41.500 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - List of designation Ids after deleted new designation are => [1, 2, 3, 4, 6, 33, 36, 38, 48, 69]
+14:06:41.511 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - List of designation names after deleted new designation are => [COO, Developer, Tester, CEO, CTO, Designer, Editor, Team Lead, Intern, doctor]
+
+14:06:41.535 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - New created Designation Id after deleted new designation is => 69
+14:06:41.551 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - New created Designation after deleted new designation is => doctor
+
+14:06:43.489 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - List of designation Ids after deleted new designation are => [1, 2, 3, 4, 6, 33, 36, 38, 48]
+14:06:43.501 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - List of designation names after deleted new designation are => [COO, Developer, Tester, CEO, CTO, Designer, Editor, Team Lead, Intern]
+
+14:06:43.518 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - New created Designation Id after deleted new designation is => 48
+14:06:43.538 --> in.biencaps.erp.api.testcases.DesignationFolderAPITestCases - New created Designation after deleted new designation is => Intern
+
