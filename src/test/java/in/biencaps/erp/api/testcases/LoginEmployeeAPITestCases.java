@@ -4,61 +4,52 @@ import org.apache.logging.log4j.*;
 
 import org.testng.annotations.Test;
 
-import com.aventstack.extentreports.Status;
-
 import in.biencaps.erp.api.bodyValidations.*;
 import in.biencaps.erp.api.endpoints.*;
 import in.biencaps.erp.api.payloads.*;
 import in.biencaps.erp.api.responses.*;
+import in.biencaps.erp.api.utilities.*;
 import io.restassured.response.*;
 
 public class LoginEmployeeAPITestCases extends BaseTest {
 	public static final Logger log = LogManager.getLogger(LoginEmployeeAPITestCases.class);
 
-	public Response response;
 	public static String authToken;
 
-	public static String password = "Pass@123";
-
-	@Test(priority = 1)
-	public void verify_Login_Employee_By_Giving_Valid_Data() {
+	@Test(priority = 1, dataProvider = "TestDataForLoginEmployee", dataProviderClass = DataProviderForLoginEmployee.class)
+	public void verify_Login_Employee(String userId, String password) {
 		test = BaseTest.extent.createTest("Login employee by giving valid data");
 
-		String requestPayload = LoginFolderPayloads.loginEmployeePayload("INC004", password);
+		String requestPayload = LoginFolderPayloads.loginEmployeePayload(userId, password);
 
-		response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.loginEmployeeEndpoint);
+		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
+				APIEndpoints.loginEmployeeEndpoint);
+
+		BaseTest.test_Method_Logs("login employee", APIEndpoints.loginEmployeeEndpoint, response);
+
+		if (!userId.equalsIgnoreCase(Constants.adminUserId)) {
+			BodyValidation.responseValidation(response, "Not Found", 404);
+		} else if (!password.equalsIgnoreCase(Constants.adminPassword)) {
+			BodyValidation.response400Validation(response);
+		} else {
+			BodyValidation.responseValidation(response, 200);
+
+			authToken = response.jsonPath().getString("token");
+			log.info("Admin Token is => " + authToken + "\n");
+		}
+	}
+
+	public static String verify_Login_Employee_By_Giving_Valid_Data(String userId, String password) {
+		String requestPayload = LoginFolderPayloads.loginEmployeePayload(userId, password);
+
+		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
+				APIEndpoints.loginEmployeeEndpoint);
 
 		BodyValidation.responseValidation(response, 200);
-		test.log(Status.INFO, "Status code for login employee is => " + response.getStatusCode());
-		test.log(Status.INFO, "Response for login employee is => " + response.getBody().asPrettyString());
 
-		authToken = response.jsonPath().getString("token");
-		log.info("Token is => " + authToken + "\n");
-	}
+		String authToken = response.jsonPath().getString("token");
+		log.info("Employee Token is => " + authToken);
 
-	@Test(priority = 2)
-	public void verify_Login_Employee_By_Giving_Invalid_LoginId() {
-		test = BaseTest.extent.createTest("Login employee by giving invalid login Id");
-
-		String requestPayload = LoginFolderPayloads.loginEmployeePayload("INC0120", "Pass@123");
-
-		response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.loginEmployeeEndpoint);
-
-		BodyValidation.responseValidation(response, "Not Found", 404);
-		test.log(Status.INFO, "Status code for login employee is => " + response.getStatusCode());
-		test.log(Status.INFO, "Response for login employee is => " + response.getBody().asPrettyString());
-	}
-
-	@Test(priority = 3)
-	public void verify_Login_Employee_By_Giving_Invalid_Password() {
-		test = BaseTest.extent.createTest("Login employee by giving invalid password");
-
-		String requestPayload = LoginFolderPayloads.loginEmployeePayload("INC012", "Pass@12345");
-
-		response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.loginEmployeeEndpoint);
-
-		BodyValidation.response400Validation(response);
-		test.log(Status.INFO, "Status code for login employee is => " + response.getStatusCode());
-		test.log(Status.INFO, "Response for login employee is => " + response.getBody().asPrettyString());
+		return authToken;
 	}
 }

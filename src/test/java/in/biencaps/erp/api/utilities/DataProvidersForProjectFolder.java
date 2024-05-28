@@ -294,7 +294,7 @@ public class DataProvidersForProjectFolder {
 		int invalidProjectId = DataGeneratorForAPI.generateFakeNumberWithRange(
 				ProjectFolderAPITestCases.newCreatedProjectId + 10, ProjectFolderAPITestCases.newCreatedProjectId + 50);
 
-		String validPassword = Constants.employeePassword;
+		String validPassword = Constants.adminPassword;
 		String invalidPassword = DataGeneratorForAPI.generateFakePassword();
 
 		return new Object[][] { { invalidProjectId, validPassword }, { validProjectId, invalidPassword },

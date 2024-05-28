@@ -419,7 +419,7 @@ public class ProjectFolderAPITestCases extends BaseTest {
 
 			if (!projectIds.contains(projectId)) {
 				BodyValidation.responseValidation(response, "Not Found", 404);
-			} else if (!password.equalsIgnoreCase(Constants.employeePassword)) {
+			} else if (!password.equalsIgnoreCase(Constants.adminPassword)) {
 				BodyValidation.responseValidation(response, "Unprocessable Entity", 422);
 			} else if (response.getStatusCode() == 403) {
 				BodyValidation.responseValidation(response, "Forbidden", 403);

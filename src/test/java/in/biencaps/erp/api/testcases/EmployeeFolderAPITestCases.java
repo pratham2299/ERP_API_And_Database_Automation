@@ -54,7 +54,7 @@ public class EmployeeFolderAPITestCases extends BaseTest {
 	public void verify_Get_Single_Employee_Without_Authorization() {
 		test = BaseTest.extent.createTest("Get single employee without authorization");
 
-		String requestPayload = EmployeeFolderPayloads.getSingleEmployeePayload(Constants.employeeUserId);
+		String requestPayload = EmployeeFolderPayloads.getSingleEmployeePayload("INC012");
 
 		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
 				APIEndpoints.getSingleEmployeeEndpoint);
@@ -696,7 +696,7 @@ public class EmployeeFolderAPITestCases extends BaseTest {
 			String confirmPassword) {
 		test = BaseTest.extent.createTest("Update password with valid and invalid data and with authorization");
 
-		String userPassword = LoginEmployeeAPITestCases.password;
+		String userPassword = Constants.adminPassword;
 
 		String requestPayload = EmployeeFolderPayloads.updatePasswordPayload(userId, oldPassword, newPassword,
 				confirmPassword);

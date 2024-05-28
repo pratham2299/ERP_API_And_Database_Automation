@@ -2,13 +2,11 @@ package in.biencaps.erp.api.utilities;
 
 import java.util.*;
 import org.testng.annotations.*;
-import com.github.javafaker.*;
 
 import in.biencaps.erp.api.testcases.*;
 
 public class DataProvidersForEmployeeFolder {
-	private static Faker faker = new Faker();
-	private static Random random = new Random();
+	static Random random = new Random();
 
 	@DataProvider(name = "TestDataForAddEmployee")
 	public Object[][] testDataForAddEmployee() {
@@ -21,22 +19,23 @@ public class DataProvidersForEmployeeFolder {
 		int randomIndexForDesignationId = random.nextInt(DesignationFolderAPITestCases.designationIds.size());
 		int randomValidDesignationId = DesignationFolderAPITestCases.designationIds.get(randomIndexForDesignationId);
 
-		int randomInvalidDesignationId = faker.number().numberBetween(50, 100);
+		int randomInvalidDesignationId = DataGeneratorForAPI.generateFakeNumberWithRange(50, 100);
 
 		int randomIndexForDepartmentId = random.nextInt(DepartmentFolderAPITestCases.departmentIds.size());
 		int randomValidDepartmentId = DepartmentFolderAPITestCases.departmentIds.get(randomIndexForDepartmentId);
 
-		int randomInvalidDepartmentId = faker.number().numberBetween(50, 100);
+		int randomInvalidDepartmentId = DataGeneratorForAPI.generateFakeNumberWithRange(50, 100);
 
 		int roleIds[] = { 3, 4, 5 };
 		int randomIndexForRoleId = random.nextInt(roleIds.length);
 		int randomValidRoleId = roleIds[randomIndexForRoleId];
 
-		int randomInvalidReportingAuthorityEmpId = faker.number().numberBetween(50, 100);
+		int randomInvalidReportingAuthorityEmpId = DataGeneratorForAPI.generateFakeNumberWithRange(50, 100);
 
-		int randomInvalidRoleId = faker.number().numberBetween(50, 100);
+		int randomInvalidRoleId = DataGeneratorForAPI.generateFakeNumberWithRange(50, 100);
 
-		String employeePersonalEmail = faker.internet().emailAddress();
+		String employeePersonalEmail = DataGeneratorForAPI.generateFakeEmail();
+
 		String[] employeeInvalidPersonalEmails = { "example@@gmail.com", "example@.gmail.com", "example@gmail",
 				"example@gmail....com" };
 		int randomIndexForEmail = random.nextInt(employeeInvalidPersonalEmails.length);
@@ -94,23 +93,23 @@ public class DataProvidersForEmployeeFolder {
 	public Object[][] testDataForUpdateEmployee() {
 		int validEmployeeId = 4;
 
-		int invalidEmployeeId = faker.number().numberBetween(50, 100);
+		int invalidEmployeeId = DataGeneratorForAPI.generateFakeNumberWithRange(50, 100);
 
 		int randomIndexForDesignationId = random.nextInt(DesignationFolderAPITestCases.designationIds.size());
 		int randomValidDesignationId = DesignationFolderAPITestCases.designationIds.get(randomIndexForDesignationId);
 
-		int randomInvalidDesignationId = faker.number().numberBetween(50, 100);
+		int randomInvalidDesignationId = DataGeneratorForAPI.generateFakeNumberWithRange(50, 100);
 
 		int randomIndexForDepartmentId = random.nextInt(DepartmentFolderAPITestCases.departmentIds.size());
 		int randomValidDepartmentId = DepartmentFolderAPITestCases.departmentIds.get(randomIndexForDepartmentId);
 
-		int randomInvalidDepartmentId = faker.number().numberBetween(50, 100);
+		int randomInvalidDepartmentId = DataGeneratorForAPI.generateFakeNumberWithRange(50, 100);
 
 		int roleIds[] = { 3, 4, 5 };
 		int randomIndexForRoleId = random.nextInt(roleIds.length);
 		int randomValidRoleId = roleIds[randomIndexForRoleId];
 
-		int randomInvalidRoleId = faker.number().numberBetween(50, 100);
+		int randomInvalidRoleId = DataGeneratorForAPI.generateFakeNumberWithRange(50, 100);
 
 		String[] employeeInvalidEmails = { "example@@gmail.com", "example@.gmail.com", "example@gmail",
 				"example@gmail....com" };
@@ -210,18 +209,19 @@ public class DataProvidersForEmployeeFolder {
 		String randomInvalidFormattedDate = DataGeneratorForAPI.generateRandomDateForGetAssignedTaskInfo("MM-yyyy-dd");
 
 		return new Object[][] { { randomRoleName, randomValidFormattedDate },
-				{ randomRoleName, randomInvalidFormattedDate }, { faker.nation().language(), randomValidFormattedDate },
-				{ faker.nation().language(), randomInvalidFormattedDate }, };
+				{ randomRoleName, randomInvalidFormattedDate },
+				{ DataGeneratorForAPI.generateFakeRole(), randomValidFormattedDate },
+				{ DataGeneratorForAPI.generateFakeRole(), randomInvalidFormattedDate }, };
 	}
 
 	@DataProvider(name = "TestDataForUpdatePassword")
 	public Object[][] testDataForUpdatePassword() {
-		String validUserId = Constants.employeeUserId;
-		String oldPassword = Constants.employeePassword;
-		String newPassword = faker.internet().password(5, 10);
+		String validUserId = Constants.adminUserId;
+		String oldPassword = Constants.adminPassword;
+		String newPassword = DataGeneratorForAPI.generateFakePasswordWithSpecificLength(5, 10);
 		String confirmPassword = newPassword;
 
-		int user_id_last_digits = faker.number().numberBetween(100, 150);
+		int user_id_last_digits = DataGeneratorForAPI.generateFakeNumberWithRange(100, 150);
 		String invalidUserId = "INC0" + String.valueOf(user_id_last_digits);
 
 		return new Object[][] { { validUserId, oldPassword, "Pass@123", "Pass@123" },
@@ -230,7 +230,7 @@ public class DataProvidersForEmployeeFolder {
 				{ validUserId, "", newPassword, confirmPassword },
 				{ validUserId, "Pratham@123", newPassword, confirmPassword },
 				{ validUserId, oldPassword, "", confirmPassword }, { "INC018", oldPassword, newPassword, "" },
-				{ validUserId, oldPassword, newPassword, faker.internet().domainName() } };
+				{ validUserId, oldPassword, newPassword, DataGeneratorForAPI.generateFakePassword() } };
 	}
 
 	@DataProvider(name = "TestDataForGetEncryptedEmail")
@@ -238,7 +238,7 @@ public class DataProvidersForEmployeeFolder {
 		int randomIndexForUserId = random.nextInt(EmployeeFolderAPITestCases.userIds.size());
 		String randomUserId = EmployeeFolderAPITestCases.userIds.get(randomIndexForUserId);
 
-		int user_id_last_digits = faker.number().numberBetween(100, 150);
+		int user_id_last_digits = DataGeneratorForAPI.generateFakeNumberWithRange(100, 150);
 		String invalidUserId = "INC0" + String.valueOf(user_id_last_digits);
 
 		return new Object[][] { { randomUserId }, { invalidUserId } };
@@ -246,26 +246,24 @@ public class DataProvidersForEmployeeFolder {
 
 	@DataProvider(name = "TestDataForAddForgotPassword")
 	public Object[][] testDataForAddForgotPassword() {
-		int randomIndexForUserId = random.nextInt(EmployeeFolderAPITestCases.userIds.size());
-		String randomUserId = EmployeeFolderAPITestCases.userIds.get(randomIndexForUserId);
+		String validUserId = "INC012";
 
-		int user_id_last_digits = faker.number().numberBetween(100, 150);
+		int user_id_last_digits = DataGeneratorForAPI.generateFakeNumberWithRange(100, 150);
 		String invalidUserId = "INC0" + String.valueOf(user_id_last_digits);
 
-		return new Object[][] { { randomUserId }, { invalidUserId } };
+		return new Object[][] { { validUserId }, { invalidUserId } };
 	}
 
 	@DataProvider(name = "TestDataForAddToken")
 	public Object[][] testDataForAddToken() {
 		String token = Constants.gmailKey;
 
-		int randomIndexForUserId = random.nextInt(EmployeeFolderAPITestCases.userIds.size());
-		String randomUserId = EmployeeFolderAPITestCases.userIds.get(randomIndexForUserId);
+		String validUserId = "INC012";
 
-		int user_id_last_digits = faker.number().numberBetween(100, 150);
+		int user_id_last_digits = DataGeneratorForAPI.generateFakeNumberWithRange(100, 150);
 		String invalidUserId = "INC0" + String.valueOf(user_id_last_digits);
 
-		return new Object[][] { { token, randomUserId }, { token, invalidUserId }, { "", randomUserId }, };
+		return new Object[][] { { token, validUserId }, { token, invalidUserId }, { "", validUserId }, };
 	}
 
 	@DataProvider(name = "TestDataForSearchEmployeeInLevel")
@@ -280,10 +278,10 @@ public class DataProvidersForEmployeeFolder {
 		String randomInvalidFormattedDate = DataGeneratorForAPI.getCurrentDate("MM-yyyy-dd");
 
 		return new Object[][] { { randomEmployeeName, randomRoleName, randomValidFormattedDate },
-				{ randomEmployeeName, faker.company().industry(), randomValidFormattedDate },
+				{ randomEmployeeName, DataGeneratorForAPI.generateFakeRole(), randomValidFormattedDate },
 				{ randomEmployeeName, "", randomValidFormattedDate },
 				{ randomEmployeeName, randomRoleName, randomInvalidFormattedDate },
 				{ randomEmployeeName, randomRoleName, "" },
-				{ faker.name().firstName(), randomRoleName, randomValidFormattedDate } };
+				{ DataGeneratorForAPI.generateFakeFullName(), randomRoleName, randomValidFormattedDate } };
 	}
 }

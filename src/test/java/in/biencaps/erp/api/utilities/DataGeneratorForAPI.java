@@ -9,9 +9,17 @@ import com.github.javafaker.Faker;
 public class DataGeneratorForAPI {
 	private static Faker faker = new Faker();
 	private static Random random = new Random();
+	
+	public static String generateFakeEmail() {
+		return faker.internet().emailAddress();
+	}
 
 	public static String generateFakePassword() {
 		return faker.internet().password();
+	}
+	
+	public static String generateFakePasswordWithSpecificLength(int min, int max) {
+		return faker.internet().password(min, max);
 	}
 
 	public static String generateFakeFullName() {
@@ -32,6 +40,10 @@ public class DataGeneratorForAPI {
 
 	public static String generateFakeDepartment() {
 		return faker.company().industry();
+	}
+	
+	public static String generateFakeRole() {
+		return faker.country().capital();
 	}
 
 	public static String generateFakeDesignation() {

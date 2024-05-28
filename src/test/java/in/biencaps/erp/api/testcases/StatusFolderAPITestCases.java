@@ -6,7 +6,6 @@ import org.apache.logging.log4j.*;
 
 import org.testng.annotations.*;
 
-import com.aventstack.extentreports.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
 import in.biencaps.erp.api.bodyValidations.*;
@@ -91,8 +90,24 @@ public class StatusFolderAPITestCases extends BaseTest {
 		verify_Get_All_Statuses_API_With_Authorization("before add new status");
 	}
 
+	@Test(priority = 6)
+	public void verify_Add_Status_With_Employee_Authorization() {
+		test = BaseTest.extent.createTest("Add status with employee authorization");
+
+		LoginEmployeeAPITestCases.verify_Login_Employee_By_Giving_Valid_Data(Constants.employeeUserId,
+				Constants.employeePassword);
+
+		String requestPayload = StatusFolderPayloads.addStatusPayload("Cancel", 10, "Red", "#FF0000");
+
+		Response response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.addStatusEndpoint);
+
+		BodyValidation.response401Validation(response);
+
+		BaseTest.test_Method_Logs("add status with employee authorization", APIEndpoints.addStatusEndpoint, response);
+	}
+
 	@Test(priority = 6, dataProvider = "TestDataForAddStatus", dataProviderClass = DataProvidersForStatusFolder.class, enabled = false)
-	public void verify_Add_Status_With_Authorization(String statusName, int statusLevel, String statusColor,
+	public void verify_Add_Status_With_Admin_Authorization(String statusName, int statusLevel, String statusColor,
 			String statusColorCode) throws JsonProcessingException {
 		String requestPayload = StatusFolderPayloads.addStatusPayload(statusName, statusLevel, statusColor,
 				statusColorCode);
@@ -126,7 +141,7 @@ public class StatusFolderAPITestCases extends BaseTest {
 	}
 
 	@Test(priority = 7, dataProvider = "TestDataForUpdateStatus", dataProviderClass = DataProvidersForStatusFolder.class, enabled = false)
-	public void verify_Update_Status_With_Authorization(int statusId, String statusName, int statusLevel,
+	public void verify_Update_Status_With_Admin_Authorization(int statusId, String statusName, int statusLevel,
 			String statusColor, String statusColorCode) throws Throwable {
 		test = BaseTest.extent.createTest("Update status with valid and invalid data and with authorization");
 
@@ -170,7 +185,7 @@ public class StatusFolderAPITestCases extends BaseTest {
 	}
 
 	@Test(priority = 8, dataProvider = "TestDataForDeleteStatus", dataProviderClass = DataProvidersForStatusFolder.class, enabled = false)
-	public void verify_Delete_Single_Status_With_Authorization(String statusName) {
+	public void verify_Delete_Single_Status_With_Admin_Authorization(String statusName) {
 		test = BaseTest.extent.createTest("Delete status with valid and invalid data and with authorization");
 
 		Response response = Responses.deleteRequestWithAuthorizationAndQueryParameter("statusName", statusName,
@@ -223,9 +238,8 @@ public class StatusFolderAPITestCases extends BaseTest {
 				APIEndpoints.getAllStatusesEndpoint);
 
 		BodyValidation.responseValidation(response, 200);
-		test.log(Status.INFO, "API Endpoint for get all statuses is => " + APIEndpoints.getAllStatusesEndpoint);
-		test.log(Status.INFO, "Status code for get all statuses is => " + response.getStatusCode());
-		test.log(Status.INFO, "Response for get all statuses is => " + response.getBody().asPrettyString());
+
+		BaseTest.test_Method_Logs("get all statuses", APIEndpoints.getAllStatusesEndpoint, response);
 
 		statusIds = response.jsonPath().getList("statusId");
 		log.info("List of status Ids " + message + " are => " + statusIds);
