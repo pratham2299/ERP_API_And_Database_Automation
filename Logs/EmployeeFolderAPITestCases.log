@@ -1,0 +1,18 @@
+17:46:48.335 --> in.biencaps.erp.api.testcases.EmployeeFolderAPITestCases - List of user Ids are: [INC001, INC003, INC004, INC005, INC006, INC007, INC008, INC009, INC010, INC011, INC012, INC014, INC015, INC016, INC017, INC018, INC019, INC020]
+17:46:48.390 --> in.biencaps.erp.api.testcases.EmployeeFolderAPITestCases - Max value of user Id is: INC020
+17:46:48.545 --> in.biencaps.erp.api.testcases.EmployeeFolderAPITestCases - Random user Id for get single employee is: INC007
+17:46:49.427 --> in.biencaps.erp.api.testcases.EmployeeFolderAPITestCases - User Id from response for get single employee  is: INC007
+
+17:46:50.060 --> in.biencaps.erp.api.testcases.EmployeeFolderAPITestCases - Random role level for get reporting authority is: 3
+
+17:46:50.956 --> in.biencaps.erp.api.testcases.EmployeeFolderAPITestCases - New User Id for get user id is: INC021
+
+17:46:52.401 --> in.biencaps.erp.api.testcases.EmployeeFolderAPITestCases - List of emp Ids are: [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 34, 35, 36, 37]
+17:46:52.415 --> in.biencaps.erp.api.testcases.EmployeeFolderAPITestCases - List of employee full names are: [Sachin Patil, Subodh Yelgandharwar, Shivkumar Tengse, Prathamesh Dhasade, Pramod Bansode, Shashikant Bagal, Govind Dindewad, Akshay Jagtap, Pankaj Kharde, Vishal Lohbande, Prajwal Kadam, Rahul Dabhade, Om Dhumal, Rahul Hatkar, Test Team Lead, John Carter, Steve Smith, David Mille]
+17:46:52.421 --> in.biencaps.erp.api.testcases.EmployeeFolderAPITestCases - Random department for get reporting authority is: UI/UX
+17:46:52.421 --> in.biencaps.erp.api.testcases.EmployeeFolderAPITestCases - Random role level for get reporting authority is: 2
+
+17:46:53.217 --> in.biencaps.erp.api.testcases.EmployeeFolderAPITestCases - Random role level for get reporting authority is: 4
+
+17:46:54.157 --> in.biencaps.erp.api.testcases.EmployeeFolderAPITestCases - Random role level for get assignee is: 4
+

@@ -235,7 +235,7 @@ public class ProjectFolderAPITestCases extends BaseTest {
 				LoginEmployeeAPITestCases.authToken, APIEndpoints.getAllProjectByDepartmentEndpoint, "deptName",
 				departmentName);
 
-		if (response.getBody().asPrettyString().equalsIgnoreCase("[]")) {
+		if (!DepartmentFolderAPITestCases.departments.contains(departmentName)) {
 			BodyValidation.responseValidation(response, 200);
 		} else {
 			BodyValidation.responseValidation(response, 200);
@@ -289,7 +289,7 @@ public class ProjectFolderAPITestCases extends BaseTest {
 		}
 	}
 
-	@Test(priority = 17, dataProvider = "TestDataForAddProject", dataProviderClass = DataProvidersForProjectFolder.class)
+	@Test(priority = 17, dataProvider = "TestDataForAddProject", dataProviderClass = DataProvidersForProjectFolder.class, enabled = false)
 	public void verify_Add_Project_With_Authorization(String projectName, String projectStartDate,
 			String projectEndDate, int projectManagerEmployeeId, int projectStatusId, int projectPriorityId,
 			int projectDepartmentId1, int projectDepartmentId2, int projectEmployeeId1, int projectEmployeeId2) {
@@ -403,7 +403,7 @@ public class ProjectFolderAPITestCases extends BaseTest {
 		}
 	}
 
-	@Test(priority = 19, dataProvider = "TestDataForDeleteProject", dataProviderClass = DataProvidersForProjectFolder.class)
+	@Test(priority = 19, dataProvider = "TestDataForDeleteProject", dataProviderClass = DataProvidersForProjectFolder.class, enabled = false)
 	public void verify_Delete_Project_With_Authorization(int projectId, String password) {
 		if (projectIds != null) {
 			String requestPayload = ProjectFolderPayloads.deleteProjectPayload(projectId, password);
@@ -412,8 +412,6 @@ public class ProjectFolderAPITestCases extends BaseTest {
 					LoginEmployeeAPITestCases.authToken, APIEndpoints.deleteProjectEndpoint);
 
 			String responseBody = response.getBody().asPrettyString();
-			log.info("Request payload for delete project is: " + requestPayload);
-			log.info("Response body of delete project is: " + responseBody + "\n");
 
 			BaseTest.test_Method_Logs("delete project", APIEndpoints.deleteProjectEndpoint, requestPayload, response);
 

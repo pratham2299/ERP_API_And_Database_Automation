@@ -45,9 +45,8 @@ public class EmployeeFolderAPITestCases extends BaseTest {
 		Response response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.addEmployeeEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "API endpoint for add employee is => " + APIEndpoints.addEmployeeEndpoint);
-		test.log(Status.INFO, "Status code for add employee is => " + response.getStatusCode());
-		test.log(Status.INFO, "Response for add employee is => " + response.getBody().asPrettyString());
+
+		BaseTest.test_Method_Logs("add employee", APIEndpoints.addEmployeeEndpoint, response);
 	}
 
 	@Test(priority = 2)
@@ -60,9 +59,8 @@ public class EmployeeFolderAPITestCases extends BaseTest {
 				APIEndpoints.getSingleEmployeeEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "API endpoint for get single employee is => " + APIEndpoints.getSingleEmployeeEndpoint);
-		test.log(Status.INFO, "Status code for get single employee is => " + response.getStatusCode());
-		test.log(Status.INFO, "Response for add employee is => " + response.getBody().asPrettyString());
+
+		BaseTest.test_Method_Logs("get single employee", APIEndpoints.getSingleEmployeeEndpoint, response);
 	}
 
 	@Test(priority = 3)
@@ -72,9 +70,8 @@ public class EmployeeFolderAPITestCases extends BaseTest {
 		Response response = Responses.getRequestWithoutAuthorization(APIEndpoints.getUserIdEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "API endpoint for get user Id is => " + APIEndpoints.getUserIdEndpoint);
-		test.log(Status.INFO, "Status code for get user Id is => " + response.getStatusCode());
-		test.log(Status.INFO, "Response for get user Id is => " + response.getBody().asPrettyString());
+
+		BaseTest.test_Method_Logs("get user Id", APIEndpoints.getUserIdEndpoint, response);
 	}
 
 	@Test(priority = 5)
@@ -85,11 +82,9 @@ public class EmployeeFolderAPITestCases extends BaseTest {
 				APIEndpoints.getAllHigherAuthoritiesEndpoint, "role", 1, "department", "Testing");
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO,
-				"API endpoint for get all reporting authorities is => " + APIEndpoints.getAllHigherAuthoritiesEndpoint);
-		test.log(Status.INFO, "Status code for get all reporting authorities is => " + response.getStatusCode());
-		test.log(Status.INFO,
-				"Response for get all reporting authorities is => " + response.getBody().asPrettyString());
+
+		BaseTest.test_Method_Logs("get all reporting authorities", APIEndpoints.getAllHigherAuthoritiesEndpoint,
+				response);
 	}
 
 	@Test(priority = 6)
@@ -102,9 +97,8 @@ public class EmployeeFolderAPITestCases extends BaseTest {
 				APIEndpoints.getAllAssigneesEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "API endpoint for get all assignees is => " + APIEndpoints.getAllAssigneesEndpoint);
-		test.log(Status.INFO, "Status code for get all assignees is => " + response.getStatusCode());
-		test.log(Status.INFO, "Response for get all assignees is => " + response.getBody().asPrettyString());
+
+		BaseTest.test_Method_Logs("get all assignees", APIEndpoints.getAllAssigneesEndpoint, response);
 	}
 
 	@Test(priority = 7)
@@ -115,9 +109,8 @@ public class EmployeeFolderAPITestCases extends BaseTest {
 				APIEndpoints.getAllEmployeesEndpoint, "page", 0, "size", 20, "key", "");
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "API endpoint for get all employees is => " + APIEndpoints.getAllEmployeesEndpoint);
-		test.log(Status.INFO, "Status code for get all employees is => " + response.getStatusCode());
-		test.log(Status.INFO, "Response for get all employees is => " + response.getBody().asPrettyString());
+
+		BaseTest.test_Method_Logs("get all employees", APIEndpoints.getAllEmployeesEndpoint, response);
 	}
 
 	@Test(priority = 8)
@@ -127,10 +120,8 @@ public class EmployeeFolderAPITestCases extends BaseTest {
 		Response response = Responses.getRequestWithoutAuthorization(APIEndpoints.getAllActiveUsersInfoEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO,
-				"API endpoint for get all active users info is => " + APIEndpoints.getAllActiveUsersInfoEndpoint);
-		test.log(Status.INFO, "Status code for get all active users info is => " + response.getStatusCode());
-		test.log(Status.INFO, "Response for get all active users info is => " + response.getBody().asPrettyString());
+
+		BaseTest.test_Method_Logs("get all active users info", APIEndpoints.getAllActiveUsersInfoEndpoint, response);
 	}
 
 	@Test(priority = 9)
@@ -140,11 +131,9 @@ public class EmployeeFolderAPITestCases extends BaseTest {
 		Response response = Responses.getRequestWithoutAuthorization(APIEndpoints.getAllEmployeesIdAndNameEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "API endpoint for get all employees Ids and names is => "
-				+ APIEndpoints.getAllEmployeesIdAndNameEndpoint);
-		test.log(Status.INFO, "Status code for get all employees Ids and names is => " + response.getStatusCode());
-		test.log(Status.INFO,
-				"Response for get all employees Ids and names is => " + response.getBody().asPrettyString());
+
+		BaseTest.test_Method_Logs("get all employees Ids and names", APIEndpoints.getAllEmployeesIdAndNameEndpoint,
+				response);
 	}
 
 	@Test(priority = 10)
@@ -155,11 +144,9 @@ public class EmployeeFolderAPITestCases extends BaseTest {
 				APIEndpoints.getAssignedTaskInfoByRoleEndpoint, "Team Lead", "date", "2024/02/15");
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "API endpoint for get assigned task info by role is => "
-				+ APIEndpoints.getAssignedTaskInfoByRoleEndpoint);
-		test.log(Status.INFO, "Status code for get assigned task info by role is => " + response.getStatusCode());
-		test.log(Status.INFO,
-				"Response for get assigned task info by role is => " + response.getBody().asPrettyString());
+
+		BaseTest.test_Method_Logs("get assigned task info by role", APIEndpoints.getAssignedTaskInfoByRoleEndpoint,
+				response);
 	}
 
 	@Test(priority = 11)
@@ -173,10 +160,9 @@ public class EmployeeFolderAPITestCases extends BaseTest {
 				APIEndpoints.getSearchEmployeeInLevelEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO,
-				"API endpoint for get search employee in level is => " + APIEndpoints.getSearchEmployeeInLevelEndpoint);
-		test.log(Status.INFO, "Status code for get search employee in level is => " + response.getStatusCode());
-		test.log(Status.INFO, "Response for get search employee in level is => " + response.getBody().asPrettyString());
+
+		BaseTest.test_Method_Logs("get search employee in level", APIEndpoints.getSearchEmployeeInLevelEndpoint,
+				response);
 	}
 
 	@Test(priority = 12)
@@ -189,9 +175,8 @@ public class EmployeeFolderAPITestCases extends BaseTest {
 				APIEndpoints.addTokenForWebEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "API endpoint for add token for web is => " + APIEndpoints.addTokenForWebEndpoint);
-		test.log(Status.INFO, "Status code for add token for web is => " + response.getStatusCode());
-		test.log(Status.INFO, "Response for add token for web is => " + response.getBody().asPrettyString());
+
+		BaseTest.test_Method_Logs("add token for web", APIEndpoints.addTokenForWebEndpoint, response);
 	}
 
 	@Test(priority = 13)
@@ -204,9 +189,8 @@ public class EmployeeFolderAPITestCases extends BaseTest {
 				APIEndpoints.addTokenForMobileEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "API endpoint for add token for mobile is => " + APIEndpoints.addTokenForMobileEndpoint);
-		test.log(Status.INFO, "Status code for add token for mobile is => " + response.getStatusCode());
-		test.log(Status.INFO, "Response for add token for mobile is => " + response.getBody().asPrettyString());
+
+		BaseTest.test_Method_Logs("add token for mobile", APIEndpoints.addTokenForMobileEndpoint, response);
 	}
 
 	@Test(priority = 14)
@@ -221,9 +205,8 @@ public class EmployeeFolderAPITestCases extends BaseTest {
 				APIEndpoints.updateEmployeeEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "API endpoint for update employee is => " + APIEndpoints.updateEmployeeEndpoint);
-		test.log(Status.INFO, "Status code for update employee is => " + response.getStatusCode());
-		test.log(Status.INFO, "Response for update employee is => " + response.getBody().asPrettyString());
+
+		BaseTest.test_Method_Logs("update employee", APIEndpoints.updateEmployeeEndpoint, response);
 	}
 
 	@Test(priority = 15)
@@ -237,9 +220,8 @@ public class EmployeeFolderAPITestCases extends BaseTest {
 				APIEndpoints.updatePasswordEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "API endpoint for update password is => " + APIEndpoints.updatePasswordEndpoint);
-		test.log(Status.INFO, "Status code for update password is => " + response.getStatusCode());
-		test.log(Status.INFO, "Response for update password is => " + response.getBody().asPrettyString());
+
+		BaseTest.test_Method_Logs("update password", APIEndpoints.updatePasswordEndpoint, response);
 	}
 
 	@Test(priority = 16)
@@ -252,9 +234,8 @@ public class EmployeeFolderAPITestCases extends BaseTest {
 				APIEndpoints.getTaskOwnersEndpoint);
 
 		BodyValidation.response401Validation(response);
-		test.log(Status.INFO, "API endpoint for get task owners is => " + APIEndpoints.getTaskOwnersEndpoint);
-		test.log(Status.INFO, "Status code for get task owners is => " + response.getStatusCode());
-		test.log(Status.INFO, "Response for get task owners is => " + response.getBody().asPrettyString());
+
+		BaseTest.test_Method_Logs("get task owners", APIEndpoints.getTaskOwnersEndpoint, response);
 	}
 
 	@Test(priority = 17, dataProvider = "TestDataForGetAllEmployees", dataProviderClass = DataProvidersForEmployeeFolder.class)
@@ -264,9 +245,7 @@ public class EmployeeFolderAPITestCases extends BaseTest {
 		response = Responses.getRequestWithAuthorizationAndThreeQueryParameter(authToken,
 				APIEndpoints.getAllEmployeesEndpoint, "page", 0, "size", 20, "key", "");
 
-		test.log(Status.INFO, "API endpoint for get all employees is => " + APIEndpoints.getAllEmployeesEndpoint);
-		test.log(Status.INFO, "Status code for get all employees is => " + response.getStatusCode());
-		test.log(Status.INFO, "Response for get all employees is => " + response.getBody().asPrettyString());
+		BaseTest.test_Method_Logs("get all employees", APIEndpoints.getAllEmployeesEndpoint, response);
 
 		if (!authToken.equalsIgnoreCase(LoginEmployeeAPITestCases.authToken)) {
 			BodyValidation.responseValidation(response, "Unauthorized", 401);

@@ -9,7 +9,7 @@ public class TaskPojo {
 	private int taskId;
 	private int empId;
 	private List<Integer> employee;
-	private String taskTitle;
+	private List<String> taskTitle;
 	private String taskDone;
 	private int taskVerificationStatus;
 	private int taskPriority;
@@ -22,6 +22,14 @@ public class TaskPojo {
 	private String taskDueDate;
 	private String taskTimeFrom;
 	private String taskTimeTo;
+	private int taskOwner;
+	private String date;
+	private List<Integer> task;
+	private String loggedInUsr;
+	private String key;
+	private int year;
+	private int month;
+	private int weekNumber;
 
 	public TaskPojo() {
 	}
@@ -43,6 +51,14 @@ public class TaskPojo {
 		this.empId = empId;
 	}
 
+	public int getTaskOwner() {
+		return taskOwner;
+	}
+
+	public void setTaskOwner(int taskOwner) {
+		this.taskOwner = taskOwner;
+	}
+
 	public List<Integer> getEmployee() {
 		return employee;
 	}
@@ -51,11 +67,11 @@ public class TaskPojo {
 		this.employee = employee;
 	}
 
-	public String getTaskTitle() {
+	public List<String> getTaskTitle() {
 		return taskTitle;
 	}
 
-	public void setTaskTitle(String taskTitle) {
+	public void setTaskTitle(List<String> taskTitle) {
 		this.taskTitle = taskTitle;
 	}
 
@@ -154,4 +170,61 @@ public class TaskPojo {
 	public void setTaskTimeTo(String taskTimeTo) {
 		this.taskTimeTo = taskTimeTo;
 	}
+
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
+
+	public List<Integer> getTask() {
+		return task;
+	}
+
+	public void setTask(List<Integer> task) {
+		this.task = task;
+	}
+
+	public String getLoggedInUsr() {
+		return loggedInUsr;
+	}
+
+	public void setLoggedInUsr(String loggedInUsr) {
+		this.loggedInUsr = loggedInUsr;
+	}
+
+	public String getKey() {
+		return key;
+	}
+
+	public void setKey(String key) {
+		this.key = key;
+	}
+
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+	public int getMonth() {
+		return month;
+	}
+
+	public void setMonth(int month) {
+		this.month = month;
+	}
+
+	public int getWeekNumber() {
+		return weekNumber;
+	}
+
+	public void setWeekNumber(int weekNumber) {
+		this.weekNumber = weekNumber;
+	}
+
 }

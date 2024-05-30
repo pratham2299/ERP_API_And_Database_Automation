@@ -11,18 +11,17 @@ public class TaskFolderPayloads {
 	private static Gson gson = new Gson();
 	static ObjectMapper objectMapper = new ObjectMapper();
 
-	public static String giveTaskPayloadForAddTask(String taskTitle, int employeeId, String taskComment,
-			String taskScheduleDate, int taskPriority, int taskStatus, int taskProject, int taskOwner, int taskTag) {
+	public static String addTaskPayload(String taskTitle, int employeeId, String taskScheduleDate, int taskPriority,
+			int taskStatus, int taskProject, int taskOwner, int taskTag) {
 		TaskPojo taskObj = new TaskPojo();
-		taskObj.setTaskTitle(taskTitle);
+		taskObj.setTaskTitle(Arrays.asList(taskTitle));
 		taskObj.setEmployee(Arrays.asList(employeeId));
 		taskObj.setTaskStatus(taskStatus);
 		taskObj.setTaskPriority(taskPriority);
 		taskObj.setTaskProject(taskProject);
 		taskObj.setTaskScheduleDate(taskScheduleDate);
-		taskObj.setTaskDueDate(taskScheduleDate);
+		taskObj.setTaskOwner(taskOwner);
 		taskObj.setTaskTags(Arrays.asList(taskTag));
-		taskObj.setTaskComment(taskComment);
 
 		try {
 			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(taskObj);
@@ -32,77 +31,98 @@ public class TaskFolderPayloads {
 	}
 
 	public static String giveTaskPayloadForSearchTaskForMonth(String key, int employeeId, int year, int month) {
-		HashMap<String, Object> taskMap = new HashMap<>();
-		taskMap.put("key", key);
-		taskMap.put("empId", employeeId);
-		taskMap.put("year", year);
-		taskMap.put("month", month);
+		TaskPojo taskObj = new TaskPojo();
+		taskObj.setKey(key);
+		taskObj.setEmpId(employeeId);
+		taskObj.setYear(year);
+		taskObj.setMonth(month);
 
-		String payload = gson.toJson(taskMap);
-		return payload;
+		try {
+			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(taskObj);
+		} catch (Exception e) {
+			throw new RuntimeException("Failed to convert Task object to JSON", e);
+		}
 	}
 
-	public static String giveTaskPayloadForGetAllTasksForDay(int employeeId, String taskDate) {
-		HashMap<String, Object> taskMap = new HashMap<>();
-		taskMap.put("empId", employeeId);
-		taskMap.put("date", taskDate);
+	public static String employeeIdAndDatePayload(int employeeId, String taskDate) {
+		TaskPojo taskObj = new TaskPojo();
+		taskObj.setEmpId(employeeId);
+		taskObj.setDate(taskDate);
 
-		String payload = gson.toJson(taskMap);
-		return payload;
+		try {
+			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(taskObj);
+		} catch (Exception e) {
+			throw new RuntimeException("Failed to convert Task object to JSON", e);
+		}
 	}
 
 	public static String giveTaskPayloadForSearchTaskForWeek(String key, int employeeId, int year, int month,
 			int weekNumber) {
-		HashMap<String, Object> taskMap = new HashMap<>();
-		taskMap.put("key", key);
-		taskMap.put("empId", employeeId);
-		taskMap.put("year", year);
-		taskMap.put("month", month);
-		taskMap.put("weekNumber", weekNumber);
+		TaskPojo taskObj = new TaskPojo();
+		taskObj.setKey(key);
+		taskObj.setEmpId(employeeId);
+		taskObj.setYear(year);
+		taskObj.setMonth(month);
+		taskObj.setWeekNumber(weekNumber);
 
-		String payload = gson.toJson(taskMap);
-		return payload;
+		try {
+			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(taskObj);
+		} catch (Exception e) {
+			throw new RuntimeException("Failed to convert Task object to JSON", e);
+		}
 	}
 
 	public static String giveTaskPayloadForSearchTaskForDay(String key, int employeeId, String date) {
-		HashMap<String, Object> taskMap = new HashMap<>();
-		taskMap.put("key", key);
-		taskMap.put("empId", employeeId);
-		taskMap.put("date", date);
+		TaskPojo taskObj = new TaskPojo();
+		taskObj.setKey(key);
+		taskObj.setEmpId(employeeId);
+		taskObj.setDate(date);
 
-		String payload = gson.toJson(taskMap);
-		return payload;
+		try {
+			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(taskObj);
+		} catch (Exception e) {
+			throw new RuntimeException("Failed to convert Task object to JSON", e);
+		}
 	}
 
 	public static String giveTaskPayloadForGetAllTasksForMonth(int year, int month, int employeeId) {
-		HashMap<String, Object> taskMap = new HashMap<>();
-		taskMap.put("year", year);
-		taskMap.put("month", month);
-		taskMap.put("empId", employeeId);
+		TaskPojo taskObj = new TaskPojo();
+		taskObj.setEmpId(employeeId);
+		taskObj.setYear(year);
+		taskObj.setMonth(month);
 
-		String payload = gson.toJson(taskMap);
-		return payload;
+		try {
+			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(taskObj);
+		} catch (Exception e) {
+			throw new RuntimeException("Failed to convert Task object to JSON", e);
+		}
 	}
 
 	public static String giveTaskPayloadForGetAllTasksForWeek(int year, int month, int weekNumber, int employeeId) {
-		HashMap<String, Object> taskMap = new HashMap<>();
-		taskMap.put("year", year);
-		taskMap.put("month", month);
-		taskMap.put("weekNumber", weekNumber);
-		taskMap.put("empId", employeeId);
+		TaskPojo taskObj = new TaskPojo();
+		taskObj.setEmpId(employeeId);
+		taskObj.setYear(year);
+		taskObj.setMonth(month);
+		taskObj.setWeekNumber(weekNumber);
 
-		String payload = gson.toJson(taskMap);
-		return payload;
+		try {
+			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(taskObj);
+		} catch (Exception e) {
+			throw new RuntimeException("Failed to convert Task object to JSON", e);
+		}
 	}
 
 	public static String giveTaskPayloadForDuplicateTask(List<Integer> taskIds, int employeeId, String taskDate) {
-		HashMap<String, Object> taskMap = new HashMap<>();
-		taskMap.put("task", taskIds);
-		taskMap.put("empId", employeeId);
-		taskMap.put("date", taskDate);
+		TaskPojo taskObj = new TaskPojo();
+		taskObj.setTask(taskIds);
+		taskObj.setEmpId(employeeId);
+		taskObj.setDate(taskDate);
 
-		String payload = gson.toJson(taskMap);
-		return payload;
+		try {
+			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(taskObj);
+		} catch (Exception e) {
+			throw new RuntimeException("Failed to convert Task object to JSON", e);
+		}
 	}
 
 	public static String giveTaskPayloadForUpdateTask(int taskId, int employeeId, int taskDone,
@@ -168,12 +188,41 @@ public class TaskFolderPayloads {
 		return payload;
 	}
 
-	public static String giveTaskPayloadForDeleteTask(int taskId, int employeeId) {
-		HashMap<String, Object> taskMap = new HashMap<>();
-		taskMap.put("task", Arrays.asList(taskId));
-		taskMap.put("empId", employeeId);
+	public static String multipleTasksShiftPayload(int taskId, String taskSceduleDate) {
+		TaskPojo taskObj = new TaskPojo();
+		taskObj.setTask(Arrays.asList(taskId));
+		taskObj.setTaskScheduleDate(taskSceduleDate);
 
-		String payload = gson.toJson(taskMap);
-		return payload;
+		try {
+			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(taskObj);
+		} catch (Exception e) {
+			throw new RuntimeException("Failed to convert Task object to JSON", e);
+		}
+	}
+
+	public static String transferTaskPayload(int employeeId, int taskId, String date, String loggedInUser) {
+		TaskPojo taskObj = new TaskPojo();
+		taskObj.setEmpId(employeeId);
+		taskObj.setTask(Arrays.asList(taskId));
+		taskObj.setTaskScheduleDate(date);
+		taskObj.setLoggedInUsr(loggedInUser);
+
+		try {
+			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(taskObj);
+		} catch (Exception e) {
+			throw new RuntimeException("Failed to convert Task object to JSON", e);
+		}
+	}
+
+	public static String giveTaskPayloadForDeleteTask(int taskId, int employeeId) {
+		TaskPojo taskObj = new TaskPojo();
+		taskObj.setTask(Arrays.asList(taskId));
+		taskObj.setEmpId(employeeId);
+
+		try {
+			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(taskObj);
+		} catch (Exception e) {
+			throw new RuntimeException("Failed to convert Task object to JSON", e);
+		}
 	}
 }

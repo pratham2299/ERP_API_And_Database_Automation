@@ -6,16 +6,26 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases">
+      <class name="in.biencaps.erp.api.testcases.ProjectFolderAPITestCases">
         <methods>
-          <include name="verifyUpdateDepartmentWithAuthorization" invocation-numbers="0 1 5 7"/>
           <include name="extent_Report_Setup"/>
-          <include name="verify_Add_Department_With_Authorization" invocation-numbers="3 5 7"/>
           <include name="startBackendServer"/>
           <include name="flush_Extent_Report"/>
           <include name="test_Method_Exection_Result"/>
+          <include name="verify_Get_All_Project_By_Department_With_Authorization" invocation-numbers="0"/>
         </methods>
-      </class> <!-- in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases -->
+      </class> <!-- in.biencaps.erp.api.testcases.ProjectFolderAPITestCases -->
+      <class name="in.biencaps.erp.api.testcases.TaskFolderAPITestCases">
+        <methods>
+          <include name="verify_Get_All_Tasks_For_Month_With_Authorization" invocation-numbers="0"/>
+          <include name="verify_Get_All_Tasks_For_Day_With_Authorization" invocation-numbers="0"/>
+          <include name="extent_Report_Setup"/>
+          <include name="startBackendServer"/>
+          <include name="flush_Extent_Report"/>
+          <include name="test_Method_Exection_Result"/>
+          <include name="verify_Get_All_Tasks_For_Week_With_Authorization" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- in.biencaps.erp.api.testcases.TaskFolderAPITestCases -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

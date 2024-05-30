@@ -97,6 +97,12 @@ public interface APIEndpoints {
 	String getAllTasksForDayByDueDateEndpoint = baseURL + "/task/get/by/due/date";
 	String getAllTasksForDayByStatusEndpoint = baseURL + "/task/get/by/status/level";
 	String getAllTasksForDayByPriorityEndpoint = baseURL + "/task/get/by/priority/level";
+	String updateViewEndpoint = baseURL + "/task/update-view";
+	String updateTaskLevelEndpoint = baseURL + "/task/update-level";
+	String shiftMultipleTasksEndpoint = baseURL + "/task/multiple-shift";
+	String transferTaskEndpoint = baseURL + "/task/delegate-task";
+	String levelMonthSearchEndpoint = baseURL + "/task/employee/get/by/month-search";
+	String closureReportByDayEndpoint = baseURL + "/task/card/get/day-mail-data";
 
 	// Verification status folder endpoints
 	String addVerificationEndpoint = baseURL + "/task/verification/add";

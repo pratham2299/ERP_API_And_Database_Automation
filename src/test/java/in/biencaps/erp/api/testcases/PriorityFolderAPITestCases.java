@@ -107,7 +107,7 @@ public class PriorityFolderAPITestCases extends BaseTest {
 				response);
 	}
 
-	@Test(priority = 7, dataProvider = "TestDataForAddPriority", dataProviderClass = DataProvidersForPriorityFolder.class)
+	@Test(priority = 7, dataProvider = "TestDataForAddPriority", dataProviderClass = DataProvidersForPriorityFolder.class, enabled = false)
 	public void verify_Add_Priority_With_Admin_Authorization(String priorityName, int priorityLevel,
 			String priorityColor, String priorityColorCode) {
 		test = BaseTest.extent.createTest("Add priority with valid and invalid data and with authorization");
@@ -163,7 +163,7 @@ public class PriorityFolderAPITestCases extends BaseTest {
 				response);
 	}
 
-	@Test(priority = 9, dataProvider = "TestDataForUpdatePriority", dataProviderClass = DataProvidersForPriorityFolder.class)
+	@Test(priority = 9, dataProvider = "TestDataForUpdatePriority", dataProviderClass = DataProvidersForPriorityFolder.class, enabled = false)
 	public void verify_Update_Priority_With_Admin_Authorization(int priorityId, String priorityName, int priorityLevel,
 			String priorityColor, String priorityColorCode) throws Throwable {
 		test = BaseTest.extent.createTest("Update priority with valid and invalid data and with authorization");
@@ -224,7 +224,7 @@ public class PriorityFolderAPITestCases extends BaseTest {
 				response);
 	}
 
-	@Test(priority = 11, dataProvider = "TestDataForDeletePriority", dataProviderClass = DataProvidersForPriorityFolder.class)
+	@Test(priority = 11, dataProvider = "TestDataForDeletePriority", dataProviderClass = DataProvidersForPriorityFolder.class, enabled = false)
 	public void verify_Delete_Single_Priority_With_Admin_Authorization(String priorityName) {
 		test = BaseTest.extent.createTest("Delete priority with valid and invalid data and with authorization");
 

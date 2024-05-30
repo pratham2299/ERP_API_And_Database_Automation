@@ -2,6 +2,7 @@ package in.biencaps.erp.api.utilities;
 
 import java.time.*;
 import java.time.format.*;
+import java.time.temporal.WeekFields;
 import java.util.*;
 
 import com.github.javafaker.Faker;
@@ -9,7 +10,7 @@ import com.github.javafaker.Faker;
 public class DataGeneratorForAPI {
 	private static Faker faker = new Faker();
 	private static Random random = new Random();
-	
+
 	public static String generateFakeEmail() {
 		return faker.internet().emailAddress();
 	}
@@ -17,7 +18,7 @@ public class DataGeneratorForAPI {
 	public static String generateFakePassword() {
 		return faker.internet().password();
 	}
-	
+
 	public static String generateFakePasswordWithSpecificLength(int min, int max) {
 		return faker.internet().password(min, max);
 	}
@@ -41,7 +42,7 @@ public class DataGeneratorForAPI {
 	public static String generateFakeDepartment() {
 		return faker.company().industry();
 	}
-	
+
 	public static String generateFakeRole() {
 		return faker.country().capital();
 	}
@@ -88,6 +89,52 @@ public class DataGeneratorForAPI {
 			sb.append(chars.charAt(index));
 		}
 		return sb.toString();
+	}
+
+	public static int generateCurrentYearInInteger() {
+		// Get the current date
+		LocalDate currentDate = LocalDate.now();
+
+		// Get the current year as a number
+		int currentYearValue = currentDate.getYear();
+
+		return currentYearValue;
+	}
+
+	public static int generateCurrentMonthInInteger() {
+		// Get the current date
+		LocalDate currentDate = LocalDate.now();
+
+		// Get the current month as a number
+		int currentMonthValue = currentDate.getMonthValue();
+
+		return currentMonthValue;
+	}
+
+	public static int generateCurrentWeekOfCurrentMonthInInteger() {
+		LocalDate currentDate = LocalDate.now();
+
+		// Get the first day of the current month
+		LocalDate firstDayOfMonth = currentDate.withDayOfMonth(1);
+
+		// Get the week fields for the default locale
+		WeekFields weekFields = WeekFields.of(Locale.getDefault());
+
+		// Get the week number of the first day of the month
+		int firstWeekOfMonth = firstDayOfMonth.get(weekFields.weekOfMonth());
+
+		// Get the week number of the current date within the month
+		int currentWeekOfMonth = currentDate.get(weekFields.weekOfMonth());
+
+		int currentWeekNumberInMonth = (currentWeekOfMonth - firstWeekOfMonth + 1);
+
+		if (currentWeekNumberInMonth == 5) {
+			currentWeekNumberInMonth = 4;
+
+			return currentWeekNumberInMonth;
+		}
+
+		return currentWeekNumberInMonth;
 	}
 
 	public static String generateRandomFutureDate() {

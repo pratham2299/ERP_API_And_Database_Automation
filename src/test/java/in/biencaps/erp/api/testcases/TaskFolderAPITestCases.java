@@ -10,11 +10,8 @@ import in.biencaps.erp.api.responses.*;
 import in.biencaps.erp.api.utilities.*;
 
 import static io.restassured.RestAssured.*;
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoUnit;
 import java.util.*;
 
 import io.restassured.response.Response;
@@ -24,18 +21,31 @@ public class TaskFolderAPITestCases extends BaseTest {
 
 	public static List<Integer> taskIds;
 	public static List<String> taskTitles;
+	public static List<String> taskScheduleDates;
+	public static List<String> taskDueDates;
+	public static List<String> taskOwners;
+	public static List<String> taskStatuses;
+	public static List<String> taskPriorities;
+	public static List<String> taskProjects;
+	public static List<String> taskVerifications;
 	public static List<Integer> allEmployeesTaskIds;
 
 	public static int newCreatedTaskId;
 	public static String newCreatedTaskTitle;
+	public static String newCreatedTaskScheduleDate;
+	public static String newCreatedTaskDueDate;
+	public static int newCreatedTaskOwner;
+	public static int newCreatedTaskStatusId;
+	public static int newCreatedTaskPriorityId;
+	public static int newCreatedTaskProjectId;
+	public static int newCreatedTaskVerificationId;
 	public Response response;
 
 	@Test(priority = 1)
 	public void verify_Add_Task_Without_Authorization() {
 		test = BaseTest.extent.createTest("Add task without authorization");
 
-		String requestPayload = TaskFolderPayloads.giveTaskPayloadForAddTask("Task 1", 26, "Do it urgent", "2024/05/27",
-				4, 3, 1, 26, 1);
+		String requestPayload = TaskFolderPayloads.addTaskPayload("Task 1", 26, "2024/05/27", 4, 3, 1, 26, 1);
 
 		Response response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.addTaskEndpoint);
 
@@ -48,7 +58,7 @@ public class TaskFolderAPITestCases extends BaseTest {
 	public void verify_Get_All_Tasks_For_Day_Without_Authorization() {
 		test = BaseTest.extent.createTest("Get all tasks for day without authorization");
 
-		String requestPayload = TaskFolderPayloads.giveTaskPayloadForGetAllTasksForDay(26, "2024/05/27");
+		String requestPayload = TaskFolderPayloads.employeeIdAndDatePayload(26, "2024/05/27");
 		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
 				APIEndpoints.getAllTasksForDayEndpoint);
 
@@ -148,7 +158,7 @@ public class TaskFolderAPITestCases extends BaseTest {
 	public void verify_Get_All_Tasks_For_Day_By_Due_Date_Without_Authorization() {
 		test = BaseTest.extent.createTest("Get all tasks for day by due date without authorization");
 
-		String requestPayload = TaskFolderPayloads.giveTaskPayloadForGetAllTasksForDay(26, "2024/02/16");
+		String requestPayload = TaskFolderPayloads.employeeIdAndDatePayload(26, "2024/02/16");
 		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
 				APIEndpoints.getAllTasksForDayByDueDateEndpoint);
 
@@ -162,7 +172,7 @@ public class TaskFolderAPITestCases extends BaseTest {
 	public void verify_Get_All_Tasks_For_Day_By_Priority_Without_Authorization() {
 		test = BaseTest.extent.createTest("Get all tasks for day by priority without authorization");
 
-		String requestPayload = TaskFolderPayloads.giveTaskPayloadForGetAllTasksForDay(26, "2024/02/16");
+		String requestPayload = TaskFolderPayloads.employeeIdAndDatePayload(26, "2024/02/16");
 		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
 				APIEndpoints.getAllTasksForDayByPriorityEndpoint);
 
@@ -176,7 +186,7 @@ public class TaskFolderAPITestCases extends BaseTest {
 	public void verify_Get_All_Tasks_For_Day_By_Status_Without_Authorization() {
 		test = BaseTest.extent.createTest("Get all tasks for day by status without authorization");
 
-		String requestPayload = TaskFolderPayloads.giveTaskPayloadForGetAllTasksForDay(26, "2024/02/16");
+		String requestPayload = TaskFolderPayloads.employeeIdAndDatePayload(26, "2024/02/16");
 		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
 				APIEndpoints.getAllTasksForDayByStatusEndpoint);
 
@@ -195,7 +205,9 @@ public class TaskFolderAPITestCases extends BaseTest {
 	}
 
 	@Test(priority = 14)
-	public void verifyDuplicateTaskWithoutAuthorization() {
+	public void verify_Duplicate_Task_Without_Authorization() {
+		test = BaseTest.extent.createTest("Duplicate task without authorization");
+
 		List<Integer> taskIds = DataGeneratorForAPI.generateRandomArrayValues(Arrays.asList(1850, 1860, 1870));
 
 		String requestPayload = TaskFolderPayloads.giveTaskPayloadForDuplicateTask(taskIds, 26, "2024/02/16");
@@ -203,10 +215,14 @@ public class TaskFolderAPITestCases extends BaseTest {
 				APIEndpoints.duplicateTaskEndpoint);
 
 		BodyValidation.response401Validation(response);
+
+		BaseTest.test_Method_Logs("duplicate task", APIEndpoints.duplicateTaskEndpoint, response);
 	}
 
 	@Test(priority = 15)
-	public void verifyUpdateTaskWithoutAuthorization() {
+	public void verify_Update_Task_Without_Authorization() {
+		test = BaseTest.extent.createTest("Update single task without authorization");
+
 		List<Integer> tagIds = DataGeneratorForAPI.generateRandomArrayValues(Arrays.asList(1, 2, 3));
 
 		String requestPayload = TaskFolderPayloads.giveTaskPayloadForUpdateTask(1, 26, 1, 4, 3, 4, 7,
@@ -214,524 +230,356 @@ public class TaskFolderAPITestCases extends BaseTest {
 		Response response = Responses.putRequestWithoutAuthorization(requestPayload, APIEndpoints.updateTaskEndpoint);
 
 		BodyValidation.response401Validation(response);
+
+		BaseTest.test_Method_Logs("update single task", APIEndpoints.updateTaskEndpoint, response);
 	}
 
 	@Test(priority = 16)
-	public void verifyUpdateMultipleTaskWithoutAuthorization() {
+	public void verify_Update_Task_View_Without_Authorization() {
+		test = BaseTest.extent.createTest("Update task view without authorization");
+
+		String requestPayload = TaskFolderPayloads.employeeIdAndDatePayload(26, "2024/05/27");
+		Response response = Responses.postRequestWithoutAuthorization(requestPayload, APIEndpoints.updateViewEndpoint);
+
+		BodyValidation.response401Validation(response);
+
+		BaseTest.test_Method_Logs("update task view", APIEndpoints.updateViewEndpoint, response);
+	}
+
+	@Test(priority = 17)
+	public void verify_Multiple_Task_Shift_Without_Authorization() {
+		test = BaseTest.extent.createTest("Multiple task shift without authorization");
+
+		String requestPayload = TaskFolderPayloads.multipleTasksShiftPayload(100, "2024-05-30");
+		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
+				APIEndpoints.shiftMultipleTasksEndpoint);
+
+		BodyValidation.response401Validation(response);
+
+		BaseTest.test_Method_Logs("multiple task shift", APIEndpoints.shiftMultipleTasksEndpoint, response);
+	}
+
+	@Test(priority = 18)
+	public void verify_Transfer_Task_Without_Authorization() {
+		test = BaseTest.extent.createTest("Transfer task without authorization");
+
+		String requestPayload = TaskFolderPayloads.transferTaskPayload(4, 100, "2024-05-30", "INC004");
+		Response response = Responses.postRequestWithoutAuthorization(requestPayload,
+				APIEndpoints.transferTaskEndpoint);
+
+		BodyValidation.response401Validation(response);
+
+		BaseTest.test_Method_Logs("transfer task", APIEndpoints.transferTaskEndpoint, response);
+	}
+
+	@Test(priority = 19, enabled = false)
+	public void verify_Level_Month_Search() {
+		test = BaseTest.extent.createTest("Level month search without authorization");
+
+	}
+
+	@Test(priority = 20, enabled = false)
+	public void verify_Update_Task_Level_Without_Authorization() {
+		test = BaseTest.extent.createTest("Update task level without authorization");
+
+	}
+
+	@Test(priority = 22)
+	public void verify_Update_Multiple_Task_Without_Authorization() {
+		test = BaseTest.extent.createTest("Update multiple task without authorization");
+
 		List<Integer> tagIds = DataGeneratorForAPI.generateRandomArrayValues(Arrays.asList(1, 2, 3));
 
 		List<Integer> taskIds = DataGeneratorForAPI.generateRandomArrayValues(Arrays.asList(1850, 1860, 1870));
 
 		String requestPayload = TaskFolderPayloads.giveTaskPayloadForUpdateMultipleTasks(taskIds, 26, 1, 4, 3, 4, 7,
 				"https://www.gilab.com", "Comment", tagIds, "2024-02-28", "2024-02-29");
-		Response response = Responses.putRequestWithoutAuthorization(requestPayload, APIEndpoints.updateTaskEndpoint);
+		Response response = Responses.putRequestWithoutAuthorization(requestPayload,
+				APIEndpoints.updateMultipleTaskEndpoint);
 
 		BodyValidation.response401Validation(response);
+
+		BaseTest.test_Method_Logs("update multiple tasks", APIEndpoints.transferTaskEndpoint, response);
 	}
 
-	@Test(priority = 17)
-	public void verifyDeleteTaskWithoutAuthorization() {
+	@Test(priority = 23)
+	public void verify_Delete_Task_Without_Authorization() {
+		test = BaseTest.extent.createTest("Delete task without authorization");
+
 		String requestPayload = TaskFolderPayloads.giveTaskPayloadForDeleteTask(699, 26);
 		Response response = Responses.putRequestWithoutAuthorization(requestPayload, APIEndpoints.deleteTaskEndpoint);
 
 		BodyValidation.response401Validation(response);
+
+		BaseTest.test_Method_Logs("delete task", APIEndpoints.deleteTaskEndpoint, response);
 	}
 
-	@Test(priority = 18, dataProvider = "TestDataForAddSelfTask", dataProviderClass = DataProvidersForTaskFolder.class)
-	public void verifyAddSelfTaskWithAuthorization(String taskTitleInput, int employeeIdInput, String taskCommentInput,
-			String taskScheduleDateInput, int taskPriorityInput, int taskStatusIdInput, int taskProjectInput,
-			int taskOwnerEmployeeIdInput, int taskTagsInput) {
-		String requestPayload = TaskFolderPayloads.giveTaskPayloadForAddTask(taskTitleInput, employeeIdInput,
-				taskCommentInput, taskScheduleDateInput, taskPriorityInput, taskStatusIdInput, taskProjectInput,
-				taskOwnerEmployeeIdInput, taskTagsInput);
+	@Test(priority = 24, dataProvider = "TestDataForAddSelfTask", dataProviderClass = DataProvidersForTaskFolder.class)
+	public void verify_Add_Self_Task_With_Authorization(String taskTitle, int employeeId, String taskScheduleDate,
+			int taskPriority, int taskStatusId, int taskProject, int taskOwnerEmployeeId, int taskTags) {
+		test = BaseTest.extent.createTest("Add single task with valid and invalid data and with authorization");
 
-		response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
+		String requestPayload = TaskFolderPayloads.addTaskPayload(taskTitle, employeeId, taskScheduleDate, taskPriority,
+				taskStatusId, taskProject, taskOwnerEmployeeId, taskTags);
+
+		Response response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.addTaskEndpoint);
 
-		if (taskTitleInput.isBlank()) {
+		BaseTest.test_Method_Logs("add single task", APIEndpoints.addTaskEndpoint, requestPayload, response);
+
+		if (taskTitle.isBlank()) {
 			BodyValidation.response400Validation(response);
-		} else if (response.getStatusCode() == 400 || taskScheduleDateInput.isBlank()) {
+		} else if (response.getStatusCode() == 400 || taskScheduleDate.isBlank()) {
 			BodyValidation.response400Validation(response);
-		} else if (PriorityFolderAPITestCases.priorityIds.contains(taskPriorityInput) == false) {
+		} else if (!PriorityFolderAPITestCases.priorityIds.contains(taskPriority)) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
-		} else if (StatusFolderAPITestCases.statusIds.contains(taskStatusIdInput) == false) {
+		} else if (!StatusFolderAPITestCases.statusIds.contains(taskStatusId)) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
-		} else if (ProjectFolderAPITestCases.projectIds.contains(taskProjectInput) == false) {
+		} else if (!ProjectFolderAPITestCases.projectIds.contains(taskProject)) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
-		} else if (DepartmentFolderAPITestCases.departmentIds.contains(taskTagsInput) == false) {
+		} else if (!DepartmentFolderAPITestCases.departmentIds.contains(taskTags)) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
-		} else if (EmployeeFolderAPITestCases.employeeIds.contains(employeeIdInput) == false) {
+		} else if (!EmployeeFolderAPITestCases.employeeIds.contains(employeeId)) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
-		} else if (EmployeeFolderAPITestCases.employeeIds.contains(taskOwnerEmployeeIdInput) == false) {
+		} else if (!EmployeeFolderAPITestCases.employeeIds.contains(taskOwnerEmployeeId)) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
 		} else {
 			BodyValidation.responseValidation(response, 201);
 
-			newCreatedTaskId = response.jsonPath().getInt("taskId[0]");
-			log.info("New created Task Id after adding new task is: " + newCreatedTaskId);
+			int taskIdFromResponse = response.jsonPath().getInt("taskId[0]");
+
+			verify_Get_All_Tasks_For_Day_API_With_Authorization("after added new self task");
+
+			verify_New_Created_Task_Details("after added new self task");
+
+			assertEquals(newCreatedTaskId, taskIdFromResponse);
+			assertEquals(newCreatedTaskTitle, taskTitle);
+			assertEquals(newCreatedTaskScheduleDate, taskScheduleDate);
+			assertEquals(newCreatedTaskDueDate, taskScheduleDate);
+			assertEquals(newCreatedTaskOwner, taskOwnerEmployeeId);
+			assertEquals(newCreatedTaskStatusId, taskStatusId);
+			assertEquals(newCreatedTaskPriorityId, taskPriority);
+			assertEquals(newCreatedTaskProjectId, taskProject);
 		}
 	}
 
-	@Test(priority = 19, dataProvider = "TestDataForSearchTaskForMonth", dataProviderClass = DataProvidersForTaskFolder.class, enabled = false)
-	public void verifySearchTaskForMonthWithAuthorization(String searchParameterInput, int employeeIdInput,
-			int yearInput, int monthInput) {
-		String requestPayload = TaskFolderPayloads.giveTaskPayloadForSearchTaskForMonth(searchParameterInput,
-				employeeIdInput, yearInput, monthInput);
-		response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
-				APIEndpoints.searchTaskEndpoint);
+	@Test(priority = 25, dataProvider = "TestDataForGetAllTasksForDay", dataProviderClass = DataProvidersForTaskFolder.class)
+	public void verify_Get_All_Tasks_For_Day_With_Authorization(int employeeId, String date) {
+		test = BaseTest.extent.createTest("Get all tasks for day with valid and invalid data and with authorization");
 
-		if (response.getBody().asPrettyString().equalsIgnoreCase("{}")) {
-			BodyValidation.responseValidation(response, 200);
-		} else {
-			BodyValidation.responseValidation(response, 200);
-
-			int lastIndex = response.jsonPath().getList("$").size() - 1;
-
-			if (StatusFolderAPITestCases.statuses.contains(searchParameterInput)) {
-				for (int i = 0; i < lastIndex; i++) {
-					String taskStatus = response.jsonPath().getString("[" + i + "]" + ".taskStatus");
-					log.info("Task status from resposne is: " + taskStatus);
-					assertEquals(taskStatus, searchParameterInput);
-				}
-			} else if (PriorityFolderAPITestCases.priorities.contains(searchParameterInput)) {
-				for (int i = 0; i < lastIndex; i++) {
-					String taskPriority = response.jsonPath().getString("[" + i + "]" + ".taskPriority");
-					log.info("Task priority from resposne is: " + taskPriority);
-					assertEquals(taskPriority, searchParameterInput);
-				}
-			} else if (taskTitles.contains(searchParameterInput)) {
-				for (int i = 0; i < lastIndex; i++) {
-					String taskTitle = response.jsonPath().getString("[" + i + "]" + ".taskTitle");
-					log.info("Task title from resposne is: " + taskTitle + "\n");
-					assertEquals(taskTitle, searchParameterInput);
-				}
-			}
-		}
-	}
-
-	@Test(priority = 20, dataProvider = "TestDataForSearchTaskForWeek", dataProviderClass = DataProvidersForTaskFolder.class, enabled = false)
-	public void verifySearchTaskForWeekWithAuthorization(String searchParameterInput, int employeeIdInput,
-			int yearInput, int monthInput, int weekInput) {
-		String requestPayload = TaskFolderPayloads.giveTaskPayloadForSearchTaskForWeek(searchParameterInput,
-				employeeIdInput, yearInput, monthInput, weekInput);
-		response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
-				APIEndpoints.searchTaskEndpoint);
-
-		if (response.getBody().asPrettyString().equalsIgnoreCase("{}")) {
-			BodyValidation.responseValidation(response, 200);
-		} else {
-			BodyValidation.responseValidation(response, 200);
-
-			int lastIndex = response.jsonPath().getList("$").size() - 1;
-
-			if (StatusFolderAPITestCases.statuses.contains(searchParameterInput)) {
-				for (int i = 0; i < lastIndex; i++) {
-					String taskStatus = response.jsonPath().getString("[" + i + "]" + ".taskStatus");
-					log.info("Task status from resposne is: " + taskStatus);
-					assertEquals(taskStatus, searchParameterInput);
-				}
-			} else if (PriorityFolderAPITestCases.priorities.contains(searchParameterInput)) {
-				for (int i = 0; i < lastIndex; i++) {
-					String taskPriority = response.jsonPath().getString("[" + i + "]" + ".taskPriority");
-					log.info("Task priority from resposne is: " + taskPriority);
-					assertEquals(taskPriority, searchParameterInput);
-				}
-			} else if (taskTitles.contains(searchParameterInput)) {
-				for (int i = 0; i < lastIndex; i++) {
-					String taskTitle = response.jsonPath().getString("[" + i + "]" + ".taskTitle");
-					log.info("Task title from resposne is: " + taskTitle + "\n");
-					assertEquals(taskTitle, searchParameterInput);
-				}
-			}
-		}
-	}
-
-	@Test(priority = 21, dataProvider = "TestDataForSearchTaskForDay", dataProviderClass = DataProvidersForTaskFolder.class, enabled = false)
-	public void verifySearchTaskForDayWithAuthorization(String searchParameterInput, int employeeIdInput,
-			String dateInput) {
-		String requestPayload = TaskFolderPayloads.giveTaskPayloadForSearchTaskForDay(searchParameterInput,
-				employeeIdInput, dateInput);
-		response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
-				APIEndpoints.searchTaskEndpoint);
-
-		if (response.getBody().asPrettyString().equalsIgnoreCase("[]")) {
-			BodyValidation.responseValidation(response, 200);
-		} else if (searchParameterInput.isBlank()) {
-			BodyValidation.responseValidation(response, "Not Found", 404);
-		} else if (dateInput.isBlank()) {
-			BodyValidation.response400Validation(response);
-		} else {
-			BodyValidation.responseValidation(response, 200);
-
-			int lastIndex = response.jsonPath().getList("$").size() - 1;
-
-			if (StatusFolderAPITestCases.statuses.contains(searchParameterInput)) {
-				for (int i = 0; i < lastIndex; i++) {
-					String taskStatus = response.jsonPath().getString("[" + i + "]" + ".taskStatus");
-					log.info("Task status from resposne is: " + taskStatus);
-					assertEquals(taskStatus, searchParameterInput);
-				}
-			} else if (PriorityFolderAPITestCases.priorities.contains(searchParameterInput)) {
-				for (int i = 0; i < lastIndex; i++) {
-					String taskPriority = response.jsonPath().getString("[" + i + "]" + ".taskPriority");
-					log.info("Task priority from resposne is: " + taskPriority);
-					assertEquals(taskPriority, searchParameterInput);
-				}
-			} else if (taskTitles.contains(searchParameterInput)) {
-				for (int i = 0; i < lastIndex; i++) {
-					String taskTitle = response.jsonPath().getString("[" + i + "]" + ".taskTitle");
-					log.info("Task title from resposne is: " + taskTitle + "\n");
-					assertEquals(taskTitle, searchParameterInput);
-				}
-			}
-		}
-	}
-
-	@Test(priority = 22, dataProvider = "TestDataForGetAllTasksForMonth", dataProviderClass = DataProvidersForTaskFolder.class)
-	public void verifyGetAllTasksForMonthWithAuthorization(int yearInput, int monthInput, int employeeIdInput) {
-		String requestPayload = TaskFolderPayloads.giveTaskPayloadForGetAllTasksForMonth(yearInput, monthInput,
-				employeeIdInput);
-		response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
-				APIEndpoints.getAllTasksForMonthEndpoint);
-
-		if (response.getBody().asPrettyString().equalsIgnoreCase("[]")) {
-			BodyValidation.responseValidation(response, 200);
-		} else {
-			BodyValidation.responseValidation(response, 200);
-		}
-	}
-
-	@Test(priority = 23, dataProvider = "TestDataForGetAllTasksForWeek", dataProviderClass = DataProvidersForTaskFolder.class)
-	public void verifyGetAllTasksForWeekWithAuthorization(int yearInput, int monthInput, int weekInput,
-			int employeeIdInput) {
-		String requestPayload = TaskFolderPayloads.giveTaskPayloadForGetAllTasksForWeek(yearInput, monthInput,
-				weekInput, employeeIdInput);
-		response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
-				APIEndpoints.getAllTasksForWeekEndpoint);
-
-		if (response.getBody().asPrettyString().equalsIgnoreCase("[]")) {
-			BodyValidation.responseValidation(response, 200);
-		} else {
-			BodyValidation.responseValidation(response, 200);
-		}
-	}
-
-	@Test(priority = 24, dataProvider = "TestDataForGetTasksInfoForEmployeeByRole", dataProviderClass = DataProvidersForTaskFolder.class)
-	public void verifyGetTaskInfoForEmployeeByRoleWithAuthorization(String roleInput, String dateInput) {
-		response = Responses.getRequestWithAuthorizationPathParameterAndOneQueryParameter(
-				LoginEmployeeAPITestCases.authToken, APIEndpoints.getAssignedTaskInfoByRoleEndpoint, roleInput, "date",
-				dateInput);
-
-		if (response.getBody().asPrettyString().equalsIgnoreCase("[]")) {
-			BodyValidation.response204Validation(response);
-		} else if (response.getStatusCode() == 400) {
-			BodyValidation.response400Validation(response);
-		} else if (RoleFolderAPITestCases.roles.contains(roleInput) == false) {
-			BodyValidation.responseValidation(response, "Not Found", 404);
-		} else {
-			BodyValidation.responseValidation(response, 200);
-		}
-	}
-
-	@Test(priority = 28, enabled = false)
-	public void verifyGetAllTasksForDayWithAuthorizationForAllEmployee() {
-		log.info("List of employee Ids are: " + EmployeeFolderAPITestCases.employeeIds);
-		List<Integer> empIds = EmployeeFolderAPITestCases.employeeIds;
-
-		allEmployeesTaskIds = new ArrayList<>();
-
-		LocalDate startDate = LocalDate.of(2023, 12, 1);
-
-		// Get the current date
-		LocalDate currentDate = LocalDate.now();
-
-		// Iterate from the start date to the current date
-		while (!startDate.isAfter(currentDate)) {
-			log.info("\n" + startDate);
-
-			// Move to the next date
-			startDate = startDate.plus(1, ChronoUnit.DAYS);
-			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-
-			for (int i = 0; i < empIds.size() - 1; i++) {
-				int empId = empIds.get(i);
-
-				String requestPayload = TaskFolderPayloads.giveTaskPayloadForGetAllTasksForDay(empId,
-						startDate.format(formatter));
-				response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
-						APIEndpoints.getAllTasksForDayEndpoint);
-
-				if (response.getBody().asPrettyString().equalsIgnoreCase("[]")) {
-					BodyValidation.responseValidation(response, 200);
-				} else {
-					BodyValidation.responseValidation(response, 200);
-
-					List<Integer> taskIds = response.jsonPath().getList("taskId");
-					log.info("Task Ids from response are: " + taskIds);
-
-					allEmployeesTaskIds.addAll(taskIds);
-				}
-			}
-		}
-	}
-
-	@Test(priority = 29, dataProvider = "TestDataForGetAllTasksForDay", dataProviderClass = DataProvidersForTaskFolder.class)
-	public void verifyGetAllTasksFordayWithAuthorization(int employeeIdInput, String dateInput) {
-		String requestPayload = TaskFolderPayloads.giveTaskPayloadForGetAllTasksForDay(employeeIdInput, dateInput);
-		response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
+		String requestPayload = TaskFolderPayloads.employeeIdAndDatePayload(employeeId, date);
+		Response response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.getAllTasksForDayEndpoint);
 
-		if (response.getBody().asPrettyString().equalsIgnoreCase("[]")) {
-			BodyValidation.responseValidation(response, 200);
-		} else if (dateInput.isBlank()) {
+		BaseTest.test_Method_Logs("get all tasks for day", APIEndpoints.getAllTasksForDayEndpoint, requestPayload,
+				response);
+
+		if (date.isBlank()) {
 			BodyValidation.response400Validation(response);
-		} else if (EmployeeFolderAPITestCases.employeeIds.contains(employeeIdInput) == false) {
+		} else if (!EmployeeFolderAPITestCases.employeeIds.contains(employeeId)) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
 		} else {
 			BodyValidation.responseValidation(response, 200);
 
-			taskIds = response.jsonPath().getList("taskId");
-			log.info("List of task Ids after added new task are: " + taskIds);
+			verify_New_Created_Task_Details("for get all tasks for day");
 
-			taskTitles = response.jsonPath().getList("taskTitle");
-			log.info("List of task titles after added new task are: " + taskTitles);
-
+			assertEquals(newCreatedTaskScheduleDate, date);
 		}
 	}
 
-	@Test(priority = 30, dataProvider = "TestDataForGetSingleTask", dataProviderClass = DataProvidersForTaskFolder.class, enabled = false)
-	public void verifyGetSingleTaskWithAuthorization(int taskIdInput) {
-		response = Responses.getRequestWithAuthorizationAndPathParameter(LoginEmployeeAPITestCases.authToken,
-				APIEndpoints.getSingleTaskEndpoint, taskIdInput);
+	@Test(priority = 25, dataProvider = "TestDataForGetAllTasksForMonth", dataProviderClass = DataProvidersForTaskFolder.class)
+	public void verify_Get_All_Tasks_For_Month_With_Authorization(int year, int month, int employeeId) {
+		test = BaseTest.extent.createTest("Get all tasks for month with valid and invalid data and with authorization");
 
-		if (response.getBody().asPrettyString().equalsIgnoreCase("[]")) {
-			BodyValidation.responseValidation(response, 200);
-		} else if (allEmployeesTaskIds.contains(taskIdInput) == false) {
+		String requestPayload = TaskFolderPayloads.giveTaskPayloadForGetAllTasksForMonth(year, month, employeeId);
+		Response response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
+				APIEndpoints.getAllTasksForMonthEndpoint);
+
+		BaseTest.test_Method_Logs("get all tasks for month", APIEndpoints.getAllTasksForMonthEndpoint, requestPayload,
+				response);
+
+		if (!EmployeeFolderAPITestCases.employeeIds.contains(employeeId)) {
 			BodyValidation.responseValidation(response, "Not Found", 404);
 		} else {
 			BodyValidation.responseValidation(response, 200);
+
+			List<String> taskIdsAsString = response.jsonPath().getList("" + newCreatedTaskScheduleDate + ".taskId");
+			log.info("Task Ids from response are: " + taskIdsAsString);
+
+			// Convert the strings to integers
+			List<Integer> taskIdsFromResponse = new ArrayList<>();
+			for (String taskIdStr : taskIdsAsString) {
+				taskIdsFromResponse.add(Integer.parseInt(taskIdStr));
+			}
+
+			// Find the maximum task ID
+			int maxTaskId = Integer.MIN_VALUE;
+			for (int taskId : taskIdsFromResponse) {
+				if (taskId > maxTaskId) {
+					maxTaskId = taskId;
+				}
+			}
+
+			System.out.println(maxTaskId);
+
+			String newCreatedTaskTitle = response.jsonPath()
+					.getString("find { it." + newCreatedTaskScheduleDate + ".taskId == " + maxTaskId + " }.taskTitle");
+			log.info("Max task Id task title for get tasks for month API is: " + newCreatedTaskTitle + "\n");
 		}
 	}
 
-	@Test(priority = 31, dataProvider = "TestDataForUpdateSelfTask", dataProviderClass = DataProvidersForTaskFolder.class)
-	public void verifyUpdateSelfTaskWithAuthorization(int taskIdInput, int employeeIdInput, int taskDoneInput,
-			int taskVerificationStatusInput, int taskStatusInput, int taskPriorityInput, int taskProjectInput,
-			String taskGitLinkInput, String taskCommentInput, List<Integer> taskTagIdsInput,
-			String taskScheduleDateInput, String taskDueDateInput) {
-		String requestPayload = TaskFolderPayloads.giveTaskPayloadForUpdateTask(taskIdInput, employeeIdInput,
-				taskDoneInput, taskVerificationStatusInput, taskStatusInput, taskPriorityInput, taskProjectInput,
-				taskGitLinkInput, taskCommentInput, taskTagIdsInput, taskScheduleDateInput, taskDueDateInput);
-		response = Responses.putRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
-				APIEndpoints.updateTaskEndpoint);
+	@Test(priority = 26, dataProvider = "TestDataForGetAllTasksForWeek", dataProviderClass = DataProvidersForTaskFolder.class)
+	public void verify_Get_All_Tasks_For_Week_With_Authorization(int year, int month, int week, int employeeId) {
+		test = BaseTest.extent.createTest("Get all tasks for week with valid and invalid data and with authorization");
+
+		String requestPayload = TaskFolderPayloads.giveTaskPayloadForGetAllTasksForWeek(year, month, week, employeeId);
+		Response response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
+				APIEndpoints.getAllTasksForWeekEndpoint);
+
+		BaseTest.test_Method_Logs("get all tasks for week", APIEndpoints.getAllTasksForWeekEndpoint, requestPayload,
+				response);
+
+		if (!EmployeeFolderAPITestCases.employeeIds.contains(employeeId)) {
+			BodyValidation.responseValidation(response, "Not Found", 404);
+		} else {
+			BodyValidation.responseValidation(response, 200);
+
+			List<String> taskIdsAsString = response.jsonPath().getList("" + newCreatedTaskScheduleDate + ".taskId");
+			log.info("Task Ids from response are: " + taskIdsAsString);
+
+			// Convert the strings to integers
+			List<Integer> taskIdsFromResponse = new ArrayList<>();
+			for (String taskIdStr : taskIdsAsString) {
+				taskIdsFromResponse.add(Integer.parseInt(taskIdStr));
+			}
+
+			// Find the maximum task ID
+			int maxTaskId = Integer.MIN_VALUE;
+			for (int taskId : taskIdsFromResponse) {
+				if (taskId > maxTaskId) {
+					maxTaskId = taskId;
+				}
+			}
+
+			System.out.println(maxTaskId);
+
+			String newCreatedTaskTitle = response.jsonPath()
+					.getString("find { it." + newCreatedTaskScheduleDate + ".taskId == " + maxTaskId + " }.taskTitle");
+			log.info("Max task Id task title for get tasks for week API is: " + newCreatedTaskTitle + "\n");
+		}
+	}
+
+	@Test(priority = 27, dataProvider = "TestDataForGetTasksInfoForEmployeeByRole", dataProviderClass = DataProvidersForTaskFolder.class)
+	public void verify_Get_Task_Info_For_Employee_By_Role_With_Authorization(String role, String date) {
+		test = BaseTest.extent
+				.createTest("get tasks info for employee by role with valid and invalid data and with authorization");
+
+		Response response = Responses.getRequestWithAuthorizationPathParameterAndOneQueryParameter(
+				LoginEmployeeAPITestCases.authToken, APIEndpoints.getAssignedTaskInfoByRoleEndpoint, role, "date",
+				date);
 
 		String responseBody = response.getBody().asPrettyString();
 
-		log.info("List of task Ids for update self task are: " + taskIds);
+		BaseTest.test_Method_Logs_With_Path_Parameter("get tasks info for employee by role",
+				APIEndpoints.getAssignedTaskInfoByRoleEndpoint, role, response);
 
-		if (taskIds != null) {
-			if (taskIds.contains(taskIdInput) == false) {
-				BodyValidation.responseValidation(response, "Not Found", 404);
-			} else if (EmployeeFolderAPITestCases.employeeIds.contains(employeeIdInput) == false) {
-				BodyValidation.responseValidation(response, "Not Found", 404);
-			} else if (!VerificationFolderAPITestCases.verificationIds.contains(taskVerificationStatusInput)) {
-				BodyValidation.responseValidation(response, "Not Found", 404);
-			} else if (!PriorityFolderAPITestCases.priorityIds.contains(taskPriorityInput)) {
-				BodyValidation.responseValidation(response, "Not Found", 404);
-			} else if (!StatusFolderAPITestCases.statusIds.contains(taskStatusInput)) {
-				BodyValidation.responseValidation(response, "Not Found", 404);
-			} else if (!ProjectFolderAPITestCases.projectIds.contains(taskProjectInput)) {
-				BodyValidation.responseValidation(response, "Not Found", 404);
-			} else if (response.getStatusCode() == 404) {
-				for (int tagId : taskTagIdsInput) {
-					if (!DepartmentFolderAPITestCases.departmentIds.contains(tagId)) {
-						BodyValidation.responseValidation(response, "Not Found", 404);
-					}
-				}
-			} else if (response.getStatusCode() == 400 || taskScheduleDateInput.isBlank()) {
-				BodyValidation.response400Validation(response);
-			} else if (response.getStatusCode() == 400 || taskDueDateInput.isBlank()) {
-				BodyValidation.response400Validation(response);
-			}
-//			else if (response.getStatusCode() == 200 && VerificationStatusFolderAPITestCases.verificationStatusIds
-//					.contains(taskVerificationStatusInput)) {
-//				assertEquals(response.getBody().asPrettyString(), "Verification status updated successfully");
-//				int contentLength = response.getBody().asPrettyString().length();
-//				BodyValidation.responseValidation(response, 200, String.valueOf(contentLength));
-//			} else if (response.getStatusCode() == 200
-//					&& StatusFolderAPITestCases.statusIds.contains(taskStatusInput)) {
-//				assertEquals(response.getBody().asPrettyString(), "Status updated Successfully");
-//				int contentLength = response.getBody().asPrettyString().length();
-//				BodyValidation.responseValidation(response, 200, String.valueOf(contentLength));
-//			} 
-			else {
-				assertEquals(responseBody, "Task Updated SuccessFully");
-				int contentLength = response.getBody().asPrettyString().length();
-				BodyValidation.responseValidation(response, 200, String.valueOf(contentLength));
-			}
+		if (responseBody.equalsIgnoreCase("[]")) {
+			BodyValidation.response204Validation(response);
+		} else if (response.getStatusCode() == 400) {
+			BodyValidation.response400Validation(response);
+		} else if (!RoleFolderAPITestCases.roles.contains(role)) {
+			BodyValidation.responseValidation(response, "Not Found", 404);
 		} else {
-			log.info("Task Ids are null");
+			BodyValidation.responseValidation(response, 200);
 		}
 	}
 
-	@Test(priority = 32, dataProvider = "TestDataForUpdateSelfMultipleTask", dataProviderClass = DataProvidersForTaskFolder.class, enabled = false)
-	public void verifyUpdateSelfMultipleTaskWithAuthorization(List<Integer> taskIdsInput, int employeeIdInput,
-			int taskDoneInput, int taskVerificationStatusInput, int taskStatusInput, int taskPriorityInput,
-			int taskProjectInput, String taskGitLinkInput, String taskCommentInput, List<Integer> taskTagIdsInput,
-			String taskScheduleDateInput, String taskDueDateInput) {
-		String requestPayload = TaskFolderPayloads.giveTaskPayloadForUpdateMultipleTasks(taskIdsInput, employeeIdInput,
-				taskDoneInput, taskVerificationStatusInput, taskStatusInput, taskPriorityInput, taskProjectInput,
-				taskGitLinkInput, taskCommentInput, taskTagIdsInput, taskScheduleDateInput, taskDueDateInput);
+	@Test(priority = 28, dataProvider = "TestDataForGetSingleTask", dataProviderClass = DataProvidersForTaskFolder.class, enabled = false)
+	public void verify_Get_Single_Task_With_Authorization(int taskId) {
+		test = BaseTest.extent.createTest("Get single task with valid and invalid data and with authorization");
 
-		response = Responses.putRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
-				APIEndpoints.updateMultipleTaskEndpoint);
+		Response response = Responses.getRequestWithAuthorizationAndPathParameter(LoginEmployeeAPITestCases.authToken,
+				APIEndpoints.getSingleTaskEndpoint, taskId);
 
 		String responseBody = response.getBody().asPrettyString();
 		System.out.println(responseBody);
 
-		if (taskIds != null) {
-			if (response.getStatusCode() == 404) {
-				for (int taskId : taskIdsInput) {
-					if (!taskIds.contains(taskId)) {
-						BodyValidation.responseValidation(response, "Not Found", 404);
-					}
-				}
-			} else if (EmployeeFolderAPITestCases.employeeIds.contains(employeeIdInput) == false) {
-				BodyValidation.responseValidation(response, "Not Found", 404);
-			} else if (!VerificationFolderAPITestCases.verificationIds.contains(taskVerificationStatusInput)) {
-				BodyValidation.responseValidation(response, "Not Found", 404);
-			} else if (!PriorityFolderAPITestCases.priorityIds.contains(taskPriorityInput)) {
-				BodyValidation.responseValidation(response, "Not Found", 404);
-			} else if (!StatusFolderAPITestCases.statusIds.contains(taskStatusInput)) {
-				BodyValidation.responseValidation(response, "Not Found", 404);
-			} else if (!ProjectFolderAPITestCases.projectIds.contains(taskProjectInput)) {
-				BodyValidation.responseValidation(response, "Not Found", 404);
-			} else if (response.getStatusCode() == 404) {
-				for (int tagId : taskTagIdsInput) {
-					if (!DepartmentFolderAPITestCases.departmentIds.contains(tagId)) {
-						BodyValidation.responseValidation(response, "Not Found", 404);
-					}
-				}
-			} else if (response.getStatusCode() == 400 || taskScheduleDateInput.isBlank()) {
-				BodyValidation.response400Validation(response);
-			} else if (response.getStatusCode() == 400 || taskDueDateInput.isBlank()) {
-				BodyValidation.response400Validation(response);
-			}
-//			else if (response.getStatusCode() == 200 && VerificationStatusFolderAPITestCases.verificationStatusIds
-//					.contains(taskVerificationStatusInput)) {
-//				assertEquals(response.getBody().asPrettyString(), "Verification status updated successfully");
-//				int contentLength = response.getBody().asPrettyString().length();
-//				BodyValidation.responseValidation(response, 200, String.valueOf(contentLength));
-//			} else if (response.getStatusCode() == 200
-//					&& StatusFolderAPITestCases.statusIds.contains(taskStatusInput)) {
-//				assertEquals(response.getBody().asPrettyString(), "Status updated Successfully");
-//				int contentLength = response.getBody().asPrettyString().length();
-//				BodyValidation.responseValidation(response, 200, String.valueOf(contentLength));
-//			} 
-			else {
-				assertEquals(responseBody, "Task Updated SuccessFully");
-				int contentLength = response.getBody().asPrettyString().length();
-				BodyValidation.responseValidation(response, 200, String.valueOf(contentLength));
-			}
+		if (responseBody.equalsIgnoreCase("[]")) {
+			BodyValidation.responseValidation(response, 200);
+		} else if (allEmployeesTaskIds.contains(taskId) == false) {
+			BodyValidation.responseValidation(response, "Not Found", 404);
 		} else {
-			log.info("Task Ids are null");
+			BodyValidation.responseValidation(response, 200);
 		}
 	}
 
-	@Test(priority = 33, dataProvider = "TestDataForDuplicateSelfTask", dataProviderClass = DataProvidersForTaskFolder.class)
-	public void verifyDuplicateSelfTaskWithAuthorization(List<Integer> taskIdsInput, int employeeIdInput,
-			String taskScheduleDate) {
-		if (taskIds != null) {
-			String requestPayload = TaskFolderPayloads.giveTaskPayloadForDuplicateTask(taskIdsInput, employeeIdInput,
-					taskScheduleDate);
-			response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
-					APIEndpoints.duplicateTaskEndpoint);
+	public void verify_New_Created_Task_Details(String message) {
+		newCreatedTaskId = response.jsonPath().getInt("max { it.taskId }.taskId");
+		log.info("New created task Id " + message + " is => " + newCreatedTaskId);
 
-			String responseBody = response.getBody().asPrettyString();
+		newCreatedTaskTitle = response.jsonPath().getString("find { it.taskId == " + newCreatedTaskId + " }.taskTitle");
+		log.info("New created task title " + message + " is => " + newCreatedTaskTitle);
 
-			if (response.getBody().asPrettyString().equalsIgnoreCase("[]")) {
-				BodyValidation.responseValidation(response, 200);
-			} else if (taskScheduleDate.isBlank()) {
-				BodyValidation.response400Validation(response);
-			} else if (response.getStatusCode() == 404) {
-				for (int taskId : taskIdsInput) {
-					if (!taskIds.contains(taskId)) {
-						BodyValidation.responseValidation(response, "Not Found", 404);
-					}
-				}
-			} else if (response.getStatusCode() == 400 && !taskScheduleDate.isBlank()) {
-				BodyValidation.response400Validation(response);
-			} else if (!EmployeeFolderAPITestCases.employeeIds.contains(employeeIdInput)) {
-				BodyValidation.responseValidation(response, "Not Found", 404);
-			} else {
-				int contentLength = responseBody.length();
-				assertEquals(responseBody, "Task Duplicate Successfully");
-				BodyValidation.responseValidation(response, 200, String.valueOf(contentLength));
-			}
-		} else {
-			log.info("Task Ids are null");
-		}
+		newCreatedTaskScheduleDate = response.jsonPath()
+				.getString("find { it.taskId == " + newCreatedTaskId + " }.taskSchedule");
+		log.info("New created task schedule date " + message + " is => " + newCreatedTaskScheduleDate);
+
+		newCreatedTaskDueDate = response.jsonPath()
+				.getString("find { it.taskId == " + newCreatedTaskId + " }.taskDueDate");
+		log.info("New created task due date " + message + " is => " + newCreatedTaskDueDate);
+
+		newCreatedTaskOwner = response.jsonPath()
+				.getInt("find { it.taskId == " + newCreatedTaskId + " }.taskOwner.empId");
+		log.info("New created task owner " + message + " is => " + newCreatedTaskOwner);
+
+		newCreatedTaskStatusId = response.jsonPath()
+				.getInt("find { it.taskId == " + newCreatedTaskId + " }.statusEntity.statusId");
+		log.info("New created task status Id " + message + " is => " + newCreatedTaskStatusId);
+
+		newCreatedTaskPriorityId = response.jsonPath()
+				.getInt("find { it.taskId == " + newCreatedTaskId + " }.priorityEntity.priorityId");
+		log.info("New created task priority Id " + message + " is => " + newCreatedTaskPriorityId);
+
+		newCreatedTaskProjectId = response.jsonPath()
+				.getInt("find { it.taskId == " + newCreatedTaskId + " }.projectEntity.projectId");
+		log.info("New created task project Id " + message + " is => " + newCreatedTaskProjectId);
 	}
 
-	@Test(priority = 35, dataProvider = "TestDataForDeleteSelfTask", dataProviderClass = DataProvidersForTaskFolder.class)
-	public void verifyDeleteTaskWithAuthorization(int taskIdInput, int employeeIdInput) {
-		if (taskIds != null) {
-			String requestPayload = TaskFolderPayloads.giveTaskPayloadForDeleteTask(taskIdInput, employeeIdInput);
-			response = Responses.putRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
-					APIEndpoints.deleteTaskEndpoint);
+	public void verify_Get_All_Tasks_For_Day_API_With_Authorization(String message) {
+		int employeeId = 4;
+		String currentDate = DataGeneratorForAPI.getCurrentDate("yyyy-MM-dd");
 
-			String responseBody = response.getBody().asPrettyString();
-			System.out.println(responseBody);
-
-			if (response.getBody().asPrettyString().equalsIgnoreCase("[]")) {
-				BodyValidation.responseValidation(response, 200);
-			} else if (taskIds.contains(taskIdInput) == false) {
-				BodyValidation.responseValidation(response, "Not Found", 404);
-			} else if (EmployeeFolderAPITestCases.employeeIds.contains(employeeIdInput) == false) {
-				BodyValidation.responseValidation(response, "Not Found", 404);
-			} else {
-				int contentLength = responseBody.length();
-				assertEquals(responseBody, "Task Deleted Successfully");
-				BodyValidation.responseValidation(response, 200, String.valueOf(contentLength));
-			}
-		} else {
-			log.info("Task Ids are null");
-		}
-	}
-
-	@Test(priority = 36, dataProvider = "TestDataForAssignTask", dataProviderClass = DataProvidersForTaskFolder.class)
-	public void verifyAssignTaskFromOneEmployeeToAnotherWithAuthorization(String taskTitleInput, int employeeIdInput,
-			String taskCommentInput, String taskScheduleDateInput, int taskPriorityInput, int taskStatusIdInput,
-			int taskProjectInput, int taskOwnerEmployeeIdInput, int taskTagsInput) {
-
-		String requestPayload = TaskFolderPayloads.giveTaskPayloadForAddTask(taskTitleInput, employeeIdInput,
-				taskCommentInput, taskScheduleDateInput, taskPriorityInput, taskStatusIdInput, taskProjectInput,
-				taskOwnerEmployeeIdInput, taskTagsInput);
-
+		String requestPayload = TaskFolderPayloads.employeeIdAndDatePayload(employeeId, currentDate);
 		response = Responses.postRequestWithAuthorization(requestPayload, LoginEmployeeAPITestCases.authToken,
-				APIEndpoints.addTaskEndpoint);
+				APIEndpoints.getAllTasksForDayEndpoint);
 
-		if (taskTitleInput.isBlank()) {
-			BodyValidation.response400Validation(response);
-		} else if (response.getStatusCode() == 400 || taskScheduleDateInput.isBlank()) {
-			BodyValidation.response400Validation(response);
-		} else if (PriorityFolderAPITestCases.priorityIds.contains(taskPriorityInput) == false) {
-			BodyValidation.responseValidation(response, "Not Found", 404);
-		} else if (StatusFolderAPITestCases.statusIds.contains(taskStatusIdInput) == false) {
-			BodyValidation.responseValidation(response, "Not Found", 404);
-		} else if (ProjectFolderAPITestCases.projectIds.contains(taskProjectInput) == false) {
-			BodyValidation.responseValidation(response, "Not Found", 404);
-		} else if (DepartmentFolderAPITestCases.departmentIds.contains(taskTagsInput) == false) {
-			BodyValidation.responseValidation(response, "Not Found", 404);
-		} else if (EmployeeFolderAPITestCases.employeeIds.contains(employeeIdInput) == false) {
-			BodyValidation.responseValidation(response, "Not Found", 404);
-		} else if (EmployeeFolderAPITestCases.employeeIds.contains(taskOwnerEmployeeIdInput) == false) {
-			BodyValidation.responseValidation(response, "Not Found", 404);
-		} else {
-			BodyValidation.responseValidation(response, 201);
+		BodyValidation.responseValidation(response, 200);
 
-			newCreatedTaskId = response.jsonPath().getInt("taskId[0]");
-			log.info("New created Task Id after adding new task is: " + newCreatedTaskId);
-		}
+		taskIds = response.jsonPath().getList("taskId");
+		log.info("List of task Ids " + message + " are: " + taskIds);
+
+		taskTitles = response.jsonPath().getList("taskTitle");
+		log.info("List of task titles " + message + " are: " + taskTitles);
+
+		taskScheduleDates = response.jsonPath().getList("taskSchedule");
+		log.info("List of task schedule dates " + message + " are: " + taskScheduleDates);
+
+		taskDueDates = response.jsonPath().getList("taskDueDate");
+		log.info("List of task due dates " + message + " are: " + taskDueDates);
+
+		taskOwners = response.jsonPath().getList("taskOwner.empFullName");
+		log.info("List of task owners " + message + " are: " + taskOwners);
+
+		taskStatuses = response.jsonPath().getList("statusEntity.status");
+		log.info("List of task statuses " + message + " are: " + taskStatuses);
+
+		taskPriorities = response.jsonPath().getList("priorityEntity.priority");
+		log.info("List of task priorities " + message + " are: " + taskPriorities);
+
+		taskProjects = response.jsonPath().getList("projectEntity.projectName");
+		log.info("List of task projects " + message + " are: " + taskProjects);
+
+		taskVerifications = response.jsonPath().getList("task_verified.verificationStatus");
+		log.info("List of task verifications " + message + " are: " + taskVerifications);
 	}
-
 }

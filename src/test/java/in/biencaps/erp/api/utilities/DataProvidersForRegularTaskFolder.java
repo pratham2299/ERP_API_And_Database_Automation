@@ -12,7 +12,6 @@ public class DataProvidersForRegularTaskFolder {
 
 	@DataProvider(name = "TestDataForAddRegularTask")
 	public Object[][] testDataForAddRegularTask() {
-		String fakeRegularTask = DataGeneratorForAPI.generateFakeTaskTitle();
 		int invalidEmployeeId = DataGeneratorForAPI.generateFakeNumberWithRange(100, 200);
 
 		int randomIndexForRegularTaskName = random.nextInt(RegularTaskFolderAPITestCases.regularTasks.size());
@@ -21,20 +20,20 @@ public class DataProvidersForRegularTaskFolder {
 		int randomIndexForEmployeeId = random.nextInt(EmployeeFolderAPITestCases.employeeIds.size());
 		int randomEmployeeId = EmployeeFolderAPITestCases.employeeIds.get(randomIndexForEmployeeId);
 
-		return new Object[][] { { fakeRegularTask, 1 }, { fakeRegularTask, randomEmployeeId }, { "", randomEmployeeId },
-				{ randomRegularTaskName, 1 }, { fakeRegularTask, invalidEmployeeId } };
+		return new Object[][] { { DataGeneratorForAPI.generateFakeTaskTitle(), 1 },
+				{ DataGeneratorForAPI.generateFakeTaskTitle(), randomEmployeeId }, { "", randomEmployeeId },
+				{ randomRegularTaskName, 1 }, { DataGeneratorForAPI.generateFakeTaskTitle(), invalidEmployeeId } };
 	}
 
 	@DataProvider(name = "TestDataForUpdateRegularTask")
 	public Object[][] testDataForUpdateRegularTask() {
-		String fakeRegularTask = DataGeneratorForAPI.generateFakeTaskTitle();
-
-		return new Object[][] { { faker.number().numberBetween(1, 20), fakeRegularTask },
+		return new Object[][] { { faker.number().numberBetween(1, 20), DataGeneratorForAPI.generateFakeTaskTitle() },
 				{ faker.number().numberBetween(1, 20), "" },
-				{ RegularTaskFolderAPITestCases.newCreatedRegularTaskId, fakeRegularTask },
+				{ RegularTaskFolderAPITestCases.newCreatedRegularTaskId, DataGeneratorForAPI.generateFakeTaskTitle() },
 				{ RegularTaskFolderAPITestCases.newCreatedRegularTaskId, "" },
 				{ faker.number().numberBetween(RegularTaskFolderAPITestCases.newCreatedRegularTaskId + 10,
-						RegularTaskFolderAPITestCases.newCreatedRegularTaskId + 50), fakeRegularTask },
+						RegularTaskFolderAPITestCases.newCreatedRegularTaskId + 50),
+						DataGeneratorForAPI.generateFakeTaskTitle() },
 				{ faker.number().numberBetween(RegularTaskFolderAPITestCases.newCreatedRegularTaskId + 10,
 						RegularTaskFolderAPITestCases.newCreatedRegularTaskId + 50), "" } };
 	}

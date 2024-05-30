@@ -1,26 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-	<test thread-count="5" name="Login Employee API Test Cases">
+	<listeners>
+		<listener class-name="in.biencaps.erp.api.utilities.SuiteListener" />
+	</listeners>
+
+	<test thread-count="10" name="Test">
 		<classes>
-			<class name="in.task_erp_api.testcases.LoginEmployeeAPITestCases" />
-			<class name="in.task_erp_api.testcases.PriorityFolderAPITestCases" />
-			<class name="in.task_erp_api.testcases.StatusFolderAPITestCases" />
 			<class
-				name="in.task_erp_api.testcases.DesignationFolderAPITestCases" />
-			<class name="in.task_erp_api.testcases.RoleFolderAPITestCases" />
+				name="in.biencaps.erp.api.testcases.LoginEmployeeAPITestCases" />
 			<class
-				name="in.task_erp_api.testcases.DepartmentFolderAPITestCases" />
-			<class name="in.task_erp_api.testcases.EmployeeFolderAPITestCases" />
-			<class name="in.task_erp_api.testcases.ProjectFolderAPITestCases" />
+				name="in.biencaps.erp.api.testcases.PriorityFolderAPITestCases" />
 			<class
-				name="in.task_erp_api.testcases.VerificationStatusFolderAPITestCases" />
+				name="in.biencaps.erp.api.testcases.StatusFolderAPITestCases" />
 			<class
-				name="in.task_erp_api.testcases.TaskFolderAPITestCases" />
+				name="in.biencaps.erp.api.testcases.DesignationFolderAPITestCases" />
 			<class
-				name="in.task_erp_api.testcases.NotificationFolderAPITestCases" />
+				name="in.biencaps.erp.api.testcases.RoleFolderAPITestCases" />
 			<class
-				name="in.task_erp_api.testcases.MilestoneFolderAPITestCases" />
+				name="in.biencaps.erp.api.testcases.DepartmentFolderAPITestCases" />
+			<class
+				name="in.biencaps.erp.api.testcases.EmployeeFolderAPITestCases" />
+			<class
+				name="in.biencaps.erp.api.testcases.ProjectFolderAPITestCases" />
+			<class
+				name="in.biencaps.erp.api.testcases.VerificationFolderAPITestCases" />
+			<class
+				name="in.biencaps.erp.api.testcases.TaskFolderAPITestCases" />
 		</classes>
 	</test>
 </suite> 

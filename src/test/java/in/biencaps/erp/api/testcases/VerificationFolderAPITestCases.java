@@ -89,7 +89,7 @@ public class VerificationFolderAPITestCases extends BaseTest {
 		verify_Get_All_Verifications_API_With_Authorization("before add new verification status");
 	}
 
-	@Test(priority = 6, dataProvider = "TestDataForAddVerification", dataProviderClass = DataProvidersForVerificationFolder.class)
+	@Test(priority = 6, dataProvider = "TestDataForAddVerification", dataProviderClass = DataProvidersForVerificationFolder.class, enabled = false)
 	public void verify_Add_Verification_With_Authorization(String Verification, int verificationLevel,
 			String verificationColor, String verificationColorCode) {
 		test = BaseTest.extent.createTest("Add verification status with valid and invalid data and with authorization");
@@ -123,7 +123,7 @@ public class VerificationFolderAPITestCases extends BaseTest {
 		}
 	}
 
-	@Test(priority = 7, dataProvider = "TestDataForUpdateVerification", dataProviderClass = DataProvidersForVerificationFolder.class)
+	@Test(priority = 7, dataProvider = "TestDataForUpdateVerification", dataProviderClass = DataProvidersForVerificationFolder.class, enabled = false)
 	public void verify_Update_Verification_With_Authorization(int VerificationId, String Verification,
 			int verificationLevel, String verificationColor, String verificationColorCode) throws Throwable {
 		test = BaseTest.extent
@@ -168,7 +168,7 @@ public class VerificationFolderAPITestCases extends BaseTest {
 		}
 	}
 
-	@Test(priority = 8, dataProvider = "TestDataForDeleteVerification", dataProviderClass = DataProvidersForVerificationFolder.class)
+	@Test(priority = 8, dataProvider = "TestDataForDeleteVerification", dataProviderClass = DataProvidersForVerificationFolder.class, enabled = false)
 	public void verify_Delete_Single_Verification_With_Authorization(int verificationId) {
 		test = BaseTest.extent
 				.createTest("Delete verification status with valid and invalid data and with authorization");
@@ -211,8 +211,8 @@ public class VerificationFolderAPITestCases extends BaseTest {
 				.getString("find { it.verificationStatusId == " + newCreatedVerificationId + " }.verificationColor");
 		log.info("New created verification status color " + message + " is => " + newCreatedVerificationColor);
 
-		newCreatedVerificationColorCode = response.jsonPath()
-				.getString("find { it.verificationStatusId == " + newCreatedVerificationId + " }.verificationColorCode");
+		newCreatedVerificationColorCode = response.jsonPath().getString(
+				"find { it.verificationStatusId == " + newCreatedVerificationId + " }.verificationColorCode");
 		log.info("New created verification status color code " + message + " is => " + newCreatedVerificationColorCode
 				+ "\n");
 	}

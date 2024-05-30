@@ -10,8 +10,6 @@ public class DataProvidersForPriorityFolder {
 
 	@DataProvider(name = "TestDataForAddPriority")
 	public Object[][] testDataForAddPriority() {
-		int validPriorityLevel = DataGeneratorForAPI.generateFakeNumberWithRange(10, 15);
-
 		int randomIndexForPriorityName = random.nextInt(PriorityFolderAPITestCases.priorities.size());
 		String randomPriorityName = PriorityFolderAPITestCases.priorities.get(randomIndexForPriorityName);
 
@@ -27,33 +25,33 @@ public class DataProvidersForPriorityFolder {
 
 		return new Object[][] {
 				// Entering valid data for all fields
-				{ DataGeneratorForAPI.generateFakePriority(), validPriorityLevel, DataGeneratorForAPI.generateFakeColor(),
-						DataGeneratorForAPI.generateFakeColorCode() },
+				{ DataGeneratorForAPI.generateFakePriority(), DataGeneratorForAPI.generateFakeNumberWithRange(10, 15),
+						DataGeneratorForAPI.generateFakeColor(), DataGeneratorForAPI.generateFakeColorCode() },
 				// Entering empty string for only priority field
-				{ "", validPriorityLevel, DataGeneratorForAPI.generateFakeColor(), DataGeneratorForAPI.generateFakeColorCode() },
+				{ "", DataGeneratorForAPI.generateFakeNumberWithRange(10, 15), DataGeneratorForAPI.generateFakeColor(),
+						DataGeneratorForAPI.generateFakeColorCode() },
 				// Entering already exist priority for only priority field
-				{ randomPriorityName, validPriorityLevel, DataGeneratorForAPI.generateFakeColor(),
+				{ randomPriorityName, DataGeneratorForAPI.generateFakeNumberWithRange(10, 15), DataGeneratorForAPI.generateFakeColor(),
 						DataGeneratorForAPI.generateFakeColorCode() },
 				// Entering already exist priorityLevel for only priorityLevel field
-				{ DataGeneratorForAPI.generateFakePriority(), randomPriorityLevel, DataGeneratorForAPI.generateFakeColor(),
-						DataGeneratorForAPI.generateFakeColorCode() },
+				{ DataGeneratorForAPI.generateFakePriority(), randomPriorityLevel,
+						DataGeneratorForAPI.generateFakeColor(), DataGeneratorForAPI.generateFakeColorCode() },
 				// Entering empty string for only priorityColor field
-				{ DataGeneratorForAPI.generateFakePriority(), validPriorityLevel, "",
+				{ DataGeneratorForAPI.generateFakePriority(), DataGeneratorForAPI.generateFakeNumberWithRange(10, 15), "",
 						DataGeneratorForAPI.generateFakeColorCode() },
 				// Entering already exist priorityColor for only priorityColor field
-				{ DataGeneratorForAPI.generateFakePriority(), validPriorityLevel, randomPriorityColor,
+				{ DataGeneratorForAPI.generateFakePriority(), DataGeneratorForAPI.generateFakeNumberWithRange(10, 15), randomPriorityColor,
 						DataGeneratorForAPI.generateFakeColorCode() },
 				// Entering empty string for only priorityColorCode field
-				{ DataGeneratorForAPI.generateFakePriority(), validPriorityLevel, DataGeneratorForAPI.generateFakeColor(), "" },
+				{ DataGeneratorForAPI.generateFakePriority(), DataGeneratorForAPI.generateFakeNumberWithRange(10, 15),
+						DataGeneratorForAPI.generateFakeColor(), "" },
 				// Entering already exist priorityColorCode for only priorityColorCode field
-				{ DataGeneratorForAPI.generateFakePriority(), validPriorityLevel, DataGeneratorForAPI.generateFakeColor(),
-						randomPriorityColorCode }, };
+				{ DataGeneratorForAPI.generateFakePriority(), DataGeneratorForAPI.generateFakeNumberWithRange(10, 15),
+						DataGeneratorForAPI.generateFakeColor(), randomPriorityColorCode }, };
 	}
 
 	@DataProvider(name = "TestDataForUpdatePriority")
 	public Object[][] testDataForUpdatePriority() {
-		int validPriorityLevel = DataGeneratorForAPI.generateFakeNumberWithRange(16, 20);
-
 		int invalidPriorityId = DataGeneratorForAPI.generateFakeNumberWithRange(
 				PriorityFolderAPITestCases.newCreatedPriorityId + 10,
 				PriorityFolderAPITestCases.newCreatedPriorityId + 50);
@@ -74,31 +72,34 @@ public class DataProvidersForPriorityFolder {
 		return new Object[][] {
 				// Entering valid data for all fields
 				{ PriorityFolderAPITestCases.newCreatedPriorityId, DataGeneratorForAPI.generateFakePriority(),
-						validPriorityLevel, DataGeneratorForAPI.generateFakeColor(), DataGeneratorForAPI.generateFakeColorCode() },
+						DataGeneratorForAPI.generateFakeNumberWithRange(10, 15), DataGeneratorForAPI.generateFakeColor(),
+						DataGeneratorForAPI.generateFakeColorCode() },
 				// Entering invalid priorityId for only priorityId field
-				{ invalidPriorityId, DataGeneratorForAPI.generateFakePriority(), validPriorityLevel, DataGeneratorForAPI.generateFakeColor(),
-						DataGeneratorForAPI.generateFakeColorCode() },
+				{ invalidPriorityId, DataGeneratorForAPI.generateFakePriority(), DataGeneratorForAPI.generateFakeNumberWithRange(10, 15),
+						DataGeneratorForAPI.generateFakeColor(), DataGeneratorForAPI.generateFakeColorCode() },
 				// Entering empty string for only priority field
-				{ PriorityFolderAPITestCases.newCreatedPriorityId, "", validPriorityLevel, DataGeneratorForAPI.generateFakeColor(),
-						DataGeneratorForAPI.generateFakeColorCode() },
+				{ PriorityFolderAPITestCases.newCreatedPriorityId, "", DataGeneratorForAPI.generateFakeNumberWithRange(10, 15),
+						DataGeneratorForAPI.generateFakeColor(), DataGeneratorForAPI.generateFakeColorCode() },
 				// Entering already exist priority for only priority field
-				{ PriorityFolderAPITestCases.newCreatedPriorityId, randomPriorityName, validPriorityLevel,
+				{ PriorityFolderAPITestCases.newCreatedPriorityId, randomPriorityName, DataGeneratorForAPI.generateFakeNumberWithRange(10, 15),
 						DataGeneratorForAPI.generateFakeColor(), DataGeneratorForAPI.generateFakeColorCode() },
 				// Entering already exist priorityLevel for only priorityLevel field
 				{ PriorityFolderAPITestCases.newCreatedPriorityId, DataGeneratorForAPI.generateFakePriority(),
-						randomPriorityLevel, DataGeneratorForAPI.generateFakeColor(), DataGeneratorForAPI.generateFakeColorCode() },
+						randomPriorityLevel, DataGeneratorForAPI.generateFakeColor(),
+						DataGeneratorForAPI.generateFakeColorCode() },
 				// Entering empty string for only priorityColor field
 				{ PriorityFolderAPITestCases.newCreatedPriorityId, DataGeneratorForAPI.generateFakePriority(),
-						validPriorityLevel, "", DataGeneratorForAPI.generateFakeColorCode() },
+						DataGeneratorForAPI.generateFakeNumberWithRange(10, 15), "", DataGeneratorForAPI.generateFakeColorCode() },
 				// Entering already exist priorityColor for only priorityColor field
 				{ PriorityFolderAPITestCases.newCreatedPriorityId, DataGeneratorForAPI.generateFakePriority(),
-						validPriorityLevel, randomPriorityColor, DataGeneratorForAPI.generateFakeColorCode() },
+						DataGeneratorForAPI.generateFakeNumberWithRange(10, 15), randomPriorityColor, DataGeneratorForAPI.generateFakeColorCode() },
 				// Entering empty string for only priorityColorCode field
 				{ PriorityFolderAPITestCases.newCreatedPriorityId, DataGeneratorForAPI.generateFakePriority(),
-						validPriorityLevel, DataGeneratorForAPI.generateFakeColor(), "" },
+						DataGeneratorForAPI.generateFakeNumberWithRange(10, 15), DataGeneratorForAPI.generateFakeColor(), "" },
 				// Entering already exist priorityColorCode for only priorityColorCode field
 				{ PriorityFolderAPITestCases.newCreatedPriorityId, DataGeneratorForAPI.generateFakePriority(),
-						validPriorityLevel, DataGeneratorForAPI.generateFakeColor(), randomPriorityColorCode } };
+						DataGeneratorForAPI.generateFakeNumberWithRange(10,
+								15), DataGeneratorForAPI.generateFakeColor(), randomPriorityColorCode } };
 	}
 
 	@DataProvider(name = "TestDataForDeletePriority")

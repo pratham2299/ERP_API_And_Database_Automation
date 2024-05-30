@@ -10,8 +10,6 @@ public class DataProvidersForStatusFolder {
 
 	@DataProvider(name = "TestDataForAddStatus")
 	public Object[][] testDataForAddStatus() {
-		int validStatusLevel = DataGeneratorForAPI.generateFakeNumberWithRange(10, 15);
-
 		int randomIndexForStatusName = random.nextInt(StatusFolderAPITestCases.statuses.size());
 		String randomStatusName = StatusFolderAPITestCases.statuses.get(randomIndexForStatusName);
 
@@ -26,34 +24,33 @@ public class DataProvidersForStatusFolder {
 
 		return new Object[][] {
 				// Entering valid data for all fields
-				{ DataGeneratorForAPI.generateFakeStatus(), validStatusLevel, DataGeneratorForAPI.generateFakeColor(),
-						DataGeneratorForAPI.generateFakeColorCode() },
+				{ DataGeneratorForAPI.generateFakeStatus(), DataGeneratorForAPI.generateFakeNumberWithRange(10, 15),
+						DataGeneratorForAPI.generateFakeColor(), DataGeneratorForAPI.generateFakeColorCode() },
 				// Entering already exist status for only status field
-				{ randomStatusName, validStatusLevel, DataGeneratorForAPI.generateFakeColor(),
-						DataGeneratorForAPI.generateFakeColorCode() },
+				{ randomStatusName, DataGeneratorForAPI.generateFakeNumberWithRange(10, 15),
+						DataGeneratorForAPI.generateFakeColor(), DataGeneratorForAPI.generateFakeColorCode() },
 				// Entering empty string for only status field
-				{ "", validStatusLevel, DataGeneratorForAPI.generateFakeColor(),
+				{ "", DataGeneratorForAPI.generateFakeNumberWithRange(10, 15), DataGeneratorForAPI.generateFakeColor(),
 						DataGeneratorForAPI.generateFakeColorCode() },
 				// Entering already exist statusLevel for only statusLevel field
 				{ DataGeneratorForAPI.generateFakeStatus(), randomStatusLevel, DataGeneratorForAPI.generateFakeColor(),
 						DataGeneratorForAPI.generateFakeColorCode() },
 				// Entering empty string for only statusColor field
-				{ DataGeneratorForAPI.generateFakeStatus(), validStatusLevel, "",
+				{ DataGeneratorForAPI.generateFakeStatus(), DataGeneratorForAPI.generateFakeNumberWithRange(10, 15), "",
 						DataGeneratorForAPI.generateFakeColorCode() },
 				// Entering already exist statusColor for only statusColor field
-				{ DataGeneratorForAPI.generateFakeStatus(), validStatusLevel, randomStatusColor,
-						DataGeneratorForAPI.generateFakeColorCode() },
+				{ DataGeneratorForAPI.generateFakeStatus(), DataGeneratorForAPI.generateFakeNumberWithRange(10, 15),
+						randomStatusColor, DataGeneratorForAPI.generateFakeColorCode() },
 				// Entering empty string for only statusColorCode field
-				{ DataGeneratorForAPI.generateFakeStatus(), validStatusLevel, DataGeneratorForAPI.generateFakeColor(),
-						"" },
+				{ DataGeneratorForAPI.generateFakeStatus(), DataGeneratorForAPI.generateFakeNumberWithRange(10, 15),
+						DataGeneratorForAPI.generateFakeColor(), "" },
 				// Entering already exist statusColorCode for only statusColorCode field
-				{ DataGeneratorForAPI.generateFakeStatus(), validStatusLevel, DataGeneratorForAPI.generateFakeColor(),
-						randomStatusColorCode } };
+				{ DataGeneratorForAPI.generateFakeStatus(), DataGeneratorForAPI.generateFakeNumberWithRange(10, 15),
+						DataGeneratorForAPI.generateFakeColor(), randomStatusColorCode } };
 	}
 
 	@DataProvider(name = "TestDataForUpdateStatus")
 	public Object[][] testDataForUpdateStatus() {
-		int validStatusLevel = DataGeneratorForAPI.generateFakeNumberWithRange(16, 20);
 		int invalidStatusId = DataGeneratorForAPI.generateFakeNumberWithRange(
 				StatusFolderAPITestCases.newCreatedStatusId + 10, StatusFolderAPITestCases.newCreatedStatusId + 50);
 
@@ -72,31 +69,40 @@ public class DataProvidersForStatusFolder {
 		return new Object[][] {
 				// Entering valid data for all fields
 				{ StatusFolderAPITestCases.newCreatedStatusId, DataGeneratorForAPI.generateFakeStatus(),
-						validStatusLevel, DataGeneratorForAPI.generateFakeColor(), DataGeneratorForAPI.generateFakeColorCode() },
+						DataGeneratorForAPI.generateFakeNumberWithRange(16, 20),
+						DataGeneratorForAPI.generateFakeColor(), DataGeneratorForAPI.generateFakeColorCode() },
 				// Entering invalid statusId for only statusId field
-				{ invalidStatusId, DataGeneratorForAPI.generateFakeStatus(), validStatusLevel, DataGeneratorForAPI.generateFakeColor(),
-						DataGeneratorForAPI.generateFakeColorCode() },
+				{ invalidStatusId, DataGeneratorForAPI.generateFakeStatus(),
+						DataGeneratorForAPI.generateFakeNumberWithRange(16, 20),
+						DataGeneratorForAPI.generateFakeColor(), DataGeneratorForAPI.generateFakeColorCode() },
 				// Entering already exist status level for only statusLevel field
 				{ StatusFolderAPITestCases.newCreatedStatusId, DataGeneratorForAPI.generateFakeStatus(),
-						randomStatusLevel, DataGeneratorForAPI.generateFakeColor(), DataGeneratorForAPI.generateFakeColorCode() },
+						randomStatusLevel, DataGeneratorForAPI.generateFakeColor(),
+						DataGeneratorForAPI.generateFakeColorCode() },
 				// Entering empty string for only status field
-				{ StatusFolderAPITestCases.newCreatedStatusId, "", validStatusLevel, DataGeneratorForAPI.generateFakeColor(),
-						DataGeneratorForAPI.generateFakeColorCode() },
+				{ StatusFolderAPITestCases.newCreatedStatusId, "",
+						DataGeneratorForAPI.generateFakeNumberWithRange(16, 20),
+						DataGeneratorForAPI.generateFakeColor(), DataGeneratorForAPI.generateFakeColorCode() },
 				// Entering already exist status for only status field
-				{ StatusFolderAPITestCases.newCreatedStatusId, randomStatusName, validStatusLevel, DataGeneratorForAPI.generateFakeColor(),
-						DataGeneratorForAPI.generateFakeColorCode() },
+				{ StatusFolderAPITestCases.newCreatedStatusId, randomStatusName,
+						DataGeneratorForAPI.generateFakeNumberWithRange(16, 20),
+						DataGeneratorForAPI.generateFakeColor(), DataGeneratorForAPI.generateFakeColorCode() },
 				// Entering empty string for only statusColor field
 				{ StatusFolderAPITestCases.newCreatedStatusId, DataGeneratorForAPI.generateFakeStatus(),
-						validStatusLevel, "", DataGeneratorForAPI.generateFakeColorCode() },
+						DataGeneratorForAPI.generateFakeNumberWithRange(16, 20), "",
+						DataGeneratorForAPI.generateFakeColorCode() },
 				// Entering already exist statusColor for only statusColor field
 				{ StatusFolderAPITestCases.newCreatedStatusId, DataGeneratorForAPI.generateFakeStatus(),
-						validStatusLevel, randomStatusColor, DataGeneratorForAPI.generateFakeColorCode() },
+						DataGeneratorForAPI.generateFakeNumberWithRange(16, 20), randomStatusColor,
+						DataGeneratorForAPI.generateFakeColorCode() },
 				// Entering empty string for only statusColorCode field
 				{ StatusFolderAPITestCases.newCreatedStatusId, DataGeneratorForAPI.generateFakeStatus(),
-						validStatusLevel, DataGeneratorForAPI.generateFakeColor(), "" },
+						DataGeneratorForAPI.generateFakeNumberWithRange(16, 20),
+						DataGeneratorForAPI.generateFakeColor(), "" },
 				// Entering already exist statusColorCode for only statusColorCode field
 				{ StatusFolderAPITestCases.newCreatedStatusId, DataGeneratorForAPI.generateFakeStatus(),
-						validStatusLevel, DataGeneratorForAPI.generateFakeColor(), randomStatusColorCode } };
+						DataGeneratorForAPI.generateFakeNumberWithRange(16, 20),
+						DataGeneratorForAPI.generateFakeColor(), randomStatusColorCode } };
 	}
 
 	@DataProvider(name = "TestDataForDeleteStatus")

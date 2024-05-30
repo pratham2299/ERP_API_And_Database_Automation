@@ -13,6 +13,10 @@ public class DataProvidersForTaskFolder {
 
 	@DataProvider(name = "TestDataForAddSelfTask")
 	public Object[][] testDataForAddSelfTask() {
+		int validEmployeeId = 4;
+		int validTaskOwner = 4;
+		int validStatusId = 1;
+
 		String validTaskScheduleDate = DataGeneratorForAPI.getCurrentDate("yyyy-MM-dd");
 		String invalidTaskScheduleDate = DataGeneratorForAPI.getCurrentDate("MM-yyyy-dd");
 
@@ -26,42 +30,36 @@ public class DataProvidersForTaskFolder {
 		int randomTagId = DepartmentFolderAPITestCases.departmentIds.get(randomIndexForTagId);
 
 		return new Object[][] {
-				{ DataGeneratorForAPI.generateFakeTaskTitle(), 26, faker.book().title(), validTaskScheduleDate, randomPriorityId, 1,
-						randomProjectId, 26, randomTagId },
-				{ DataGeneratorForAPI.generateFakeTaskTitle(), faker.number().numberBetween(50, 100), faker.book().title(),
-						validTaskScheduleDate, randomPriorityId, 1, randomProjectId, 26, randomTagId },
-				{ DataGeneratorForAPI.generateFakeTaskTitle(), 26, faker.book().title(), "", randomPriorityId, 1, randomProjectId, 26,
+				{ DataGeneratorForAPI.generateFakeTaskTitle(), validEmployeeId, validTaskScheduleDate, randomPriorityId,
+						validStatusId, randomProjectId, validTaskOwner, randomTagId },
+				{ DataGeneratorForAPI.generateFakeTaskTitle(), faker.number().numberBetween(50, 100),
+						validTaskScheduleDate, randomPriorityId, 1, randomProjectId, 4, randomTagId },
+				{ DataGeneratorForAPI.generateFakeTaskTitle(), 4, "", randomPriorityId, 1, randomProjectId, 4,
 						randomTagId },
-				{ DataGeneratorForAPI.generateFakeTaskTitle(), 26, faker.book().title(), invalidTaskScheduleDate, randomPriorityId, 1,
-						randomProjectId, 26, randomTagId },
-				{ DataGeneratorForAPI.generateFakeTaskTitle(), 26, faker.book().title(), validTaskScheduleDate,
+				{ DataGeneratorForAPI.generateFakeTaskTitle(), 4, invalidTaskScheduleDate, randomPriorityId, 1,
+						randomProjectId, 4, randomTagId },
+				{ DataGeneratorForAPI.generateFakeTaskTitle(), 4, validTaskScheduleDate,
 						faker.number().numberBetween(PriorityFolderAPITestCases.newCreatedPriorityId + 10,
 								PriorityFolderAPITestCases.newCreatedPriorityId + 50),
-						1, randomProjectId, 26, randomTagId },
-				{ DataGeneratorForAPI.generateFakeTaskTitle(), 26, faker.book().title(), validTaskScheduleDate, randomPriorityId,
+						1, randomProjectId, 4, randomTagId },
+				{ DataGeneratorForAPI.generateFakeTaskTitle(), 4, validTaskScheduleDate, randomPriorityId,
 						faker.number().numberBetween(StatusFolderAPITestCases.newCreatedStatusId + 10,
 								StatusFolderAPITestCases.newCreatedStatusId + 50),
-						randomProjectId, 26, randomTagId },
-				{ DataGeneratorForAPI.generateFakeTaskTitle(), 26, faker.book().title(), validTaskScheduleDate, randomPriorityId, 1,
-						faker.number().numberBetween(50, 100), 26, randomTagId },
-				{ DataGeneratorForAPI.generateFakeTaskTitle(), 26, faker.book().title(), validTaskScheduleDate, randomPriorityId, 1,
+						randomProjectId, 4, randomTagId },
+				{ DataGeneratorForAPI.generateFakeTaskTitle(), 4, validTaskScheduleDate, randomPriorityId, 1,
+						faker.number().numberBetween(50, 100), 4, randomTagId },
+				{ DataGeneratorForAPI.generateFakeTaskTitle(), 4, validTaskScheduleDate, randomPriorityId, 1,
 						randomProjectId, faker.number().numberBetween(50, 100), randomTagId },
-				{ DataGeneratorForAPI.generateFakeTaskTitle(), 26, faker.book().title(), validTaskScheduleDate, randomPriorityId, 1,
-						randomProjectId, 26,
+				{ DataGeneratorForAPI.generateFakeTaskTitle(), 4, validTaskScheduleDate, randomPriorityId, 1,
+						randomProjectId, 4,
 						faker.number().numberBetween(DepartmentFolderAPITestCases.newCreatedDepartmentId + 10,
 								DepartmentFolderAPITestCases.newCreatedDepartmentId + 50) } };
 	}
 
 	@DataProvider(name = "TestDataForGetAllTasksForDay")
 	public Object[][] testDataForGetAllTasksForDay() {
-		int randomIndexForEmployeeId = random.nextInt(EmployeeFolderAPITestCases.employeeIds.size());
-		int randomEmployeeId = EmployeeFolderAPITestCases.employeeIds.get(randomIndexForEmployeeId);
-
-		return new Object[][] { { randomEmployeeId, DataGeneratorForAPI.generateRandomPastDate() },
-				{ 26, DataGeneratorForAPI.getCurrentDate("MM-yyyy-dd") },
-				{ 26, DataGeneratorForAPI.generateRandomFutureDate() },
-				{ 26, DataGeneratorForAPI.generateRandomPastDate() }, { 26, "" },
-				{ 26, DataGeneratorForAPI.getCurrentDate("yyyy-MM-dd") },
+		return new Object[][] { { 4, DataGeneratorForAPI.getCurrentDate("MM-yyyy-dd") }, { 4, "" },
+				{ 4, DataGeneratorForAPI.getCurrentDate("yyyy-MM-dd") },
 				{ faker.number().numberBetween(100, 150), DataGeneratorForAPI.getCurrentDate("yyyy-MM-dd") } };
 	}
 
@@ -74,89 +72,27 @@ public class DataProvidersForTaskFolder {
 				{ faker.number().numberBetween(1000, 2000) } };
 	}
 
-	@DataProvider(name = "TestDataForSearchTaskForMonth")
-	public Object[][] testDataForSearchTaskForMonth() {
-		List<String> searchParameters = new ArrayList<String>();
-		searchParameters.addAll(StatusFolderAPITestCases.statuses);
-		searchParameters.addAll(PriorityFolderAPITestCases.priorities);
-		searchParameters.addAll(DepartmentFolderAPITestCases.departments);
-
-		int randomIndexForSearchParameter = random.nextInt(searchParameters.size());
-		String randomSearchParameter = searchParameters.get(randomIndexForSearchParameter);
-
-		int randomIndexForEmployeeId = random.nextInt(EmployeeFolderAPITestCases.employeeIds.size());
-		int randomEmployeeId = EmployeeFolderAPITestCases.employeeIds.get(randomIndexForEmployeeId);
-
-		return new Object[][] { { randomSearchParameter, randomEmployeeId, 2024, faker.number().numberBetween(1, 12) },
-				{ "", randomEmployeeId, 2024, faker.number().numberBetween(1, 12) },
-				{ randomSearchParameter, faker.number().numberBetween(50, 100), 2024,
-						faker.number().numberBetween(1, 12) },
-				{ randomSearchParameter, randomEmployeeId, faker.number().numberBetween(2020, 2030),
-						faker.number().numberBetween(1, 12) } };
-	}
-
-	@DataProvider(name = "TestDataForSearchTaskForWeek")
-	public Object[][] testDataForSearchTaskForWeek() {
-		List<String> searchParameters = new ArrayList<String>();
-		searchParameters.addAll(StatusFolderAPITestCases.statuses);
-		searchParameters.addAll(PriorityFolderAPITestCases.priorities);
-		searchParameters.addAll(DepartmentFolderAPITestCases.departments);
-
-		int randomIndexForSearchParameter = random.nextInt(searchParameters.size());
-		String randomSearchParameter = searchParameters.get(randomIndexForSearchParameter);
-
-		int randomIndexForEmployeeId = random.nextInt(EmployeeFolderAPITestCases.employeeIds.size());
-		int randomEmployeeId = EmployeeFolderAPITestCases.employeeIds.get(randomIndexForEmployeeId);
-
-		return new Object[][] {
-				{ randomSearchParameter, randomEmployeeId, 2024, faker.number().numberBetween(1, 12),
-						faker.number().numberBetween(1, 7) },
-				{ "", randomEmployeeId, 2024, faker.number().numberBetween(1, 12), faker.number().numberBetween(1, 7) },
-				{ randomSearchParameter, faker.number().numberBetween(50, 100), 2024,
-						faker.number().numberBetween(1, 12), faker.number().numberBetween(1, 7) },
-				{ randomSearchParameter, randomEmployeeId, faker.number().numberBetween(2020, 2030),
-						faker.number().numberBetween(1, 12), faker.number().numberBetween(1, 7) } };
-	}
-
-	@DataProvider(name = "TestDataForSearchTaskForDay")
-	public Object[][] testDataForSearchTaskForDay() {
-		List<String> searchParameters = new ArrayList<String>();
-		searchParameters.addAll(StatusFolderAPITestCases.statuses);
-		searchParameters.addAll(PriorityFolderAPITestCases.priorities);
-		searchParameters.addAll(TaskFolderAPITestCases.taskTitles);
-
-		int randomIndexForSearchParameter = random.nextInt(searchParameters.size());
-		String randomSearchParameter = searchParameters.get(randomIndexForSearchParameter);
-
-		int randomIndexForEmployeeId = random.nextInt(EmployeeFolderAPITestCases.employeeIds.size());
-		int randomEmployeeId = EmployeeFolderAPITestCases.employeeIds.get(randomIndexForEmployeeId);
-
-		String randomValidDate = DataGeneratorForAPI.generateRandomDateRangeForTask("yyyy-MM-dd");
-
-		return new Object[][] { { randomSearchParameter, randomEmployeeId, randomValidDate },
-				{ "", randomEmployeeId, randomValidDate },
-				{ randomSearchParameter, faker.number().numberBetween(50, 100), randomValidDate },
-				{ randomSearchParameter, randomEmployeeId, "" } };
-	}
-
 	@DataProvider(name = "TestDataForGetAllTasksForMonth")
 	public Object[][] testDataForGetAllTasksForMonth() {
-		int randomIndexForEmployeeId = random.nextInt(EmployeeFolderAPITestCases.employeeIds.size());
-		int randomEmployeeId = EmployeeFolderAPITestCases.employeeIds.get(randomIndexForEmployeeId);
+		int currentYear = DataGeneratorForAPI.generateCurrentYearInInteger();
+		int currentMonth = DataGeneratorForAPI.generateCurrentMonthInInteger();
+		int validEmployeeId = 4;
+		int invalidEmployeeId = DataGeneratorForAPI.generateFakeNumberWithRange(50, 100);
 
-		return new Object[][] { { 2024, faker.number().numberBetween(1, 12), randomEmployeeId },
-				{ 2024, faker.number().numberBetween(1, 12), faker.number().numberBetween(50, 100) } };
+		return new Object[][] { { currentYear, currentMonth, validEmployeeId },
+				{ currentYear, currentMonth, invalidEmployeeId } };
 	}
 
 	@DataProvider(name = "TestDataForGetAllTasksForWeek")
 	public Object[][] testDataForGetAllTasksForWeek() {
-		int randomIndexForEmployeeId = random.nextInt(EmployeeFolderAPITestCases.employeeIds.size());
-		int randomEmployeeId = EmployeeFolderAPITestCases.employeeIds.get(randomIndexForEmployeeId);
+		int currentYear = DataGeneratorForAPI.generateCurrentYearInInteger();
+		int currentMonth = DataGeneratorForAPI.generateCurrentMonthInInteger();
+		int currentWeekNumberInMonth = DataGeneratorForAPI.generateCurrentWeekOfCurrentMonthInInteger();
+		int validEmployeeId = 4;
+		int invalidEmployeeId = DataGeneratorForAPI.generateFakeNumberWithRange(50, 100);
 
-		return new Object[][] {
-				{ 2024, faker.number().numberBetween(1, 12), faker.number().numberBetween(1, 7), randomEmployeeId },
-				{ 2024, faker.number().numberBetween(1, 12), faker.number().numberBetween(1, 7),
-						faker.number().numberBetween(50, 100) } };
+		return new Object[][] { { currentYear, currentMonth, currentWeekNumberInMonth, validEmployeeId },
+				{ currentYear, currentMonth, currentWeekNumberInMonth, invalidEmployeeId } };
 	}
 
 	@DataProvider(name = "TestDataForGetTasksInfoForEmployeeByRole")
@@ -212,47 +148,47 @@ public class DataProvidersForTaskFolder {
 				faker.number().numberBetween(1, 5));
 
 		return new Object[][] {
-				{ randomSelfTaskId, 26, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
+				{ randomSelfTaskId, 4, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
 						randomTaskProjectId, "https://www.gitlab.com", faker.food().dish(), validTagIds,
 						validTaskScheduleDate, validTaskDueDate },
 				{ randomSelfTaskId, faker.number().numberBetween(50, 100), 0, randomTaskVerificationStatusId,
 						randomTaskPriorityId, randomTaskStatusId, randomTaskProjectId, "https://www.gitlab.com",
 						faker.food().dish(), validTagIds, validTaskScheduleDate, validTaskDueDate },
-				{ randomSelfTaskId, 26, 0, faker.number().numberBetween(50, 100), randomTaskPriorityId,
+				{ randomSelfTaskId, 4, 0, faker.number().numberBetween(50, 100), randomTaskPriorityId,
 						randomTaskStatusId, randomTaskProjectId, "https://www.gitlab.com", faker.food().dish(),
 						validTagIds, validTaskScheduleDate, validTaskDueDate },
-				{ randomSelfTaskId, 26, 0, randomTaskVerificationStatusId, faker.number().numberBetween(50, 100),
+				{ randomSelfTaskId, 4, 0, randomTaskVerificationStatusId, faker.number().numberBetween(50, 100),
 						randomTaskStatusId, randomTaskProjectId, "https://www.gitlab.com", faker.food().dish(),
 						validTagIds, validTaskScheduleDate, validTaskDueDate },
-				{ randomSelfTaskId, 26, 0, randomTaskVerificationStatusId, randomTaskPriorityId,
+				{ randomSelfTaskId, 4, 0, randomTaskVerificationStatusId, randomTaskPriorityId,
 						faker.number().numberBetween(50, 100), randomTaskProjectId, "https://www.gitlab.com",
 						faker.food().dish(), validTagIds, validTaskScheduleDate, validTaskDueDate },
-				{ randomSelfTaskId, 26, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
+				{ randomSelfTaskId, 4, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
 						faker.number().numberBetween(50, 100), "https://www.gitlab.com", faker.food().dish(),
 						validTagIds, validTaskScheduleDate, validTaskDueDate },
-				{ randomSelfTaskId, 26, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
+				{ randomSelfTaskId, 4, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
 						randomTaskProjectId, "", faker.food().dish(), validTagIds, validTaskScheduleDate,
 						validTaskDueDate },
-				{ randomSelfTaskId, 26, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
+				{ randomSelfTaskId, 4, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
 						randomTaskProjectId, "https://www.gitlab.com", "", validTagIds, validTaskScheduleDate,
 						validTaskDueDate },
-				{ randomSelfTaskId, 26, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
+				{ randomSelfTaskId, 4, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
 						randomTaskProjectId, "https://www.gitlab.com", faker.food().dish(), invalidTagIds,
 						validTaskScheduleDate, validTaskDueDate },
-				{ randomSelfTaskId, 26, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
+				{ randomSelfTaskId, 4, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
 						randomTaskProjectId, "https://www.gitlab.com", faker.food().dish(), validTagIds, "",
 						validTaskDueDate },
-				{ randomSelfTaskId, 26, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
+				{ randomSelfTaskId, 4, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
 						randomTaskProjectId, "https://www.gitlab.com", faker.food().dish(), validTagIds,
 						invalidTaskScheduleDate, validTaskDueDate },
-				{ randomSelfTaskId, 26, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
+				{ randomSelfTaskId, 4, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
 						randomTaskProjectId, "https://www.gitlab.com", faker.food().dish(), validTagIds,
 						validTaskScheduleDate, "" },
-				{ randomSelfTaskId, 26, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
+				{ randomSelfTaskId, 4, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
 						randomTaskProjectId, "https://www.gitlab.com", faker.food().dish(), validTagIds,
 						validTaskScheduleDate, invalidTaskDueDate },
 				{ faker.number().numberBetween(TaskFolderAPITestCases.newCreatedTaskId + 100,
-						TaskFolderAPITestCases.newCreatedTaskId + 500), 26, 0, randomTaskVerificationStatusId,
+						TaskFolderAPITestCases.newCreatedTaskId + 500), 4, 0, randomTaskVerificationStatusId,
 						randomTaskPriorityId, randomTaskStatusId, randomTaskProjectId, "https://www.gitlab.com",
 						faker.food().dish(), validTagIds, validTaskScheduleDate, validTaskDueDate } };
 	}
@@ -306,46 +242,46 @@ public class DataProvidersForTaskFolder {
 				faker.number().numberBetween(1, 5));
 
 		return new Object[][] {
-				{ validTaskIds, 26, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
+				{ validTaskIds, 4, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
 						randomTaskProjectId, "https://www.gitlab.com", faker.food().dish(), validTagIds,
 						validTaskScheduleDate, validTaskDueDate },
 				{ validTaskIds, faker.number().numberBetween(50, 100), 0, randomTaskVerificationStatusId,
 						randomTaskPriorityId, randomTaskStatusId, randomTaskProjectId, "https://www.gitlab.com",
 						faker.food().dish(), validTagIds, validTaskScheduleDate, validTaskDueDate },
-				{ validTaskIds, 26, 0, faker.number().numberBetween(50, 100), randomTaskPriorityId, randomTaskStatusId,
+				{ validTaskIds, 4, 0, faker.number().numberBetween(50, 100), randomTaskPriorityId, randomTaskStatusId,
 						randomTaskProjectId, "https://www.gitlab.com", faker.food().dish(), validTagIds,
 						validTaskScheduleDate, validTaskDueDate },
-				{ validTaskIds, 26, 0, randomTaskVerificationStatusId, faker.number().numberBetween(50, 100),
+				{ validTaskIds, 4, 0, randomTaskVerificationStatusId, faker.number().numberBetween(50, 100),
 						randomTaskStatusId, randomTaskProjectId, "https://www.gitlab.com", faker.food().dish(),
 						validTagIds, validTaskScheduleDate, validTaskDueDate },
-				{ validTaskIds, 26, 0, randomTaskVerificationStatusId, randomTaskPriorityId,
+				{ validTaskIds, 4, 0, randomTaskVerificationStatusId, randomTaskPriorityId,
 						faker.number().numberBetween(50, 100), randomTaskProjectId, "https://www.gitlab.com",
 						faker.food().dish(), validTagIds, validTaskScheduleDate, validTaskDueDate },
-				{ validTaskIds, 26, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
+				{ validTaskIds, 4, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
 						faker.number().numberBetween(50, 100), "https://www.gitlab.com", faker.food().dish(),
 						validTagIds, validTaskScheduleDate, validTaskDueDate },
-				{ validTaskIds, 26, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
+				{ validTaskIds, 4, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
 						randomTaskProjectId, "", faker.food().dish(), validTagIds, validTaskScheduleDate,
 						validTaskDueDate },
-				{ validTaskIds, 26, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
+				{ validTaskIds, 4, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
 						randomTaskProjectId, "https://www.gitlab.com", "", validTagIds, validTaskScheduleDate,
 						validTaskDueDate },
-				{ validTaskIds, 26, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
+				{ validTaskIds, 4, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
 						randomTaskProjectId, "https://www.gitlab.com", faker.food().dish(), invalidTagIds,
 						validTaskScheduleDate, validTaskDueDate },
-				{ validTaskIds, 26, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
+				{ validTaskIds, 4, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
 						randomTaskProjectId, "https://www.gitlab.com", faker.food().dish(), validTagIds, "",
 						validTaskDueDate },
-				{ validTaskIds, 26, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
+				{ validTaskIds, 4, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
 						randomTaskProjectId, "https://www.gitlab.com", faker.food().dish(), validTagIds,
 						invalidTaskScheduleDate, validTaskDueDate },
-				{ validTaskIds, 26, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
+				{ validTaskIds, 4, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
 						randomTaskProjectId, "https://www.gitlab.com", faker.food().dish(), validTagIds,
 						validTaskScheduleDate, "" },
-				{ validTaskIds, 26, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
+				{ validTaskIds, 4, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
 						randomTaskProjectId, "https://www.gitlab.com", faker.food().dish(), validTagIds,
 						validTaskScheduleDate, invalidTaskDueDate },
-				{ invalidtaskIds, 26, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
+				{ invalidtaskIds, 4, 0, randomTaskVerificationStatusId, randomTaskPriorityId, randomTaskStatusId,
 						randomTaskProjectId, "https://www.gitlab.com", faker.food().dish(), validTagIds,
 						validTaskScheduleDate, validTaskDueDate } };
 	}
@@ -367,10 +303,10 @@ public class DataProvidersForTaskFolder {
 		String validTaskScheduleDate = DataGeneratorForAPI.getCurrentDate("yyyy-MM-dd");
 		String invalidTaskScheduleDate = DataGeneratorForAPI.getCurrentDate("MM-yyyy-dd");
 
-		return new Object[][] { { validTaskIds, 26, validTaskScheduleDate },
-				{ invalidtaskIds, 26, validTaskScheduleDate },
-				{ validTaskIds, faker.number().numberBetween(50, 100), validTaskScheduleDate },
-				{ validTaskIds, 26, "" }, { validTaskIds, 26, invalidTaskScheduleDate } };
+		return new Object[][] { { validTaskIds, 4, validTaskScheduleDate },
+				{ invalidtaskIds, 4, validTaskScheduleDate },
+				{ validTaskIds, faker.number().numberBetween(50, 100), validTaskScheduleDate }, { validTaskIds, 4, "" },
+				{ validTaskIds, 4, invalidTaskScheduleDate } };
 	}
 
 	@DataProvider(name = "TestDataForUpdateAnotherEmployeeAssignedTaskUsingTaskVerificationStatusField")
@@ -382,10 +318,10 @@ public class DataProvidersForTaskFolder {
 		int randomTaskVerificationStatusId = VerificationFolderAPITestCases.verificationIds
 				.get(randomIndexForVerificationStatusId);
 
-		return new Object[][] { { randomSelfTaskId, 26, randomTaskVerificationStatusId },
+		return new Object[][] { { randomSelfTaskId, 4, randomTaskVerificationStatusId },
 				{ faker.number().numberBetween(TaskFolderAPITestCases.newCreatedTaskId + 100,
-						TaskFolderAPITestCases.newCreatedTaskId + 500), 26, randomTaskVerificationStatusId },
-				{ randomSelfTaskId, 26, faker.number().numberBetween(50, 100) } };
+						TaskFolderAPITestCases.newCreatedTaskId + 500), 4, randomTaskVerificationStatusId },
+				{ randomSelfTaskId, 4, faker.number().numberBetween(50, 100) } };
 	}
 
 	@DataProvider(name = "TestDataForUpdateAnotherEmployeeAssignedTaskUsingTaskPriorityField")
@@ -396,10 +332,10 @@ public class DataProvidersForTaskFolder {
 		int randomIndexForPriorityId = random.nextInt(PriorityFolderAPITestCases.priorityIds.size());
 		int randomTaskPriorityId = PriorityFolderAPITestCases.priorityIds.get(randomIndexForPriorityId);
 
-		return new Object[][] { { randomSelfTaskId, 26, randomTaskPriorityId },
+		return new Object[][] { { randomSelfTaskId, 4, randomTaskPriorityId },
 				{ faker.number().numberBetween(TaskFolderAPITestCases.newCreatedTaskId + 100,
-						TaskFolderAPITestCases.newCreatedTaskId + 500), 26, randomTaskPriorityId },
-				{ randomSelfTaskId, 26, faker.number().numberBetween(50, 100) } };
+						TaskFolderAPITestCases.newCreatedTaskId + 500), 4, randomTaskPriorityId },
+				{ randomSelfTaskId, 4, faker.number().numberBetween(50, 100) } };
 	}
 
 	@DataProvider(name = "TestDataForUpdateAnotherEmployeeAssignedTaskUsingTaskStatusField")
@@ -410,10 +346,10 @@ public class DataProvidersForTaskFolder {
 		int randomIndexForStatusId = random.nextInt(StatusFolderAPITestCases.statusIds.size());
 		int randomTaskStatusId = StatusFolderAPITestCases.statusIds.get(randomIndexForStatusId);
 
-		return new Object[][] { { randomSelfTaskId, 26, randomTaskStatusId },
+		return new Object[][] { { randomSelfTaskId, 4, randomTaskStatusId },
 				{ faker.number().numberBetween(TaskFolderAPITestCases.newCreatedTaskId + 100,
-						TaskFolderAPITestCases.newCreatedTaskId + 500), 26, randomTaskStatusId },
-				{ randomSelfTaskId, 26, faker.number().numberBetween(50, 100) } };
+						TaskFolderAPITestCases.newCreatedTaskId + 500), 4, randomTaskStatusId },
+				{ randomSelfTaskId, 4, faker.number().numberBetween(50, 100) } };
 	}
 
 	@DataProvider(name = "TestDataForUpdateAnotherEmployeeAssignedTaskUsingTaskProjectField")
@@ -424,10 +360,10 @@ public class DataProvidersForTaskFolder {
 		int randomIndexForProjectId = random.nextInt(ProjectFolderAPITestCases.projectIds.size());
 		int randomTaskProjectId = ProjectFolderAPITestCases.projectIds.get(randomIndexForProjectId);
 
-		return new Object[][] { { randomSelfTaskId, 26, randomTaskProjectId },
+		return new Object[][] { { randomSelfTaskId, 4, randomTaskProjectId },
 				{ faker.number().numberBetween(TaskFolderAPITestCases.newCreatedTaskId + 100,
-						TaskFolderAPITestCases.newCreatedTaskId + 500), 26, randomTaskProjectId },
-				{ randomSelfTaskId, 26, faker.number().numberBetween(50, 100) } };
+						TaskFolderAPITestCases.newCreatedTaskId + 500), 4, randomTaskProjectId },
+				{ randomSelfTaskId, 4, faker.number().numberBetween(50, 100) } };
 	}
 
 	@DataProvider(name = "TestDataForUpdateAnotherEmployeeAssignedTaskUsingTaskTagField")
@@ -438,10 +374,10 @@ public class DataProvidersForTaskFolder {
 		int randomIndexForTagId = random.nextInt(DepartmentFolderAPITestCases.departmentIds.size());
 		int randomTaskTagId = DepartmentFolderAPITestCases.departmentIds.get(randomIndexForTagId);
 
-		return new Object[][] { { randomSelfTaskId, 26, randomTaskTagId },
+		return new Object[][] { { randomSelfTaskId, 4, randomTaskTagId },
 				{ faker.number().numberBetween(TaskFolderAPITestCases.newCreatedTaskId + 100,
-						TaskFolderAPITestCases.newCreatedTaskId + 500), 26, randomTaskTagId },
-				{ randomSelfTaskId, 26, faker.number().numberBetween(50, 100) } };
+						TaskFolderAPITestCases.newCreatedTaskId + 500), 4, randomTaskTagId },
+				{ randomSelfTaskId, 4, faker.number().numberBetween(50, 100) } };
 	}
 
 	@DataProvider(name = "TestDataForUpdateAnotherEmployeeAssignedTaskUsingTaskCommentField")
@@ -449,10 +385,10 @@ public class DataProvidersForTaskFolder {
 		int randomIndexForSelfTaskId = random.nextInt(TaskFolderAPITestCases.taskIds.size());
 		int randomSelfTaskId = TaskFolderAPITestCases.taskIds.get(randomIndexForSelfTaskId);
 
-		return new Object[][] { { randomSelfTaskId, 26, faker.dog().breed() },
+		return new Object[][] { { randomSelfTaskId, 4, faker.dog().breed() },
 				{ faker.number().numberBetween(TaskFolderAPITestCases.newCreatedTaskId + 100,
-						TaskFolderAPITestCases.newCreatedTaskId + 500), 26, faker.dog().breed() },
-				{ randomSelfTaskId, 26, "" } };
+						TaskFolderAPITestCases.newCreatedTaskId + 500), 4, faker.dog().breed() },
+				{ randomSelfTaskId, 4, "" } };
 	}
 
 	@DataProvider(name = "TestDataForUpdateAnotherEmployeeAssignedTaskUsingTaskGitLinkField")
@@ -460,10 +396,10 @@ public class DataProvidersForTaskFolder {
 		int randomIndexForSelfTaskId = random.nextInt(TaskFolderAPITestCases.taskIds.size());
 		int randomSelfTaskId = TaskFolderAPITestCases.taskIds.get(randomIndexForSelfTaskId);
 
-		return new Object[][] { { randomSelfTaskId, 26, faker.dog().breed() },
+		return new Object[][] { { randomSelfTaskId, 4, faker.dog().breed() },
 				{ faker.number().numberBetween(TaskFolderAPITestCases.newCreatedTaskId + 100,
-						TaskFolderAPITestCases.newCreatedTaskId + 500), 26, faker.dog().breed() },
-				{ randomSelfTaskId, 26, "" } };
+						TaskFolderAPITestCases.newCreatedTaskId + 500), 4, faker.dog().breed() },
+				{ randomSelfTaskId, 4, "" } };
 	}
 
 	@DataProvider(name = "TestDataForUpdateAnotherEmployeeAssignedTaskUsingTaskScheduleDateField")
@@ -474,10 +410,10 @@ public class DataProvidersForTaskFolder {
 		String validTaskScheduleDate = DataGeneratorForAPI.getCurrentDate("yyyy-MM-dd");
 		String invalidTaskScheduleDate = DataGeneratorForAPI.getCurrentDate("MM-yyyy-dd");
 
-		return new Object[][] { { randomSelfTaskId, 26, validTaskScheduleDate },
+		return new Object[][] { { randomSelfTaskId, 4, validTaskScheduleDate },
 				{ faker.number().numberBetween(TaskFolderAPITestCases.newCreatedTaskId + 100,
-						TaskFolderAPITestCases.newCreatedTaskId + 500), 26, validTaskScheduleDate },
-				{ randomSelfTaskId, 26, "" }, { randomSelfTaskId, 26, invalidTaskScheduleDate } };
+						TaskFolderAPITestCases.newCreatedTaskId + 500), 4, validTaskScheduleDate },
+				{ randomSelfTaskId, 4, "" }, { randomSelfTaskId, 4, invalidTaskScheduleDate } };
 	}
 
 	@DataProvider(name = "TestDataForUpdateAnotherEmployeeAssignedTaskUsingTaskDueDateField")
@@ -490,10 +426,10 @@ public class DataProvidersForTaskFolder {
 		String invalidTaskDueDate = DataGeneratorForAPI.getCurrentDatePlusDays("MM-yyyy-dd",
 				faker.number().numberBetween(1, 5));
 
-		return new Object[][] { { randomSelfTaskId, 26, validTaskDueDate },
+		return new Object[][] { { randomSelfTaskId, 4, validTaskDueDate },
 				{ faker.number().numberBetween(TaskFolderAPITestCases.newCreatedTaskId + 100,
-						TaskFolderAPITestCases.newCreatedTaskId + 500), 26, validTaskDueDate },
-				{ randomSelfTaskId, 26, "" }, { randomSelfTaskId, 26, invalidTaskDueDate } };
+						TaskFolderAPITestCases.newCreatedTaskId + 500), 4, validTaskDueDate },
+				{ randomSelfTaskId, 4, "" }, { randomSelfTaskId, 4, invalidTaskDueDate } };
 	}
 
 	@DataProvider(name = "TestDataForDeleteSelfTask")
@@ -503,10 +439,10 @@ public class DataProvidersForTaskFolder {
 
 		return new Object[][] {
 				{ faker.number().numberBetween(TaskFolderAPITestCases.newCreatedTaskId + 10,
-						TaskFolderAPITestCases.newCreatedTaskId + 50), 26 },
+						TaskFolderAPITestCases.newCreatedTaskId + 50), 4 },
 				{ faker.number().numberBetween(TaskFolderAPITestCases.newCreatedTaskId + 10,
 						TaskFolderAPITestCases.newCreatedTaskId + 50), faker.number().numberBetween(500, 1000) },
-				{ randomSelfTaskId, 26 }, { randomSelfTaskId, faker.number().numberBetween(500, 1000) } };
+				{ randomSelfTaskId, 4 }, { randomSelfTaskId, faker.number().numberBetween(500, 1000) } };
 	}
 
 	@DataProvider(name = "TestDataForAssignTask")
@@ -527,29 +463,33 @@ public class DataProvidersForTaskFolder {
 		int randomTagId = DepartmentFolderAPITestCases.departmentIds.get(randomIndexForTagId);
 
 		return new Object[][] {
-				{ DataGeneratorForAPI.generateFakeTaskTitle(), 26, faker.book().title(), validTaskScheduleDate, randomPriorityId, 1,
-						randomProjectId, 26, randomTagId },
-				{ DataGeneratorForAPI.generateFakeTaskTitle(), faker.number().numberBetween(50, 100), faker.book().title(),
-						validTaskScheduleDate, randomPriorityId, 1, randomProjectId, 26, randomTagId },
-				{ DataGeneratorForAPI.generateFakeTaskTitle(), 26, faker.book().title(), "", randomPriorityId, 1, randomProjectId, 26,
-						randomTagId },
-				{ DataGeneratorForAPI.generateFakeTaskTitle(), 26, faker.book().title(), invalidTaskScheduleDate, randomPriorityId, 1,
-						randomProjectId, 26, randomTagId },
-				{ DataGeneratorForAPI.generateFakeTaskTitle(), 26, faker.book().title(), validTaskScheduleDate,
+				{ DataGeneratorForAPI.generateFakeTaskTitle(), 4, DataGeneratorForAPI.generateFakeTaskTitle(),
+						validTaskScheduleDate, randomPriorityId, 1, randomProjectId, 4, randomTagId },
+				{ DataGeneratorForAPI.generateFakeTaskTitle(), faker.number().numberBetween(50, 100),
+						DataGeneratorForAPI.generateFakeTaskTitle(), validTaskScheduleDate, randomPriorityId, 1,
+						randomProjectId, 4, randomTagId },
+				{ DataGeneratorForAPI.generateFakeTaskTitle(), 4, DataGeneratorForAPI.generateFakeTaskTitle(), "",
+						randomPriorityId, 1, randomProjectId, 4, randomTagId },
+				{ DataGeneratorForAPI.generateFakeTaskTitle(), 4, DataGeneratorForAPI.generateFakeTaskTitle(),
+						invalidTaskScheduleDate, randomPriorityId, 1, randomProjectId, 4, randomTagId },
+				{ DataGeneratorForAPI.generateFakeTaskTitle(), 4, DataGeneratorForAPI.generateFakeTaskTitle(),
+						validTaskScheduleDate,
 						faker.number().numberBetween(PriorityFolderAPITestCases.newCreatedPriorityId + 10,
 								PriorityFolderAPITestCases.newCreatedPriorityId + 50),
-						1, randomProjectId, 26, randomTagId },
-				{ DataGeneratorForAPI.generateFakeTaskTitle(), 26, faker.book().title(), validTaskScheduleDate, randomPriorityId,
+						1, randomProjectId, 4, randomTagId },
+				{ DataGeneratorForAPI.generateFakeTaskTitle(), 4, DataGeneratorForAPI.generateFakeTaskTitle(),
+						validTaskScheduleDate, randomPriorityId,
 						faker.number().numberBetween(StatusFolderAPITestCases.newCreatedStatusId + 10,
 								StatusFolderAPITestCases.newCreatedStatusId + 50),
-						randomProjectId, 26, randomTagId },
-				{ DataGeneratorForAPI.generateFakeTaskTitle(), 26, faker.book().title(), validTaskScheduleDate, randomPriorityId, 1,
-						faker.number().numberBetween(50, 100), 26, randomTagId },
-				{ DataGeneratorForAPI.generateFakeTaskTitle(), 26, faker.book().title(), validTaskScheduleDate, randomPriorityId, 1,
-						randomProjectId, faker.number().numberBetween(50, 100), randomTagId },
-				{ DataGeneratorForAPI
-						.generateFakeTaskTitle(), 26, faker.book().title(), validTaskScheduleDate, randomPriorityId, 1,
-						randomProjectId, 26,
+						randomProjectId, 4, randomTagId },
+				{ DataGeneratorForAPI.generateFakeTaskTitle(), 4, DataGeneratorForAPI.generateFakeTaskTitle(),
+						validTaskScheduleDate, randomPriorityId, 1, faker.number().numberBetween(50, 100), 4,
+						randomTagId },
+				{ DataGeneratorForAPI.generateFakeTaskTitle(), 4, DataGeneratorForAPI.generateFakeTaskTitle(),
+						validTaskScheduleDate, randomPriorityId, 1, randomProjectId,
+						faker.number().numberBetween(50, 100), randomTagId },
+				{ DataGeneratorForAPI.generateFakeTaskTitle(), 4, DataGeneratorForAPI.generateFakeTaskTitle(),
+						validTaskScheduleDate, randomPriorityId, 1, randomProjectId, 4,
 						faker.number().numberBetween(DepartmentFolderAPITestCases.newCreatedDepartmentId + 10,
 								DepartmentFolderAPITestCases.newCreatedDepartmentId + 50) } };
 	}

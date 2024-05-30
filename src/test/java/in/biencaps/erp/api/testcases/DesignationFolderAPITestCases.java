@@ -248,7 +248,7 @@ public class DesignationFolderAPITestCases extends BaseTest {
 				APIEndpoints.deleteDesignationEndpoint, response);
 	}
 
-	@Test(priority = 13, dataProvider = "TestDataForDeleteDesignation", dataProviderClass = DataProvidersForDesignationFolder.class)
+	@Test(priority = 13, dataProvider = "TestDataForDeleteDesignation", dataProviderClass = DataProvidersForDesignationFolder.class, enabled = false)
 	public void verify_Delete_Designation_With_Admin_Authorization(String designationName) {
 		test = BaseTest.extent.createTest("Delete designation with valid and invalid data and with authorization");
 

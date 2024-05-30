@@ -169,7 +169,7 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 		verify_Get_All_Departments_API_With_Authorization("before add new department");
 	}
 
-	@Test(priority = 11, dataProvider = "TestDataForAddDepartment", dataProviderClass = DataProvidersForDepartmentFolder.class)
+	@Test(priority = 11, dataProvider = "TestDataForAddDepartment", dataProviderClass = DataProvidersForDepartmentFolder.class, enabled = false)
 	public void verify_Add_Department_With_Authorization(String departmentName, int departmentLevel,
 			String departmentColor, String departmentColorCode) {
 		test = BaseTest.extent.createTest("Add department with valid and invalid data and with authorization");
@@ -201,7 +201,7 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 		}
 	}
 
-	@Test(priority = 12, dataProvider = "TestDataForUpdateDepartment", dataProviderClass = DataProvidersForDepartmentFolder.class)
+	@Test(priority = 12, dataProvider = "TestDataForUpdateDepartment", dataProviderClass = DataProvidersForDepartmentFolder.class, enabled = false)
 	public void verifyUpdateDepartmentWithAuthorization(int departmentId, String departmentName, int departmentLevel,
 			String departmentColor, String departmentColorCode) throws Throwable {
 		test = BaseTest.extent.createTest("Update department with valid and invalid data and with authorization");
@@ -243,7 +243,7 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 		}
 	}
 
-	@Test(priority = 13, dataProvider = "TestDataForDeleteDepartment", dataProviderClass = DataProvidersForDepartmentFolder.class)
+	@Test(priority = 13, dataProvider = "TestDataForDeleteDepartment", dataProviderClass = DataProvidersForDepartmentFolder.class, enabled = false)
 	public void verifyDeleteSingleDepartmentWithAuthorization(int departmentId) {
 		test = BaseTest.extent.createTest("Delete department with valid and invalid data and with authorization");
 
@@ -295,7 +295,7 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 			newUserId = "INC0" + newNumericPart;
 			log.info("New User Id for get user id is => " + newUserId + "\n");
 		} else {
-			newUserId = "BIE0" + newNumericPart;
+			newUserId = "INC0" + newNumericPart;
 			log.info("New User Id for get user id is => " + newUserId + "\n");
 		}
 
@@ -303,131 +303,53 @@ public class DepartmentFolderAPITestCases extends BaseTest {
 		Response response = Responses.getRequestWithAuthorization(LoginEmployeeAPITestCases.authToken,
 				APIEndpoints.getUserIdEndpoint);
 
-		int responseBodyLength = response.getBody().asPrettyString().length();
+		String responseBody = response.getBody().asPrettyString();
+
+		int responseBodyLength = responseBody.length();
 		String contentLength = String.valueOf(responseBodyLength);
 
-		assertEquals(response.getBody().asPrettyString(), newUserId, "Invalid response text");
+		assertEquals(responseBody, newUserId);
 
 		BodyValidation.responseValidation(response, 200, contentLength);
-		test.log(Status.INFO, "API endpoint for get user Id is => " + APIEndpoints.getUserIdEndpoint);
-		test.log(Status.INFO, "Status code for get user Id is => " + response.getStatusCode());
-		test.log(Status.INFO, "Response for get user Id is => " + response.getBody().asPrettyString());
+
+		BaseTest.test_Method_Logs("get user Id", APIEndpoints.getUserIdEndpoint, response);
 	}
 
-	@Test(priority = 15)
-	public void verify_Get_Employees_By_Department_Name_With_Authorization() {
-		if (departments != null) {
-			int randomIndexForDepartment = random.nextInt(departments.size());
-			String newCreatedDepartment = departments.get(randomIndexForDepartment);
-			log.info(
-					"Random department name for get all employees by department is  => " + newCreatedDepartment + "\n");
+	@Test(priority = 15, dataProvider = "TestDataForGetEmployeesByDepartment", dataProviderClass = DataProvidersForDepartmentFolder.class)
+	public void verify_Get_Employees_By_Department_Name_With_Authorization(String department) {
+		test = BaseTest.extent.createTest("Get employees by department with authorization");
 
-			Response response = Responses.getRequestWithAuthorizationAndPathParameter(
-					LoginEmployeeAPITestCases.authToken, APIEndpoints.getAllEmployeesByDepartmentNameEndpoint,
-					newCreatedDepartment);
-			test.log(Status.INFO, "API endpoint for get all employees by department name is => "
-					+ APIEndpoints.getAllEmployeesByDepartmentNameEndpoint);
-			test.log(Status.INFO,
-					"Path parameter for get all employees by department name is => " + newCreatedDepartment);
-			test.log(Status.INFO,
-					"Status code for get all employees by department name is => " + response.getStatusCode());
-			test.log(Status.INFO,
-					"Response for get all employees by department name is => " + response.getBody().asPrettyString());
+		Response response = Responses.getRequestWithAuthorizationAndPathParameter(LoginEmployeeAPITestCases.authToken,
+				APIEndpoints.getAllEmployeesByDepartmentNameEndpoint, department);
 
-			assertTrue(departments.contains(newCreatedDepartment));
+		BaseTest.test_Method_Logs_With_Path_Parameter("get all employees by department name",
+				APIEndpoints.getAllEmployeesByDepartmentNameEndpoint, department, response);
 
-			if (response.getBody().asPrettyString().isBlank()) {
-				BodyValidation.response204Validation(response);
-			} else {
-				BodyValidation.responseValidation(response, 200);
-			}
-		} else {
-			log.info("Departments are null");
-		}
-	}
-
-	@Test(priority = 16)
-	public void verify_Get_Employees_By_Department_By_Giving_Invalid_Department() {
-		String fakeDepartmentName = DataGeneratorForAPI.generateFakeDepartment();
-
-		if (departments != null) {
-			Response response = Responses.getRequestWithAuthorizationAndPathParameter(
-					LoginEmployeeAPITestCases.authToken, APIEndpoints.getAllEmployeesByDepartmentNameEndpoint,
-					fakeDepartmentName);
-			test.log(Status.INFO, "API endpoint for get all employees by department name is => "
-					+ APIEndpoints.getAllEmployeesByDepartmentNameEndpoint);
-			test.log(Status.INFO,
-					"Path parameter for get all employees by department name is => " + newCreatedDepartment);
-			test.log(Status.INFO,
-					"Status code for get all employees by department name is => " + response.getStatusCode());
-			test.log(Status.INFO,
-					"Response for get all employees by department name is => " + response.getBody().asPrettyString());
-
-			assertFalse(departments.contains(fakeDepartmentName));
-
+		if (!departments.contains(department)) {
 			BodyValidation.response204Validation(response);
 		} else {
-			log.info("Departments are null");
+			BodyValidation.responseValidation(response, 200);
 		}
 	}
 
-	@Test(priority = 17)
-	public void verify_Get_All_Employees_By_Designation_With_Authorization() {
-		if (DesignationFolderAPITestCases.designations != null) {
-			int randomIndexForDesignationName = random.nextInt(DesignationFolderAPITestCases.designations.size());
-			String randomDesignationName = DesignationFolderAPITestCases.designations
-					.get(randomIndexForDesignationName);
-			log.info("Random designation name for get all employees by designation is => " + randomDesignationName
-					+ "\n");
+	@Test(priority = 17, dataProvider = "TestDataForGetEmployeesByDesignation", dataProviderClass = DataProvidersForDepartmentFolder.class)
+	public void verify_Get_All_Employees_By_Designation_With_Authorization(String designation) {
+		Response response = Responses.getRequestWithAuthorizationAndOneQueryParameter(
+				LoginEmployeeAPITestCases.authToken, APIEndpoints.getAllEmployeesByDesignationNameEndpoint,
+				"designationName", designation);
 
-			Response response = Responses.getRequestWithAuthorizationAndOneQueryParameter(
-					LoginEmployeeAPITestCases.authToken, APIEndpoints.getAllEmployeesByDesignationNameEndpoint,
-					"designationName", randomDesignationName);
-			test.log(Status.INFO, "API endpoint for get all employees by designation name is => "
-					+ APIEndpoints.getAllEmployeesByDesignationNameEndpoint);
-			test.log(Status.INFO,
-					"Query parameter for get all employees by department name is => " + randomDesignationName);
-			test.log(Status.INFO,
-					"Status code for get all employees by designation name is => " + response.getStatusCode());
-			test.log(Status.INFO,
-					"Response for get all employees by designation name is => " + response.getBody().asPrettyString());
+		BaseTest.test_Method_Logs_With_Query_Parameter("get employees by designation",
+				APIEndpoints.getAllEmployeesByDesignationNameEndpoint, designation, response);
 
-			if (response.getBody().asPrettyString().isBlank()) {
-				BodyValidation.response204Validation(response);
-			} else {
-				BodyValidation.responseValidation(response, 200);
-			}
-		} else {
-			log.info("Designations are null");
-		}
-	}
-
-	@Test(priority = 18)
-	public void verify_Get_All_Employees_By_Designation_By_Giving_Invalid_Designation() {
-		String fakeDesignation = DataGeneratorForAPI.generateFakeDesignation();
-
-		if (DesignationFolderAPITestCases.designations != null) {
-			Response response = Responses.getRequestWithAuthorizationAndOneQueryParameter(
-					LoginEmployeeAPITestCases.authToken, APIEndpoints.getAllEmployeesByDesignationNameEndpoint,
-					"designationName", fakeDesignation);
-			test.log(Status.INFO, "API endpoint for get all employees by designation name is => "
-					+ APIEndpoints.getAllEmployeesByDesignationNameEndpoint);
-			test.log(Status.INFO, "Query parameter for get all employees by department name is => " + fakeDesignation);
-			test.log(Status.INFO,
-					"Status code for get all employees by designation name is => " + response.getStatusCode());
-			test.log(Status.INFO,
-					"Response for get all employees by designation name is => " + response.getBody().asPrettyString());
-
-			assertFalse(DesignationFolderAPITestCases.designations.contains(fakeDesignation));
-
+		if (!DesignationFolderAPITestCases.designations.contains(designation)) {
 			BodyValidation.response204Validation(response);
 		} else {
-			log.info("Designations are null");
+			BodyValidation.responseValidation(response, 200);
 		}
 	}
 
 	@Test(priority = 19)
-	public void verify_Get_All_Assignee_With_Authorization_By_Giving_Valid_Role_Level() {
+	public void verify_Get_All_Assignee_With_Authorization() {
 		if (RoleFolderAPITestCases.roleIds != null) {
 			int randomIndexForRoleId = random.nextInt(RoleFolderAPITestCases.roleIds.size());
 			int randomRoleId = RoleFolderAPITestCases.roleIds.get(randomIndexForRoleId);

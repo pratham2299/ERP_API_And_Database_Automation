@@ -1,0 +1,5 @@
+17:47:14.630 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project Ids are: [19, 22, 5, 4, 1, 2]
+17:47:14.641 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project names are: [Test Project, Core2Web, Coffee Shop App, Incubators, E commerce, Enterprise Resource Planning]
+
+17:47:19.298 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project manager employee Ids are: [7, 6, 1, 9]
+17:47:19.880 --> in.biencaps.erp.api.testcases.ProjectFolderAPITestCases - List of project status Ids are: [1, 2, 3]

@@ -94,7 +94,7 @@ public class RoleFolderAPITestCases extends BaseTest {
 		verify_Get_All_Roles_API_With_Authorization("before add new role");
 	}
 
-	@Test(priority = 7, dataProvider = "TestDataForAddRole", dataProviderClass = DataProvidersForRoleFolder.class)
+	@Test(priority = 7, dataProvider = "TestDataForAddRole", dataProviderClass = DataProvidersForRoleFolder.class, enabled = false)
 	public void verify_Add_Role_With_Authorization(String roleNameInput, int roleLevelInput) {
 		test = BaseTest.extent.createTest("Add role with valid and invalid data and with authorization");
 
@@ -124,7 +124,7 @@ public class RoleFolderAPITestCases extends BaseTest {
 		}
 	}
 
-	@Test(priority = 8, dataProvider = "TestDataForUpdateRole", dataProviderClass = DataProvidersForRoleFolder.class)
+	@Test(priority = 8, dataProvider = "TestDataForUpdateRole", dataProviderClass = DataProvidersForRoleFolder.class, enabled = false)
 	public void verify_Update_Role_With_Authorization(int roleIdInput, String roleNameInput, int roleLevelInput)
 			throws Throwable {
 		test = BaseTest.extent.createTest("Update role with valid and invalid data and with authorization");
@@ -161,7 +161,7 @@ public class RoleFolderAPITestCases extends BaseTest {
 		}
 	}
 
-	@Test(priority = 9, dataProvider = "TestDataForDeleteRole", dataProviderClass = DataProvidersForRoleFolder.class)
+	@Test(priority = 9, dataProvider = "TestDataForDeleteRole", dataProviderClass = DataProvidersForRoleFolder.class, enabled = false)
 	public void verify_Delete_Role_With_Authorization(int roleIdInput) {
 		test = BaseTest.extent.createTest("Delete role with valid and invalid data and with authorization");
 

@@ -1,0 +1,27 @@
+17:47:41.240 --> in.biencaps.erp.api.testcases.TaskFolderAPITestCases - List of task Ids after added new self task are: [4335, 4336, 4337, 4338, 4339, 4340]
+17:47:41.246 --> in.biencaps.erp.api.testcases.TaskFolderAPITestCases - List of task titles after added new self task are: [First task of admin, Alone on a Wide, Wide Sea, Frequent Hearses, The Little Foxes, Mother Night, A Monstrous Regiment of Women]
+17:47:41.264 --> in.biencaps.erp.api.testcases.TaskFolderAPITestCases - List of task schedule dates after added new self task are: [2024-05-30, 2024-05-30, 2024-05-30, 2024-05-30, 2024-05-30, 2024-05-30]
+17:47:41.276 --> in.biencaps.erp.api.testcases.TaskFolderAPITestCases - List of task due dates after added new self task are: [2024-05-30, 2024-05-30, 2024-05-30, 2024-05-30, 2024-05-30, 2024-05-30]
+17:47:41.293 --> in.biencaps.erp.api.testcases.TaskFolderAPITestCases - List of task owners after added new self task are: [Prathamesh Dhasade, Prathamesh Dhasade, Prathamesh Dhasade, Prathamesh Dhasade, Prathamesh Dhasade, Prathamesh Dhasade]
+17:47:41.305 --> in.biencaps.erp.api.testcases.TaskFolderAPITestCases - List of task statuses after added new self task are: [In Discussion, Not Started, Not Started, Not Started, Not Started, Not Started]
+17:47:41.316 --> in.biencaps.erp.api.testcases.TaskFolderAPITestCases - List of task priorities after added new self task are: [Highest, Medium, High, High, Highest, Highest]
+17:47:41.328 --> in.biencaps.erp.api.testcases.TaskFolderAPITestCases - List of task projects after added new self task are: [Incubators, E commerce, E commerce, E commerce, Enterprise Resource Planning, Incubators]
+17:47:41.338 --> in.biencaps.erp.api.testcases.TaskFolderAPITestCases - List of task verifications after added new self task are: [Not Verified, Not Verified, Not Verified, Not Verified, Not Verified, Not Verified]
+17:47:41.354 --> in.biencaps.erp.api.testcases.TaskFolderAPITestCases - New created task Id after added new self task is => 4340
+17:47:41.367 --> in.biencaps.erp.api.testcases.TaskFolderAPITestCases - New created task title after added new self task is => A Monstrous Regiment of Women
+17:47:41.379 --> in.biencaps.erp.api.testcases.TaskFolderAPITestCases - New created task schedule date after added new self task is => 2024-05-30
+17:47:41.390 --> in.biencaps.erp.api.testcases.TaskFolderAPITestCases - New created task due date after added new self task is => 2024-05-30
+17:47:41.400 --> in.biencaps.erp.api.testcases.TaskFolderAPITestCases - New created task owner after added new self task is => 4
+17:47:41.416 --> in.biencaps.erp.api.testcases.TaskFolderAPITestCases - New created task status Id after added new self task is => 1
+17:47:41.430 --> in.biencaps.erp.api.testcases.TaskFolderAPITestCases - New created task priority Id after added new self task is => 4
+17:47:41.442 --> in.biencaps.erp.api.testcases.TaskFolderAPITestCases - New created task project Id after added new self task is => 4
+17:47:50.477 --> in.biencaps.erp.api.testcases.TaskFolderAPITestCases - New created task Id for get all tasks for day is => 4340
+17:47:50.498 --> in.biencaps.erp.api.testcases.TaskFolderAPITestCases - New created task title for get all tasks for day is => A Monstrous Regiment of Women
+17:47:50.515 --> in.biencaps.erp.api.testcases.TaskFolderAPITestCases - New created task schedule date for get all tasks for day is => 2024-05-30
+17:47:50.529 --> in.biencaps.erp.api.testcases.TaskFolderAPITestCases - New created task due date for get all tasks for day is => 2024-05-30
+17:47:50.546 --> in.biencaps.erp.api.testcases.TaskFolderAPITestCases - New created task owner for get all tasks for day is => 4
+17:47:50.565 --> in.biencaps.erp.api.testcases.TaskFolderAPITestCases - New created task status Id for get all tasks for day is => 1
+17:47:50.580 --> in.biencaps.erp.api.testcases.TaskFolderAPITestCases - New created task priority Id for get all tasks for day is => 4
+17:47:50.602 --> in.biencaps.erp.api.testcases.TaskFolderAPITestCases - New created task project Id for get all tasks for day is => 4
+17:47:52.414 --> in.biencaps.erp.api.testcases.TaskFolderAPITestCases - Task Ids from response are: [4335, 4336, 4337, 4338, 4339, 4340]
+17:47:54.146 --> in.biencaps.erp.api.testcases.TaskFolderAPITestCases - Task Ids from response are: [4335, 4336, 4337, 4338, 4339, 4340]

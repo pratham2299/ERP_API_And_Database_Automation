@@ -2,12 +2,10 @@ package in.biencaps.erp.api.utilities;
 
 import java.util.*;
 import org.testng.annotations.*;
-import com.github.javafaker.*;
 
 import in.biencaps.erp.api.testcases.*;
 
 public class DataProvidersForRoleFolder {
-	private static Faker faker = new Faker();
 	private static Random random = new Random();
 
 	@DataProvider(name = "TestDataForAddRole")
@@ -18,13 +16,22 @@ public class DataProvidersForRoleFolder {
 		int randomIndexForRoleLevel = random.nextInt(RoleFolderAPITestCases.roleLevels.size());
 		int randomRoleLevel = RoleFolderAPITestCases.roleLevels.get(randomIndexForRoleLevel);
 
-		return new Object[][] { { faker.country().capital(), faker.number().numberBetween(10, 20) },
-				{ faker.country().capital(), randomRoleLevel }, { "", faker.number().numberBetween(10, 20) },
-				{ randomRoleName, faker.number().numberBetween(10, 20) }, };
+		return new Object[][] {
+				// Entering valid data for all fields
+				{ DataGeneratorForAPI.generateFakeRole(), DataGeneratorForAPI.generateFakeNumberWithRange(10, 15) },
+				// Entering already exist roleLevel for only roleLevel field
+				{ DataGeneratorForAPI.generateFakeRole(), randomRoleLevel },
+				// Entering empty string for for only roleName field
+				{ "", DataGeneratorForAPI.generateFakeNumberWithRange(10, 15) },
+				// Entering already exist roleLevel for only roleLevel field
+				{ randomRoleName, DataGeneratorForAPI.generateFakeNumberWithRange(10, 15) }, };
 	}
 
 	@DataProvider(name = "TestDataForUpdateRole")
 	public Object[][] testDataForUpdateRole() {
+		int invalidRoleId = DataGeneratorForAPI.generateFakeNumberWithRange(
+				RoleFolderAPITestCases.newCreatedRoleId + 10, RoleFolderAPITestCases.newCreatedRoleId + 50);
+
 		int randomIndexForRoleName = random.nextInt(RoleFolderAPITestCases.roles.size());
 		String randomRoleName = RoleFolderAPITestCases.roles.get(randomIndexForRoleName);
 
@@ -32,14 +39,20 @@ public class DataProvidersForRoleFolder {
 		int randomRoleLevel = RoleFolderAPITestCases.roleLevels.get(randomIndexForRoleLevel);
 
 		return new Object[][] {
-				{ RoleFolderAPITestCases.newCreatedRoleId, faker.country().capital(),
-						faker.number().numberBetween(10, 20) },
-				{ RoleFolderAPITestCases.newCreatedRoleId, faker.country().capital(), randomRoleLevel },
-				{ RoleFolderAPITestCases.newCreatedRoleId, "", faker.number().numberBetween(10, 20) },
-				{ RoleFolderAPITestCases.newCreatedRoleId, randomRoleName, faker.number().numberBetween(10, 20) },
-				{ faker.number().numberBetween(RoleFolderAPITestCases.newCreatedRoleId + 10,
-						RoleFolderAPITestCases.newCreatedRoleId + 50), faker.country().capital(),
-						faker.number().numberBetween(10, 20) }, };
+				// Entering valid data for all fields
+				{ RoleFolderAPITestCases.newCreatedRoleId, DataGeneratorForAPI.generateFakeRole(),
+						DataGeneratorForAPI.generateFakeNumberWithRange(16, 20) },
+				// Entering already exist roleLevel for only roleLevel field
+				{ RoleFolderAPITestCases.newCreatedRoleId, DataGeneratorForAPI.generateFakeRole(), randomRoleLevel },
+				// Entering empty string for for only roleName field
+				{ RoleFolderAPITestCases.newCreatedRoleId, "",
+						DataGeneratorForAPI.generateFakeNumberWithRange(16, 20) },
+				// Entering already exist roleLevel for only roleLevel field
+				{ RoleFolderAPITestCases.newCreatedRoleId, randomRoleName,
+						DataGeneratorForAPI.generateFakeNumberWithRange(16, 20) },
+				// Entering invalid roleId for only roleId field
+				{ invalidRoleId, DataGeneratorForAPI.generateFakeRole(),
+						DataGeneratorForAPI.generateFakeNumberWithRange(16, 20) }, };
 	}
 
 	@DataProvider(name = "TestDataForDeleteRole")
@@ -47,7 +60,10 @@ public class DataProvidersForRoleFolder {
 //		int randomIndexForRoleId = random.nextInt(RoleFolderAPITestCases.roleIds.size());
 //		int randomRoleId = RoleFolderAPITestCases.roleIds.get(randomIndexForRoleId);
 
-		return new Object[][] { { faker.number().numberBetween(50, 100) }, { RoleFolderAPITestCases.newCreatedRoleId },
+		int invalidRoleId = DataGeneratorForAPI.generateFakeNumberWithRange(
+				RoleFolderAPITestCases.newCreatedRoleId + 10, RoleFolderAPITestCases.newCreatedRoleId + 50);
+
+		return new Object[][] { { invalidRoleId }, { RoleFolderAPITestCases.newCreatedRoleId },
 //				{ randomRoleId } 
 		};
 	}
@@ -57,6 +73,8 @@ public class DataProvidersForRoleFolder {
 		int randomIndexForRoleLevel = random.nextInt(RoleFolderAPITestCases.roleLevels.size());
 		int randomRoleLevel = RoleFolderAPITestCases.roleLevels.get(randomIndexForRoleLevel);
 
-		return new Object[][] { { faker.number().numberBetween(50, 100) }, { randomRoleLevel } };
+		int invalidRoleLevel = DataGeneratorForAPI.generateFakeNumberWithRange(50, 100);
+
+		return new Object[][] { { invalidRoleLevel }, { randomRoleLevel } };
 	}
 }
